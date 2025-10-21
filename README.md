@@ -8,7 +8,7 @@
 
 [Lien vers le forum français et les descriptions complètes](https://www.baldursgateworld.fr/viewtopic.php?t=34557)  
 
-## Description:
+## Description :
 ------------
 
 # Défis insurmontables de Telim'Gar
