@@ -1,0 +1,9 @@
+IF
+    Clicked([ANYONE])
+	Global("PXD108trap2","PXD108",0)
+THEN
+    RESPONSE #100
+        SetGlobal("PXD108trap2","PXD108",1)
+		DisplayStringHead(LastTrigger,@10807)
+		ReallyForceSpellRES("pxd108p2",LastTrigger)
+END

@@ -1,0 +1,16 @@
+IF
+    OnCreation()
+THEN
+    RESPONSE #100
+		Wait(3)
+        ReallyForceSpellPointRES("Pxd1601",[2627.1141])
+        StartTimer(22,18)
+END
+
+IF
+    TimerExpired(22)
+THEN
+    RESPONSE #100
+        ReallyForceSpellPointRES("Pxd1601",[2627.1141])
+        StartTimer(22,18)			
+END
