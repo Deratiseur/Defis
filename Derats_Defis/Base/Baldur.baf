@@ -1,0 +1,23 @@
+IF
+Global("px108ok","GLOBAL",1)
+Global("px108wn","GLOBAL",0)
+!AreaCheck("PXD108")
+!AreaCheck("PXD404")
+!AreaCheck("PXD903")
+THEN
+    RESPONSE #100
+SetGlobal("pxcoward","GLOBAL",1)
+END
+
+IF
+    Global("pxreturn","GLOBAL",1)
+THEN
+    RESPONSE #100
+    SetGlobal("pxreturn","GLOBAL",0)
+    ActionOverride(Player1,LeaveAreaLUA("AR0500","",[2387.1252],NNE))
+    ActionOverride(Player2,LeaveAreaLUA("AR0500","",[2428.1222],NNE))
+    ActionOverride(Player3,LeaveAreaLUA("AR0500","",[2477.1247],NNE))
+    ActionOverride(Player4,LeaveAreaLUA("AR0500","",[2437.1281],NNE))
+    ActionOverride(Player5,LeaveAreaLUA("AR0500","",[2484.1249],NNE))
+    ActionOverride(Player6,LeaveAreaLUA("AR0500","",[2520.1270],NNE))
+END

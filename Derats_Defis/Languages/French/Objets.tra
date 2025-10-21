@@ -1,0 +1,300 @@
+@201 = ~Trésor de Cachemisère~
+@202 = ~Vous avez trouvé ce sac toile dégoûtant accroché au coup d'un Planétaire déchu puant la charogne.
+
+Capacité de charge :
+- Une fois par jour peut générer un trésor aléatoire.~
+
+@203 = ~Dague de la méduse~
+@204 = ~C’était la dague que portait la reine méduse spectrale que vous avez vaincu lors d'une épreuve pour prouver votre valeur.
+
+CARACTÉRISTIQUES :
+
+Capacité de combat :
+- Pétrifie la cible en cas de coup critique (jet de sauvegarde contre la Métamorphose pour annuler)
+
+Capacités d'équipement :
+- +3 au jet de sauvegarde contre la Métamorphose
+- Peau de pierre (1 peau) chaque fois que le porteur est touché (une fois par round maximum)
+
+TAC0 : +3
+Dégâts : 1D4+3
+Type de dégâts : perforants
+Poids : 2
+Facteur de vitesse : 1
+Compétence : dague
+Type : une main~
+
+
+@207 = ~Orbe des fées~
+@208 = ~Vous avez trouvé cet orbe dans le ventre d'un ver charognard géant. Il luit d'une étrange lumière bleue quand vous le prenez en main. Bizarrement, vous savez d'instinct ce que vous pouvez en faire.
+
+Capacité d'équipement :
+Protection contre les sorts de niveau 1 à 3.
+
+Capacité de charge :
+Une fois par jour permet de lancer au choix : Immunité absolue, Bouclier des fées ou Globe d'invulnérabilité féerique.~
+
+@209 = ~Épée cruelle de Tr'kin +5~
+@210 = ~Cette épée est une des deux choses que vous à laissé le Mal Absolu en disparaissant.
+
+PARAMETRES :
+
+Capacités d'équipement :
++3 aux chances de coup critique
++3 au multiplicateur d'attaque sournoise
++1 attaque par round
+Spécial : l'épée est habitée par l'esprit acharné de Tr'kin le xvart et il y a de grande chance que cela ait des répercutions sur le porteur.
+Spécial : maudite, on ne peut s'en débarrasser qu'avec un sort de délivrance de la malédiction
+
+Capacité de charge :
+Une fois par jour, permet de lancer une combinaison d'Invisibilité majeure et Immunité contre la divination.
+
+TAC0 : +5
+Dégâts : 2D3 +5
+Type de dégâts : tranchant 
+Poids : 1
+Facteur de Vitesse : 0
+Compétence : épée courte
+Type d'arme : à 1 main
+Force nécessaire : 5~
+
+@211 = ~Discombullateur merveilleux~
+@212 = ~Cet authentique artefact n'a été ensorcelé qu'avec les enchantements spatiaux et temporels les plus raffinés. Au moyen de matériaux alchimiques complexes et d'une iconographie magique et artisanale, cette merveille arcanique moderne permet à son utilisateur d'exercer son influence au-delà même du temps et de l'espace afin de trouver toutes sortes d'élixirs mystérieux et puissants, tout droit sortis de derrière le voile même de la réalité, et cela sans le moindre entraînement. Il n'aura jamais été aussi simple d'invoquer des potions.
+
+PARAMÈTRES :
+
+Capacité de charge :
+- Une fois par jour, crée une potion aléatoire.~
+
+@213 = ~Baguette de déplacement~
+@214 = ~Quelqu’un c'est fait enterrer avec cette baguette.
+
+PARAMÈTRES :
+
+Capacité de charge :
+- Téléportation (instantanée)
+- Interversion (sur cible, interverti l'utilisateur et la cible)~
+@2141 = ~Téléportation~
+@2142 = ~Interversion~
+
+@215 = ~Lame noire du désastre vivante incarnée~
+@216 = ~Cette arme est un sort vivant que vous avez réussi à mater. Plutôt que de mourir, le sort à choisi de se plier à votre volonté pour vivre. Il est donc devenue une arme que vous pouvez utiliser.
+
+PARAMETRES
+
+Capacité d'équipement :
+- Fixe la compétence Épée longue du porteur à 5
+
+Capacité de combat :
+- La victime doit réussir un jet de sauvegarde contre la mort à +4 ou être désintégrée
+- 10 % de chance de drainer 4 niveaux de la cible et de soigner 20 points de vie du porteur
+- 2% de chance que l'arme devienne frénétique : dans ce cas elle disparaît de la main du porteur et se réincarne pour attaquer indépendamment avec 4 attaques par rounds pendant 5 rounds. Après 5 rounds elle tombe inerte au sol, son porteur doit la ramasser.
+
+TAC0 : +5
+Dégâts : 2D12 +5
+Type de dégâts : Tranchant 
+Poids : 2
+Facteur de Vitesse : 0 
+Compétence : Épée longue~
+
+@217 = ~La lumière anéantissante~
+@218 = ~L’incarnation du feu que vous avez combattu dans un des défis de Telim'Gar a utilisé ce bâton contre vous.
+
+PARAMETRES
+
+Capacités d'équipement :
+- Résistances élémentaires : -65%
+- Dégâts élémentaires infligés : +200%
+
+TAC0 : +5
+Dégâts : 1D6 +5
+Type de dégâts : Contondant 
+Poids : 2
+Facteur de Vitesse : 1
+Compétence : Bâton
+Type d'arme : à 2 mains
+Force nécessaire : 5~
+
+@219 = ~Flamme ardente~
+@220 = ~Vous avez récupéré cet anneau sur le cadavre de l'Incarnation du feu.
+
+PARAMETRES
+
+Capacités d'équipement :
+- Résistance au feu : fixée à 125%
+- Dégâts de feu infligés : +20%~
+
+@221 = ~Racines de Kaom~
+@222 = ~L’Incarnation du feu que vous avez combattu sur une poche de terre dans le plan élémentaire du feu portait ces bottes.
+
+PARAMETRES
+
+Capacités d'équipement :
+- Point de vie maximum : +38
+- Immunité au ralentissement et aux coup d'aile.~
+
+@223 = ~Coeur de Kaom~
+@224 = ~L’Incarnation du feu que vous avez combattu sur une poche de terre dans le plan élémentaire du feu portait cette armure.
+
+PARAMETRES
+
+Capacités d'équipement :
+- Point de vie maximum : +200
+PARAMETRES :
+
+Classe d'Armure : 2 (-1 contre les armes tranchantes)
+Poids : 20
+Force nécessaire : 12~
+
+@225 = ~Célérité du voleur~
+@226 = ~Cet anneau appartenait à un voleur inconnu mort dans l'une des épreuves de Telim'gar. Vous l'avez trouvé dans les possessions d'un prête du même groupe.
+
+PARAMETRES
+
+Capacités d'équipement :
+- Hâte
+- Mouvement +2~
+
+@227 = ~Leçons de Maître Iroshi-Sama~
+@228 = ~Ce recueil de techniques de ninja est enchanté pour permettre à n'importe qui de profiter des connaissance d'un maître.
+
+Capacités de charge :
+- Une fois par jour permet d'utiliser n'importe quel technique majeure de Guerrier ou voleur.~
+
+@229 = ~Robe de l'Ak'Chazar~
+@230 = ~Cette robe reposait parmi les cendres d'un feu de camp éteint depuis longtemps. Quelqu'un a manifestement essayé de la brûler pour en tirer de la chaleur, mais elle à résisté au feu et est intacte.
+
+PARAMETRES :
+
+- Classe d'armure : 3
+- Maximum de points de vie fixé à 1 point de vie par niveau
+- +3 sorts mémorisables par niveau de sorts
+- Immunité à tout autre effet qui modifierait le maximum de points de vie~
+
+@231 = ~Tueuse de mage~
+@232 = ~Cette épée reposait au fond d'un tombeau avant que vous ne le pillez.
+
+PARAMÈTRES :
+
+Capacités de combat :
+- Dissipe la magie en touchant
+- Renvoi les créatures invoquées touchées
+- Fait oublier un sort arcanique du plus haut niveau connu à la cible, 5% de chance de faire oublier tous les sorts à la place.
+
+Capacités de charge :
+- Une fois par jour peut lancer Bouclier des fées (immunité à la magie pendant 4 rounds).
+
+TAC0 :  +3
+Dégâts :  1D6 +3
+Type de dégâts : perforant
+Facteur de Vitesse : 0
+Poids :  2
+Type de compétence : Épée Courte
+Type : arme à 1 main
+Force nécessaire : 5~
+
+@233 = ~Bâton Galeno~
+@234 = ~Voici l'histoire de Galeno, le voleur malin. Au cours de ses années d'aventures, Galeno appris à imiter de nombreuses personnes, y compris des magiciens et des sorciers. Son imitation était si astucieuse et complète qu'il pouvait utiliser leurs baguettes et leurs bâtons. Galeno avait peu d'attrait pour les baguettes, car il ne savait pas s'en servir comme armes, et il lui était difficile de les porter pour escalader les murs d'un des temples de Vurkis, lui qui aimait voler les fidèles du dieu du mal. Les baguettes pouvaient toutefois être glissées dans une poche ou une pochette, ou cousues dans la doublure d'une cape, et Galeno les trouvait très utiles. Un jour, alors qu'il échappait aux gardiens d'un autre temple de Vurkis, Galeno sortit une baguette de sous sa cape, dans le but de créer l'illusion d'un mur entre lui et ses poursuivants. Au lieu de cela, il transforma l'un de ses poursuivants en poulet ! Forcé de sauter d'une fenêtre plutôt que de faire une sortie plus digne, Galeno atterrit dans le chariot d'un nettoyeur de rue. Si le contenu âcre du chariot amortit sa chute, il abîma aussi ses vêtements. Frustré et temporairement humilié, Galeno décida qu'il devait y avoir une meilleure façon d'organiser et de transporter sa collection de baguettes magiques. Pendant des jours, il resta assis dans sa chambre, réfléchissant et attendant que les gens oublient son humiliante évasion pour ne pas rire lorsqu'il entrerait dans la taverne. Après tout, l'habile voleur était habitué aux accolades et aux auditeurs avides d'un nouveau récit de ses exploits audacieux. Après avoir soigneusement étudié sa collection, Galeno choisit une baguette qui le transformerait en elfe. Empruntant quelques vêtements à un voisin endormi, Galeno se confectionna un déguisement. S'il n'a rien appris d'autre, il a appris qu'il valait mieux expérimenter quand aucun témoin ne se rendrait compte qu'il regardait le grand Galeno. Tout d'abord, Galeno rassembla les baguettes et tenta de s'en servir pour dévaliser un riche marchand. Cette expérience s'avéra décevante, car Galeno découvrit qu'il ne pouvait accéder qu'aux baguettes qui n’étaient pas rangée. Sans se décourager, Galeno renouvela son déguisement et essaya d'attacher les baguettes en rang sur de courtes longueurs de bois, puis partit voler les bijoux de la duchesse de Beortheocht. (Normalement, il aurait également volé ses affections, car la duchesse était d'une grande beauté. Mais l'orgueil de Galeno voulait qu'il ne puisse le faire que sous sa véritable forme). Il constata qu'il pouvait utiliser toutes les baguettes dont il avait besoin, mais les planches étaient encombrantes lorsqu'il s'agissait de se glisser dans des endroits étroits, qu'il ne put voler les bijoux.
+Cela n'arrivera jamais. Le grand Galeno ne pouvait pas se permettre d'échouer. Sa réputation en souffrirait irrémédiablement. Seul son déguisement éloignait de sa porte la bête de l'humiliation. Cette fois, Galeno décida d'attacher ses baguettes à un tube creux de papier épais, juste assez grand pour faire le tour de son avant-bras. Les baguettes à l'intérieur du tube dépassaient juste assez pour qu'il puisse voir laquelle était laquelle. Sans s'embarrasser d'un déguisement, Galeno entreprit de voler un sorcier nommé Joaquin Mago, dont l'arrogant étalage de richesses méritait d'être cueilli.
+Hélas, le sorcier pris Galeno en flagrant délit. À la grande horreur de Galeno, tout cela n'était qu'un piège ! Il semblait que le garde que Galeno avait transformé en poulet était le fils de Joaquin, et que l'étalage ostentatoire de richesse n'était rien d'autre qu'un appât pour l'avide voleur qui se croyait intelligent. Galeno et Joaquin se livrèrent un combat acharné. L'habile voleur savait que le sorcier avait l'avantage, car il pouvait choisir tous les sorts qu'il connaissait, alors que Galeno n'avait que ses baguettes. Il ne souhaitait rien tant que d'échapper à son piège. Alors qu'il parcourait des yeux la chambre dans laquelle ils se battaient, sa concentration se relâcha et une étrange confluence entre une baguette mal utilisée et un sortilège arcanique se produisit. Le tube autour du bras de Galeno commença à se tordre et à s'allonger. Galeno avait beau essayer, il ne parvenait pas à libérer son bras de la transformation en cours. Il implora désespérément la pitié de Joaquin, et le cœur du sorcier se serra : son fils n'avait été que temporairement une poule, après tout. Comme il ne parvenait pas arrêter ou inverser la transformation, Joaquin trouva le moyen de faire voler le paquet protéiforme de baguettes à travers les dimensions.
+
+
+PARAMETRES :
+
+- Capacités de combat : le bâton crée l'effet d'une baguette aléatoire en touchant.
+
+Capacités de charge :
+- Crée une baguette aléatoire
+
+TAC0 : +3
+Dégâts : 1D6 +3
+Type de dégât : contondant
+Poids : 3
+Facteur de vitesse : 1
+Type de compétence : bâton
+Type : arme à 2 mains
+Force nécessaire : 5~
+
+@235 = ~Négation~
+@236 = ~C'est l'armure que portait Grod Lannas lorsqu'il dirigeait la Citadelle d'Exhalus. Lorsqu'une armée de Vacuous tenta de prendre la citadelle, la Garde Fatale et quelques Hommes poussières luttèrent vaillamment et repoussèrent les monstres. Mais les pertes furent lourdes et les disparitions nombreuses. Après la bataille, l'armure flottait isolée près de la citadelle. Les monstres n'avait pas pu la dévorer. Du sort de Grod, aucune idée. Et de comment l'armure c'est finalement retrouvée sur le plan matériel, encore moins....
+Elle est constituée de vide négatif solidifié, ce qui ne devrait même pas être possible. Mais dans les plans, rien n'est impossible.
+
+PARAMÈTRES :
+
+Capacité d'équipement :
+- Toute adversaire qui frappe en mêlée le porteur de l'armure subit 2D6 points de dégâts magiques et doit réussir un jet de sauvegarde contre la mort à +4 ou être désintégré.
+- 50% de résistance à la magie.
+
+Classe d'armure : -3 (-6 contre les armes tranchantes)
+Poids : 5
+Force nécessaire : 3~
+
+@237 = ~Hache d'os de Gaurak~
+@238 = ~Forgée par le forgeron fou Galsconi à partir d'un éclat de dent de Gaurak, la bête, cette arme ressemble à un morceau d’ivoire pourri taillé en grande hache d'arme. La poignée est enveloppée de cuir noirci et déchiré, qui semble prête à tomber en morceaux au moindre contact. Encore plus dérangeant est le venin jaune que cette hache d'os semble secréter dès qu'on la prend en main.
+
+Capacités d'équipement :
+Force +4
+
+Capacités de combat :
+Impose à la cible un jet de sauvegarde contre les sorts sous peine de perdre un point de force pendant 5 tours.
+Empoisonne la cible : 2 points de dégâts par round pendant un tour.
+
+Capacités de charges :
+Contagion une fois par jour.
+Dégénérescence une fois par jour.
+Toucher vampirique une fois par jour.
+
+TAC0 : +5
+Dégâts : 1D8 +5, +4 contre les créatures bonnes
+Type de dégâts : tranchant  
+Poids : 5
+Facteur de Vitesse : 2 
+Compétence : Hache
+Type d'arme : à 1 main
+Force nécessaire : 10~
+
+@239 = ~Pipe de Dévastation~
+@240 = ~Cette pipe était utilisée par le Mal Absolu pour rendre une des épreuves que vous avez du passer encore plus difficile. Il vous l'a laissé quand vous vous êtes débarrassé de lui.
+
+Capacité de charge :
+- Trois fois par jour peut créer un Nuage de frénésie bestiale (chaque round jet de sauvegarde contre les sorts ou Berserk, +1 attaque par round et attaque toujours la créature la plus proche) ou un Nuage Incendiaire ou une Brume de Sombremort (chaque round attaqué par 1D3 assassins imaginaires)~
+
+@241 = ~Collier de Rex~
+@242 = ~C'est le collier que portait Rex, l'animal de compagnie de Cachemisère le puant.
+
+Capacités d'équipement :
+- Action libre
+- Immunité à la peur~
+
+@243 = ~
+Arme pourrie de Cachemisère~
+@244 = ~C'est l'arme d'un planétaire. Mais elle très abîmée, elle pue et elle n'a plus rien de luxueux.
+
+Capacités de combat :
+- 25% de chance de dissiper la magie et de tuer la cible si elle rate un jet de sauvegarde contre la mort à -2
+- 10% de chance de lancer Contagion sur la cible
+
+Spécial : fragile : peut se casser lors de l'impact
+
+TAC0 : +3
+Dégâts : 2D10+3 
+Type de dégâts : tranchant  
+Poids : 8
+Facteur de Vitesse : 5 
+Compétence : Épée à deux mains
+Type d'arme : à 2 mains
+Force nécessaire : 12~
+
+@245 = ~L'enclume~
+@246 = ~Ce marteau, c'est une enclume magique à laquelle on a fixé un manche.
+
+Spécial : le manche est fragile : peut se casser lors de l'impact
+
+Dégâts : 4D6 +4
+TAC0 : +1
+Type de dégâts : contondant
+Poids: 750
+Facteur de vitesse : 5
+Type de compétence : marteau de guerre
+Type : arme à 1 main
+Force nécessaire : 22~
