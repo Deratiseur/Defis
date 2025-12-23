@@ -1,0 +1,7 @@
+IF
+    !Dead("PXD610B")
+    OnCreation()
+THEN
+    RESPONSE #100
+        ReallyForceSpellRES("pxd610pr",Myself)
+END

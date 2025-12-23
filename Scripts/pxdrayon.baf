@@ -1,0 +1,7 @@
+IF
+  True()
+  Delay(6)
+THEN
+  RESPONSE #100
+	ReallyForceSpellRES("pxdrayox",Myself)
+END

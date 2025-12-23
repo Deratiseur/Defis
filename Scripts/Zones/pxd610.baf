@@ -1,0 +1,108 @@
+IF
+    OnCreation()
+THEN
+    RESPONSE #100
+		ReallyForceSpellPointRES("Pxd6101",[2580.1890])  // No such index
+		StartTimer(22,24)
+END
+
+IF
+    TimerExpired(22)
+THEN
+    RESPONSE #100
+		ReallyForceSpellPointRES("Pxd6101",[2580.1890])  // No such index
+		StartTimer(22,24)
+END
+
+IF
+    !GlobalTimerNotExpired("PXD610ptsp","PXD610")
+THEN
+    RESPONSE #100
+		CreateCreature("pxd610pt",[3580.2850],S)
+		SetGlobalTimer("PXD610ptsp","PXD610",30)
+    RESPONSE #100
+		CreateCreature("pxd610pt",[2643.2947],S)
+		SetGlobalTimer("PXD610ptsp","PXD610",30)
+    RESPONSE #100
+		CreateCreature("pxd610pt",[1280.3000],S)
+		SetGlobalTimer("PXD610ptsp","PXD610",30)
+    RESPONSE #100
+		CreateCreature("pxd610pt",[622.2305],S)
+		SetGlobalTimer("PXD610ptsp","PXD610",30)
+    RESPONSE #100
+		CreateCreature("pxd610pt",[415.1831],S)
+		SetGlobalTimer("PXD610ptsp","PXD610",30)
+    RESPONSE #100
+		CreateCreature("pxd610pt",[632.1120],S)
+		SetGlobalTimer("PXD610ptsp","PXD610",30)
+    RESPONSE #100
+		CreateCreature("pxd610pt",[1311.638],S)
+		SetGlobalTimer("PXD610ptsp","PXD610",30)
+    RESPONSE #100
+		CreateCreature("pxd610pt",[2051.393],S)
+		SetGlobalTimer("PXD610ptsp","PXD610",30)
+    RESPONSE #100
+		CreateCreature("pxd610pt",[2818.439],S)
+		SetGlobalTimer("PXD610ptsp","PXD610",30)
+    RESPONSE #100
+		CreateCreature("pxd610pt",[4021.863],S)
+		SetGlobalTimer("PXD610ptsp","PXD610",30)
+    RESPONSE #100
+		CreateCreature("pxd610pt",[4251.1639],S)
+		SetGlobalTimer("PXD610ptsp","PXD610",30)
+    RESPONSE #100
+		CreateCreature("pxd610pt",[3566.2116],S)
+		SetGlobalTimer("PXD610ptsp","PXD610",30)
+    RESPONSE #100
+		CreateCreature("pxd610pt",[2699.2126],S)
+		SetGlobalTimer("PXD610ptsp","PXD610",30)
+    RESPONSE #100
+		CreateCreature("pxd610pt",[1884.2677],S)
+		SetGlobalTimer("PXD610ptsp","PXD610",30)
+    RESPONSE #100
+		CreateCreature("pxd610pt",[1148.2254],S)
+		SetGlobalTimer("PXD610ptsp","PXD610",30)
+    RESPONSE #100
+		CreateCreature("pxd610pt",[1179.1530],S)
+		SetGlobalTimer("PXD610ptsp","PXD610",30)
+    RESPONSE #100
+		CreateCreature("pxd610pt",[2356.936],S)
+		SetGlobalTimer("PXD610ptsp","PXD610",30)
+    RESPONSE #100
+		CreateCreature("pxd610pt",[2966.1425],S)
+		SetGlobalTimer("PXD610ptsp","PXD610",30)
+    RESPONSE #100
+		CreateCreature("pxd610pt",[3743.1419],S)
+		SetGlobalTimer("PXD610ptsp","PXD610",30)
+    RESPONSE #100
+		CreateCreature("pxd610pt",[2955.1902],S)
+		SetGlobalTimer("PXD610ptsp","PXD610",30)
+    RESPONSE #100
+		CreateCreature("pxd610pt",[2045.2278],S)
+		SetGlobalTimer("PXD610ptsp","PXD610",30)
+    RESPONSE #100
+		CreateCreature("pxd610pt",[2191.1780],S)
+		SetGlobalTimer("PXD610ptsp","PXD610",30)
+    RESPONSE #100
+		CreateCreature("pxd610pt",[1742.1436],S)
+		SetGlobalTimer("PXD610ptsp","PXD610",30)
+    RESPONSE #100
+		CreateCreature("pxd610pt",[2487.1661],S)
+		SetGlobalTimer("PXD610ptsp","PXD610",30)
+    RESPONSE #100
+		CreateCreature("pxd610pt",[3156.910],S)
+		SetGlobalTimer("PXD610ptsp","PXD610",30)
+END
+
+IF
+    Global("px610wn","GLOBAL",1)
+THEN
+    RESPONSE #100
+    SetGlobal("px610wn","GLOBAL",2)
+    ActionOverride(Player1,LeaveAreaLUA("AR0500","",[2387.1252],NNW))
+    ActionOverride(Player2,LeaveAreaLUA("AR0500","",[2428.1222],NNW))
+    ActionOverride(Player3,LeaveAreaLUA("AR0500","",[2477.1247],NNW))
+    ActionOverride(Player4,LeaveAreaLUA("AR0500","",[2437.1281],NNW))
+    ActionOverride(Player5,LeaveAreaLUA("AR0500","",[2484.1249],NNW))
+    ActionOverride(Player6,LeaveAreaLUA("AR0500","",[2520.1270],NNW))
+END

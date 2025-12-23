@@ -1,0 +1,7 @@
+IF
+    Die()
+    LevelGT(Myself,1)
+THEN
+    RESPONSE #100
+        ReallyForceSpellDeadRES("pxdimmox",Myself)
+END

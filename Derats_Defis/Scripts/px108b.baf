@@ -1,8 +1,0 @@
-IF
-	See(Player1)
-    Global("px108boss","LOCALS",0)
-THEN
-    RESPONSE #100
-        SetGlobal("px108boss","LOCALS",1)
-        StartDialogueNoSet(LastSeenBy(Myself))
-END

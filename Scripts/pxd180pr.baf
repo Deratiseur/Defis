@@ -1,0 +1,9 @@
+IF
+    True()
+    Delay(24)
+THEN
+    RESPONSE #100
+        CreateCreature("px180pr1",[-1.-1],SE)
+    RESPONSE #100
+        CreateCreature("px180pr2",[-1.-1],SE)
+END

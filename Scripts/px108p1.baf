@@ -1,0 +1,9 @@
+IF
+    Clicked([ANYONE])
+	
+	Global("PXD108trap1","PXD108",0)
+THEN
+    RESPONSE #100
+        SetGlobal("PXD108trap1","PXD108",1)
+		ForceSpell(LastTrigger,TRAP_STINKING_CLOUD) 
+END

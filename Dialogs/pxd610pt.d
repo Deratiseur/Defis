@@ -1,0 +1,7 @@
+BEGIN ~PXD610PT~
+
+IF ~AreaCheck("PXD610")~ THEN BEGIN portal1 SAY @61003
+	IF ~~ THEN REPLY #13912  DO
+	~ActionOverride(LastTalkedToBy,JumpToPoint([4593.3207]))~ EXIT
+	IF ~~ THEN REPLY #13913 EXIT
+END

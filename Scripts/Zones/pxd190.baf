@@ -1,0 +1,94 @@
+IF
+    OnCreation()
+THEN
+    RESPONSE #100
+        Explore()
+        ReallyForceSpellPointRES("Pxd1901",[2558.1900])
+        StartTimer(6,6)
+        Wait(2)
+        CreateCreature("pxd190t",[2558.1900],S)
+        ActionOverride("pxd190t",StartDialogueNoSet([PC]))
+END
+
+IF
+    TimerExpired(6)
+THEN
+    RESPONSE #100
+        ReallyForceSpellPointRES("Pxd1901",[2558.1900])
+        StartTimer(6,6)
+        IncrementGlobal("pxd190","GLOBAL",1)
+    RESPONSE #100
+        ReallyForceSpellPointRES("Pxd1901",[2558.1900])
+        StartTimer(6,6)
+        IncrementGlobal("pxd190","GLOBAL",1)
+    RESPONSE #100
+        ReallyForceSpellPointRES("Pxd1901",[2558.1900])
+        StartTimer(6,6)
+        IncrementGlobal("pxd190","GLOBAL",1)
+    RESPONSE #100
+        ReallyForceSpellPointRES("Pxd1901",[2558.1900])
+        StartTimer(6,6)
+        IncrementGlobal("pxd190","GLOBAL",1)
+    RESPONSE #100
+        ReallyForceSpellPointRES("Pxd1901",[2558.1900])
+        StartTimer(6,6)
+        IncrementGlobal("pxd190","GLOBAL",1)
+    RESPONSE #100
+        ReallyForceSpellPointRES("Pxd1901",[2558.1900])
+        CreateCreature("pxd190ac",[2558.1900],S)
+        DisplayStringNoName(Myself,106026)
+        StartTimer(6,6)
+        IncrementGlobal("pxd190","GLOBAL",1)
+END
+
+IF
+    GlobalGT("pxd190","GLOBAL",99)
+    Global("PXD190boss","PXD190",0)
+THEN
+    RESPONSE #100
+        SetGlobal("PXD190boss","PXD190",1)
+        GiveItemCreate("pxd190r",Player1,1,0,0)
+        CreateCreature("pxd190t",[2558.1900],S)
+        ActionOverride("pxd190t",StartDialogueNoSet([PC]))
+END
+
+IF
+    Global("px190b1","GLOBAL",1)
+    Delay(18)
+THEN
+    RESPONSE #100
+        CreateCreature("pxd190b",[2558.1900],S)
+        SetGlobal("px190b1","GLOBAL",0)
+END
+
+IF
+    Global("px190b2","GLOBAL",1)
+    Delay(18)
+THEN
+    RESPONSE #100
+        CreateCreature("pxd190b2",[2548.1910],S)
+        SetGlobal("px190b2","GLOBAL",0)
+END
+
+IF
+    Global("px190b3","GLOBAL",1)
+    Delay(18)
+THEN
+    RESPONSE #100
+        CreateCreature("pxd190b3",[2568.1890],S)
+        SetGlobal("px190b3","GLOBAL",0)
+END
+
+IF
+    Global("px190wn","GLOBAL",1)
+THEN
+    RESPONSE #100
+    SetGlobal("px190wn","GLOBAL",2)
+    ActionOverride(Player1,LeaveAreaLUA("AR0500","",[2387.1252],NNW))
+    ActionOverride(Player2,LeaveAreaLUA("AR0500","",[2428.1222],NNW))
+    ActionOverride(Player3,LeaveAreaLUA("AR0500","",[2477.1247],NNW))
+    ActionOverride(Player4,LeaveAreaLUA("AR0500","",[2437.1281],NNW))
+    ActionOverride(Player5,LeaveAreaLUA("AR0500","",[2484.1249],NNW))
+    ActionOverride(Player6,LeaveAreaLUA("AR0500","",[2520.1270],NNW))
+END
+

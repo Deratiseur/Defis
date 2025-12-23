@@ -1,0 +1,122 @@
+IF
+    Global("px108ok","GLOBAL",1)
+    Global("px108wn","GLOBAL",0)
+	!AreaCheck("PXD108")
+    !AreaCheck("PXD404")
+    !AreaCheck("PXD903")
+THEN
+    RESPONSE #100
+        SetGlobal("pxcoward","GLOBAL",1)
+		ReallyForceSpellRES("spwi602",Player1)
+END
+
+IF
+    Global("px160ok","GLOBAL",1)
+    Global("px160wn","GLOBAL",0)
+    !AreaCheck("PXD160")
+    !AreaCheck("PXD150")
+THEN
+    RESPONSE #100
+        SetGlobal("pxcoward","GLOBAL",1)
+END
+
+IF
+    Global("px610ok","GLOBAL",1)
+    Global("px610wn","GLOBAL",0)
+    !AreaCheck("PXD610")
+THEN
+    RESPONSE #100
+        SetGlobal("pxcoward","GLOBAL",1)
+END
+
+IF
+    Global("px208ok","GLOBAL",1)
+    Global("px208wn","GLOBAL",0)
+    !AreaCheck("PXD208")
+THEN
+    RESPONSE #100
+        SetGlobal("pxcoward","GLOBAL",1)
+END
+
+IF
+    Global("px190ok","GLOBAL",1)
+    Global("px190wn","GLOBAL",0)
+    !AreaCheck("PXD190")
+THEN
+    RESPONSE #100
+        SetGlobal("pxcoward","GLOBAL",1)
+END
+
+IF
+    Global("px180ok","GLOBAL",1)
+    Global("px180wn","GLOBAL",0)
+    !AreaCheck("PXD180")
+THEN
+    RESPONSE #100
+        SetGlobal("pxcoward","GLOBAL",1)
+END
+
+IF
+    Global("px100ok","GLOBAL",1)
+    Global("px100wn","GLOBAL",0)
+    !AreaCheck("PXD100")
+THEN
+    RESPONSE #100
+        SetGlobal("pxcoward","GLOBAL",1)
+END
+
+IF
+    Global("px110ok","GLOBAL",1)
+    Global("px110wn","GLOBAL",0)
+    !AreaCheck("PXD110")
+    !AreaCheck("PXD101")
+THEN
+    RESPONSE #100
+        SetGlobal("pxcoward","GLOBAL",1)
+END
+
+IF
+    Global("px201ok","GLOBAL",1)
+    Global("px201wn","GLOBAL",0)
+    !AreaCheck("PXD201")
+THEN
+    RESPONSE #100
+        SetGlobal("pxcoward","GLOBAL",1)
+END
+
+IF
+    Global("px708ok","GLOBAL",1)
+    Global("px708wn","GLOBAL",0)
+    !AreaCheck("PXD708")
+    !AreaCheck("PXD501")
+THEN
+    RESPONSE #100
+        SetGlobal("pxcoward","GLOBAL",1)
+END
+
+IF
+    Global("px204ok","GLOBAL",1)
+    Global("px204wn","GLOBAL",0)
+    !AreaCheck("PXD204")
+THEN
+    RESPONSE #100
+        SetGlobal("pxcoward","GLOBAL",1)
+END
+
+IF
+    Global("px200ok","GLOBAL",1)
+    Global("px200wn","GLOBAL",0)
+    !AreaCheck("PXD200")
+THEN
+    RESPONSE #100
+        SetGlobal("pxcoward","GLOBAL",1)
+END
+
+IF
+    Global("px290ok","GLOBAL",1)
+    Global("px290wn","GLOBAL",0)
+    !AreaCheck("PXD290")
+THEN
+    RESPONSE #100
+        SetGlobal("pxcoward","GLOBAL",1)
+END

@@ -1,0 +1,21 @@
+IF
+    See(NearestEnemyOf(Myself))
+    !GlobalTimerNotExpired("PXD610bs","LOCALS")
+THEN
+    RESPONSE #100
+        ReallyForceSpellRES("pxd610pr",Myself)
+        SetGlobalTimer("PXD610bs","LOCALS",THREE_ROUNDS)
+END
+
+IF
+    Global("px610hit","LOCALS",0)
+    OR(3)
+        HitBy([ANYONE],CRUSHING)
+        HitBy([ANYONE],SLASHING)
+        HitBy([ANYONE],PIERCING)
+THEN
+    RESPONSE #100
+        SetGlobal("px610hit","LOCALS",1)
+        ReallyForceSpellRES("SPWI907",Myself)
+END
+

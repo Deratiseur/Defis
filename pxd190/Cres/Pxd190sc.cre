@@ -1,0 +1,31 @@
+COPY ~Derats_Defis/pxd204/Area~					~override~
+LAF FIND_FREE_ANIM_SLOT INT_VAR slotMin = 0xE000 slotMax = 0xefff RET slot END
+ACTION_IF (slot <= 0) BEGIN
+  FAIL ~No free creature animation slot found.~
+END
+
+LAF TO_HEX_NUMBER INT_VAR value = slot minDigits = 4 RET hexNumber END
+APPEND ~animate.ids~ ~0x%hexNumber% GW_Dracolich~ UNLESS ~GW_Dracolich~
+CLEAR_IDS_MAP
+
+COPY ~Derats_Defis/pxd105/items/Discombulateur/Blob1/xdr2.ini~ ~override/%hexNumber%.ini~
+ACTION_BASH_FOR ~Derats_Defis/pxd105/items/Discombulateur/Blob1/Anim/Dracolich~ ~^.+\.bam$~ BEGIN
+  COPY ~%BASH_FOR_FILESPEC%~ ~override~
+END
+
+COPY ~Derats_Defis/pxd105/items/Discombulateur/Blob1/copy~	~override~
+COPY ~Derats_Defis/pxd105/items/Discombulateur/Blob1/area~	~override~
+COPY_EXISTING ~pxd108sp.cre~		~override/pxd200sp.cre~	WRITE_ASCII 0x514 ~pxd200sp~ #8
+COPY_EXISTING ~pxd108sp.spl~		~override/pxd200sp.spl~	WRITE_ASCII 0xae ~pxd200~ #8
+
+
+
+
+COPY ~Derats_Defis/pxd105/items/Discombulateur/Blob2/copy~	~override~
+COPY ~Derats_Defis/pxd105/items/Discombulateur/Blob2/area~	~override~
+COPY_EXISTING ~pxd108sp.cre~		~override/pxd290sp.cre~	WRITE_ASCII 0x514 ~pxd290sp~ #8
+COPY_EXISTING ~pxd108sp.spl~		~override/pxd290sp.spl~	WRITE_ASCII 0xae ~pxd290~ #8
+
+ADD_PROJECTILE	~Derats_Defis/pxd105/items/Discombulateur/Blob2/pxdcowbl.pro~				~pxd proximity Cow~
+COPY ~Derats_Defis/pxd105/items/Discombulateur/Blob2/pxdcowbl.spl~	~override~	WRITE_SHORT 0x98 ~%pxdcowbl%~
+COPY_EXISTING	~amcall.vvc~				~override/pxfycalv.vvc~	WRITE_ASCII 0x8 ~pxfycal2~ #8	WRITE_ASCII 0x78 ~pxfycalo~ #8

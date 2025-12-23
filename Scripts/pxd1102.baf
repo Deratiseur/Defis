@@ -1,0 +1,107 @@
+IF
+    HPPercentLT(Myself,50)
+    !GlobalTimerNotExpired("DrankPotionTimer","LOCALS")
+    HasItem("POTN55",Myself)
+THEN
+    RESPONSE #100
+        SetGlobalTimer("DrankPotionTimer","LOCALS",ONE_ROUND)
+        DisplayStringHead(Myself,46150)
+        UseItem("POTN55",Myself)
+END
+
+IF
+    HPPercentLT(Myself,60)
+    Global("LayOnHands","LOCALS",0)
+    HaveSpell(MONK_LAY_ON_HANDS)
+    !GlobalTimerNotExpired("DrankPotionTimer","LOCALS")
+THEN
+    RESPONSE #100
+        SetGlobal("LayOnHands","LOCALS",1)
+        SetGlobalTimer("DrankPotionTimer","LOCALS",ONE_ROUND)
+        Spell(Myself,MONK_LAY_ON_HANDS)
+END
+
+IF
+    Heard([ANYONE],154)
+THEN
+    RESPONSE #100
+        AttackReevaluate([PC.0.0.MAGE],45)
+END
+
+IF
+    See(NearestEnemyOf(Myself))
+    HaveSpell(MONK_QUIVERING_PALM)
+    !GlobalTimerNotExpired("DrankPotionTimer","LOCALS")
+    Range(NearestEnemyOf(Myself),7)
+THEN
+    RESPONSE #100
+        SetGlobalTimer("DrankPotionTimer","LOCALS",ONE_ROUND)
+        Spell(Myself,MONK_QUIVERING_PALM)
+        AttackReevaluate(NearestEnemyOf(Myself),45)
+END
+
+IF
+    See(NearestEnemyOf(Myself))
+    HaveSpell(MONK_STUNNING_BLOW)
+    !GlobalTimerNotExpired("DrankPotionTimer","LOCALS")
+    Range(NearestEnemyOf(Myself),7)
+    Delay(10)
+THEN
+    RESPONSE #100
+        SetGlobalTimer("DrankPotionTimer","LOCALS",ONE_ROUND)
+        Spell(Myself,MONK_STUNNING_BLOW)
+        AttackReevaluate(NearestEnemyOf(Myself),45)
+END
+
+IF
+    Allegiance(Myself,EVILCUTOFF)
+    !Detect(NearestEnemyOf(Myself))
+    !StateCheck(Myself,STATE_INVISIBLE)
+    !StateCheck(Myself,STATE_BLIND)
+    !GlobalTimerNotExpired("OH_HIDE","LOCALS")
+    CheckStatGT(Myself,20,HIDEINSHADOWS)
+THEN
+    RESPONSE #100
+        SetInterrupt(FALSE)
+        SetGlobalTimer("OH_HIDE","LOCALS",ONE_ROUND)
+        Hide()
+        SetInterrupt(TRUE)
+END
+
+IF
+    !GlobalTimerNotExpired("DrankPotionTimer","LOCALS")
+    HaveSpellRES("SPDD03")  // Souffle
+    !Range(NearestMyGroupOfType,30)
+    Range(NearestEnemyOf(Myself),10)
+    See(NearestEnemyOf(Myself))
+    CheckStatLT(NearestEnemyOf(Myself),50,RESISTFIRE)
+    CheckStatLT(NearestEnemyOf(Myself),50,RESISTMAGIC)
+    !StateCheck(Myself,STATE_SILENCED)
+THEN
+    RESPONSE #100
+        SetInterrupt(FALSE)
+        SetGlobalTimer("DrankPotionTimer","LOCALS",ONE_ROUND)
+        SpellRES("SPDD03",NearestEnemyOf(Myself))
+        SetInterrupt(TRUE)
+END
+
+IF
+    See(NearestEnemyOf(Myself))
+THEN
+    RESPONSE #100
+        AttackReevaluate(NearestEnemyOf(Myself),30)
+END
+
+IF
+    AttackedBy([ANYONE],DEFAULT)
+THEN
+    RESPONSE #100
+        Attack(LastAttackerOf(Myself))
+END
+
+IF
+    True()
+THEN
+    RESPONSE #100
+        RandomWalk()
+END

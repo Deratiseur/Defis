@@ -1,0 +1,41 @@
+IF
+    Die()
+THEN
+    RESPONSE #100
+        ReallyForceSpellDead(Myself,ILLUSION_DEATH)
+        DestroySelf()
+        SetGlobal("px190b1","GLOBAL",1)
+END
+
+IF
+    InMyArea(Player1)
+    !Range(Player1,7)
+    !See(NearestEnemyOf(Myself))
+THEN
+    RESPONSE #100
+        MoveToObject(Player1)
+        Continue()
+    RESPONSE #100
+        MoveToObject(Player2)
+        Continue()
+    RESPONSE #100
+        MoveToObject(Player3)
+        Continue()
+    RESPONSE #100
+        MoveToObject(Player4)
+        Continue()
+    RESPONSE #100
+        MoveToObject(Player5)
+        Continue()
+    RESPONSE #100
+        MoveToObject(Player6)
+        Continue()
+END
+
+IF
+    ActionListEmpty()
+    See(NearestEnemyOf(Myself))
+THEN
+    RESPONSE #100
+        AttackReevaluate(NearestEnemyOf(Myself),30)
+END

@@ -1,5 +1,0 @@
-BEGIN ~px108b~
-
-IF ~AreaCheck("PXD108")~ THEN BEGIN callrex SAY @108011 = @108012 = @108013 = @108014
-	IF ~~ EXIT
-END

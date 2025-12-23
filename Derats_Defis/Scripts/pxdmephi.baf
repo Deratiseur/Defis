@@ -1,6 +1,0 @@
-IF
-	Die()
-THEN
-	RESPONSE #100
-		ReallyForceSpellDeadRES("pxdmephy",Myself)
-END

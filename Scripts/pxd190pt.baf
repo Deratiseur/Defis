@@ -1,0 +1,12 @@
+IF
+    Clicked([ANYONE])
+THEN
+    RESPONSE #100
+        CreateCreatureObject("pxd190gd",Myself,0,0,0)
+    RESPONSE #100
+        Continue()
+    RESPONSE #100
+        Continue()
+    RESPONSE #100
+        Continue()
+END

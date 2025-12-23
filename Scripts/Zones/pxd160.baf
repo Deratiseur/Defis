@@ -1,0 +1,20 @@
+IF
+    !GlobalTimerNotExpired("pxd160sil","PXD160")
+THEN
+    RESPONSE #100
+        ReallyForceSpellPointRES("Pxd1601",[2627.1141])
+        SetGlobalTimer("pxd160sil","PXD160",18)
+END
+
+IF
+    Global("px160wn","GLOBAL",1)
+THEN
+    RESPONSE #100
+    SetGlobal("px160wn","GLOBAL",2)
+    ActionOverride(Player1,LeaveAreaLUA("AR0500","",[2387.1252],NNW))
+    ActionOverride(Player2,LeaveAreaLUA("AR0500","",[2428.1222],NNW))
+    ActionOverride(Player3,LeaveAreaLUA("AR0500","",[2477.1247],NNW))
+    ActionOverride(Player4,LeaveAreaLUA("AR0500","",[2437.1281],NNW))
+    ActionOverride(Player5,LeaveAreaLUA("AR0500","",[2484.1249],NNW))
+    ActionOverride(Player6,LeaveAreaLUA("AR0500","",[2520.1270],NNW))
+END

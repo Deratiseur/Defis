@@ -1,0 +1,22 @@
+IF
+    Clicked([ANYONE])
+THEN
+    RESPONSE #100
+        ActionOverride(LastTrigger,JumpToPoint([1961.3027]))
+    RESPONSE #100
+        ActionOverride(LastTrigger,JumpToPoint([2133.2423]))
+    RESPONSE #100
+        ActionOverride(LastTrigger,JumpToPoint([3291.1961]))
+    RESPONSE #100
+        ActionOverride(LastTrigger,JumpToPoint([1710.2414]))
+    RESPONSE #100
+        ActionOverride(LastTrigger,JumpToPoint([434.2083]))
+    RESPONSE #100
+        ActionOverride(LastTrigger,JumpToPoint([276.1426]))
+	RESPONSE #100
+        ActionOverride(LastTrigger,JumpToPoint([1486.961]))
+	RESPONSE #100
+        ActionOverride(LastTrigger,JumpToPoint([1759.876]))
+	RESPONSE #100
+        ActionOverride(LastTrigger,JumpToPoint([3029.1085]))
+END

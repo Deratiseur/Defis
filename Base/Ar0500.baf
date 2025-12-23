@@ -1,0 +1,8 @@
+IF
+	Global("Pxdgolem","GLOBAL",0)
+	AreaCheck("AR0500")
+THEN
+	RESPONSE #100
+		SetGlobal("Pxdgolem","GLOBAL",1)
+		CreateCreature("pxdgolem",[2375.1215],SSE)
+END

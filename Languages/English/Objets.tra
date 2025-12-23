@@ -1,0 +1,458 @@
+@201 = ~Potemkin Jack's Treasure~
+@202 = ~You found this disgusting canvas bag hanging around the neck of a fallen Planetary stinking of carrion.
+
+Load capacity:
+- Once per day, it can generate a random treasure.~
+
+@203 = ~Medusa's Dagger~
+@204 = ~This was the dagger carried by the spectral Medusa queen you defeated in a challenge to prove your valor.
+
+CHARACTERISTICS:
+
+Combat Ability:
+- Petrifies the target on a critical hit (save vs. Polymorph to negate)
+
+Equipment Abilities:
+- +3 to save vs. Polymorph
+- Stoneskin (1 skin) each time the wearer is hit (maximum once per round)
+
+THAC0: +3
+Damage: 1D4+3 (percing)
+Speed Factor: 1
+Proficiency Type: Dagger
+Type: One-handed
+Requires:
+ 3 Strength
+ 
+Weight: 2~
+
+@207 = ~Fairy Orb~
+@208 = ~You found this orb in the belly of a giant carrion crawler. It glows with a strange blue light when you hold it in your hand. Strangely, you instinctively know what to do with it.
+
+Equipment capacity:
+Protection against 1st to 3rd level spells.
+
+Charge capacity:
+Once per day, you can choose to cast:
+- Absolute Immunity
+- Fairy Shield (immunity to magic for 4 rounds) 
+- Fairy Globe of Invulnerability (Immunity to 1st- through 5th-level spells and the rest of the group to 1st- through 3th-level spells)
+Special: Must be held in hand, takes the place of the shield.~
+@2081 = ~Fairy Shield~
+@2082 = ~Fairy Globe of Invulnerability~
+
+@209 = ~Tr'kin's Cruel Sword +5~
+@210 = ~This sword is one of two things left behind by the Absolute Evil when it disappeared.
+
+PARAMETERS:
+
+Equipment abilities:
++3 to critical hit chance
++3 to backstab multiplier
++1 attack per round
+Special: the sword is inhabited by the relentless spirit of Tr'kin the xvart, and there is a high chance that this will have repercussions on the bearer.
+Special: Cursed, it can only be removed with a curse removal spell.
+
+Charge Capacity:
+Once per day, allows you to cast a combination of Greater Invisibility and Immunity to Divination.
+
+THAC0: +5
+Damage: 2D3 +5 (slashing)
+Speed Factor: 0
+Proficiency Type: Short sword
+Type: One-handed
+Requires:
+ 5 Strength
+
+Weight: 1~
+
+@211 = ~Wonderful Discombulator~
+@212 = ~This authentic artifact has been enchanted with only the most refined spatial and temporal spells. Using complex alchemical materials and magical, artisanal iconography, this modern arcane marvel allows its user to exert influence beyond even time and space to find all kinds of mysterious and powerful elixirs, straight from behind the veil of reality itself, without the slightest training. It has never been easier to conjure potions.
+
+PARAMETERS:
+
+Charge capacity:
+- Once per day, creates a random potion.~
+
+@213 = ~Wand of Displacement~
+@214 = ~Someone was buried with this wand.
+
+PARAMETERS:
+
+Capacity:
+- Teleportation (instantaneous)
+- Interversion (on target, interverts the user and the target)~
+@2141 = ~Teleportation~
+@2142 = ~Interversion~
+
+@215 = ~Incarnate Black Blade of Disaster~
+@216 = ~This weapon is a living spell that you have managed to subdue. Rather than dying, the spell chose to bend to your will in order to live. It has therefore become a weapon that you can use.
+
+PARAMETERS
+
+Equipment Capacity:
+- Sets the wearer's Long Sword Proficiency to 5
+
+Combat Capacity:
+- the victim must make a Save vs. Death at +4 or be disintegrated.
+- 10% chance with every hit that the sword drains 4 levels from the target and heals the wielder 20 Hit Points.
+- 2% chance that the weapon will go Berserk: in this case, it will fly out of the wearer's hand and become an aggressive living spell. Its owner must then subdue it again if they want to retrieve it.
+
+THAC0: +5
+Damage: 2D12 +5 (slashing)
+Speed Factor: 0 
+Proficiency Type: Long Sword
+Type: One-handed
+
+Weight: 0~
+
+@217 = ~The Annihilating Light~
+@218 = ~The Fire Incarnate you fought in one of Telim'Gar's challenges used this staff against you.
+
+PARAMETERS
+
+Equipment Capabilities:
+- Elemental Resistances: -65%
+- Elemental Damage Dealt: +200%
+
+THAC0: +5
+Damage: 1D6 +5 (crushing)
+Speed Factor: 1
+Proficiency Type: Quarterstaff
+Type: Two-handed
+ 
+Weight: 2~
+
+@219 = ~Blazing Flame~
+@220 = ~You retrieved this ring from the corpse of the Fire Incarnate.
+
+PARAMETERS
+
+Equipment Capabilities:
+- Fire Resistance: set at 125%
+- Fire Damage Dealt: +20%~
+
+@221 = ~Kaom's Roots~
+@222 = ~The Incarnation of Fire that you fought on a pocket of earth in the elemental plane of fire wore these boots.
+
+PARAMETERS:
+
+Equipment Capabilities:
+- Maximum Health Points: +40
+- Immunity to Slow and Wing Buffets.~
+
+@223 = ~Kaom's Heart~
+@224 = ~The Incarnation of Fire that you fought on a pocket of land in the elemental plane of fire wore this armor.
+
+PARAMETERS:
+
+Equipment Capabilities:
+- Maximum Hit Points: +200
+
+Armor Class: 2 (-1 vs. slashing)
+Weight: 20
+Strength Required: 12~
+
+@225 = ~Thief's Velocity~
+@226 = ~This ring belonged to an unknown thief who died in one of Telim'gar's challenges. You found it among the possessions of a priest from the same group.
+
+PARAMETERS
+
+Equipment abilities:
+- Haste
+- Movement +2~
+
+@227 = ~Lessons from Master Iroshi-Sama~
+@228 = ~This collection of ninja techniques is enchanted to allow anyone to benefit from the knowledge of a master.
+
+Charge capacity:
+- Once per day, allows you to use any major Warrior or Thief technique.~
+
+@229 = ~Robe of the Lich~
+@230 = ~This robe lay among the ashes of a long-extinguished campfire. Someone had clearly tried to burn it for warmth, but it resisted the fire and remains intact.
+
+PARAMETERS:
+
+- Armor Class: 3
+- Can memorize three extra spells of each level
+- Maximum hit points set at 1 hit point per level
+- Immunity to any other effect that would modify maximum hit points~
+
+@231 = ~Mage Slayer~
+@232 = ~This sword lay at the bottom of a tomb before you looted it.
+
+PARAMETERS:
+
+Combat Abilities:
+- Dispels magic on hit
+- Dispels summoned creatures on hit
+- Causes the target to forget the highest-level arcane spell it knows, with a 5% chance to cause it to forget all spells instead.
+
+Charge Abilities:
+- Once per day, can cast Fairy Shield (magic immunity for 4 rounds).
+
+THAC0:  +3
+Damage:  1D6 +3 (piercing)
+Type de Damage: perforant
+Speed Factor: 0
+Proficiency Type: Short sword
+Type: One-handed
+Requires:
+ 5 Strength
+
+Weight:  1~
+
+@233 = ~Galeno the Staff~
+@234 = ~This is a tale of Galeno, the clever thief. Over his years of adventures, Galeno learned to imitate many people, including wizards and sorcerers. His imitation was so cunning and complete that he could use their wands and staves. Galeno had little use for staves as he had no skill in using them as weapons, and it was difficult to carry them when scaling the walls of one of Talos’s temples—for he loved to steal from the followers of the god of evil. Wands could be tucked in a pouch or pocket, or sewed into the lining of a cloak, however, and Galeno found them most useful.
+One day, while escaping the guardians of another of Talos’ temples, Galeno pulled a wand from beneath his cloak, meaning to create the illusion of a wall between him and his pursuers.
+Instead, he turned one of his pursuers into a chicken! Forced to jump from a window rather than make a more dignified exit, Galeno landed in the wagon of a street cleaner. While the pungent contents of the wagon cushioned his fall, they also ruined his clothes.
+Frustrated and temporarily humbled, Galeno decided there had to be a better way to organize and carry his collection of magic wands. For days he sat in his room, thinking and waiting for people to forget his humiliating escape so they would not laugh when he entered the tavern. After all, the clever thief was accustomed to accolades and listeners eager for another tale of his daring exploits. Carefully studying his collection, Galeno chose a wand that would turn him into an elf.
+Borrowing some clothes from a sleeping neighbor, Galeno crafted a disguise for himself. If he learned nothing else, he learned it was best to experiment when no witness would realize they were looking at the great Galeno.
+First, Galeno bundled the wands together and tried using them as a tool while robbing a wealthy merchant. This experiment proved disappointing, as Galeno found he could only access the wands on the outside of the bundle. Undaunted, Galeno renewed his disguise and tried attaching the wands in a row along short lengths of wood, then left to rob the Duchess of Beortheocht of her jewelry. (Normally he would also have stolen her affections, for the Duchess was a great beauty. However Galeno’s pride argued that he could only do so in his true shape and form.) He found he could use any wand he needed, but the planks were cumbersome when squeezing into tight places. So cumbersome, in fact, that he was unable to steal the jewels.
+This would never do. The great Galeno could not afford to fail. His reputation would suffer irreparable damage. Only his disguise kept the beast of humiliation away from his door. This time Galeno decided to attach his wands to a hollow tube of thick paper, just big enough that it would fit around his forearm. The wands on the inside of the tube stuck out the back of the tube just enough that he could see which was which. Not bothering with a disguise, Galeno set out to rob a sorcerer named Joaquin Mago, whose arrogant display of wealth cried out for a plucking.
+Alas, the sorcerer discovered Galeno in midtheft. To Galeno’s horror, it was all a trap! It seemed the guard who Galeno turned into a chicken was Joaquin’s son, and the ostentatious display of wealth nothing more than bait for a greedy, albeit clever, thief. Galeno and Joaquin fought a mighty duel. The clever thief knew the sorcerer had the advantage, for he could choose any spell he knew while Galeno had only his wands. He wanted nothing so much as to escape his trap. As his eyes
+darted around the chamber in which they fought, his concentration slipped and a strange confluence of a misused wand and arcane spell occurred. The tube around Galeno’s arm began twisting and lengthening. Try as he might, Galeno could not free his arm from the steady transformation. Desperately he pleaded with Joaquin for mercy, and the sorcerer’s heart softened. His son had only been a chicken temporarily, after all. Though he could not stop or reverse the transformation,
+Joaquin was at last able to fling the protean bundle of wands through the dimensions.
+
+PARAMETERS:
+
+Combat abilities:
+- Creates a random wand effect on hit.
+
+Charge abilities:
+- Creates a random wand.
+
+THAC0: +3
+Damage: 1D6 +3 (crushing)
+Speed Factor: 1
+Proficiency Type: Quarterstaff
+Type: Two-handed
+Requires:
+ 5 Strength
+
+Weight: 3~
+
+@235 = ~Negation~
+@236 = ~This is the armor worn by Frod Lannas when he ruled the Citadel Exhalus. When an army of Vacuous attempted to take the citadel, the Doomguards and a few Dust Men fought valiantly and repelled the monsters. But the losses were heavy and many disappeared. After the battle, the armor floated alone near the citadel. The monsters had been unable to devour it. No one knows what became of Frod. And how the armor can remain solid on a material plane, even less so....
+It is made of solidified negative void, which shouldn't even be possible. But in the planes, nothing is impossible.
+
+PARAMETERS:
+
+Equipment capacity:
+- Any opponent who strikes the armor wearer in melee combat suffers 2D6 points of magical damage and must make a save vs. death at +4 or be disintegrated.
+- +50% magic resistance.
+
+Armor class: -3 (-6 vs. slashing)
+
+Strength required: 3
+
+Weight: 5~
+
+@237 = ~Gaurak's Tooth~
+@238 = ~Forged by the mad blacksmith Galsconi from a tooth of Gaurak the Beast, this weapon resembles a piece of rotten ivory carved into a great sword. The hilt is wrapped in blackened, torn leather that looks as if it might fall apart at the slightest touch. Even more disturbing is the yellow venom that this bone sword seems to secrete as soon as it is picked up.
+
+PARAMETERS:
+
+Equipment Abilities:
+Strength +4
+
+Combat Abilities:
+- Hit target takes 2 points of poison damage per round for one turn
+- Hit target lose one point of strength for 5 rounds (Save vs. Spells negates)
+
+Charge abilities:
+- Contagion once per day.
+- Degeneration once per day.
+- Vampiric touch once per day.
+
+THAC0: +5
+Damage: 1D12 +5, +4 vs Good (slashing)
+Speed Factor: 5
+Proficiency Type: Two-handed Sword
+Type: Two-handed
+Requires:
+ 12 Strength
+
+Weight: 10~
+
+@239 = ~Pipe of Devastation~
+@240 = ~This pipe was used by the Absolute Evil to make one of the challenges you had to overcome even more difficult. He left it to you when you got rid of him.
+
+Capacity:
+- Three times per day can create a Cloud of Beastly Frenzy (each round save vs. Spells or Berserk, +1 attack per round and always attacks the nearest creature) or a Incendiary Cloud or a Mist of Darkdeath (each round attacked by 1D3 phantasmal killers).~
+
+@241 = ~Rex's Collar~
+@242 = ~This is the collar worn by Rex, the pet of Potemkin Jack the Stinky.
+
+PARAMETERS:
+
+Equipment abilities:
+- Free action
+- Immunity to fear~
+
+@243 = ~Potemkin Jack's rotten weapon~
+@244 = ~This is a planetar's weapon. But it is badly damaged, it stinks, and it no longer has any luxurious qualities.
+
+PARAMETERS:
+
+Combat abilities:
+- 25% chance to dispel magic and kill the target if it fails a saving throw against death at -2
+- 10% chance to cast Contagion on the target
+
+Special: fragile: may break on impact
+
+THAC0: +3
+Damage: 2D10+3 
+Type de Damage: (slashing)
+Speed Factor: 5 
+Proficiency Type: Two-handed Sword
+Type: Two-handed
+Requires:
+ 12 Strength
+
+Weight: 8~
+
+@245 = ~The Anvil~
+@246 = ~This hammer is a magical anvil with a handle attached to it.
+
+PARAMETERS:
+
+Special: the handle is fragile and may break upon impact.
+
+Damage: 4D6 +4 (crushing)
+THAC0: +1
+Speed Factor: 5
+Proficiency Type: War Hammer
+Type: One-handed
+Requires:
+ 22 Strength
+
+Weight: 750~
+
+@247 = ~Guardian Bastard Sword +3~
+@248 = ~This is one of the weapons used by the Ragewind you defeated.
+
+PARAMETERS:
+
+Equipment Capabilities:
+- Armor Class: +2
+- Saving Throws: +1
+- Physical Damage Resistance: +10%
+
+THAC0: +3
+Damage: 2D4 +3 (slashing)
+Speed Factor: 5
+Proficiency Type: Bastard sword
+Type: One-handed
+Requires:
+ 11 Strength
+
+Weight: 7~
+
+@249 = ~Grod's Gold Ring~
+@250 = ~This ring was created by Telim'gar, the master of challenges, for his guardian of the pocket of reality in the negative plane. You recovered this ring from the corpse of Grod “No-Eye,” who was not supposed to be the original guardian.
+
+Equipment abilities:
+- Death Ward
+- Negative Plane Protection
+
+Charge abilities:
+- Control Undead once per day (4.5-meter radius area, saving throw at -4 to cancel, permanent control)
+- Protection From Undead once per day (2 turns)~
+
+@251 = ~Cleric's Staff +3~
+@252 = ~You found this weapon in a maze infested with aberrations.
+
+PARAMETERS:
+
+Charge Capabilities:
+- Allows to cast any existing level 5 divine spell once per day.
+
+THAC0: +3
+Damage: 1D6 +3 (crushing), +4 against undead
+Speed Factor: 1
+Proficiency Type: Quarterstaff
+Type: Two-handed
+Requires:
+ 5 Strength
+
+Weight: 3~
+
+@253 = ~Iron Bow~
+@254 = ~This bow is made of iron. It requires extraordinary strength to bend it, but the magic of the object fortunately converts this strength into power.
+
+PARAMETERS:
+
+Special: takes into account the strength bonus
+
+THAC0: +3
+Damage: +1 (missile)
+Speed Factor: 5
+Proficiency Type: Longbow
+Type: Two-handed
+Requires:
+ 21 Strength
+
+Weight: 9~
+
+@255 = ~Tinkered Lightning Wand~
+@256 = ~This wand looks exactly like a Wand of Lightning, but it doesn't consume charges. 
+
+PARAMETRES
+
+Charge abilities:
+- At willLightning Bolts
+  Damage: 3d6 electrical (Save vs. Wand for half)
+  Range: 100 ft.
+  Area of Effect: Path of bolts~
+
+@257 = ~Strange gem~
+@258 = ~This gem seems perfectly normal, except for the fact that it responds to magic detection. 
+
+PARAMETERS
+
+Allows you to summon an unknown creature. Single use.~
+
+@259 = ~Frenzy~
+@260 = ~This sword won't stay still. When you hold it in your hand, it swings around at breakneck speed. 
+
+PARAMETERS:
+
+Equipment capabilities:
+ +3 attacks per round
+ 
+THAC0: -8
+Damage:  1D6 +2 (piercing)
+Speed Factor: 1
+Proficiency Type: Short sword
+Type: One-handed
+Requires:
+ 5 Strength
+
+Weight:  2~
+
+@261 = ~Skull of Tepesh~
+@262 = ~This is the skull of Tepesh the Brave, protector of the Bief. He had the misfortune of challenging a necromancer too powerful for him, and this enchanted skull is all that remains of him.
+
+PARAMETERS:
+
+Charge capacities:
+- Summon Tepesh for 2 turns once per day.~
+
+@263 = ~Dagger of the Gloom~
+@264 = ~In the hands of a gloom, this dagger is a +10 sharp dagger with human condemnation. But you are not a sepulchral, and in your hands this dagger is just a simple +5 sharp dagger.
+
+STATISTICS:
+
+Equipment Capabilities:
+- Critical hit chances : +2
+
+THAC0: +5
+Damage: 1d4+5 (piercing)
+Speed Factor: 0
+Proficiency Type: Dagger
+Type: One-handed
+Requires:
+ 3 Strength
+
+Weight: 2~

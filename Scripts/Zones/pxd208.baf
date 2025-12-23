@@ -1,0 +1,145 @@
+IF
+    OnCreation()
+THEN
+    RESPONSE #100
+        ReallyForceSpellPointRES("pxd2081",[4041.2601])
+        StartTimer(150,6)
+END
+
+IF
+	Global("PXD208boss","PXD208",0)
+	Dead("px208x1")
+	Dead("px208x2")
+	Dead("px208x3")
+	Dead("px208x4")
+THEN
+    RESPONSE #100
+		CreateCreature("pxd208b",[714.1673],S)
+		SetGlobal("PXD208boss","PXD208",1)
+	RESPONSE #100
+		CreateCreature("pxd208b",[3393.2581],S)
+		SetGlobal("PXD208boss","PXD208",1)
+	RESPONSE #100
+		CreateCreature("pxd208b",[3092.3304],S)
+		SetGlobal("PXD208boss","PXD208",1)
+	RESPONSE #100
+		CreateCreature("pxd208b",[3995.1230],S)
+		SetGlobal("PXD208boss","PXD208",1)
+END
+
+IF
+    TimerExpired(150)
+THEN
+    RESPONSE #100
+        ReallyForceSpellPointRES("pxd2081",[4041.2601])
+		StartTimer(150,6)
+	RESPONSE #100	
+        ReallyForceSpellPointRES("pxd2081",[4102.1440])
+		StartTimer(150,6)
+	RESPONSE #100	
+        ReallyForceSpellPointRES("pxd2081",[3198.418])
+		StartTimer(150,6)
+	RESPONSE #100	
+        ReallyForceSpellPointRES("pxd2081",[2016.479])
+		StartTimer(150,6)
+	RESPONSE #100	
+        ReallyForceSpellPointRES("pxd2081",[1194.615])
+		StartTimer(150,6)
+	RESPONSE #100	
+        ReallyForceSpellPointRES("pxd2081",[1190.1002])
+		StartTimer(150,6)
+	RESPONSE #100	
+        ReallyForceSpellPointRES("pxd2081",[1396.1311])
+		StartTimer(150,6)
+	RESPONSE #100	
+        ReallyForceSpellPointRES("pxd2081",[976.1981])
+		StartTimer(150,6)
+	RESPONSE #100	
+        ReallyForceSpellPointRES("pxd2081",[425.2363])
+		StartTimer(150,6)
+	RESPONSE #100	
+        ReallyForceSpellPointRES("pxd2081",[1224.2651])
+		StartTimer(150,6)
+	RESPONSE #100	
+        ReallyForceSpellPointRES("pxd2081",[1949.2300])
+		StartTimer(150,6)
+	RESPONSE #100	
+        ReallyForceSpellPointRES("pxd2081",[3208.3074])
+		StartTimer(150,6)
+	RESPONSE #100	
+        ReallyForceSpellPointRES("pxd2081",[3737.3275])
+		StartTimer(150,6)
+	RESPONSE #100	
+        ReallyForceSpellPointRES("pxd2081",[1433.3109])
+		StartTimer(150,6)
+	RESPONSE #100	
+        ReallyForceSpellPointRES("pxd2081",[3046.2767])
+		StartTimer(150,6)
+	RESPONSE #100	
+        ReallyForceSpellPointRES("pxd2081",[3509.2117])
+		StartTimer(150,6)
+	RESPONSE #100	
+        ReallyForceSpellPointRES("pxd2081",[3315.1231])
+		StartTimer(150,6)
+	RESPONSE #100	
+		ReallyForceSpellPointRES("pxd2081",[2256.3063])
+		StartTimer(150,6)
+	RESPONSE #100	
+		ReallyForceSpellPointRES("pxd2081",[1688.1516])
+		StartTimer(150,6)
+	RESPONSE #100	
+        ReallyForceSpellPointRES("pxd2081",[2078.1002])
+		StartTimer(150,6)
+	RESPONSE #100	
+        ReallyForceSpellPointRES("pxd2081",[2796.1698])
+		StartTimer(150,6)
+	RESPONSE #100	
+		ReallyForceSpellPointRES("pxd2081",[2699.2141])
+		StartTimer(150,6)
+	RESPONSE #100			
+        ReallyForceSpellPointRES("pxd2081",[1912.1776])
+		StartTimer(150,6)
+	RESPONSE #100	
+        ReallyForceSpellPointRES("pxd2081",[698.3106])
+		StartTimer(150,6)
+	RESPONSE #100	
+		ReallyForceSpellPointRES("pxd2081",[428.1927])
+		StartTimer(150,6)
+	RESPONSE #100	
+		ReallyForceSpellPointRES("pxd2081",[3672.683])
+		StartTimer(150,6)
+	RESPONSE #100	
+        ReallyForceSpellPointRES("pxd2081",[2548.416])
+		StartTimer(150,6)
+	RESPONSE #100	
+        ReallyForceSpellPointRES("pxd2081",[259.1189])
+		StartTimer(150,6)
+	RESPONSE #100	
+		ReallyForceSpellPointRES("pxd2081",[2426.2697])
+		StartTimer(150,6)
+	RESPONSE #100	
+		ReallyForceSpellPointRES("pxd2081",[1052.2303])
+		StartTimer(150,6)
+	RESPONSE #100	
+		ReallyForceSpellPointRES("pxd2081",[2603.1206])
+		StartTimer(150,6)
+	RESPONSE #100	
+		ReallyForceSpellPointRES("pxd2081",[3574.1655])
+		StartTimer(150,6)
+	RESPONSE #100	
+		ReallyForceSpellPointRES("pxd2081",[4125.2092])
+		StartTimer(150,6)
+END
+
+IF
+    Global("px208wn","GLOBAL",1)
+THEN
+    RESPONSE #100
+    SetGlobal("px208wn","GLOBAL",2)
+    ActionOverride(Player1,LeaveAreaLUA("AR0500","",[2387.1252],NNW))
+    ActionOverride(Player2,LeaveAreaLUA("AR0500","",[2428.1222],NNW))
+    ActionOverride(Player3,LeaveAreaLUA("AR0500","",[2477.1247],NNW))
+    ActionOverride(Player4,LeaveAreaLUA("AR0500","",[2437.1281],NNW))
+    ActionOverride(Player5,LeaveAreaLUA("AR0500","",[2484.1249],NNW))
+    ActionOverride(Player6,LeaveAreaLUA("AR0500","",[2520.1270],NNW))
+END

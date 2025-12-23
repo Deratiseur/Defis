@@ -1,0 +1,8 @@
+IF
+    True()
+THEN
+    RESPONSE #100
+	StartDialogueNoSet([PC])
+	Wait(1)
+	DestroySelf()
+END

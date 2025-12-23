@@ -1,0 +1,209 @@
+BACKUP ~Derats_Defis/Backup~
+AUTHOR ~Deratiseur, at the_deratiseur@hotmail.com~
+VERSION ~Wip 2~
+
+LANGUAGE ~Francais~
+	~French~
+	~Derats_Defis/Languages/French/setup.tra~
+	~Derats_Defis/Languages/French/golem.tra~
+	~Derats_Defis/Languages/French/objets.tra~
+	~Derats_Defis/Languages/French/discombulateur.tra~
+	~Derats_Defis/Languages/French/pxd108.tra~
+	~Derats_Defis/Languages/French/pxd160.tra~
+	~Derats_Defis/Languages/French/pxd610.tra~
+	~Derats_Defis/Languages/French/pxd208.tra~
+	~Derats_Defis/Languages/French/pxd190.tra~
+	~Derats_Defis/Languages/French/pxd180.tra~
+	//~Derats_Defis/Languages/French/pxd100.tra~
+	//~Derats_Defis/Languages/French/pxd110.tra~
+	//~Derats_Defis/Languages/French/pxd201.tra~
+	//~Derats_Defis/Languages/French/pxd708.tra~
+	//~Derats_Defis/Languages/French/pxd204.tra~
+	//~Derats_Defis/Languages/French/pxd105.tra~
+LANGUAGE ~English~
+	~English~
+	~Derats_Defis/Languages/English/setup.tra~
+	~Derats_Defis/Languages/English/golem.tra~
+	~Derats_Defis/Languages/English/objets.tra~
+	~Derats_Defis/Languages/English/discombulateur.tra~
+	~Derats_Defis/Languages/English/pxd108.tra~
+	~Derats_Defis/Languages/English/pxd160.tra~
+	~Derats_Defis/Languages/English/pxd610.tra~
+	~Derats_Defis/Languages/English/pxd208.tra~
+	~Derats_Defis/Languages/English/pxd190.tra~
+	~Derats_Defis/Languages/English/pxd180.tra~
+	//~Derats_Defis/Languages/English/pxd100.tra~
+	//~Derats_Defis/Languages/English/pxd110.tra~
+	//~Derats_Defis/Languages/English/pxd201.tra~
+	//~Derats_Defis/Languages/English/pxd708.tra~
+	//~Derats_Defis/Languages/English/pxd204.tra~
+	//~Derats_Defis/Languages/English/pxd105.tra~
+	
+BEGIN @116	SUBCOMPONENT @0 DESIGNATED 1161	LABEL Px_Defi_Athkatla
+REQUIRE_PREDICATE GAME_IS ~BG2EE EET IWDEE~ @0009
+PRINT @120
+SILENT
+EXTEND_TOP ~AR0500.BCS~	~Derats_Defis/base/AR0500.baf~
+COMPILE ~Derats_Defis/Scripts/Zones~
+INCLUDE ~Derats_Defis/Scripts/Installs/Install.tph~
+VERBOSE
+
+
+BEGIN @117	SUBCOMPONENT @0 DESIGNATED 1162	LABEL Px_Defi_Watchtower
+REQUIRE_PREDICATE GAME_IS ~BG2EE EET IWDEE~ @0009
+PRINT @120
+SILENT
+EXTEND_TOP ~AR3001.BCS~	~Derats_Defis/base/AR3001.baf~
+COPY ~Derats_Defis/Scripts/Zones/pxd100.baf~	~Derats_Defis/Temp/pxd100.baf~
+	~Derats_Defis/Scripts/Zones/pxd150.baf~	~Derats_Defis/Temp/pxd150.baf~
+	~Derats_Defis/Scripts/Zones/pxd160.baf~	~Derats_Defis/Temp/pxd160.baf~
+	~Derats_Defis/Scripts/Zones/pxd180.baf~	~Derats_Defis/Temp/pxd180.baf~
+	~Derats_Defis/Scripts/Zones/pxd190.baf~	~Derats_Defis/Temp/pxd190.baf~
+	~Derats_Defis/Scripts/Zones/pxd208.baf~	~Derats_Defis/Temp/pxd208.baf~
+	~Derats_Defis/Scripts/Zones/pxd404.baf~	~Derats_Defis/Temp/pxd404.baf~
+	~Derats_Defis/Scripts/Zones/pxd501.baf~	~Derats_Defis/Temp/pxd501.baf~
+	~Derats_Defis/Scripts/Zones/pxd610.baf~	~Derats_Defis/Temp/pxd610.baf~
+	~Derats_Defis/Scripts/Zones/pxd903.baf~	~Derats_Defis/Temp/pxd903.baf~
+	REPLACE_TEXTUALLY ~AR0500~~AR3001~
+	REPLACE_TEXTUALLY ~2387.1252],NNW~~2253.1042],NE~
+    REPLACE_TEXTUALLY ~2428.1222],NNW~~2280.1074],NE~
+    REPLACE_TEXTUALLY ~2477.1247],NNW~~2238.1108],NE~
+    REPLACE_TEXTUALLY ~2437.1281],NNW~~2202.1075],NE~
+    REPLACE_TEXTUALLY ~2484.1249],NNW~~2170.1095],NE~
+    REPLACE_TEXTUALLY ~2520.1270],NNW~~2191.1132],NE~
+INCLUDE ~Derats_Defis/Scripts/Installs/Install.tph~
+VERBOSE	
+	
+BEGIN @118	SUBCOMPONENT @0 DESIGNATED 1163	LABEL Px_Defi_Amkethran
+REQUIRE_PREDICATE GAME_IS ~BG2EE EET IWDEE~ @0009
+PRINT @120
+SILENT
+EXTEND_TOP ~AR5500.BCS~	~Derats_Defis/base/AR5500.baf~
+COPY ~Derats_Defis/Scripts/Zones/pxd100.baf~	~Derats_Defis/Temp/pxd100.baf~
+	~Derats_Defis/Scripts/Zones/pxd150.baf~	~Derats_Defis/Temp/pxd150.baf~
+	~Derats_Defis/Scripts/Zones/pxd160.baf~	~Derats_Defis/Temp/pxd160.baf~
+	~Derats_Defis/Scripts/Zones/pxd180.baf~	~Derats_Defis/Temp/pxd180.baf~
+	~Derats_Defis/Scripts/Zones/pxd190.baf~	~Derats_Defis/Temp/pxd190.baf~
+	~Derats_Defis/Scripts/Zones/pxd208.baf~	~Derats_Defis/Temp/pxd208.baf~
+	~Derats_Defis/Scripts/Zones/pxd404.baf~	~Derats_Defis/Temp/pxd404.baf~
+	~Derats_Defis/Scripts/Zones/pxd501.baf~	~Derats_Defis/Temp/pxd501.baf~
+	~Derats_Defis/Scripts/Zones/pxd610.baf~	~Derats_Defis/Temp/pxd610.baf~
+	~Derats_Defis/Scripts/Zones/pxd903.baf~	~Derats_Defis/Temp/pxd903.baf~
+	REPLACE_TEXTUALLY ~AR0500~~AR5500~
+	REPLACE_TEXTUALLY ~2387.1252],NNW~~3662.1637],N~
+    REPLACE_TEXTUALLY ~2428.1222],NNW~~3704.1627],N~
+    REPLACE_TEXTUALLY ~2477.1247],NNW~~3702.1660],N~
+    REPLACE_TEXTUALLY ~2437.1281],NNW~~3659.1667],N~
+    REPLACE_TEXTUALLY ~2484.1249],NNW~~3660.1705],N~
+    REPLACE_TEXTUALLY ~2520.1270],NNW~~3704.1700],N~
+INCLUDE ~Derats_Defis/Scripts/Installs/Install.tph~
+VERBOSE	
+
+BEGIN @10	DESIGNATED 10	LABEL Px_Defi_noxp
+REQUIRE_PREDICATE (MOD_IS_INSTALLED ~Setup-Derats_Defis.tp2~ ~1161~ OR MOD_IS_INSTALLED ~Setup-Derats_Defis.tp2~ ~1162~	OR MOD_IS_INSTALLED ~Setup-Derats_Defis.tp2~ ~1163~) @15
+COPY_EXISTING_REGEXP GLOB ~px1.*\.cre~ ~override~
+						  ~px2.*\.cre~ ~override~ 
+						  ~px6.*\.cre~ ~override~ WRITE_SHORT 0x14 0
+
+BEGIN @113 SUBCOMPONENT @112	DESIGNATED 1121	LABEL Px_Defi_treasure3
+REQUIRE_PREDICATE (MOD_IS_INSTALLED ~Setup-Derats_Defis.tp2~ ~1161~ OR MOD_IS_INSTALLED ~Setup-Derats_Defis.tp2~ ~1162~	OR MOD_IS_INSTALLED ~Setup-Derats_Defis.tp2~ ~1163~) @15
+COPY_EXISTING_REGEXP GLOB ~px1.*\.cre~ ~override~
+						  ~px2.*\.cre~ ~override~
+						  ~px6.*\.cre~ ~override~	ADD_CRE_ITEM ~RNDTRE03~ #0 #0 #0 ~NONE~ ~INV11~
+
+BEGIN @114 SUBCOMPONENT @112	DESIGNATED 1122	LABEL Px_Defi_treasure4
+REQUIRE_PREDICATE (MOD_IS_INSTALLED ~Setup-Derats_Defis.tp2~ ~1161~ OR MOD_IS_INSTALLED ~Setup-Derats_Defis.tp2~ ~1162~	OR MOD_IS_INSTALLED ~Setup-Derats_Defis.tp2~ ~1163~) @15
+COPY_EXISTING_REGEXP GLOB ~px1.*\.cre~ ~override~
+						  ~px2.*\.cre~ ~override~
+						  ~px6.*\.cre~ ~override~	ADD_CRE_ITEM ~RNDTRE04~ #0 #0 #0 ~NONE~ ~INV11~
+
+BEGIN @115 SUBCOMPONENT @112	DESIGNATED 1123	LABEL Px_Defi_treasure5
+REQUIRE_PREDICATE (MOD_IS_INSTALLED ~Setup-Derats_Defis.tp2~ ~1161~ OR MOD_IS_INSTALLED ~Setup-Derats_Defis.tp2~ ~1162~	OR MOD_IS_INSTALLED ~Setup-Derats_Defis.tp2~ ~1163~) @15
+COPY_EXISTING_REGEXP GLOB ~px1.*\.cre~ ~override~
+						  ~px2.*\.cre~ ~override~
+						  ~px6.*\.cre~ ~override~	ADD_CRE_ITEM ~RNDTRE05~ #0 #0 #0 ~NONE~ ~INV11~
+					
+BEGIN @12 SUBCOMPONENT @11	DESIGNATED 111	LABEL Px_Defi_multi_x2
+REQUIRE_PREDICATE (MOD_IS_INSTALLED ~Setup-Derats_Defis.tp2~ ~1161~ OR MOD_IS_INSTALLED ~Setup-Derats_Defis.tp2~ ~1162~	OR MOD_IS_INSTALLED ~Setup-Derats_Defis.tp2~ ~1163~) @15
+COPY_EXISTING ~pxd108sp.spl~ ~override~
+			  ~pxd404sp.spl~ ~override~
+			  ~pxd160sp.spl~ ~override~
+			  ~pxd150sp.spl~ ~override~
+			  ~pxd610sp.spl~ ~override~
+			  ~pxd208sp.spl~ ~override~
+			  ~pxd190sp.spl~ ~override~
+			  ~pxd180sp.spl~ ~override~ WRITE_BYTE 0x9e 2
+			  //+ Poche de normalité apparition des MVS 2x+ vite
+			  //+ Final 2x + de gardiens
+BEGIN @13 SUBCOMPONENT @11	DESIGNATED 112	LABEL Px_Defi_multi_x3
+REQUIRE_PREDICATE (MOD_IS_INSTALLED ~Setup-Derats_Defis.tp2~ ~1161~ OR MOD_IS_INSTALLED ~Setup-Derats_Defis.tp2~ ~1162~	OR MOD_IS_INSTALLED ~Setup-Derats_Defis.tp2~ ~1163~) @15
+COPY_EXISTING ~pxd108sp.spl~ ~override~
+			  ~pxd404sp.spl~ ~override~
+			  ~pxd160sp.spl~ ~override~
+			  ~pxd150sp.spl~ ~override~
+			  ~pxd208sp.spl~ ~override~
+			  ~pxd190sp.spl~ ~override~
+			  ~pxd180sp.spl~ ~override~ WRITE_BYTE 0x9e 3
+			  //+ Poche de normalité apparition des MVS 3x+ vite
+			  //+ Final 3x + de gardiens
+BEGIN @14 SUBCOMPONENT @11	DESIGNATED 113	LABEL Px_Defi_multi_x4
+REQUIRE_PREDICATE (MOD_IS_INSTALLED ~Setup-Derats_Defis.tp2~ ~1161~ OR MOD_IS_INSTALLED ~Setup-Derats_Defis.tp2~ ~1162~	OR MOD_IS_INSTALLED ~Setup-Derats_Defis.tp2~ ~1163~) @15
+COPY_EXISTING ~pxd108sp.spl~ ~override~
+			  ~pxd404sp.spl~ ~override~
+			  ~pxd150sp.spl~ ~override~
+			  ~pxd610sp.spl~ ~override~
+			  ~pxd208sp.spl~ ~override~
+			  ~pxd190sp.spl~ ~override~
+			  ~pxd180sp.spl~ ~override~ WRITE_BYTE 0x9e 4
+			  //+ Poche de normalité apparition des MVS 4x+ vite
+			  //+ Final 4x + de gardiens
+
+			  
+/* //pas en Wip 2 à cause de Nécropole manquante.
+BEGIN @17	DESIGNATED 17	LABEL Px_Defi_difficulty
+REQUIRE_PREDICATE (MOD_IS_INSTALLED ~Setup-Derats_Defis.tp2~ ~1161~ OR MOD_IS_INSTALLED ~Setup-Derats_Defis.tp2~ ~1162~	OR MOD_IS_INSTALLED ~Setup-Derats_Defis.tp2~ ~1163~) @15
+
+//PXD108 La décharge -> des rats pestiférés se promènent dans la zone et qui s'en approche risque de chopper la peste calimshane
+
+//PXD160 La nécropole silencieuse
+//Pas trouvé
+
+//PXD610 Le Jardin végétal -> tous les vers sont infectés
+COPY_EXISTING_REGEXP ~^px1083\([0-9][0-9]\)\.cre$~ ~override/px6107\1.cre~	WRITE_ASCII 0x260 ~pxdmouch~  #8
+LPF ADD_CRE_EFFECT INT_VAR opcode = 146 parameter2 = 1 timing = 9 target = 1 STR_VAR resource = pxdmouch
+LPF ADD_CRE_EFFECT INT_VAR opcode = 206 target = 1 timing = 9 STR_VAR resource = pxdmoucy END
+COPY_EXISTING ~px610708.cre~						~override~	 WRITE_ASCII 0x260 ~~	WRITE_ASCII 0x248 ~px610708~ 
+COPY ~Derats_Defis/Difficulty/Scripts/px610708.baf~ ~Derats_Defis/Difficulty/Scripts/px610710.baf~ REPLACE_TEXTUALLY ~pxdmephy~ ~pxdaveuy~
+COPY_EXISTING ~px610710.cre~						~override~	WRITE_ASCII 0x260 ~~	WRITE_ASCII 0x248 ~px610710~
+COPY ~Derats_Defis/Difficulty/Scripts/px610708.baf~ ~Derats_Defis/Difficulty/Scripts/px610711.baf~ REPLACE_TEXTUALLY ~pxdmephy~ ~pxdmalhy~
+COPY_EXISTING ~px610711.cre~						~override~	WRITE_ASCII 0x260 ~~	WRITE_ASCII 0x248 ~px610711~
+COPY ~Derats_Defis/Difficulty/Scripts/px610708.baf~ ~Derats_Defis/Difficulty/Scripts/px610738.baf~ REPLACE_TEXTUALLY ~pxdmephy~ ~px108138~
+COPY_EXISTING ~px610738.cre~						~override~	WRITE_ASCII 0x260 ~~	WRITE_ASCII 0x248 ~px610738~
+COPY_EXISTING ~px610739.cre~						~override~	WRITE_ASCII 0x260 ~~	WRITE_ASCII 0x248 ~px610739~
+COPY_EXISTING ~px610743.cre~						~override~	WRITE_ASCII 0x260 ~~	WRITE_ASCII 0x248 ~px610743~
+COPY_EXISTING ~sppr717.spl~			~override/pxdmoucy.spl~
+
+//PXD208 Les tombeaux d'acier -> Des Esprits mulhorandais parcourent le niveau et boostent les monstres.
+
+//PXD190 Le dédale -> les portails sont aléatoires et ne laissent passer qu'une personne
+//OK fait : script + copy
+
+//PXD208 Antimaginium -> un vortex temporel ralenti les pjs et spawn n'importe quel monstre de n'importe quelle zone
+
+//PXD100 La fournaise -> les dégâts de feu par round peuvent générer une bouffée de flammes
+
+//PXD110 Le tombeau du grand ver -> +1 dragon du temps
+//Pas original, trouver mieux
+
+//PXD201 La salle de jeu du Mal -> +3 cranes enflammés automatiquement recrées après 1D32+ rounds près du boss.
+
+//PXD708 La forge -> les golems ont une chance d'exploser en mourant.
+
+//PXD204 Poche de normalité
+//Pas trouvé
+
+//PXD105 Finale -> la zone contient en plus un Déchireur enragé (toujours immortel).
+
+COPY ~Derats_Defis/Difficulty/Copy~			~override~
+COMPILE ~Derats_Defis/Difficulty/Scripts~
+*/	
