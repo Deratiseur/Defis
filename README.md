@@ -12,6 +12,15 @@
 ------------
 
 # Défis insurmontables de Telim'Gar
-Sur le pont vous rencontrerez un golem de diamant qui vous proposera de relever des défis. Chaque défi consiste en une "arène" dans laquelle vous devez trouver et tuer le boss pour valider la victoire.
+À l'endroit que vous choisirez (Athkatla, Tour de garde ou Amkethran) vous rencontrerez un golem de diamant qui vous proposera de relever des défis. Chaque défi consiste en une "arène" dans laquelle vous devez trouver et tuer le boss pour valider la victoire.
 
-Ceci est un version Wip, ne proposant que 2 arènes sur les douzes prévues (les 2 plus faciles).
+Ceci est un version Wip, ne proposant que 6 arènes sur les 12 prévues.
+
+------------
+
+# Telim'Gar's Insurmountable Challenges
+At the location of your choice (Athkatla, Watchtower, or Amkethran), you will encounter a diamond golem who will offer you challenges. Each challenge consists of an “arena” in which you must find and kill the boss to claim victory.
+
+This is a WIP version, offering only 6 of the 12 planned arenas.
+
+
