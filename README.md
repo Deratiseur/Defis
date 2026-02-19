@@ -7,6 +7,7 @@
 **Auteur** : **Deratiseur**
 
 [Lien vers le sujet sur le forum français](https://www.baldursgateworld.fr/viewtopic.php?t=34557)  
+[Link to the beamdog forum]([https://forums.beamdog.com/discussion/89445/mod-crossclass-powerkits/p1?new=1](https://forums.beamdog.com/discussion/90555/mod-wip-telimgars-insurmountable-challenges/p1?new=1))    
 
 ## Description :
 ------------
