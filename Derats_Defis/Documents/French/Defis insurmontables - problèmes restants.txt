@@ -1,0 +1,5 @@
+Poche de réalité : Plan d'énergie négative, dégâts d’énergie négative devraient être contrés par "protection contre le plan négatif" -> aucun moyen de checker ça
+
+La Bibliothèque : Cutscene qui laisse les pjs en haut à gauche et déplace la caméra vers le bas à droite, donc les pjs restent hors champ, comment faire ?
+
+Le Tombeau du grand ver : aucun dieu "rp correspondant" pour répondre à l'appel du boss.
