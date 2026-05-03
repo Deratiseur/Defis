@@ -1,6 +1,6 @@
 BACKUP ~Derats_Defis/Backup~
 AUTHOR ~Deratiseur, at the_deratiseur@hotmail.com~
-VERSION ~Wip 2~
+VERSION ~Wip 2.2~
 
 LANGUAGE ~Francais~
 	~French~
@@ -133,7 +133,7 @@ COPY_EXISTING ~pxd108sp.spl~ ~override~
 			  ~pxd208sp.spl~ ~override~
 			  ~pxd190sp.spl~ ~override~
 			  ~pxd180sp.spl~ ~override~ WRITE_BYTE 0x9e 2
-			  //+ Poche de normalitÈ apparition des MVS 2x+ vite
+			  //+ Poche de normalit√© apparition des MVS 2x+ vite
 			  //+ Final 2x + de gardiens
 BEGIN @13 SUBCOMPONENT @11	DESIGNATED 112	LABEL Px_Defi_multi_x3
 REQUIRE_PREDICATE (MOD_IS_INSTALLED ~Setup-Derats_Defis.tp2~ ~1161~ OR MOD_IS_INSTALLED ~Setup-Derats_Defis.tp2~ ~1162~	OR MOD_IS_INSTALLED ~Setup-Derats_Defis.tp2~ ~1163~) @15
@@ -144,7 +144,7 @@ COPY_EXISTING ~pxd108sp.spl~ ~override~
 			  ~pxd208sp.spl~ ~override~
 			  ~pxd190sp.spl~ ~override~
 			  ~pxd180sp.spl~ ~override~ WRITE_BYTE 0x9e 3
-			  //+ Poche de normalitÈ apparition des MVS 3x+ vite
+			  //+ Poche de normalit√© apparition des MVS 3x+ vite
 			  //+ Final 3x + de gardiens
 BEGIN @14 SUBCOMPONENT @11	DESIGNATED 113	LABEL Px_Defi_multi_x4
 REQUIRE_PREDICATE (MOD_IS_INSTALLED ~Setup-Derats_Defis.tp2~ ~1161~ OR MOD_IS_INSTALLED ~Setup-Derats_Defis.tp2~ ~1162~	OR MOD_IS_INSTALLED ~Setup-Derats_Defis.tp2~ ~1163~) @15
@@ -155,20 +155,20 @@ COPY_EXISTING ~pxd108sp.spl~ ~override~
 			  ~pxd208sp.spl~ ~override~
 			  ~pxd190sp.spl~ ~override~
 			  ~pxd180sp.spl~ ~override~ WRITE_BYTE 0x9e 4
-			  //+ Poche de normalitÈ apparition des MVS 4x+ vite
+			  //+ Poche de normalit√© apparition des MVS 4x+ vite
 			  //+ Final 4x + de gardiens
 
 			  
-/* //pas en Wip 2 ‡ cause de NÈcropole manquante.
+/* //pas en Wip 2 √† cause de N√©cropole manquante.
 BEGIN @17	DESIGNATED 17	LABEL Px_Defi_difficulty
 REQUIRE_PREDICATE (MOD_IS_INSTALLED ~Setup-Derats_Defis.tp2~ ~1161~ OR MOD_IS_INSTALLED ~Setup-Derats_Defis.tp2~ ~1162~	OR MOD_IS_INSTALLED ~Setup-Derats_Defis.tp2~ ~1163~) @15
 
-//PXD108 La dÈcharge -> des rats pestifÈrÈs se promËnent dans la zone et qui s'en approche risque de chopper la peste calimshane
+//PXD108 La d√©charge -> des rats pestif√©r√©s se prom√®nent dans la zone et qui s'en approche risque de chopper la peste calimshane
 
-//PXD160 La nÈcropole silencieuse
-//Pas trouvÈ
+//PXD160 La n√©cropole silencieuse
+//Pas trouv√©
 
-//PXD610 Le Jardin vÈgÈtal -> tous les vers sont infectÈs
+//PXD610 Le Jardin v√©g√©tal -> tous les vers sont infect√©s
 COPY_EXISTING_REGEXP ~^px1083\([0-9][0-9]\)\.cre$~ ~override/px6107\1.cre~	WRITE_ASCII 0x260 ~pxdmouch~  #8
 LPF ADD_CRE_EFFECT INT_VAR opcode = 146 parameter2 = 1 timing = 9 target = 1 STR_VAR resource = pxdmouch
 LPF ADD_CRE_EFFECT INT_VAR opcode = 206 target = 1 timing = 9 STR_VAR resource = pxdmoucy END
@@ -185,24 +185,24 @@ COPY_EXISTING ~sppr717.spl~			~override/pxdmoucy.spl~
 
 //PXD208 Les tombeaux d'acier -> Des Esprits mulhorandais parcourent le niveau et boostent les monstres.
 
-//PXD190 Le dÈdale -> les portails sont alÈatoires et ne laissent passer qu'une personne
+//PXD190 Le d√©dale -> les portails sont al√©atoires et ne laissent passer qu'une personne
 //OK fait : script + copy
 
 //PXD208 Antimaginium -> un vortex temporel ralenti les pjs et spawn n'importe quel monstre de n'importe quelle zone
 
-//PXD100 La fournaise -> les dÈg‚ts de feu par round peuvent gÈnÈrer une bouffÈe de flammes
+//PXD100 La fournaise -> les d√©g√¢ts de feu par round peuvent g√©n√©rer une bouff√©e de flammes
 
 //PXD110 Le tombeau du grand ver -> +1 dragon du temps
 //Pas original, trouver mieux
 
-//PXD201 La salle de jeu du Mal -> +3 cranes enflammÈs automatiquement recrÈes aprËs 1D32+ rounds prËs du boss.
+//PXD201 La salle de jeu du Mal -> +3 cranes enflamm√©s automatiquement recr√©es apr√®s 1D32+ rounds pr√®s du boss.
 
 //PXD708 La forge -> les golems ont une chance d'exploser en mourant.
 
-//PXD204 Poche de normalitÈ
-//Pas trouvÈ
+//PXD204 Poche de normalit√©
+//Pas trouv√©
 
-//PXD105 Finale -> la zone contient en plus un DÈchireur enragÈ (toujours immortel).
+//PXD105 Finale -> la zone contient en plus un D√©chireur enrag√© (toujours immortel).
 
 COPY ~Derats_Defis/Difficulty/Copy~			~override~
 COMPILE ~Derats_Defis/Difficulty/Scripts~
