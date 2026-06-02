@@ -1,0 +1,23 @@
+IF
+	GlobalGT("pxdvoid","GLOBAL",0)
+THEN
+	RESPONSE #100
+		ClearAllActions()
+		StorePartyLocations()
+		CreateVisualEffectObject("icccmdsi",Player1)
+		CreateVisualEffectObject("icccmdsi",Player2)
+		CreateVisualEffectObject("icccmdsi",Player3)
+		CreateVisualEffectObject("icccmdsi",Player4)
+		CreateVisualEffectObject("icccmdsi",Player5)
+		CreateVisualEffectObject("icccmdsi",Player6)
+		CreateVisualEffectObject("icccmdsi",Familiar)
+		Wait(2)
+		ActionOverride(Player1,LeaveAreaLUA("pxd204","",[1385.892],SEE))
+		ActionOverride(Player2,LeaveAreaLUA("pxd204","",[1401.832],NWW))
+		ActionOverride(Player3,LeaveAreaLUA("pxd204","",[1464.820],N))
+		ActionOverride(Player4,LeaveAreaLUA("pxd204","",[1512.844],NEE))
+		ActionOverride(Player5,LeaveAreaLUA("pxd204","",[1511.896],SE))
+		ActionOverride(Player6,LeaveAreaLUA("pxd204","",[1446.913],S))
+		TakePartyItem("PXDVOID")
+		SetGlobal("pxdvoid","GLOBAL",0)
+END

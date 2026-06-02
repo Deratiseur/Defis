@@ -2,18 +2,20 @@
 @0 = ~Defis insurmontables de Telim'Gar~
 @1 = ~Réplique~
 @10 = ~Les monstres aleatoires ne rapportent pas d'xp~
-@11 = ~Multiplier le nombre de monstres aleatoires poses~
+@11 = ~Multiplier le nombre de monstres aleatoires poses
+(Composant modifiable en cour de jeu)~
 @12 = ~Doubler~
 @13 = ~Tripler~
 @14 = ~Quadrupler~
 @15 = ~Cette option necessite le composant principal~
 @16 = ~Esprit maudit~
-@17 = ~Ajouter un inconvenient supplementaire à chaque zone~
+@17 = ~Ajouter un inconvénient supplementaire a chaque zone~
 @18 = ~Golem poseur de défis~
 @19 = ~Rune de sortie~
 @110 = ~C'est une des runes nécessaires pour valider la victoire dans les Défis insurmontables de Telim'Gar.~
 @111 = ~C'est la rune finaaale, le jour de gloire est arrivé... Vous avez triomphé des Défis insurmontables de Telim'Gar, et cette rune vous permettra de mettre un terme définitif à l'aventure en retournant sur le plan primaire. Par contre il n'y aura probablement auquel barde pour avoir connaissance de vos exploits et un tirer une ballade épique.~
-@112 = ~Les monstres aleatoires droppent un tresor aleatoire~
+@112 = ~Les monstres aleatoires droppent un tresor aleatoire
+(Composant modifiable en cour de jeu)~
 @113 = ~de petite valeur~
 @114 = ~de moyenne valeur~
 @115 = ~de grosse valeur~
@@ -32,5 +34,13 @@
 @128 = ~Installation du Tombeau du Grand ver~
 @129 = ~Installation de la Salle de jeu du Mal~
 @130 = ~Installation de la Forge~
-@131 = ~Installation de la Poche de normalite~
+@131 = ~Installation de la Poche de réalité~
 @132 = ~Installation de la zone finale~
+@133 = ~Ajouter des objets permettant de dormir / sauvegarder pendant les defis.~
+@134 = ~Portail portable~
+@135 = ~Vous avez trouvé ce portail portable dans une décharge. Il permet de faire des aller-retours vers la chambre du responsable, et il ne fonctionne que dans l'enceinte des défis de Telim'gar.~
+@136 = ~Enlever le composant : un seul monstre a la fois~
+@137 = ~Enlever le composant : pas de tresor aleatoire~
+@138 = ~Sceptre de sauvegarde~
+@139 = ~Ce sceptre permet de sauvegarder la partie, même en présence d'ennemis ou d'effet de sorts de zone en court. Attention, la recharge risque d'être dangereuse !~
+@140 = ~^GSauvegarde effectuée^-~

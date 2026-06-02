@@ -1,0 +1,7 @@
+BEGIN ~PXD501PT~
+
+IF ~AreaCheck("PXD501")~ THEN BEGIN portal1 SAY @61003
+	IF ~~ THEN REPLY #13912  DO
+	~ActionOverride(LastTalkedToBy,LeaveAreaLUA("PXD708","",[2476.769],SEE))~ EXIT
+	IF ~~ THEN REPLY #13913 EXIT
+END

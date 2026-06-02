@@ -1,0 +1,35 @@
+ IF
+	OnCreation()
+THEN
+	RESPONSE #100
+		SetGlobalTimer("web","LOCALS",6)
+	RESPONSE #100
+		SetGlobalTimer("web","LOCALS",12)
+	RESPONSE #100
+		SetGlobalTimer("web","LOCALS",18)
+	RESPONSE #100
+		SetGlobalTimer("web","LOCALS",24)
+END
+
+IF
+	!StateCheck(Myself,STATE_HELPLESS)
+	See(NearestEnemyOf(Myself))
+	GlobalTimerExpired("web","LOCALS")
+THEN
+	RESPONSE #100
+		ReallyForceSpellRES("spdr201",NearestEnemyOf(Myself))
+		SetGlobalTimer("web","LOCALS",6)
+		Attack(NearestEnemyOf(Myself))
+	RESPONSE #100
+		ReallyForceSpellRES("spdr201",NearestEnemyOf(Myself))
+		SetGlobalTimer("web","LOCALS",12)
+		Attack(NearestEnemyOf(Myself))
+	RESPONSE #100
+		ReallyForceSpellRES("spdr201",NearestEnemyOf(Myself))
+		SetGlobalTimer("web","LOCALS",18)
+		Attack(NearestEnemyOf(Myself))
+	RESPONSE #100
+		ReallyForceSpellRES("spdr201",NearestEnemyOf(Myself))
+		SetGlobalTimer("web","LOCALS",24)
+		Attack(NearestEnemyOf(Myself))	
+END

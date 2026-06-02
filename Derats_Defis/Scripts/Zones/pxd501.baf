@@ -1,0 +1,138 @@
+IF
+    Global("px501wn","GLOBAL",1)
+THEN
+    RESPONSE #100
+        AmbientActivate("DEAD",TRUE)
+		AmbientActivate("ARM",FALSE)
+        AmbientActivate("HEAD",FALSE) 
+		SetGlobal("px501wn","GLOBAL",2)		
+END
+
+IF
+    Global("px708wn","GLOBAL",1)
+THEN
+    RESPONSE #100
+    SetGlobal("px708wn","GLOBAL",2)
+    ActionOverride(Player1,LeaveAreaLUA("AR0500","",[2387.1252],NNW))
+    ActionOverride(Player2,LeaveAreaLUA("AR0500","",[2428.1222],NNW))
+    ActionOverride(Player3,LeaveAreaLUA("AR0500","",[2477.1247],NNW))
+    ActionOverride(Player4,LeaveAreaLUA("AR0500","",[2437.1281],NNW))
+    ActionOverride(Player5,LeaveAreaLUA("AR0500","",[2484.1249],NNW))
+    ActionOverride(Player6,LeaveAreaLUA("AR0500","",[2520.1270],NNW))
+END
+
+
+IF
+   OnCreation()
+THEN
+    RESPONSE #100
+        StartTimer(30,30)
+END
+
+IF
+	TimerExpired(30)
+	Global("px501carbo","GLOBAL",1)
+	Global("px501wn","GLOBAL",0)
+	Global("px501hammer","GLOBAL",0)
+THEN
+	RESPONSE #100
+		SetGlobal("px501carbo","GLOBAL",2)
+		CreateVisualEffect("SPFLAST1",[794.1001])
+		CreateCreature("pxcarbo2",[794.1001],NE)
+		StartTimer(30,30)
+END
+
+IF
+	TimerExpired(30)
+	Global("px501carbo","GLOBAL",2)
+	Global("px501hammer","GLOBAL",1)
+	Global("px501wn","GLOBAL",0)
+	RandomNum(10,1)
+THEN
+	RESPONSE #100
+		CreateVisualEffect("SPFLAST1",[794.1001])
+		CreateCreature("pxcarbo2",[794.1001],NE)
+		StartTimer(30,18)
+END
+
+IF
+	TimerExpired(30)
+	Global("px501carbo","GLOBAL",2)
+	Global("px501wn","GLOBAL",0)
+	Global("px501hammer","GLOBAL",0)
+	RandomNum(10,1)
+THEN
+	RESPONSE #100
+		CreateVisualEffect("SPFLAST1",[794.1001])
+		CreateCreature("pxcarbo2",[794.1001],NE)
+		StartTimer(30,30)
+END
+
+IF
+	TimerExpired(30)
+	Global("px501carbo","GLOBAL",1)
+	Global("px501hammer","GLOBAL",1)
+	Global("px501wn","GLOBAL",0)
+THEN
+	RESPONSE #100
+		SetGlobal("px501carbo","GLOBAL",2)
+		CreateVisualEffect("SPFLAST1",[794.1001])
+		CreateCreature("pxcarbo2",[794.1001],NE)
+		StartTimer(30,18)
+END
+
+IF
+	TimerExpired(30)
+	Global("px501wn","GLOBAL",0)
+	Global("px501hammer","GLOBAL",0)
+	!Global("px501carbo","GLOBAL",1)
+THEN
+	RESPONSE #100
+		CreateVisualEffect("SPFLAST1",[794.851])
+		CreateCreature("pxd708sp",[794.858],S)
+		StartTimer(30,30)
+	RESPONSE #100
+		CreateVisualEffect("SPFLAST1",[983.880])
+		CreateCreature("pxd708sp",[983.880],S)
+		StartTimer(30,30)
+	RESPONSE #100
+		CreateVisualEffect("SPFLAST1",[1024.754])
+		CreateCreature("pxd708sp",[1072.754],S)
+		StartTimer(30,30)
+	RESPONSE #100
+		CreateVisualEffect("SPFLAST1",[1213.678])
+		CreateCreature("pxd708sp",[1213.678],S)
+		StartTimer(30,30)
+	RESPONSE #100
+		CreateVisualEffect("SPFLAST1",[1261.532])
+		CreateCreature("pxd708sp",[1261.532],S)
+		StartTimer(30,30)
+END
+
+IF
+	TimerExpired(30)
+	Global("px501wn","GLOBAL",0)
+	Global("px501hammer","GLOBAL",1)
+	!Global("px501carbo","GLOBAL",1)
+THEN
+	RESPONSE #100
+		CreateVisualEffect("SPFLAST1",[794.851])
+		CreateCreature("pxd708sp",[794.858],S)
+		StartTimer(30,18)
+	RESPONSE #100
+		CreateVisualEffect("SPFLAST1",[983.880])
+		CreateCreature("pxd708sp",[983.880],S)
+		StartTimer(30,18)
+	RESPONSE #100
+		CreateVisualEffect("SPFLAST1",[1024.754])
+		CreateCreature("pxd708sp",[1072.754],S)
+		StartTimer(30,18)
+	RESPONSE #100
+		CreateVisualEffect("SPFLAST1",[1213.678])
+		CreateCreature("pxd708sp",[1213.678],S)
+		StartTimer(30,18)
+	RESPONSE #100
+		CreateVisualEffect("SPFLAST1",[1261.532])
+		CreateCreature("pxd708sp",[1261.532],S)
+		StartTimer(30,18)
+END

@@ -137,7 +137,7 @@ Choqueur_caparaconne			px180336
 Choqueur_maudit					px180338
 Choqueur_explosif				px180339
 Choqueur_antimagique			px180341
-Choqueur_immortel				px190143
+Choqueur_immortel				px180143
 Choqueur_refracte				px180345
 Choqueur_temporel				px180346
 Choqueur_protecteur				px180347
@@ -208,7 +208,6 @@ Elemental_cryophique		px180502
 Elemental_accelere			px180503
 Elemental_flou				px180504
 Elemental_berserk			px180505
-Elemental_cracheur			px180506
 Elemental_rayonnant			px180507
 Elemental_mephitique		px180508
 Ancien_Elemental			px180509
@@ -245,7 +244,6 @@ Elemental_tueur				px180540
 Elemental_antimagique		px180541
 Elemental_negatif			px180542
 Elemental_immortel			px180543
-Elemental_psychique			px180544
 Elemental_refracte			px180545
 Elemental_temporel			px180546
 Elemental_protecteur		px180547

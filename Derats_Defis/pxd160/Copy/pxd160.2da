@@ -46,7 +46,7 @@ Archer_temporel			px160146
 Archer_protecteur		px160147
 Archer_source_de_vie	px160148
 Archer_repliquant		px160149
-Archer_pyro-lie			px160160
+Archer_pyro-lie			px160150
 Archer_du_carnage		px160151
 Super_Archer			px160152
 Archer_du_vide			px160154
@@ -100,7 +100,7 @@ Combattant_temporel			px160246
 Combattant_protecteur		px160247
 Combattant_source_de_vie	px160248
 Combattant_repliquant		px160249
-Combattant_pyro-lie			px160260
+Combattant_pyro-lie			px160250
 Combattant_du_carnage		px160251
 Super_Combattant			px160252
 Combattant_du_vide			px160254
@@ -155,7 +155,7 @@ Goule_temporel			px160346
 Goule_protecteur		px160347
 Goule_source_de_vie		px160348
 Goule_repliquant		px160349
-Goule_pyro-lie			px160360
+Goule_pyro-lie			px160350
 Goule_du_carnage		px160351
 Super_Goule				px160352
 Goule_du_vide			px160354
@@ -210,7 +210,7 @@ Necrophage_temporel			px160446
 Necrophage_protecteur		px160447
 Necrophage_source_de_vie	px160448
 Necrophage_repliquant		px160449
-Necrophage_pyro-lie			px160460
+Necrophage_pyro-lie			px160450
 Necrophage_du_carnage		px160451
 Super_Necrophage			px160452
 Necrophage_du_vide			px160454
@@ -264,7 +264,7 @@ Vampire_temporel		px160546
 Vampire_protecteur		px160547
 Vampire_source_de_vie	px160548
 Vampire_repliquant		px160549
-Vampire_pyro-lie		px160560
+Vampire_pyro-lie		px160550
 Vampire_du_carnage		px160551
 Super_Vampire			px160552
 Vampire_du_vide			px160554
@@ -318,7 +318,7 @@ Spectre_temporel			px160646
 Spectre_protecteur			px160647
 Spectre_source_de_vie		px160648
 Spectre_repliquant			px160649
-Spectre_pyro-lie			px160660
+Spectre_pyro-lie			px160650
 Spectre_du_carnage			px160651
 Super_Spectre				px160652
 Spectre_du_vide				px160654

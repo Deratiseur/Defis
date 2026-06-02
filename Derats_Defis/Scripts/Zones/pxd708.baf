@@ -1,0 +1,55 @@
+IF
+	OnCreation()
+THEN
+	RESPONSE #100
+		ReallyForceSpellPointRES("Pxd7081",[3677.1619])
+		ReallyForceSpellPointRES("Pxd7081",[2530.1298])
+		StartTimer(1,1)
+		IncrementGlobal("pxd708","GLOBAL",1)
+END
+
+IF
+	Global("px501wn","GLOBAL",0)
+	Global("px501hammer","GLOBAL",0)
+	GlobalGT("pxd708","GLOBAL",29)
+THEN
+	RESPONSE #100
+		CreateCreature("pxd708sp",[2437.728],S)
+		SetGlobal("pxd708","GLOBAL",0)
+		StartTimer(1,1)
+END
+
+IF
+	Global("px501wn","GLOBAL",0)
+	Global("px501hammer","GLOBAL",1)
+	GlobalGT("pxd708","GLOBAL",17)
+THEN
+	RESPONSE #100
+		CreateCreature("pxd708sp",[2437.728],S)
+		SetGlobal("pxd708","GLOBAL",0)
+		StartTimer(1,1)
+END
+
+IF
+	TimerExpired(1)
+THEN
+	RESPONSE #100
+		ReallyForceSpellPointRES("Pxd7081",[3677.1619])
+		ReallyForceSpellPointRES("Pxd7081",[2530.1298])
+		IncrementGlobal("pxd708","GLOBAL",1)
+		StartTimer(1,1)
+END
+
+IF
+	Global("px708wn","GLOBAL",1)
+THEN
+	RESPONSE #100
+		SetGlobal("px708wn","GLOBAL",2)
+		ActionOverride(Player1,LeaveAreaLUA("AR0500","",[2387.1252],NNW))  // Bridge District
+		ActionOverride(Player2,LeaveAreaLUA("AR0500","",[2428.1222],NNW))  // Bridge District
+		ActionOverride(Player3,LeaveAreaLUA("AR0500","",[2477.1247],NNW))  // Bridge District
+		ActionOverride(Player4,LeaveAreaLUA("AR0500","",[2437.1281],NNW))  // Bridge District
+		ActionOverride(Player5,LeaveAreaLUA("AR0500","",[2484.1249],NNW))  // Bridge District
+		ActionOverride(Player6,LeaveAreaLUA("AR0500","",[2520.1270],NNW))  // Bridge District
+END
+

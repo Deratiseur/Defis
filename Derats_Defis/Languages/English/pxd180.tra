@@ -3,7 +3,7 @@
 @18003 = ~This tapestry lists the names of all the heroes who died in one of the challenges. You don't know any of the names listed. Most of the challenges referenced do not correspond to those proposed by the golem.~
 @18004 = ~This tapestry lists the names of all the heroes who have successfully reached the final challenge. However, it is not specified whether they managed to defeat the ultimate boss. One of the names has been scratched out to be erased.~
 @18005 = ~This tapestry lists the names of all the heroes who distinguished themselves in the challenges. You can read about feats such as “Completed all challenges in just one hour and five minutes,” “Destroyed two bosses with a single spell,” etc. Curiously, in the middle of the list, one name has been scratched out. His feat was said to have “impressed the master so much that he never came out.”~
-@18006 = ~This tapestry lists all the series of challenges that have been constructed. It seems that several different series of challenges have existed and that the one you are currently attempting is unique. The last reference indicates the eleven challenges that the golem offered you, plus three others that he did not offer: “The Library,” “The Museum of the Dead,” and “The Pasture.”~
+@18006 = ~This tapestry lists all the series of challenges that have been constructed. It seems that several different series of challenges have existed and that the one you are currently attempting is unique. The last reference indicates the ten challenges that the golem offered you, plus three others that he did not offer: “The Library,” “The Gallery of Agony,” and “The Pasture.”~
 
 @180101 = ~Pyrophor Nishruu~
 @180102 = ~Cryophic Nishruu~
@@ -224,7 +224,6 @@
 @180503 = ~Accelerated Antimagic Quasielemental~
 @180504 = ~Blurry Antimagic Quasielemental~
 @180505 = ~Berserk Antimagic Quasielemental~
-@180506 = ~Spitter Antimagic Quasielemental~
 @180507 = ~Radiant Antimagic Quasielemental~
 @180508 = ~Noxious Antimagic Quasielemental~
 @180509 = ~Old Antimagic Quasielemental~
@@ -262,7 +261,6 @@
 @180541 = ~Antimagic Antimagic Quasielemental~
 @180542 = ~Negative Antimagic Quasielemental~
 @180543 = ~Immortal Antimagic Quasielemental~
-@180544 = ~Psychic Antimagic Quasielemental~
 @180545 = ~Refracted Antimagic Quasielemental~
 @180546 = ~Temporal Antimagic Quasielemental~
 @180547 = ~Protector Antimagic Quasielemental~

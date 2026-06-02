@@ -1,0 +1,11 @@
+IF
+	!StateCheck(Myself,STATE_HELPLESS)
+	See(NearestEnemyOf(Myself))
+	Range(NearestEnemyOf(Myself),9)
+	!GlobalTimerNotExpired("shock","LOCALS")
+THEN
+	RESPONSE #100
+		ReallyForceSpellRES("px70833",Myself)
+		SetGlobalTimer("shock","LOCALS",18)
+		Attack(NearestEnemyOf(Myself))
+END

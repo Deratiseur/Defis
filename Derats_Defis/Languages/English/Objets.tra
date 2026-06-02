@@ -36,7 +36,7 @@ Charge capacity:
 Once per day, you can choose to cast:
 - Absolute Immunity
 - Fairy Shield (immunity to magic for 4 rounds) 
-- Fairy Globe of Invulnerability (Immunity to 1st- through 5th-level spells and the rest of the group to 1st- through 3th-level spells)
+- Fairy Globe of Invulnerability (Immunity to 1st- through 6th-level spells and the rest of the group to 1st- through 3th-level spells)
 Special: Must be held in hand, takes the place of the shield.~
 @2081 = ~Fairy Shield~
 @2082 = ~Fairy Globe of Invulnerability~
@@ -138,7 +138,7 @@ Equipment Capabilities:
 PARAMETERS:
 
 Equipment Capabilities:
-- Maximum Health Points: +40
+- Maximum Hit Points: +40
 - Immunity to Slow and Wing Buffets.~
 
 @223 = ~Kaom's Heart~
@@ -413,7 +413,7 @@ PARAMETERS
 
 Allows you to summon an unknown creature. Single use.~
 
-@259 = ~Frenzy~
+@259 = ~Frenzy +2~
 @260 = ~This sword won't stay still. When you hold it in your hand, it swings around at breakneck speed. 
 
 PARAMETERS:
@@ -456,3 +456,57 @@ Requires:
  3 Strength
 
 Weight: 2~
+
+@265 = ~Magic Bullet~
+@266 = ~This bullet literally radiates magic. And for good reason: it splits into 5 when thrown. However, the thrower makes only a single attack roll: either all the projectiles hit, or none do.
+
+STATISTICS:
+
+Special: Regenerates in the sling after each throw
+Special: Considered a +1 magic weapon
+
+Damage: 5x1D4+1
+Damage Type: Magic
+Weight: 0
+Throwing Weapon: Sling~
+
+@267 = ~Secrets of the Blacksmith~
+@268 = ~This thick tome teaches everything needed to create some of the golems known only to the Blacksmith.
+
+STATISTICS:
+
+Special Ability:
+Summon a golem specific to the Blacksmith for 10 rounds, once per day.~
+
+@269 = ~Wand of Curse Removal~ 
+@270 = ~A wand that can be useful in certain circumstances.
+
+PARAMETERS:
+
+Effects: Curse Removal
+Range: 30 m
+Area: 1 creature~
+
+
+@271 = ~Blacksmith's Booklet~
+@272 = ~This tattered booklet describes how to build a Charreder.
+
+PARAMETERS:
+
+Special Ability:
+Summon a Charreder v2 for 10 rounds, once per day.
+
+Special: 15% chance that the booklet will deteriorate and become unusable after each use.
+
+Weight: 25~
+@273 = ~Remains of a Booklet~
+@274 = ~This is all that remains of the Blacksmith's Booklet. Through repeated use, it has been completely destroyed.~
+
+@275 = ~Wand of Party Teleportation~ 
+@276 = ~This wand allows for mass teleportation.
+
+PARAMETERS:
+
+Effects: Teleports the party to any location on the map.
+Range: Special
+Target: Party~

@@ -5,9 +5,9 @@ IF ~Global("pxcoward","GLOBAL",0) Global("pxgolem","GLOBAL",0)~ THEN BEGIN welco
 	IF ~~ THEN REPLY @33 GOTO sort
 END
 
-IF ~Global("pxgolem","GLOBAL",1)~ THEN BEGIN welcome4 SAY @339
+IF ~Global("pxcoward","GLOBAL",0) Global("pxgolem","GLOBAL",1)~ THEN BEGIN welcome4 SAY @339
 	IF ~~ THEN REPLY @340 GOTO liste
-	IF ~Global("px180wn","GLOBAL",1) Global("px180sc","GLOBAL",0)~ THEN REPLY @341 GOTO trois
+	IF ~Global("px180wn","GLOBAL",2) Global("pxdhour2","GLOBAL",1) Global("px180sc","GLOBAL",0)~ THEN REPLY @341 GOTO trois
 	IF ~~ THEN REPLY @337 EXIT
 END
 	
@@ -150,6 +150,28 @@ IF ~~ THEN BEGIN liste SAY @332
 	ActionOverride(Player4,LeaveAreaLUA("PXD180","",[2681.1073],SW))
     ActionOverride(Player5,LeaveAreaLUA("PXD180","",[2712.1024],SW))
     ActionOverride(Player6,LeaveAreaLUA("PXD180","",[2663.999],SW))~ EXIT
+	IF ~Global("px100ok","GLOBAL",0)~ THEN REPLY @322 DO
+	~SaveGame(0)
+	CreateVisualEffectObject("spportal",LastTalkedToBy)
+	Wait(3)
+	SetGlobal("px100ok","GLOBAL",1)
+	ActionOverride(Player1,LeaveAreaLUA("PXD100","",[620.2329],E))
+    ActionOverride(Player2,LeaveAreaLUA("PXD100","",[616.2373],E))
+    ActionOverride(Player3,LeaveAreaLUA("PXD100","",[571.2374],E))
+	ActionOverride(Player4,LeaveAreaLUA("PXD100","",[573.2326],E))
+    ActionOverride(Player5,LeaveAreaLUA("PXD100","",[512.2330],E))
+    ActionOverride(Player6,LeaveAreaLUA("PXD100","",[515.2375],E))~ EXIT
+	IF ~Global("px708ok","GLOBAL",0)~ THEN REPLY @331 DO
+	~SaveGame(0)
+	CreateVisualEffectObject("spportal",LastTalkedToBy)
+	Wait(3)
+	SetGlobal("px100ok","GLOBAL",1)
+	ActionOverride(Player1,LeaveAreaLUA("PXD708","",[169.2067],E))
+    ActionOverride(Player2,LeaveAreaLUA("PXD708","",[142.2104],E))
+    ActionOverride(Player3,LeaveAreaLUA("PXD708","",[86.2083],E))
+	ActionOverride(Player4,LeaveAreaLUA("PXD708","",[119.2046],E))
+    ActionOverride(Player5,LeaveAreaLUA("PXD708","",[77.2031],E))
+    ActionOverride(Player6,LeaveAreaLUA("PXD708","",[44.2066],E))~ EXIT
 	IF ~~ THEN REPLY @333 EXIT
 END
 

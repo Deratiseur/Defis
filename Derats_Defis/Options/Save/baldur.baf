@@ -1,0 +1,48 @@
+IF
+	Global("pxdsave","GLOBAL",1)
+THEN
+	RESPONSE #100
+		SaveGame(1)
+		DisplayString(Myself,@140)
+		SetGlobal("pxdsave","GLOBAL",0)
+END
+
+IF
+	GlobalGT("pxdvoid","GLOBAL",0)
+	OR(16)
+		AreaCheck("PXD108")
+		AreaCheck("PXD404")
+		AreaCheck("PXD160")
+		AreaCheck("PXD150")
+		AreaCheck("PXD610")
+		AreaCheck("PXD208")
+		AreaCheck("PXD190")
+		AreaCheck("PXD180")
+		AreaCheck("PXD100")
+		AreaCheck("PXD110")
+		AreaCheck("PXD101")
+		AreaCheck("PXD201")
+		AreaCheck("PXD708")
+		AreaCheck("PXD501")
+		AreaCheck("PXD200")
+		AreaCheck("PXD290")
+THEN
+	RESPONSE #100
+		SetGlobal("pxdvoid","GLOBAL",0)
+		ClearAllActions()
+		StorePartyLocations()
+		CreateVisualEffectObject("icccmdsi",Player1)
+		CreateVisualEffectObject("icccmdsi",Player2)
+		CreateVisualEffectObject("icccmdsi",Player3)
+		CreateVisualEffectObject("icccmdsi",Player4)
+		CreateVisualEffectObject("icccmdsi",Player5)
+		CreateVisualEffectObject("icccmdsi",Player6)
+		Wait(2)
+		ActionOverride(Player1,LeaveAreaLUA("pxd903","",[582.341],SE))
+		ActionOverride(Player2,LeaveAreaLUA("pxd903","",[536.363],SE))
+		ActionOverride(Player3,LeaveAreaLUA("pxd903","",[499.342],SE))
+		ActionOverride(Player4,LeaveAreaLUA("pxd903","",[538.307],SE))
+		ActionOverride(Player5,LeaveAreaLUA("pxd903","",[511.280],SE))
+		ActionOverride(Player6,LeaveAreaLUA("pxd903","",[458.306],SE))
+		
+END

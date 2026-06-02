@@ -32,7 +32,7 @@ COPY_EXISTING ~tooltip.2da~						~override~	REPLACE ~6969963~ @2081
 
 ////Random monsters
 
-COPY ~Derats_Defis/pxd180/Cres/px1803.cre~ 		~override~	SAY NAME1 @1803	SAY NAME2 @1803	LPF Anticre END
+COPY ~Derats_Defis/pxd180/Cres/px1803.cre~ 		~override~	SAY NAME1 @1803	SAY NAME2 @1803	LPF Anti180 END
 LPF ADD_CRE_EFFECT INT_VAR opcode = 206 target = 1 timing = 9 STR_VAR resource = pxd1801 END
 COPY_EXISTING ~spwi403d.eff~		~override/pxd18034.eff~	WRITE_ASCII 0x30 ~pxd18034~ #8
 COPY_EXISTING ~spwi403d.eff~		~override/pxd18035.eff~	WRITE_ASCII 0x30 ~pxd18035~ #8
@@ -50,7 +50,7 @@ WRITE_LONG 0x28 (IDS_OF_SYMBOL (~animate~ ~MYRLOCHAR~))
 LPF ADD_CRE_EFFECT INT_VAR opcode = 51 target = 1 timing = 9  parameter2 = 2 parameter1 = 1684340480 END
 LPF ADD_CRE_EFFECT INT_VAR opcode = 176 target = 1 timing = 9  parameter2 = 1 parameter1 = 9 END
 COPY_EXISTING ~golmag01.cre~		~override/px1804.cre~	LPF Anti180 END
-COPY_EXISTING ~Nishruu.itm~						~Override~ WRITE_LONG 0x98 1
+COPY_EXISTING ~Nishruu.itm~						~override~ WRITE_LONG 0x98 1
 
 //Nishru
 COPY_EXISTING ~px1801.cre~			~override/px180101.cre~	SAY NAME1 @180101	SAY NAME2 @180101
@@ -240,7 +240,8 @@ LPF ADD_CRE_EFFECT INT_VAR opcode = 146 parameter2 = 1 timing = 9 target = 1 STR
 COPY_EXISTING ~pxdrayon.spl~		~override/px180pr1.spl~	WRITE_ASCII 0xae ~px180pr1~ #8	WRITE_BYTE 0x9e 24
 COPY_EXISTING ~sareveff.eff~		~override/px180pr1.eff~	WRITE_ASCII 0x30 ~px180pr2~ #8
 COPY ~Derats_Defis/pxd180/Cres/px180pr1.cre~	~override~	SAY NAME1 @1802211	SAY NAME2 @1802211	LPF Anti108 END
-COPY_EXISTING ~px180pr1.cre~		~override/px180pr2.cre~ SAY NAME1 @1802212	SAY NAME2 @1802212	WRITE_ASCII 0x106c ~px180221~ #8
+COPY_EXISTING ~px180pr1.cre~		~override/px180pr2.cre~ SAY NAME1 @1802212	SAY NAME2 @1802212
+LPF ALTER_EFFECT STR_VAR match_resource= px1802 resource= px180221 END
 COPY_EXISTING ~px1802.cre~			~override/px180222.cre~	SAY NAME1 @180222	SAY NAME2 @180222
 LPF ADD_CRE_EFFECT INT_VAR opcode = 146 parameter2 = 1 timing = 9 target = 1 STR_VAR resource = pxdpeste END
 COPY_EXISTING ~px1802.cre~			~override/px180223.cre~	SAY NAME1 @180223	SAY NAME2 @180223
@@ -421,8 +422,7 @@ LPF ADD_CRE_EFFECT INT_VAR opcode = 146 parameter2 = 1 timing = 9 target = 1 STR
 //Cracheur
 COPY_EXISTING ~px1804.cre~			~override/px180406.cre~	SAY NAME1 @180406	SAY NAME2 @180406
 REPLACE_CRE_ITEM ~px180406~ #0 #0 #0 ~UNDROPPABLE~ ~WEAPON1~ EQUIP
-COPY_EXISTING ~otyugh.itm~			~override/px180406.itm~	WRITE_BYTE 0x9c 192	WRITE_BYTE 0x72 2	WRITE_BYTE 0x80 50
-WRITE_ASCII 0xbe ~px180406~ #8	WRITE_ASCII 0xee ~px180406~ #8
+COPY_EXISTING ~golmag01.itm~			~override/px180406.itm~	WRITE_BYTE 0x9c 192	WRITE_BYTE 0x72 2	WRITE_BYTE 0x80 50
 COPY_EXISTING ~px1804.cre~			~override/px180407.cre~	SAY NAME1 @180407	SAY NAME2 @180407
 LPF ADD_CRE_EFFECT INT_VAR opcode = 146 parameter2 = 1 timing = 9 target = 1 STR_VAR resource = pxdrayon END
 //Méphitique
@@ -507,7 +507,6 @@ COPY_EXISTING ~px1804.cre~			~override/px180443.cre~	SAY NAME1 @180443	SAY NAME2
 COPY_EXISTING ~px1804.cre~			~override/px180444.cre~	SAY NAME1 @180444	SAY NAME2 @180444
 REPLACE_CRE_ITEM ~px180444~ #0 #0 #0 ~UNDROPPABLE~ ~WEAPON1~ EQUIP
 COPY_EXISTING ~px180406.itm~		~override/px180444.itm~	WRITE_SHORT 0x9c ~%pxdpsych%~
-WRITE_ASCII 0xbe ~px180444~ #8	WRITE_ASCII 0xee ~px180444~ #8
 COPY_EXISTING ~px1804.cre~			~override/px180445.cre~	SAY NAME1 @180445	SAY NAME2 @180445
 LPF ADD_CRE_EFFECT INT_VAR opcode = 146 parameter2 = 1 timing = 9 target = 1 STR_VAR resource = pxdrefra END
 COPY_EXISTING ~px1804.cre~			~override/px180446.cre~	SAY NAME1 @180446	SAY NAME2 @180446
@@ -553,11 +552,6 @@ COPY_EXISTING ~px1805.cre~			~override/px180504.cre~	SAY NAME1 @180504	SAY NAME2
 LPF ADD_CRE_EFFECT INT_VAR opcode = 146 parameter2 = 1 timing = 9 target = 1 STR_VAR resource = pxdflou END
 COPY_EXISTING ~px1805.cre~			~override/px180505.cre~	SAY NAME1 @180505	SAY NAME2 @180505
 LPF ADD_CRE_EFFECT INT_VAR opcode = 146 parameter2 = 1 timing = 9 target = 1 STR_VAR resource = pxdbersk END
-//Cracheur
-COPY_EXISTING ~px1805.cre~			~override/px180506.cre~	SAY NAME1 @180506	SAY NAME2 @180506
-REPLACE_CRE_ITEM ~px180506~ #0 #0 #0 ~UNDROPPABLE~ ~WEAPON1~ EQUIP
-COPY_EXISTING ~otyugh.itm~			~override/px180506.itm~	WRITE_BYTE 0x9c 192	WRITE_BYTE 0x72 2	WRITE_BYTE 0x80 50
-WRITE_ASCII 0xbe ~px180506~ #8	WRITE_ASCII 0xee ~px180506~ #8
 COPY_EXISTING ~px1805.cre~			~override/px180507.cre~	SAY NAME1 @180507	SAY NAME2 @180507
 LPF ADD_CRE_EFFECT INT_VAR opcode = 146 parameter2 = 1 timing = 9 target = 1 STR_VAR resource = pxdrayon END
 //Méphitique
@@ -638,11 +632,6 @@ COPY_EXISTING ~px1805.cre~			~override/px180542.cre~	SAY NAME1 @180542	SAY NAME2
 LPF ADD_CRE_EFFECT INT_VAR opcode = 146 parameter2 = 1 timing = 9 target = 1 STR_VAR resource = pxdnegat END
 //Immortel
 COPY_EXISTING ~px1805.cre~			~override/px180543.cre~	SAY NAME1 @180543	SAY NAME2 @180543	WRITE_ASCII 0x248 ~pxdimmor~ #8
-//Psychique
-COPY_EXISTING ~px1805.cre~			~override/px180544.cre~	SAY NAME1 @180544	SAY NAME2 @180544
-REPLACE_CRE_ITEM ~px180544~ #0 #0 #0 ~UNDROPPABLE~ ~WEAPON1~ EQUIP
-COPY_EXISTING ~px180506.itm~		~override/px180544.itm~	WRITE_SHORT 0x9c ~%pxdpsych%~
-WRITE_ASCII 0xbe ~px180544~ #8	WRITE_ASCII 0xee ~px180544~ #8
 COPY_EXISTING ~px1805.cre~			~override/px180545.cre~	SAY NAME1 @180545	SAY NAME2 @180545
 LPF ADD_CRE_EFFECT INT_VAR opcode = 146 parameter2 = 1 timing = 9 target = 1 STR_VAR resource = pxdrefra END
 COPY_EXISTING ~px1805.cre~			~override/px180546.cre~	SAY NAME1 @180546	SAY NAME2 @180546

@@ -1,0 +1,8 @@
+IF
+	!GlobalTimerNotExpired("spawn","LOCALS")
+	Global("px501wn","GLOBAL",0)
+THEN
+	RESPONSE #100
+		CreateCreature("pxd708sp",[2473.769],S)
+		SetGlobalTimer("spawn","LOCALS",30)
+END

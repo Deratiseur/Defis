@@ -9,6 +9,8 @@ LAM ~GW_READ_COL_TOOLTIP~
 INCLUDE ~Derats_Defis/Scripts/Installs/Base.tph~
 VERBOSE
 
+
+
 /////////////////////////////////////////////////////////////////////////////////////
 /////////////////////////   108 - LA DECHARGE + 404 + 903   /////////////////////////
 /////////////////////////////////////////////////////////////////////////////////////
@@ -63,11 +65,20 @@ SILENT
 INCLUDE ~Derats_Defis/Scripts/Installs/Pxd180.tph~
 VERBOSE
 
-/*
+/////////////////////////////////////////////////////////////////////////////////////
+///////////////////////////////   100 - LA FOURNAISE   //////////////////////////////
+/////////////////////////////////////////////////////////////////////////////////////
+PRINT  @127
+SILENT
+INCLUDE ~Derats_Defis/Scripts/Installs/Pxd100.tph~
+VERBOSE
 
+/*
 /////////////////////////////////////////////////////////////////////////////////////
 //////////////////////   110 - LE TOMBEAU DU GRAND VER + 101   //////////////////////
 /////////////////////////////////////////////////////////////////////////////////////
+PRINT  @128
+SILENT
 COPY ~Derats_Defis/pxd110/Area~					~override~
 COPY ~Derats_Defis/pxd110/Anim/Abishai-red-blue~ ~override~
 COPY ~Derats_Defis/pxd110/Anim/Half-dragon_black~ ~override~
@@ -77,55 +88,44 @@ COPY_EXISTING ~pxd108sp.spl~		~override/pxd110sp.spl~	WRITE_ASCII 0xae ~pxd110~ 
 
 
 
-COPY ~Derats_Defis/pxd110-101/Area~				~override~
+COPY ~Derats_Defis/pxd110/pxd101/Area~			~override~
 COPY ~Derats_Defis/pxd110/items/pxdbatoc.itm~ 	~override~	SAY NAME2 @251	SAY DESC @252
 
-/////////////////////////////////////////////////////////////////////////////////////
-///////////////////////////////   100 - LA FOURNAISE   //////////////////////////////
-/////////////////////////////////////////////////////////////////////////////////////
-COPY ~Derats_Defis/pxd100/Area~					~override~
-COPY_EXISTING ~pxd108sp.cre~		~override/pxd100sp.cre~	WRITE_ASCII 0x514 ~pxd100sp~ #8
-COPY_EXISTING ~pxd108sp.spl~		~override/pxd100sp.spl~	WRITE_ASCII 0xae ~pxd100~ #8
-COPY ~Derats_Defis/pxd100/pxd1001.spl~			~override~	WRITE_SHORT 0x98 ~%pxdtout%~
+VERBOSE
 
 /////////////////////////////////////////////////////////////////////////////////////
-///////////////////////////   201 - LA SALLE DE TORTURE   ///////////////////////////
+//////////////////////////   201 - LA SALLE DE JEU DU MAL   /////////////////////////
 /////////////////////////////////////////////////////////////////////////////////////
+PRINT  @129
+SILENT
 COPY ~Derats_Defis/pxd201/Area~					~override~
 COPY_EXISTING ~pxd108sp.cre~		~override/pxd201sp.cre~	WRITE_ASCII 0x514 ~pxd201sp~ #8
 COPY_EXISTING ~pxd108sp.spl~		~override/pxd201sp.spl~	WRITE_ASCII 0xae ~pxd201~ #8
 
+
+VERBOSE
+
+*/
+
 /////////////////////////////////////////////////////////////////////////////////////
 //////////////////////////////   708 - LA FORGE + 501   /////////////////////////////
 /////////////////////////////////////////////////////////////////////////////////////
-COPY ~Derats_Defis/pxd708/Area~					~override~
-COPY ~Derats_Defis/pxd708/Anim/Iwd_Iron_Golem~	~override~
-COPY_EXISTING ~pxd108sp.cre~		~override/pxd708sp.cre~	WRITE_ASCII 0x514 ~pxd708sp~ #8
-COPY_EXISTING ~pxd108sp.spl~		~override/pxd708sp.spl~	WRITE_ASCII 0xae ~pxd708~ #8
-
-
-COPY ~Derats_Defis/pxd708-501/Area~				~override~
-COPY ~Derats_Defis/pxd708-501/pxd501b.cre~		~override~	SAY NAME1 @70801	SAY NAME2 @70801
-COPY_EXISTING ~pxd108sp.cre~		~override/pxd501sp.cre~	WRITE_ASCII 0x514 ~pxd501sp~ #8
-COPY_EXISTING ~pxd108sp.spl~		~override/pxd501sp.spl~	WRITE_ASCII 0xae ~pxd501~ #8
-
-/////////////////////////////////////////////////////////////////////////////////////
-////////////////////////////   204 - POCHE DE NORMALITÉ   ///////////////////////////
-/////////////////////////////////////////////////////////////////////////////////////
-
-COPY ~Derats_Defis/pxd204/Area~					~override~
-COPY_EXISTING ~pxd108sp.cre~		~override/pxd204sp.cre~	WRITE_ASCII 0x514 ~pxd204sp~ #8
-COPY_EXISTING ~pxd108sp.spl~		~override/pxd204sp.spl~	WRITE_ASCII 0xae ~pxd204~ #8
+PRINT  @130
+SILENT
+INCLUDE ~Derats_Defis/Scripts/Installs/Pxd708.tph~
+VERBOSE
+/*
 
 /////////////////////////////////////////////////////////////////////////////////////
 /////////////////////////////   105 - LA BIBLIOTHÈQUE   /////////////////////////////
 /////////////////////////////////////////////////////////////////////////////////////
-
+PRINT  @132
+SILENT
 COPY ~Derats_Defis/pxd105/Area~					~override~
 COPY ~Derats_Defis/pxd105/Copy~					~override~
 
 ////Nouvelle animation : Tarasque
-LAF FIND_FREE_ANIM_SLOT INT_VAR slotMin = 0xE000 slotMax = 0xefff RET slot END
+LAF FIND_FREE_ANIM_SLOT INT_VAR slotMin = 0x7000 slotMax = 0xefff RET slot END
 ACTION_IF (slot <= 0) BEGIN
   FAIL ~No free creature animation slot found.~
 END
@@ -134,7 +134,7 @@ LAF TO_HEX_NUMBER INT_VAR value = slot minDigits = 4 RET hexNumber END
 APPEND ~animate.ids~ ~0x%hexNumber% GW_Tarasque~ UNLESS ~GW_Tarasque~
 CLEAR_IDS_MAP
 
-COPY ~Derats_Defis/pxd105/xdr1.ini~ ~override/%hexNumber%.ini~
+COPY ~Derats_Defis/pxd105/Anim/xdr1.ini~ ~override/%hexNumber%.ini~
 ACTION_BASH_FOR ~Derats_Defis/pxd105/Anim/Tarasque~ ~^.+\.bam$~ BEGIN
   COPY ~%BASH_FOR_FILESPEC%~ ~override~
 END
@@ -143,11 +143,117 @@ END
 COPY ~Derats_Defis/pxd105/items/pxdnegac.itm~	~override~	SAY NAME2 @235	SAY DESC @236
 COPY_EXISTING ~spwi403d.eff~		~override/pxdnegac.eff~	WRITE_ASCII 0x30 ~pxdnegac~ #8
 
+VERBOSE
+
+/////////////////////////////////////////////////////////////////////////////////////
+/////////////////////////   200 - LA GALERIE DE L'AGONIE   //////////////////////////
+/////////////////////////////////////////////////////////////////////////////////////
+SILENT
+
+
+////Nouvelle animation : Élémentaire de pierre de Diablo2
+LAF FIND_FREE_ANIM_SLOT INT_VAR slotMin = 0x7F00 slotMax = 0xefff RET slot END
+ACTION_IF (slot <= 0) BEGIN
+  FAIL ~No free creature animation slot found.~
+END
+
+LAF TO_HEX_NUMBER INT_VAR value = slot minDigits = 4 RET hexNumber END
+APPEND ~animate.ids~ ~0x%hexNumber% D2_Stone_elemental~ UNLESS ~D2_Stone_elemental~
+CLEAR_IDS_MAP
+
+COPY ~Derats_Defis/pxd105/items/Discombulateur/Blob1/Anim/pxdg.ini~ ~override/%hexNumber%.ini~
+ACTION_BASH_FOR ~Derats_Defis/Secrets/blob1/Anim/Skins_Stone_Elemental~ ~^.+\.bam$~ BEGIN
+  COPY ~%BASH_FOR_FILESPEC%~ ~override~
+END
+
+
+COPY ~Derats_Defis/pxd105/items/Discombulateur/Blob1/copy~	~override~
+COPY ~Derats_Defis/pxd105/items/Discombulateur/Blob1/area~	~override~
+COPY_EXISTING ~pxd108sp.cre~		~override/pxd200sp.cre~	WRITE_ASCII 0x514 ~pxd200sp~ #8
+COPY_EXISTING ~pxd108sp.spl~		~override/pxd200sp.spl~	WRITE_ASCII 0xae ~pxd200~ #8
+
+
+
+
+/////////////////////////////////////////////////////////////////////////////////////
+///////////////////////////////  290 - LE PÂTURAGE   ////////////////////////////////
+/////////////////////////////////////////////////////////////////////////////////////
+
+
+////Nouvelle animation : Minotaure en armure de Diablo2
+LAF FIND_FREE_ANIM_SLOT INT_VAR slotMin = 0xE000 slotMax = 0xefff RET slot END
+ACTION_IF (slot <= 0) BEGIN
+  FAIL ~No free creature animation slot found.~
+END
+
+LAF TO_HEX_NUMBER INT_VAR value = slot minDigits = 4 RET hexNumber END
+APPEND ~animate.ids~ ~0x%hexNumber% D2_Minotaur~ UNLESS ~D2_Minotaur~
+CLEAR_IDS_MAP
+
+COPY ~Derats_Defis/pxd105/items/Discombulateur/Blob2/Anim/skmn.ini~ ~override/%hexNumber%.ini~
+ACTION_BASH_FOR ~Derats_Defis/pxd105/items/Discombulateur/Blob2/Anim/Skins_Minotaure~ ~^.+\.bam$~ BEGIN
+  COPY ~%BASH_FOR_FILESPEC%~ ~override~
+END
+
+////Nouvelle animation : Vache avec hallebarde de Diablo2
+LAF FIND_FREE_ANIM_SLOT INT_VAR slotMin = 0xE000 slotMax = 0xefff RET slot END
+ACTION_IF (slot <= 0) BEGIN
+  FAIL ~No free creature animation slot found.~
+END
+
+LAF FIND_FREE_ANIM_SLOT INT_VAR slotMin = 0xE000 slotMax = 0xefff RET slot END
+ACTION_IF (slot <= 0) BEGIN
+  FAIL ~No free creature animation slot found.~
+END
+
+LAF TO_HEX_NUMBER INT_VAR value = slot minDigits = 4 RET hexNumber END
+APPEND ~animate.ids~ ~0x%hexNumber% bovine_axe_thing~ UNLESS ~bovine_axe_thing~
+CLEAR_IDS_MAP
+
+COPY ~Derats_Defis/pxd105/items/Discombulateur/Blob2/Anim/d2cow.ini~ ~override/%hexNumber%.ini~
+ACTION_BASH_FOR ~Derats_Defis/pxd105/items/Discombulateur/Blob2/Anim/Anim/bovine_axe_thing~ ~^.+\.bam$~ BEGIN
+  COPY ~%BASH_FOR_FILESPEC%~ ~override~
+END
+
+LAF FIND_FREE_ANIM_SLOT INT_VAR slotMin = 0xE000 slotMax = 0xefff RET slot END
+ACTION_IF (slot <= 0) BEGIN
+  FAIL ~No free creature animation slot found.~
+END
+
+
+COPY ~Derats_Defis/pxd105/items/Discombulateur/Blob2/copy~	~override~
+COPY ~Derats_Defis/pxd105/items/Discombulateur/Blob2/area~	~override~
+COPY_EXISTING ~pxd108sp.cre~		~override/pxd290sp.cre~	WRITE_ASCII 0x514 ~pxd290sp~ #8
+COPY_EXISTING ~pxd108sp.spl~		~override/pxd290sp.spl~	WRITE_ASCII 0xae ~pxd290~ #8
+
+ADD_PROJECTILE	~Derats_Defis/pxd105/items/Discombulateur/Blob2/pxdcowbl.pro~				~pxd proximity Cow~
+COPY ~Derats_Defis/pxd105/items/Discombulateur/Blob2/pxdcowbl.spl~	~override~	WRITE_SHORT 0x98 ~%pxdcowbl%~
+COPY_EXISTING	~amcall.vvc~		~override/pxfycalv.vvc~	WRITE_ASCII 0x8 ~pxfycal2~ #8	WRITE_ASCII 0x78 ~pxfycalo~ #8
+
+
+VERBOSE
+
 */
+
 
 PRINT  @119
 SILENT
 COMPILE ~Derats_Defis/Scripts~
 COMPILE ~Derats_Defis/Temp~
 COMPILE ~Derats_Defis/Dialogs~
+
+DEFINE_PATCH_FUNCTION Antiall BEGIN
+LPF Anti108 END
+LPF Anti160 END
+LPF Anti610 END
+LPF Anti208 END
+LPF Anti190 END
+LPF Anti180 END
+LPF Anti100 END
+END
+COPY_EXISTING ~zombie01.cre~		~override/pxdnecr1.cre~
+			  ~skelet01.cre~		~override/pxdnecr2.cre~
+			  ~skelwa02.cre~		~override/pxdnecr3.cre~
+			  ~ghoul01.cre~			~override/pxdnecr4.cre~LPF Antiall END	LPF Anticre END	
+			  LPF ADD_CRE_EFFECT INT_VAR opcode = 16 target = 1 timing = 9  END
 VERBOSE

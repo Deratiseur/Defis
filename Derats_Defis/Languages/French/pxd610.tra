@@ -57,6 +57,7 @@
 @610156 = ~Grizzli d'ombre~
 @610157 = ~Grizzli maître des mouches~
 @610158 = ~Grizzli hypnotique~
+
 @610201 = ~Araignée sabre pyrophore~
 @610202 = ~Araignée sabre cryophique~
 @610203 = ~Araignée sabre accélérée~
@@ -116,6 +117,7 @@
 @610256 = ~Araignée sabre d'ombre~
 @610257 = ~Araignée sabre maîtresse des mouches~
 @610258 = ~Araignée sabre roches hypnotique~
+
 @610301 = ~Troll pyrophore~
 @610302 = ~Troll cryophique~
 @610303 = ~Troll accéléré~
@@ -172,6 +174,7 @@
 @610356 = ~Troll d'ombre~
 @610357 = ~Troll maître des mouches~
 @610358 = ~Troll hypnotique~
+
 @610401 = ~Basilic pyrophore~
 @610402 = ~Basilic cryophique~
 @610403 = ~Basilic accéléré~
@@ -237,8 +240,10 @@
 @610466 = ~Basilic majeur vampirique~
 @610467 = ~Basilic majeur caparaçonné~
 @610468 = ~Basilic majeur maudit~
-@610469 = ~Basilic majeur répliquant~
-@610470 = ~Basilic majeur du vide~
+@610469 = ~Basilic majeur psychique~
+@610470 = ~Basilic majeur répliquant~
+@610471 = ~Basilic majeur du vide~
+
 @610501 = ~Wyverne pyrophore~
 @610502 = ~Wyverne cryophique~
 @610503 = ~Wyverne accélérée~
@@ -295,6 +300,7 @@
 @610556 = ~Wyverne d'ombre~
 @610557 = ~Wyverne maîtresse des mouches~
 @610558 = ~Wyverne hypnotique~
+
 @610601 = ~Tertre errant pyrophore~
 @610602 = ~Tertre errant cryophique~
 @610603 = ~Tertre errant accéléré~
@@ -352,15 +358,15 @@
 @610657 = ~Tertre errant maître des mouches~
 @610658 = ~Tertre errant hypnotique~
 
-@18001 = ~vache guerrière~
-@18002 = ~vache de proximité~
-@18003 = ~Gardien de vache bombardeur~
-@18004 = ~Tête de vache~
-@18005 = ~Bouse de vache~
-@18006 = ~Tête de vache vengeresse de la mort~
-@18007 = ~Tête de vache vengeresse du vide~
-@18008 = ~Tête de vache vengeresse du chaos~
-@18009 = ~Tête de vache vengeresse du temps~
-@18010 = ~Mourrez, mangeurs de vaches !~
-@18011 = ~Vengeance pour les vaches !~
-@18012 = ~Champion de la vengeance des vaches~
+@29001 = ~vache guerrière~
+@29002 = ~vache de proximité~
+@29003 = ~Gardien de vache bombardeur~
+@29004 = ~Tête de vache~
+@29005 = ~Bouse de vache~
+@29006 = ~Tête de vache vengeresse de la mort~
+@29007 = ~Tête de vache vengeresse du vide~
+@29008 = ~Tête de vache vengeresse du chaos~
+@29009 = ~Tête de vache vengeresse du temps~
+@29010 = ~Mourrez, mangeurs de vaches !~
+@29011 = ~Vengeance pour les vaches !~
+@29012 = ~Champion de la vengeance des vaches~

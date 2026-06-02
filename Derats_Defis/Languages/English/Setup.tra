@@ -2,7 +2,8 @@
 @0 = ~Telim'Gar's insurmountable challenges~
 @1 = ~Replica~
 @10 = ~Random monsters do not yield XP.~
-@11 = ~Increase the number of random monsters placed~
+@11 = ~Increase the number of random monsters placed
+(Component that can be changed during gameplay)~
 @12 = ~Double~
 @13 = ~Triple~
 @14 = ~Quadruple~
@@ -13,7 +14,8 @@
 @19 = ~Exit rune~
 @110 = ~It is one of the runes needed to validate victory in Telim'Gar's Insurmountable Challenges.~
 @111 = ~This is the finaaal rune, the day of glory has arrived... You have triumphed over the insurmountable challenges of Telim'Gar, and this rune will allow you to bring the adventure to a definitive end by returning to the primary plane. However, there will probably be no bard to hear of your exploits and compose an epic ballad about them.~
-@112 = ~Random monsters drop random treasure.~
+@112 = ~Random monsters drop random treasure.
+(Component that can be changed during gameplay)~
 @113 = ~of little value~
 @114 = ~of average value~
 @115 = ~of great value~
@@ -34,3 +36,11 @@
 @130 = ~Installation of the Forge~
 @131 = ~Installation of the Pocket of Normality~
 @132 = ~Installation of the final zone~
+@133 = ~Add items that allow you to sleep or save during challenges.~
+@134 = ~Portable portal~
+@135 = ~You found this portable portal in a dump. It lets you travel back and forth to the boss's room, and it only works within the Telim'gar Challenge area.~
+@136 = ~Remove the component: one monster at a time~
+@137 = ~Remove the component: no random treasure~
+@138 = ~Scepter of Save~
+@139 = ~This scepter allows you to save your game, even when enemies are present or area-of-effect spells are active. Be careful—reloading could be dangerous!~
+@140 = ~^GQuick save successful^-~

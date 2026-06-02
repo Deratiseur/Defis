@@ -1,9 +1,9 @@
 @18001 = ~Lame noire du désastre vivante~
 @18002 = ~La Lame noire du désastre vivante devient Berserk~
-@18003 = ~Sur cette tapisserie sont listés les noms de tous les héros morts dans l'un des défis. Vous ne connaisse aucun des noms listés. La plupart des défis référencés ne correspondent pas à ceux que le golem vous a proposé.~
+@18003 = ~Sur cette tapisserie sont listés les noms de tous les héros morts dans l'un des défis. Vous ne connaissez aucun des noms listés. La plupart des défis référencés ne correspondent pas à ceux que le golem vous a proposé.~
 @18004 = ~Sur cette tapisserie sont listés les noms de tous les héros qui ont réussi à atteindre le défi final. Par contre il n'est pas précisé s'il ont réussi à vaincre le boss ultime. Un des noms a été gratté pour être effacé.~
 @18005 = ~Sur cette tapisserie sont listés les noms de tous les héros qui se sont illustrés dans les défis. Vous pouvez lire des exploits tels que "A réussi tous les défis en une heure et cinq minutes seulement", "A détruit deux boss avec un seul sort", etc... Curieusement, au milieu de la liste, un nom à été gratté pour être effacé. Son exploit serait "à tellement impressionné le maître qu'il n'est jamais ressorti".~
-@18006 = ~Sur cette tapisserie sont listés toutes les séries de défis qui ont été construites. Il semble que plusieurs séries de défis différentes aient existé et que celle que vous tentez actuellement soit unique. La dernière référence indique les onze défis que vous à proposé le golem, plus trois autres qu'il ne vous a pas proposé : "La Bibliothèque", "Le Musée des morts" et "Le pâturage".~
+@18006 = ~Sur cette tapisserie sont listés toutes les séries de défis qui ont été construites. Il semble que plusieurs séries de défis différentes aient existé et que celle que vous tentez actuellement soit unique. La dernière référence indique les dix défis que vous à proposé le golem, plus trois autres qu'il ne vous a pas proposé : "La bibliothèque", "La galerie de l'agonie" et "Le pâturage".~
 
 @180101 = ~Nishru pyrophore~
 @180102 = ~Nishru cryophique~
@@ -220,7 +220,6 @@
 @180503 = ~Quasi élémentaire d'Antimagie accéléré~
 @180504 = ~Quasi élémentaire d'Antimagie flou~
 @180505 = ~Quasi élémentaire d'Antimagie berserk~
-@180506 = ~Quasi élémentaire d'Antimagie cracheur~
 @180507 = ~Quasi élémentaire d'Antimagie rayonnant~
 @180508 = ~Quasi élémentaire d'Antimagie méphitique~
 @180509 = ~Ancien Quasi élémentaire d'Antimagie~
@@ -257,7 +256,6 @@
 @180541 = ~Quasi élémentaire d'Antimagie antimagique~
 @180542 = ~Quasi élémentaire d'Antimagie négatif~
 @180543 = ~Quasi élémentaire d'Antimagie immortel~
-@180544 = ~Quasi élémentaire d'Antimagie psychique~
 @180545 = ~Quasi élémentaire d'Antimagie réfracté~
 @180546 = ~Quasi élémentaire d'Antimagie temporel~
 @180547 = ~Quasi élémentaire d'Antimagie protecteur~

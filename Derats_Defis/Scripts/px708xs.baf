@@ -1,0 +1,29 @@
+IF
+	!StateCheck(Myself,STATE_HELPLESS)
+	!See(NearestEnemyOf(Myself))
+	!GlobalTimerNotExpired("fire","LOCALS")
+THEN
+	RESPONSE #100
+		ReallyForceSpellPointRES("pxdgdrag",[3126.1348])
+		SetGlobalTimer("fire","LOCALS",6)
+END
+
+
+
+IF
+	!StateCheck(Myself,STATE_HELPLESS)
+	See(NearestEnemyOf(Myself))
+	!GlobalTimerNotExpired("fire","LOCALS")
+THEN
+	RESPONSE #100
+		ReallyForceSpellRES("pxdgdrag",NearestEnemyOf(Myself))
+		SetGlobalTimer("fire","LOCALS",6)
+END
+
+
+IF
+	!HitBy()
+THEN
+	RESPONSE #100
+		AttackOneRound(LastHitter)
+END

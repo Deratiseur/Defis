@@ -139,6 +139,8 @@
 @190406 = ~Ocularon cracheur~
 @190407 = ~Ocularon rayonnant~
 @190409 = ~Ancien Ocularon~
+@190410 = ~Ocularon aveuglant~
+@190411 = ~Ocularon du malheur~
 @190412 = ~Ocularon déchirant~
 @190413 = ~Ocularon entropique~
 @190414 = ~Ocularon épuisant~
@@ -201,7 +203,7 @@
 
 @20001 = ~Moglus~
 @20002 = ~Des aventuriers ? Ici ? Comment êtes vous arrivés là ?~
-	@20003 = ~J'ai utilisé un portail bleu dans la zone où se trouve le mal absolu.~
+	@20003 = ~J'ai utilisé un portail bleu dans la Salle de jeu du Mal.~
 @20004 = ~Un portail bleu ? Zut, ça veut dire qu'il est resté en place après que je l'ai crée pour m'enfuir. Il aurait disparaître de lui même.~
 	@20005 = ~Vous enfuir ? De quoi vouliez vous vous enfuir ?~
 	@20006 = ~Et ben non, c'est raté. Mais je dois dire que votre portail est instable, il apparaît et disparaît aléatoirement.~

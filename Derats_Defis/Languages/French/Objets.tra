@@ -35,7 +35,7 @@ Capacité de charge :
 Une fois par jour permet de lancer au choix :
 - Immunité absolue
 - Bouclier des fées (immunité contre la magie 4 rounds)
-- Globe d'invulnérabilité féerique (protection contre les sorts de niveau 5 et le reste du groupe contre les sorts de niveau 3).
+- Globe d'invulnérabilité féerique (protection contre les sorts de niveau 6 et le reste du groupe contre les sorts de niveau 3).
 
 Spécial : doit être tenue en main, occupe la place du bouclier.~
 @2081 = ~Bouclier des fées~
@@ -115,10 +115,10 @@ Capacités d'équipement :
 - Résistances élémentaires : -65%
 - Dégâts élémentaires infligés : +200%
 
-TAC0 : +5
-Dégâts : 1D6 +5
+TAC0 : +1
+Dégâts : 1D6 +1
 Type de dégâts : Contondant 
-Facteur de Vitesse : 1
+Facteur de Vitesse : 3
 Compétence : Bâton
 Type d'arme : à 2 mains
 Force nécessaire : 5
@@ -141,7 +141,7 @@ PARAMETRES :
 
 Capacités d'équipement :
 - Point de vie maximum : +40
-- Immunité au ralentissement et aux coup d'aile.~
+- Immunité au ralentissement et aux coups d'ailes.~
 
 @223 = ~Coeur de Kaom~
 @224 = ~L’Incarnation du feu que vous avez combattu sur une poche de terre dans le plan élémentaire du feu portait cette armure.
@@ -149,7 +149,7 @@ Capacités d'équipement :
 PARAMETRES :
 
 Capacités d'équipement :
-- Point de vie maximum : +200
+- Points de vie maximum : +200
 
 Classe d'Armure : 2 (-1 contre les armes tranchantes)
 Poids : 20
@@ -211,7 +211,7 @@ Hélas, le sorcier pris Galeno en flagrant délit. À la grande horreur de Galen
 
 PARAMETRES :
 
-- Capacités de combat :
+Capacités de combat :
 - Crée l'effet d'une baguette aléatoire en touchant.
 
 Capacités de charge :
@@ -404,7 +404,7 @@ PARAMETRES
 
 Permet d'invoquer une créature inconnue. Usage unique.~
 
-@259 = ~Frénésie~
+@259 = ~Frénésie +2~
 @260 = ~Cette épée ne tient pas en place. Quand vous la tenez en main elle s'agite en tout sens à une vitesse hallucinante. 
 
 PARAMETRES :
@@ -413,7 +413,7 @@ Capacités d'équipement :
  +3 attaques par round
  
 TAC0 : -8
-Dégâts :  1D6 +2 (perforant)
+Dégâts :  1D6+2 (perforant)
 Facteur de Vitesse : 1
 
 Type de compétence : Épée Courte
@@ -446,3 +446,56 @@ Compétence : dague
 Type : une main
 
 Poids : 2~
+
+@265 = ~Bille magique~
+@266 = ~Cette bille de fronde irradie littéralement la magie. Et pour cause : elle se divise en 5 quand elle est projetée. Toutefois le tireur ne fait qu'un seul jet d'attaque : ou tous les projectiles touchent, ou aucun.
+
+PARAMETRES :
+
+Spécial : recrée dans la fronde après chaque lancé
+Spécial : considérée comme une arme magique +1
+
+Dégâts : 5x1D4+1
+Type de dégâts : magiques
+Poids : 0
+Arme de jet : fronde~
+
+@267 = ~Secrets du Forgeron~
+@268 = ~Cet épais volume enseigne tout ce qu'il faut pour pouvoir créer quelques uns des golems que le Forgeron est le seul à connaître.
+
+PARAMETRES :
+
+Capacité spéciale :
+Invocation d'un golem spécifique au Forgeron pour 10 rounds, 1 fois par jour.~
+
+@269 = ~Baguette de délivrance de la malédiction~ 
+@270 = ~Une baguette qui peut être utile dans certaines circonstances.
+
+PARAMETRES :
+
+Effets : Délivrance de la malédiction
+Portée : 30 m
+Zone : 1 créature~
+
+@271 = ~Livret du Forgeron~
+@272 = ~Ce livret en mauvais état décrit comment construire un Carbonisateur.
+
+PARAMETRES :
+
+Capacité spéciale :
+Invocation d'un Carbonisateur v2 pour 10 rounds, 1 fois par jour.
+
+Spécial : 15% de chances que le livret se détériore et devienne inutilisable après chaque utilisation.
+
+Poid : 25~
+@273 = ~Reste d'un livret~
+@274 = ~C'est tout ce qui reste du Livret du Forgeron. À force d'utilisation il a fini complètement détruit.~
+
+@275 = ~Baguette de déplacement de groupe~ 
+@276 = ~cette baguette permet une téléportation de masse.
+
+PARAMETRES :
+
+Effets : Téléporte tout le groupe à n'importe quel endroit sur la carte.
+Portée : spéciale
+Cible : groupe complet~

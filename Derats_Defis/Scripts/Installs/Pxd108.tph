@@ -36,12 +36,12 @@ LPF ADD_ITEM_EFFECT INT_VAR opcode = 146 type = 1 target = 2  probability1 = 10 
 COPY ~Derats_Defis/pxd108/Cres/px1085.cre~ 		~override~	SAY NAME1 @10851	SAY NAME2 @10851	LPF Anti108 END
 COPY_EXISTING ~Otyugh.cre~			~override/px1081.cre~	LPF Anti108 END	
 LPF	ADD_CRE_EFFECT INT_VAR opcode = 101 target = 1 parameter2 = 78 timing = 9 END //Rp : les Otyughs sont immunisés aux maladies
-LPF ADD_CRE_EFFECT INT_VAR opcode = 206 target = 1 timing = 9 STR_VAR resource = Pxd1901 END
+LPF ADD_CRE_EFFECT INT_VAR opcode = 206 target = 1 timing = 9 STR_VAR resource = Pxd1901 END //Réutilisé pour Le Dédale
 COPY_EXISTING ~Jellmu.cre~			~override/px1082.cre~
 			  ~Pettin.cre~			~override/px1086.cre~	LPF Anti108 END
-COPY_EXISTING ~Umbhul01.cre~		~override/px1084.cre~	LPF Anti108 END WRITE_BYTE 0x72 2 //Ombre des roches correction du niveau : 10
+COPY_EXISTING ~Umbhul01.cre~		~override/px1084.cre~	LPF Anti108 END WRITE_BYTE 0x234 10 //Ombre des roches correction du niveau : 10
 COPY_EXISTING ~Carrio.cre~			~override/px1083.cre~	LPF Anti108 END
-LPF ADD_CRE_EFFECT INT_VAR opcode = 206 target = 1 timing = 9 STR_VAR resource = Pxd6101 END
+LPF ADD_CRE_EFFECT INT_VAR opcode = 206 target = 1 timing = 9 STR_VAR resource = Pxd6101 END //Réutilisé pour le Labyrinthe végétal
 
 //Otyugh
 COPY_EXISTING ~px1081.cre~			~override/px108101.cre~	SAY NAME1 @108101	SAY NAME2 @108101
@@ -58,7 +58,7 @@ LPF ADD_CRE_EFFECT INT_VAR opcode = 146 parameter2 = 1 timing = 9 target = 1 STR
 COPY_EXISTING ~px1081.cre~			~override/px108106.cre~	SAY NAME1 @108106	SAY NAME2 @108106
 REPLACE_CRE_ITEM ~px108106~ #0 #0 #0 ~UNDROPPABLE~ ~WEAPON1~ EQUIP
 COPY_EXISTING ~otyugh.itm~			~override/px108106.itm~	WRITE_BYTE 0x9c 192	WRITE_BYTE 0x72 2	WRITE_BYTE 0x80 50
-WRITE_ASCII 0xbe ~px108106~ #8	WRITE_ASCII 0xee ~px108106~ #8
+LPF ALTER_EFFECT STR_VAR match_resource= otyugh resource=px108106 END
 //Rayonnant
 COPY_EXISTING ~px1081.cre~			~override/px108107.cre~	SAY NAME1 @108107	SAY NAME2 @108107
 LPF ADD_CRE_EFFECT INT_VAR opcode = 146 parameter2 = 1 timing = 9 target = 1 STR_VAR resource = pxdrayon END
@@ -144,7 +144,7 @@ COPY_EXISTING ~px1081.cre~			~override/px108143.cre~	SAY NAME1 @108143	SAY NAME2
 COPY_EXISTING ~px1081.cre~			~override/px108144.cre~	SAY NAME1 @108144	SAY NAME2 @108144
 REPLACE_CRE_ITEM ~px108144~ #0 #0 #0 ~UNDROPPABLE~ ~WEAPON1~ EQUIP
 COPY_EXISTING ~px108106.itm~		~override/px108144.itm~	WRITE_SHORT 0x9c ~%pxdpsych%~
-WRITE_ASCII 0xbe ~px108144~ #8	WRITE_ASCII 0xee ~px108144~ #8
+LPF ALTER_EFFECT STR_VAR match_resource= px108106 resource=px108144 END
 COPY_EXISTING ~px1081.cre~			~override/px108145.cre~	SAY NAME1 @108145	SAY NAME2 @108145
 LPF ADD_CRE_EFFECT INT_VAR opcode = 146 parameter2 = 1 timing = 9 target = 1 STR_VAR resource = pxdrefra END
 COPY_EXISTING ~px1081.cre~			~override/px108146.cre~	SAY NAME1 @108146	SAY NAME2 @108146
@@ -603,7 +603,8 @@ LPF ADD_CRE_EFFECT INT_VAR opcode = 146 parameter2 = 1 timing = 9 target = 1 STR
 COPY_EXISTING ~pxdrayon.spl~		~override/px108pr1.spl~	WRITE_ASCII 0xae ~px108pr1~ #8	WRITE_BYTE 0x9e 24
 COPY_EXISTING ~sareveff.eff~		~override/px108pr1.eff~	WRITE_ASCII 0x30 ~px108pr2~ #8
 COPY ~Derats_Defis/pxd108/Cres/px108pr1.cre~	~override~	SAY NAME1 @1085211	SAY NAME2 @1085211	LPF Anti108 END
-COPY_EXISTING ~px108pr1.cre~		~override/px108pr2.cre~ SAY NAME1 @1085212	SAY NAME2 @1085212	WRITE_ASCII 0x106c ~px108521~ #8
+COPY_EXISTING ~px108pr1.cre~		~override/px108pr2.cre~ SAY NAME1 @1085212	SAY NAME2 @1085212
+LPF ALTER_EFFECT STR_VAR match_resource= px1085 resource= px108521 END
 COPY_EXISTING ~px1085.cre~			~override/px108522.cre~	SAY NAME1 @108522	SAY NAME2 @108522
 LPF ADD_CRE_EFFECT INT_VAR opcode = 146 parameter2 = 1 timing = 9 target = 1 STR_VAR resource = pxdpeste END
 COPY_EXISTING ~px1085.cre~			~override/px108523.cre~	SAY NAME1 @108523	SAY NAME2 @108523
@@ -821,16 +822,20 @@ COPY_EXISTING ~pxd108sp.cre~		~override/pxd404sp.cre~	WRITE_ASCII 0x514 ~pxd404s
 COPY_EXISTING ~pxd108sp.spl~		~override/pxd404sp.spl~	WRITE_ASCII 0xae ~pxd404~ #8
 
 ////Sous Boss
-COPY_EXISTING ~px108144.itm~		~override/pxd404b2.itm~
-WRITE_ASCII 0xbe ~pxd404b2~ #8	WRITE_ASCII 0xee ~pxd404b2~ #8	WRITE_BYTE 0x88 6	WRITE_BYTE 0x8a 2
+COPY_EXISTING ~px108144.itm~		~override/pxd404b2.itm~	WRITE_BYTE 0x88 6	WRITE_BYTE 0x8a 2
+LPF ALTER_EFFECT STR_VAR match_resource= px108144 resource=pxd404b2 END
 COPY ~Derats_Defis/pxd108/pxd404/pxd404b2.cre~	~override~	SAY NAME1 @10803	SAY NAME2 @10803	LPF Anticre END
 COPY_EXISTING ~otyugh.itm~			~override/pxd404b.itm~
-WRITE_ASCII 0xbe ~pxd404b~ #8	WRITE_ASCII 0xee ~pxd404b~ #8	WRITE_BYTE 0x88 6	WRITE_BYTE 0x8a 2
-WRITE_BYTE 0x10e 2	WRITE_SHORT 0x118 270	WRITE_SHORT 0x148 270	WRITE_SHORT 0x178 270	WRITE_SHORT 0x1a8 270
-COPY_EXISTING ~pxd404b2.cre~		~override/pxd404b.cre~	SAY NAME1 @10802	SAY NAME2 @10802	WRITE_BYTE 0x504 1
+LPF ALTER_EFFECT STR_VAR match_resource= otyugh resource=pxd404b END
+LPF ALTER_EFFECT STR_VAR match_duration=90 duration=270 END
+WRITE_BYTE 0x88 6	WRITE_BYTE 0x8a 2	WRITE_BYTE 0x10e 2	
+COPY_EXISTING ~pxd404b2.cre~		~override/pxd404b.cre~	SAY NAME1 @10802	SAY NAME2 @10802
 REPLACE_CRE_ITEM ~pxd404b~ #0 #0 #0 ~UNDROPPABLE~ ~WEAPON1~ EQUIP
 REPLACE_CRE_ITEM ~pxdcrex~ #0 #0 #0 ~UNSTEALABLE~ ~AMULET~
+REMOVE_CRE_ITEM PXD108RU
+LPF DELETE_CRE_EFFECT INT_VAR opcode_to_delete=16 END
 LPF ADD_CRE_EFFECT INT_VAR opcode = 146 parameter2 = 1 timing = 9 target = 1 STR_VAR resource = pxdbersk END
+LPF ADD_CRE_EFFECT INT_VAR opcode = 16 parameter2 = 1 timing = 9 target = 1 END
 
 COPY ~Derats_Defis/pxd108/pxd903/Area~			~override~
 COPY ~Derats_Defis/pxd108/pxd903/pxd903.are~	~override~ SAY 0x308 @10810 SAY 0x244 @10811

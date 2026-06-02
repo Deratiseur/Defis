@@ -1,12 +1,30 @@
 IF
-    Global("px108wn","GLOBAL",1)
+	GlobalGT("pxdvoid","GLOBAL",0)
 THEN
-    RESPONSE #100
-    SetGlobal("px108wn","GLOBAL",2)
-    ActionOverride(Player1,LeaveAreaLUA("AR0500","",[2387.1252],NNW))
-    ActionOverride(Player2,LeaveAreaLUA("AR0500","",[2428.1222],NNW))
-    ActionOverride(Player3,LeaveAreaLUA("AR0500","",[2477.1247],NNW))
-    ActionOverride(Player4,LeaveAreaLUA("AR0500","",[2437.1281],NNW))
-    ActionOverride(Player5,LeaveAreaLUA("AR0500","",[2484.1249],NNW))
-    ActionOverride(Player6,LeaveAreaLUA("AR0500","",[2520.1270],NNW))
+	RESPONSE #100
+		SetGlobal("pxdvoid","GLOBAL",0)
+		ClearAllActions()
+		CreateVisualEffectObject("icccmdsi",Player1)
+		CreateVisualEffectObject("icccmdsi",Player2)
+		CreateVisualEffectObject("icccmdsi",Player3)
+		CreateVisualEffectObject("icccmdsi",Player4)
+		CreateVisualEffectObject("icccmdsi",Player5)
+		CreateVisualEffectObject("icccmdsi",Player6)
+		CreateVisualEffectObject("icccmdsi",Familiar)
+		Wait(2)
+		RestorePartyLocations()		
+END
+
+IF
+	PartyHasItem("pxdvoid")  // Portail portable
+THEN
+	RESPONSE #100
+		TriggerActivation("to0109",FALSE)
+END
+
+IF
+	!PartyHasItem("pxdvoid")  // Portail portable
+THEN
+	RESPONSE #100
+		TriggerActivation("to0109",TRUE)
 END

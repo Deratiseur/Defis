@@ -127,7 +127,7 @@ LPF ADD_CRE_EFFECT INT_VAR opcode = 146 parameter2 = 1 timing = 9 target = 1 STR
 COPY_EXISTING ~px1601.cre~			~override/px160137.cre~	SAY NAME1 @160137	SAY NAME2 @160137
 LPF ADD_CRE_EFFECT INT_VAR opcode = 146 parameter2 = 1 timing = 9 target = 1 STR_VAR resource = pxdcharg END
 COPY_EXISTING ~px1601.cre~			~override/px160138.cre~	SAY NAME1 @160138	SAY NAME2 @160138	WRITE_ASCII 0x248 ~px1601md~ #8
-COPY ~Derats_Defis/Scripts/pxd1803.baf~		~Derats_Defis/Temp/px1603.baf~	REPLACE_TEXTUALLY ~pxdhour2~ ~pxdhour1~
+COPY ~Derats_Defis/Scripts/pxd180t3.baf~		~Derats_Defis/Temp/px1603.baf~	REPLACE_TEXTUALLY ~pxdhour2~ ~pxdhour1~
 COPY ~Derats_Defis/Scripts/pxdmephi.baf~ ~Derats_Defis/Temp/px1601md.baf~	REPLACE_TEXTUALLY ~pxdmephy~ ~px160138~
 COPY_EXISTING ~px1601.cre~			~override/px1601sp.cre~	SAY NAME1 @16	SAY NAME2 @16
 REPLACE_CRE_ITEM ~BDSPIRIM~ #0 #0 #0 ~UNDROPPABLE~ ~HELMET~

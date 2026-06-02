@@ -1,0 +1,30 @@
+IF
+	Global("pxd200hp","LOCALS",0)
+	See(NearestEnemyOf(Myself))
+    !GlobalTimerNotExpired("pxd2003","LOCALS")
+THEN
+    RESPONSE #100
+        ReallyForceSpellRES("spwi299",LastSeenBy(Myself))
+        SetGlobalTimer("pxd2003","LOCALS",6)
+END
+
+IF
+	Global("pxd200hp","LOCALS",0)
+	OR(3)
+        HPPercentLT(Myself,100)
+        AttackedBy([ANYONE],DEFAULT)
+        TookDamage()
+THEN
+    RESPONSE #100
+		SetGlobal("pxd200hp","LOCALS",1)
+END
+
+IF
+	Global("pxd200hp","LOCALS",1)
+	See(NearestEnemyOf(Myself))
+    !GlobalTimerNotExpired("pxd2003","LOCALS")
+THEN
+    RESPONSE #100
+        ReallyForceSpellRES("spwi299",LastSeenBy(Myself))
+        SetGlobalTimer("pxd2003","LOCALS",2)
+END

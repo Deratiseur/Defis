@@ -1,0 +1,7 @@
+IF
+    SpellCastOnMe([ANYONE],CLERIC_REMOVE_CURSE)
+THEN
+    RESPONSE #100
+        Kill(Myself)
+        AddexperienceParty(8000)
+END

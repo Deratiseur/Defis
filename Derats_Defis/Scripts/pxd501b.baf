@@ -2,5 +2,30 @@ IF
 	Die()
 THEN
 	RESPONSE #100
-		SetGlobal("px708wn","GLOBAL",1)
+		SetGlobal("px501wn","GLOBAL",1)
+END
+
+IF
+	PartyHasItem("pxdenclu")
+	Global("px501hammer","GLOBAL",0)
+THEN
+	RESPONSE #100
+		SetGlobal("px501hammer","GLOBAL",1)
+		Wait (3)
+		DisplayStringHead(Myself,@70808)
+		Wait (1)
+		ReallyForceSpell(Myself,HOLY_LIGHT_FROM_ABOVE)
+END
+
+IF
+	OR(3)
+	PartyHasItem("pxdkaoma")
+	PartyHasItem("pxdkaomb")
+	PartyHasItem("pxdlumie")
+	Global("px501carbo","GLOBAL",0)
+THEN
+	RESPONSE #100
+		SetGlobal("px501carbo","GLOBAL",1)
+		Wait (3)
+		DisplayStringHead(Myself,@70807)	
 END

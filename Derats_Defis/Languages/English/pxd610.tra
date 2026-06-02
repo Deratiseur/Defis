@@ -244,8 +244,9 @@
 @610466 = ~Vampiric Greater Basilisk~
 @610467 = ~Hardened Greater Basilisk~
 @610468 = ~Cursed Greater Basilisk~
-@610469 = ~Replicant Greater Basilisk~
-@610470 = ~Void Greater Basilisk~
+@610469 = ~Psychic Greater Basilisk~
+@610470 = ~Replicant Greater Basilisk~
+@610471 = ~Void Greater Basilisk~
 
 @61051 = ~Wyvern~
 @610501 = ~Pyrophor Wyvern~
@@ -363,15 +364,15 @@
 @610657 = ~Fly master Shambling Mound~
 @610658 = ~Hypnotic Shambling Mound~
 
-@18001 = ~War Cow~
-@18002 = ~Proximity Cow~
-@18003 = ~Bomber Cow Guardian~
-@18004 = ~Cow Head~
-@18005 = ~Cow dung~
-@18006 = ~Death Avenger Cow Head~
-@18007 = ~Void Avenger Cow Head~
-@18008 = ~Chaos Avenger Cow Head~
-@18009 = ~Time Avenger Cow Head~
-@18010 = ~Die, cow eaters!~
-@18011 = ~Revenge for the cows!~
-@18012 = ~Champion of cow vengeance~
+@29001 = ~War Cow~
+@29002 = ~Proximity Cow~
+@29003 = ~Bomber Cow Guardian~
+@29004 = ~Cow Head~
+@29005 = ~Cow dung~
+@29006 = ~Death Avenger Cow Head~
+@29007 = ~Void Avenger Cow Head~
+@29008 = ~Chaos Avenger Cow Head~
+@29009 = ~Time Avenger Cow Head~
+@29010 = ~Die, cow eaters!~
+@29011 = ~Revenge for the cows!~
+@29012 = ~Champion of cow vengeance~

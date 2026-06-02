@@ -11,15 +11,15 @@ COPY ~Derats_Defis/pxd208/Items/pxddefen.itm~	~override~	SAY NAME2 @247	SAY DESC
 
 
 
-//Ca plante, pourquoi, c'est un code simple ???????? (il y a 13 containers dans la zone)
+//Ca plante, pourquoi, c'est un code simple ???????? (il y a 13 containers dans la zone, et c'est le même code que dans pwd160)
+/*
 ACTION_IF FILE_EXISTS_IN_GAME ~pxl2hexa.itm~ THEN BEGIN
 COPY_EXISTING ~pxd208.are~						~override~
-//LPF ADD_AREA_ITEM INT_VAR container_to_add_to = 4 STR_VAR item_to_add = ~PXDINT1~ END 
-//LPF ADD_AREA_ITEM INT_VAR container_to_add_to = 10 STR_VAR item_to_add = ~PXDINT2~ END
-//BUT_ONLY
+LPF ADD_AREA_ITEM INT_VAR container_to_add_to = 4 STR_VAR item_to_add = ~PXDINT1~ END 
+LPF ADD_AREA_ITEM INT_VAR container_to_add_to = 10 STR_VAR item_to_add = ~PXDINT2~ END
+BUT_ONLY
 END
-
-
+*/
 
 
 ////Boss
