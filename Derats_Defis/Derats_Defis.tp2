@@ -1,7 +1,11 @@
 BACKUP ~Derats_Defis/Backup~
 AUTHOR ~Deratiseur, at the_deratiseur@hotmail.com~
+<<<<<<< HEAD
 VERSION ~Wip 3~
 ASK_EVERY_COMPONENT
+=======
+VERSION ~Wip 2.2~
+>>>>>>> 8f54d34c62e4b971959fa09557f669d1dde5b832
 
 LANGUAGE ~Francais~
 	~French~
@@ -173,9 +177,14 @@ COPY_EXISTING ~pxd108sp.spl~ ~override~
 			  ~pxd610sp.spl~ ~override~
 			  ~pxd208sp.spl~ ~override~
 			  ~pxd190sp.spl~ ~override~
+<<<<<<< HEAD
 			  ~pxd180sp.spl~ ~override~ 
 			  ~pxd100sp.spl~ ~override~
 			  ~pxd708sp.spl~ ~override~ WRITE_BYTE 0x9e 2
+=======
+			  ~pxd180sp.spl~ ~override~ WRITE_BYTE 0x9e 2
+			  //+ Poche de normalitÃ© apparition des MVS 2x+ vite
+>>>>>>> 8f54d34c62e4b971959fa09557f669d1dde5b832
 			  //+ Final 2x + de gardiens
 BEGIN @13 SUBCOMPONENT @11	DESIGNATED 113	LABEL Px_Defi_multi_x3 NO_LOG_RECORD
 REQUIRE_PREDICATE (MOD_IS_INSTALLED ~Setup-Derats_Defis.tp2~ ~1161~ OR MOD_IS_INSTALLED ~Setup-Derats_Defis.tp2~ ~1162~	OR MOD_IS_INSTALLED ~Setup-Derats_Defis.tp2~ ~1163~) @15
@@ -186,9 +195,14 @@ COPY_EXISTING ~pxd108sp.spl~ ~override~
 			  ~pxd610sp.spl~ ~override~
 			  ~pxd208sp.spl~ ~override~
 			  ~pxd190sp.spl~ ~override~
+<<<<<<< HEAD
 			  ~pxd180sp.spl~ ~override~
 			  ~pxd100sp.spl~ ~override~
 			  ~pxd708sp.spl~ ~override~ WRITE_BYTE 0x9e 3
+=======
+			  ~pxd180sp.spl~ ~override~ WRITE_BYTE 0x9e 3
+			  //+ Poche de normalitÃ© apparition des MVS 3x+ vite
+>>>>>>> 8f54d34c62e4b971959fa09557f669d1dde5b832
 			  //+ Final 3x + de gardiens
 BEGIN @14 SUBCOMPONENT @11	DESIGNATED 114	LABEL Px_Defi_multi_x4	NO_LOG_RECORD
 REQUIRE_PREDICATE (MOD_IS_INSTALLED ~Setup-Derats_Defis.tp2~ ~1161~ OR MOD_IS_INSTALLED ~Setup-Derats_Defis.tp2~ ~1162~	OR MOD_IS_INSTALLED ~Setup-Derats_Defis.tp2~ ~1163~) @15
@@ -198,25 +212,39 @@ COPY_EXISTING ~pxd108sp.spl~ ~override~
 			  ~pxd610sp.spl~ ~override~
 			  ~pxd208sp.spl~ ~override~
 			  ~pxd190sp.spl~ ~override~
+<<<<<<< HEAD
 			  ~pxd180sp.spl~ ~override~ 
 			  ~pxd100sp.spl~ ~override~
 			  ~pxd708sp.spl~ ~override~ WRITE_BYTE 0x9e 4
+=======
+			  ~pxd180sp.spl~ ~override~ WRITE_BYTE 0x9e 4
+			  //+ Poche de normalitÃ© apparition des MVS 4x+ vite
+>>>>>>> 8f54d34c62e4b971959fa09557f669d1dde5b832
 			  //+ Final 4x + de gardiens
 			  
+<<<<<<< HEAD
 
 
 /*		  
 
+=======
+/* //pas en Wip 2 Ã  cause de NÃ©cropole manquante.
+>>>>>>> 8f54d34c62e4b971959fa09557f669d1dde5b832
 BEGIN @17	DESIGNATED 17	LABEL Px_Defi_difficulty
 REQUIRE_PREDICATE (MOD_IS_INSTALLED ~Setup-Derats_Defis.tp2~ ~1161~ OR MOD_IS_INSTALLED ~Setup-Derats_Defis.tp2~ ~1162~	OR MOD_IS_INSTALLED ~Setup-Derats_Defis.tp2~ ~1163~) @15
 
-//PXD108 La décharge -> des rats pestiférés se promènent dans la zone et qui s'en approche risque de chopper la peste calimshane
+//PXD108 La dÃ©charge -> des rats pestifÃ©rÃ©s se promÃ¨nent dans la zone et qui s'en approche risque de chopper la peste calimshane
 
+<<<<<<< HEAD
 //PXD160 La nécropole silencieuse -> Si n'importe quel héros lance un sort (voir script zone athkatla), 20% de chance qu'un portail apparaisse, d'où
 sort une "Gardienne du silence" (servante d'Ugloril) qui dit juste  "CHUT". Avant de disparaître. La deuxième fois elle revient, redit chut et
 re-disparaît. La troisième fois elle vient avec 9 golems d'os aléatoires et dit "je vous avait prévenus" et combat.... (en boucle)
+=======
+//PXD160 La nÃ©cropole silencieuse
+//Pas trouvÃ©
+>>>>>>> 8f54d34c62e4b971959fa09557f669d1dde5b832
 
-//PXD610 Le Jardin végétal -> tous les vers sont infectés
+//PXD610 Le Jardin vÃ©gÃ©tal -> tous les vers sont infectÃ©s
 COPY_EXISTING_REGEXP ~^px1083\([0-9][0-9]\)\.cre$~ ~override/px6107\1.cre~	WRITE_ASCII 0x260 ~pxdmouch~  #8
 LPF ADD_CRE_EFFECT INT_VAR opcode = 146 parameter2 = 1 timing = 9 target = 1 STR_VAR resource = pxdmouch
 LPF ADD_CRE_EFFECT INT_VAR opcode = 206 target = 1 timing = 9 STR_VAR resource = pxdmoucy END
@@ -233,23 +261,36 @@ COPY_EXISTING ~sppr717.spl~			~override/pxdmoucy.spl~
 
 //PXD208 Les tombeaux d'acier -> Des Esprits mulhorandais parcourent le niveau et boostent les monstres.
 
-//PXD190 Le dédale -> les portails sont aléatoires et ne laissent passer qu'une personne
+//PXD190 Le dÃ©dale -> les portails sont alÃ©atoires et ne laissent passer qu'une personne
 //OK fait : script + copy
 
 //PXD208 Antimaginium -> un vortex temporel ralenti les pjs et spawn n'importe quel monstre de n'importe quelle zone
 
+<<<<<<< HEAD
 //PXD100 La fournaise -> Chaque sous chaque pj 5% de chance que s'ouvre une faille qui crache des flammes et risque d'emporter le pjs dans
 les profondeurs du plan (jds contre la mort ou mort ,sinon 10D10 points de dégâts de feu/contondants)
 //OK fait : copy
+=======
+//PXD100 La fournaise -> les dÃ©gÃ¢ts de feu par round peuvent gÃ©nÃ©rer une bouffÃ©e de flammes
+>>>>>>> 8f54d34c62e4b971959fa09557f669d1dde5b832
 
 //PXD110 Le tombeau du grand ver -> Des mini-tornades de sable parcourent aléatoirement le niveau (elles sont invulnérables)
 Si la tornade passe à coté d'un héros ce héros et aveuglé pour 1 round et doit réussir un jds contre les souffles à -8 ou être violemment repoussé.
 
+<<<<<<< HEAD
 //PXD201 La salle de jeu du Mal -> Les nuages ne sont pas crées à un endroit aléatoire : il sont crées sur un joueur aléatoire
 
 //PXD708 La forge -> les golems ont 20% de chance d'exploser en mourant (impacte aussi le golem de la Fournaise).
+=======
+//PXD201 La salle de jeu du Mal -> +3 cranes enflammÃ©s automatiquement recrÃ©es aprÃ¨s 1D32+ rounds prÃ¨s du boss.
 
-//PXD105 Finale -> la zone contient en plus un Déchireur enragé (toujours immortel).
+//PXD708 La forge -> les golems ont une chance d'exploser en mourant.
+
+//PXD204 Poche de normalitÃ©
+//Pas trouvÃ©
+>>>>>>> 8f54d34c62e4b971959fa09557f669d1dde5b832
+
+//PXD105 Finale -> la zone contient en plus un DÃ©chireur enragÃ© (toujours immortel).
 
 //Secret 1 -> ajout de Tourmente martiale à la liste des monstres aléatoires.
 

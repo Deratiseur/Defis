@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 2DA_V1.0
 0
 						RESREF
@@ -55,4 +56,63 @@ Charognard_du_vide			px108354
 Charognard_puissant			px108355
 Charognard_dombre			px108356
 Charognard_maitre_mouches	px108357
+=======
+2DA_V1.0
+0
+						RESREF
+Charognard_pyrophore		px108301
+Charognard_cryophique		px108302
+Charognard_accelere			px108303
+Charognard_flou				px108304
+Charognard_berserk			px108305
+Charognard_cracheur			px108306
+Charognard_rayonnant		px108307
+Charognard_mephitique		px108308
+Ancien_Charognard			px108309
+Charognard_aveuglant		px108310
+Charognard_du_malheur		px108311
+Charognard_dechirant		px108312
+Charognard_entropique		px108313
+Charognard_epuisant			px108314
+Charognard_enivrant			px108315
+Charognard_furieux			px108316
+Charognard_venimeux			px108317
+Charognard_hurleur			px108318
+Charognard_puits_de_sante	px108319
+Charognard_du_destin		px108320
+Charognard_de_la_peste		px108322
+Charognard_du_silence		px108323
+Charognard_horrible			px108324
+Charognard_siphonneur		px108325
+Charognard_cannibale		px108326
+Charognard_regenerant		px108327
+Charognard_paralysant		px108328
+Charognard_brutal			px108329
+Charognard_antediluvien		px108330
+Charognard_de_Sombrelune	px108331
+Charognard_precis			px108332
+Charognard_vampirique		px108333
+Charognard_dirigeant		px108334
+Charognard_caparaconne		px108336
+Charognard_charge			px108337
+Charognard_maudit			px108338
+Charognard_explosif			px108339
+Charognard_tueur			px108340
+Charognard_antimagique		px108341
+Charognard_negatif			px108342
+Charognard_immortel			px108343
+Charognard_psychique		px108344
+Charognard_refracte			px108345
+Charognard_temporel			px108346
+Charognard_protecteur		px108347
+Charognard_source_de_vie	px108348
+Charognard_repliquant		px108349
+Charognard_pyro-lie			px108350
+Charognard_du_carnage		px108351
+Super_Charognard			px108352
+Charognard_du_vide			px108354
+Charognard_puissant			px108355
+Charognard_dombre			px108356
+Charognard_maitre_mouches	px108357
+>>>>>>> 8f54d34c62e4b971959fa09557f669d1dde5b832
 Charognard_hypnotique		px108358

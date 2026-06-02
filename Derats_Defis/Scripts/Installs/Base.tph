@@ -78,16 +78,16 @@ COPY_EXISTING ~pxdpyro.spl~			~override/pxdcryo.spl~	WRITE_ASCII 0xae ~pxdcryo~ 
 WRITE_ASCII 0x13e ~SPFIRESB~ #8	WRITE_ASCII 0x16e ~SPFIRESA~ #8	WRITE_ASCII 0x19e ~SPWI403D.EFF~ #8	WRITE_BYTE 0x1c2 2	WRITE_ASCII 0x1fe ~pxdcryo~ #8
 COPY_EXISTING ~dam5.eff~			~override/pxdpyro.eff~	WRITE_BYTE 0x1c 0	WRITE_BYTE 0x38 1	WRITE_BYTE 0x3c 10	WRITE_BYTE 0x22 8
 COPY_EXISTING ~pxdpyro.eff~			~override/pxdcryo.eff~	WRITE_BYTE 0x22 2
-//03 - Accélérée - Copy
+//03 - AccÃ©lÃ©rÃ©e - Copy
 //04 - Floue - Copy
 //05 - Berserk - Copy
-//06 - Cracheuse - Spécifique
+//06 - Cracheuse - SpÃ©cifique
 //07 - Rayonnante
 ADD_PROJECTILE ~Derats_Defis/Base/Cre_buffs/pxdrayon.pro~	~pxd rayonnement~
 COPY ~Derats_Defis/Base/Cre_buffs/pxdrayox.spl~	~override~	WRITE_SHORT 0x98 ~%pxdrayon%~
 COPY_EXISTING ~amcall.vvc~			~override/pxl2pulv.vvc~	WRITE_ASCII 0x8 ~pxl2pul1~ #8	WRITE_BYTE 0x2c 0	WRITE_BYTE 0x34 31	WRITE_BYTE 0x4c 20	WRITE_BYTE 0x1a (THIS | 34)
 COPY_EXISTING ~sareveff.eff~		~override/pxdrayox.eff~	WRITE_ASCII 0x30 ~pxdrayox~ #8
-//08 - Méphitique
+//08 - MÃ©phitique
 COPY_EXISTING ~spin979.spl~			~override/pxdmephy.spl~	WRITE_SHORT 0x98 95
 COPY_EXISTING ~spwi403d.eff~		~override/pxdmephx.eff~	WRITE_ASCII 0x30 ~pxdmephx~ #8
 //09 - Ancien - Copy
@@ -101,7 +101,7 @@ COPY_EXISTING ~pxdaveuy.spl~		~override/pxdaveux.spl~	WRITE_SHORT 0x98 0	WRITE_B
 COPY_EXISTING ~pxdaveug.spl~		~override/pxdmalhe.spl~ WRITE_ASCII 0xae ~pxdmalhx~ #8	WRITE_ASCII 0xde ~pxdmalhx~ #8
 COPY ~Derats_Defis/Scripts/pxdmephi.baf~ ~Derats_Defis/Temp/pxdmalhe.baf~ REPLACE_TEXTUALLY ~pxdmephy~ ~pxdmalhy~
 COPY ~Derats_Defis/Base/Cre_buffs/pxdmalhy.spl~	~override~	WRITE_SHORT 0x98 ~%pxdecla7%~
-//12 - Déchirante
+//12 - DÃ©chirante
 COPY_EXISTING ~pxdaveug.spl~		~override/pxddechi.spl~ WRITE_ASCII 0xae ~pxddechx~ #8	WRITE_ASCII 0xde ~pxddechx~ #8
 COPY_EXISTING ~sareveff.eff~		~override/pxddechx.eff~	WRITE_ASCII 0x30 ~pxddechx~ #8
 //13 - Entropique
@@ -109,7 +109,7 @@ COPY_EXISTING ~pxdrayon.spl~		~override/pxdentro.spl~	WRITE_ASCII 0xae ~pxdentrx
 LPF ADD_SPELL_EFFECT INT_VAR opcode = 215 target = 2 timing = 9 parameter2 = 1 STR_VAR resource = pxdentrv	END
 COPY_EXISTING ~sareveff.eff~		~override/pxdentrx.eff~	WRITE_ASCII 0x30 ~pxdentrx~ #8
 COPY_EXISTING ~deathwrd.vvc~		~override/pxdentrv.vvc~	WRITE_ASCII 0x8 ~pxdentro~ #8	WRITE_BYTE 0x20 (THIS | 64)	WRITE_BYTE 0x1a (THIS | 34)
-//14 - Épuisante
+//14 - Ã‰puisante
 COPY_EXISTING ~pxdentro.spl~		~override/pxdepuis.spl~	WRITE_ASCII 0xae ~pxdepuix~ #8	WRITE_ASCII 0xde ~pxdepuvf~ #8
 LPF ADD_SPELL_EFFECT INT_VAR opcode = 215 target = 2 timing = 9 parameter2 = 1 STR_VAR resource = pxdepuvb	END
 COPY_EXISTING ~sareveff.eff~		~override/pxdepuix.eff~	WRITE_ASCII 0x30 ~pxdepuix~ #8
@@ -128,9 +128,9 @@ ADD_PROJECTILE ~override/pxdhurle.pro~						~pxd np medium~
 COPY ~Derats_Defis/Base/Cre_buffs/pxdhurlx.spl~	~override~	WRITE_SHORT 0x98 ~%pxdhurle%~
 COPY_EXISTING	~spstones.vvc~		~override/pxl2hu1v.vvc~	WRITE_ASCII 0x8 ~pxw5hur0~ #8	WRITE_BYTE 0x34 33	WRITE_BYTE 0x18 (THIS|2)	WRITE_BYTE 0x20 (THIS | 64)
 COPY_EXISTING ~pxl2hu1v.vvc~		~override/pxl2hu2v.vvc~	WRITE_ASCII 0x8 ~pxw5hur1~ #8
-//19 - Puits de santé - Copy
+//19 - Puits de santÃ© - Copy
 //20 - Du destin - Copy
-//21 - Prolifératrice - Spécifique
+//21 - ProlifÃ©ratrice - SpÃ©cifique
 //22 - De la peste
 //COPY_EXISTING ~pxdaveug.spl~		~override/pxdpeste.spl~	WRITE_ASCII 0xae ~pxdpestx~ #8 WRITE_ASCII 0xde ~pxdpestx~ #8
 COPY_EXISTING ~sareveff.eff~		~override/pxdpestx.eff~	WRITE_ASCII 0x30 ~pxdpestx~ #8
@@ -147,16 +147,16 @@ COPY_EXISTING ~sareveff.eff~		~override/pxdsiphx.eff~	WRITE_ASCII 0x30 ~pxdsiphx
 COPY_EXISTING ~pxdentrv.vvc~		~override/pxdsiphv.vvc~	WRITE_ASCII 0x8 ~pxdsipho~ #8
 //26 - Cannibale 
 COPY_EXISTING ~pxdaveug.spl~		~override/pxdcanib.spl~	WRITE_ASCII 0xae ~pxdcanix~ #8 WRITE_ASCII 0xde ~pxdcanix~ #8
-//27 - Régénérante - Copy
+//27 - RÃ©gÃ©nÃ©rante - Copy
 //28 - Paralysante
 COPY_EXISTING ~pxdvenim.spl~		~override/pxdparal.spl~	WRITE_ASCII 0xae ~pxdpara1~ #8 WRITE_ASCII 0xde ~pxdpara2~ #8	WRITE_ASCII 0x10e ~pxdpara1~ #8 WRITE_ASCII 0x13e ~pxdpara2~ #8
 //29 - Brutale - Copy
-//30 - Antédiluvienne - Copy
+//30 - AntÃ©diluvienne - Copy
 //31 - De sombrelune
 COPY_EXISTING ~pxdepuis.spl~		~override/pxdsombr.spl~	WRITE_ASCII 0xae ~pxdsombx~ #8	WRITE_ASCII 0xde ~pxdsomvf~ #8	WRITE_ASCII 0x10e ~pxdsomvb~ #8
 COPY_EXISTING ~sareveff.eff~		~override/pxdsombx.eff~	WRITE_ASCII 0x30 ~pxdsombx~ #8
 COPY_EXISTING ~pxdentrv.vvc~		~override/pxdsomvf.vvc~	WRITE_ASCII 0x8 ~pxdsombf~ #8	WRITE_BYTE 0x2c 10
-//32 - Précise - Copy
+//32 - PrÃ©cise - Copy
 //33 - Vampirique
 COPY_EXISTING ~pxdvenim.spl~		~override/pxdvampi.spl~	WRITE_ASCII 0xae ~pxdvamp1~ #8 WRITE_ASCII 0xde ~pxdvamp2~ #8	WRITE_ASCII 0x10e ~pxdvamp1~ #8 WRITE_ASCII 0x13e ~pxdvamp2~ #8
 //34 - Dirigeante
@@ -164,7 +164,7 @@ COPY_EXISTING ~pxdepuis.spl~		~override/pxddirig.spl~	WRITE_ASCII 0xae ~pxddirix
 COPY_EXISTING ~sareveff.eff~		~override/pxddirix.eff~	WRITE_ASCII 0x30 ~pxddirix~ #8
 COPY_EXISTING ~pxdentrv.vvc~		~override/pxddirvf.vvc~	WRITE_ASCII 0x8 ~pxddirif~ #8	WRITE_BYTE 0x2c 5
 COPY_EXISTING ~pxdentrv.vvc~		~override/pxddirvb.vvc~	WRITE_ASCII 0x8 ~pxddirib~ #8	WRITE_BYTE 0x2c ~-10~
-//35 - Nécromantique
+//35 - NÃ©cromantique
 COPY_EXISTING ~pxdrayon.spl~		~override/pxdnecro.spl~	WRITE_ASCII 0xae ~pxdnecrx~ #8	WRITE_BYTE 0x9e 12
 COPY_EXISTING ~sareveff.eff~		~override/pxdnecrx.eff~	WRITE_ASCII 0x30 ~pxdnecrx~ #8
 COPY_EXISTING ~zombie01.cre~		~override/pxdnecr1.cre~
@@ -172,17 +172,17 @@ COPY_EXISTING ~zombie01.cre~		~override/pxdnecr1.cre~
 			  ~skelwa02.cre~		~override/pxdnecr3.cre~
 			  ~ghoul01.cre~			~override/pxdnecr4.cre~	LPF Anticre END	LPF Antiall END
 			  LPF ADD_CRE_EFFECT INT_VAR opcode = 16 target = 1 timing = 9  END
-//36 - Caparaçonné
+//36 - CaparaÃ§onnÃ©
 COPY_EXISTING ~pxdcara1.spl~		~override/pxdcara2.spl~
 LPF ADD_SPELL_EFFECT INT_VAR opcode = 120 target = 2 timing = 9 parameter1 = 2 END
 COPY_EXISTING ~pxdcara2.spl~		~override/pxdcara3.spl~
 LPF ADD_SPELL_EFFECT INT_VAR opcode = 120 target = 2 timing = 9 parameter1 = 3 END
 COPY_EXISTING ~pxdcara3.spl~		~override/pxdcara4.spl~
 LPF ADD_SPELL_EFFECT INT_VAR opcode = 120 target = 2 timing = 9 parameter1 = 4 END
-//37 - Chargée 
+//37 - ChargÃ©e 
 COPY_EXISTING ~spwi403d.eff~		~override/pxdcharx.eff~	WRITE_ASCII 0x30 ~pxdcharx~ #8
 COPY_EXISTING ~sparm2.vvc~			~override/pxsph62v.vvc~	WRITE_ASCII 0x8 ~pxl2elc1~ #8	WRITE_BYTE 0x20 (THIS | 65)	WRITE_BYTE 0x18 (THIS | 2)
-//38 - Maudite - Spécifique
+//38 - Maudite - SpÃ©cifique
 //39 - Explosive
 COPY_EXISTING ~amcall.vvc~			~override/pxdexpl1.vvc~	WRITE_ASCII 0x8 ~pxl2expl~ #8	WRITE_BYTE 0x34 33	WRITE_BYTE 0x28 10	WRITE_BYTE 0x4c 30
 COPY_EXISTING ~amcall.vvc~			~override/pxdexpl2.vvc~	WRITE_ASCII 0x8 ~pxl2rage~ #8	WRITE_ASCII 0x78 ~pxfzrage~ #8 WRITE_BYTE 0x34  33
@@ -193,13 +193,13 @@ COPY_EXISTING ~pxdaveug.spl~		~override/pxdtueus.spl~	WRITE_ASCII 0xae ~pxdtueux
 //41 - Antimagique
 COPY_EXISTING ~sareveff.eff~		~override/pxdantix.eff~	WRITE_ASCII 0x30 ~pxdantix~ #8
 COPY_EXISTING ~sareveff.eff~		~override/pxdantiy.eff~	WRITE_ASCII 0x30 ~pxdantiy~ #8
-//42 - Négative
+//42 - NÃ©gative
 COPY_EXISTING ~spwi403d.eff~		~override/pxdnegax.eff~	WRITE_ASCII 0x30 ~pxdnegax~ #8
 //43 - Immortelle - Copy
-//44 - Psychique - Spécifique
+//44 - Psychique - SpÃ©cifique
 COPY_EXISTING	~SPARSTNP.pro~					~override/pxdpsych.pro~	WRITE_LONG 0x204 128	WRITE_LONG 0x206 128	WRITE_BYTE 0xa 50
 ADD_PROJECTILE ~override/pxdpsych.pro~						~pxd psy atttack~
-//45 - Réfractée
+//45 - RÃ©fractÃ©e
 COPY_EXISTING ~spwi403d.eff~		~override/pxl2cdup.eff~	WRITE_ASCII 0x30 ~pxl2ima4~ #8
 //46 - Temporelle
 COPY_EXISTING ~sareveff.eff~		~override/pxdtempx.eff~	WRITE_ASCII 0x30 ~pxdtempx~ #8
@@ -212,8 +212,8 @@ COPY_EXISTING ~sareveff.eff~		~override/pxdprotx.eff~	WRITE_ASCII 0x30 ~pxdprotx
 COPY_EXISTING ~pxdepuis.spl~		~override/pxdsourc.spl~	WRITE_ASCII 0xae ~pxdsourx~ #8	WRITE_ASCII 0xde ~pxdsouvf~ #8	WRITE_ASCII 0x10e ~pxdsouvb~ #8
 COPY_EXISTING ~sareveff.eff~		~override/pxdsourx.eff~	WRITE_ASCII 0x30 ~pxdsourx~ #8
 COPY_EXISTING ~pxdentrv.vvc~		~override/pxdsouvf.vvc~	WRITE_ASCII 0x8 ~pxdsourf~ #8	WRITE_BYTE 0x2c 8
-//49 - Répliquante - Spécifique
-//50 - Pyro-liée
+//49 - RÃ©pliquante - SpÃ©cifique
+//50 - Pyro-liÃ©e
 COPY_EXISTING ~pxdexplo.spl~		~override/pxdpyrol.spl~	WRITE_ASCII 0xae ~pxdpyrlx~ #8
 COPY_EXISTING ~spwi403d.eff~		~override/pxdpyrlx.eff~	WRITE_ASCII 0x30 ~pxdpyrlx~ #8
 //51 - Du carnage - Copy
@@ -224,7 +224,7 @@ COPY_EXISTING ~pxdaveug.spl~		~override/pxdvide.spl~	WRITE_ASCII 0xae ~pxdvidex~
 COPY_EXISTING ~sareveff.eff~		~override/pxdvidex.eff~	WRITE_ASCII 0x30 ~pxdvidex~ #8
 //55 - Puissante - Copy
 //56 - D'ombre - Copy
-//57 - Maître des mouches
+//57 - MaÃ®tre des mouches
 COPY ~Derats_Defis/Scripts/pxdmephi.baf~ ~Derats_Defis/Temp/pxdmouch.baf~ REPLACE_TEXTUALLY ~pxdmephy~ ~pxdmoucz~
 COPY_EXISTING ~sppr517.spl~			~override/pxdmoucz.spl~
 COPY_EXISTING ~sareveff.eff~		~override/pxdmoucx.eff~	WRITE_ASCII 0x30 ~sppr319~ #8
@@ -240,22 +240,23 @@ COPY ~Derats_Defis/pxd105/items/Discombulateur/copy~	~override~
 COPY ~Derats_Defis/pxd105/items/Discombulateur/bams~	~override~
 COPY ~Derats_Defis/pxd105/items/Discombulateur/pxl2dsoi.itm~	~override~	SAY NAME2 @501	SAY DESC @502 //Potion de soins importants
 COPY_EXISTING	~potn55.itm~		~override/pxl2dso2.itm~	SAY NAME2 @503	SAY DESC @504	WRITE_ASCII 0x3a ~pxl2dso2~ #8
-WRITE_ASCII 0x58 ~CPOTN06~ #8	WRITE_ASCII 0x76 ~pxl2dso2~ #8	WRITE_BYTE 0xae 60	WRITE_SHORT 0x34 900 //Potion de soins suprême
+WRITE_ASCII 0x58 ~CPOTN06~ #8	WRITE_ASCII 0x76 ~pxl2dso2~ #8	WRITE_BYTE 0xae 60	WRITE_SHORT 0x34 900 //Potion de soins suprÃªme
 COPY_EXISTING	~potn44.itm~		~override/pxl2df19.itm~	SAY NAME2 @505	SAY DESC @506	WRITE_ASCII 0x3a ~IPOTN03~ #8
 WRITE_ASCII 0x58 ~CPOTN41~ #8	WRITE_ASCII 0x76 ~IPOTN03~ #8	WRITE_SHORT 0xb8 600	WRITE_SHORT 0x118 600	WRITE_SHORT 0x1a8 600
-WRITE_BYTE 0xae 19	WRITE_SHORT 0x34 450 //Potion de  force de géant des collines*
+WRITE_BYTE 0xae 19	WRITE_SHORT 0x34 450 //Potion de  force de gÃ©ant des collines*
 COPY_EXISTING	~pxl2df19.itm~		~override/pxl2df20.itm~	SAY NAME2 @507	SAY DESC @508	WRITE_ASCII 0x3a ~IPOTN12~ #8
-WRITE_ASCII 0x76 ~IPOTN12~ #8	WRITE_BYTE 0xae 20	WRITE_SHORT 0x34 750 //Potion de  force de géant de pierre*
+WRITE_ASCII 0x76 ~IPOTN12~ #8	WRITE_BYTE 0xae 20	WRITE_SHORT 0x34 750 //Potion de  force de gÃ©ant de pierre*
 COPY_EXISTING	~pxl2df19.itm~		~override/pxl2df21.itm~	SAY NAME2 @509	SAY DESC @5010	WRITE_ASCII 0x3a ~IPOTN04~ #8
-WRITE_ASCII 0x76 ~IPOTN04~ #8	WRITE_BYTE 0xae 21	WRITE_SHORT 0x34 1000 //Potion de  force de géant du froid*
+WRITE_ASCII 0x76 ~IPOTN04~ #8	WRITE_BYTE 0xae 21	WRITE_SHORT 0x34 1000 //Potion de  force de gÃ©ant du froid*
 COPY_EXISTING	~pxl2df19.itm~		~override/pxl2df22.itm~	SAY NAME2 @5011	SAY DESC @5012	WRITE_ASCII 0x3a ~IPOTN05~ #8
-WRITE_ASCII 0x58 ~CPOTN06~ #8	WRITE_ASCII 0x76 ~IPOTN05~ #8	WRITE_BYTE 0xae 22	WRITE_SHORT 0x34 1400 //Potion de force de géant de feu*
+WRITE_ASCII 0x58 ~CPOTN06~ #8	WRITE_ASCII 0x76 ~IPOTN05~ #8	WRITE_BYTE 0xae 22	WRITE_SHORT 0x34 1400 //Potion de force de gÃ©ant de feu*
 COPY_EXISTING	~pxl2df22.itm~		~override/pxl2df23.itm~	SAY NAME2 @5013	SAY DESC @5014	WRITE_ASCII 0x3a ~IPOTN06~ #8
-WRITE_ASCII 0x76 ~IPOTN06~ #8	WRITE_BYTE 0xae 23	WRITE_SHORT 0x34 1750 //Potion de force de géant des nuages*
+WRITE_ASCII 0x76 ~IPOTN06~ #8	WRITE_BYTE 0xae 23	WRITE_SHORT 0x34 1750 //Potion de force de gÃ©ant des nuages*
 COPY_EXISTING	~pxl2df22.itm~		~override/pxl2df24.itm~	SAY NAME2 @5015	SAY DESC @5016	WRITE_ASCII 0x3a ~IPOTN07~ #8
-WRITE_ASCII 0x76 ~IPOTN07~ #8	WRITE_BYTE 0xae 24	WRITE_SHORT 0x34 2400 //Potion de  force de géant des tempêtes*
+WRITE_ASCII 0x76 ~IPOTN07~ #8	WRITE_BYTE 0xae 24	WRITE_SHORT 0x34 2400 //Potion de  force de gÃ©ant des tempÃªtes*
 COPY_EXISTING	~pxl2df22.itm~		~override/pxl2df25.itm~	SAY NAME2 @5017	SAY DESC @5018	WRITE_ASCII 0x3a ~pxl2dtit~ #8
 WRITE_ASCII 0x58 ~CPOTN07~ #8	WRITE_ASCII 0x76 ~pxl2dtit~ #8	WRITE_BYTE 0xae 25	WRITE_SHORT 0x34 3000 //Potion de force de titan*
+<<<<<<< HEAD
 COPY ~Derats_Defis/pxd105/items/Discombulateur/pxl2dp01.itm~	~override~	SAY NAME2 @5019	SAY DESC @5020 //Potion de transfert de force
 COPY ~Derats_Defis/pxd105/items/Discombulateur/pxl2dp02.itm~	~override~	SAY NAME2 @5021	SAY DESC @5022 //Potion de transfert d'action
 COPY ~Derats_Defis/pxd105/items/Discombulateur/pxl2dp03.itm~	~override~	SAY NAME2 @5023	SAY DESC @5024 //Potion de transfert sacré
@@ -267,12 +268,26 @@ COPY ~Derats_Defis/pxd105/items/Discombulateur/pxl2dp08.itm~	~override~	SAY NAME
 COPY ~Derats_Defis/pxd105/items/Discombulateur/pxl2dp09.itm~	~override~	SAY NAME2 @5035	SAY DESC @5036 //Potion de robustesse
 COPY ~Derats_Defis/pxd105/items/Discombulateur/pxl2dp10.itm~	~override~	SAY NAME2 @5037	SAY DESC @5038 //Potion d'isolation
 COPY ~Derats_Defis/pxd105/items/Discombulateur/pxl2dp11.itm~	~override~	SAY NAME2 @5039	SAY DESC @5040 //Potion de vitalité
+=======
+COPY ~Derats_Defis/pxd180/items/Discombulateur/pxl2dp01.itm~	~override~	SAY NAME2 @5019	SAY DESC @5020 //Potion de transfert de force
+COPY ~Derats_Defis/pxd180/items/Discombulateur/pxl2dp02.itm~	~override~	SAY NAME2 @5021	SAY DESC @5022 //Potion de transfert d'action
+COPY ~Derats_Defis/pxd180/items/Discombulateur/pxl2dp03.itm~	~override~	SAY NAME2 @5023	SAY DESC @5024 //Potion de transfert sacrÃ©
+COPY ~Derats_Defis/pxd180/items/Discombulateur/pxl2dp04.itm~	~override~	SAY NAME2 @5025	SAY DESC @5026 //Potion de transfert d'Ã©nergie vitale
+COPY ~Derats_Defis/pxd180/items/Discombulateur/pxl2dp05.itm~	~override~	SAY NAME2 @5027	SAY DESC @5028 //Potion de certitude
+COPY ~Derats_Defis/pxd180/items/Discombulateur/pxl2dp06.itm~	~override~	SAY NAME2 @5029	SAY DESC @5030 //Potion de bestialitÃ©
+COPY ~Derats_Defis/pxd180/items/Discombulateur/pxl2dp07.itm~	~override~	SAY NAME2 @5031	SAY DESC @5032 //Potion de rÃ©sistance
+COPY ~Derats_Defis/pxd180/items/Discombulateur/pxl2dp08.itm~	~override~	SAY NAME2 @5033	SAY DESC @5034 //Potion dÂ’endurcissement
+COPY ~Derats_Defis/pxd180/items/Discombulateur/pxl2dp09.itm~	~override~	SAY NAME2 @5035	SAY DESC @5036 //Potion de robustesse
+COPY ~Derats_Defis/pxd180/items/Discombulateur/pxl2dp10.itm~	~override~	SAY NAME2 @5037	SAY DESC @5038 //Potion d'isolation
+COPY ~Derats_Defis/pxd180/items/Discombulateur/pxl2dp11.itm~	~override~	SAY NAME2 @5039	SAY DESC @5040 //Potion de vitalitÃ©
+>>>>>>> 8f54d34c62e4b971959fa09557f669d1dde5b832
 COPY_EXISTING	~pxl2dp8.eff~		~override/pxl2dp7.eff~	WRITE_BYTE 0x1c 7
 COPY_EXISTING	~pxl2dp8.eff~		~override/pxl2dp6.eff~	WRITE_BYTE 0x1c 6
 COPY_EXISTING	~pxl2dp8.eff~		~override/pxl2dp5.eff~	WRITE_BYTE 0x1c 5
 COPY_EXISTING	~pxl2dp8.eff~		~override/pxl2dp4.eff~	WRITE_BYTE 0x1c 4
 COPY_EXISTING	~pxl2dp8.eff~		~override/pxl2dp3.eff~	WRITE_BYTE 0x1c 3
 COPY_EXISTING	~pxl2dp8.eff~		~override/pxl2dp2.eff~	WRITE_BYTE 0x1c 2
+<<<<<<< HEAD
 COPY ~Derats_Defis/pxd105/items/Discombulateur/pxl2dp12.itm~	~override~	SAY NAME2 @5041	SAY DESC @5042 //Potion de fortification
 COPY ~Derats_Defis/pxd105/items/Discombulateur/pxl2dp13.itm~	~override~	SAY NAME2 @5043	SAY DESC @5044 //Potion de résistance supérieure
 COPY ~Derats_Defis/pxd105/items/Discombulateur/pxl2dp14.itm~	~override~	SAY NAME2 @5045	SAY DESC @5046 //Potion de thaumaturgie
@@ -314,10 +329,54 @@ COPY ~Derats_Defis/pxd105/items/Discombulateur/pxl2dbro.itm~	~override~	SAY NAME
 COPY_EXISTING	~amcall.vvc~					~override/pxw0morv.vvc~	WRITE_ASCII 0x8 ~pxw0mort~ #8	WRITE_BYTE 0x34 22	WRITE_BYTE 0x4c 50	WRITE_ASCII 0x78 ~EFF_M27~ #8
 COPY ~Derats_Defis/pxd105/items/Discombulateur/pxl2dluk.itm~	~override~	SAY NAME2 @50111	SAY DESC @50112 //Filtre de chance sublimée
 COPY ~Derats_Defis/pxd105/items/Discombulateur/pxl2dref.itm~	~override~	SAY NAME2 @50113	SAY DESC @50114 //Réflecteur de Sanset
+=======
+COPY ~Derats_Defis/pxd180/items/Discombulateur/pxl2dp12.itm~	~override~	SAY NAME2 @5041	SAY DESC @5042 //Potion de fortification
+COPY ~Derats_Defis/pxd180/items/Discombulateur/pxl2dp13.itm~	~override~	SAY NAME2 @5043	SAY DESC @5044 //Potion de rÃ©sistance supÃ©rieure
+COPY ~Derats_Defis/pxd180/items/Discombulateur/pxl2dp14.itm~	~override~	SAY NAME2 @5045	SAY DESC @5046 //Potion de thaumaturgie
+COPY ~Derats_Defis/pxd180/items/Discombulateur/pxl2dp15.itm~	~override~	SAY NAME2 @5047	SAY DESC @5048 //Potion d'augmentation d'aura
+COPY ~Derats_Defis/pxd180/items/Discombulateur/pxl2dp16.itm~	~override~	SAY NAME2 @5049	SAY DESC @5050 //Potion d'absorption de magie
+COPY_EXISTING	~pxl2dp16.itm~		~override/pxl2dp17.itm~	SAY NAME2 @5051	SAY DESC @5052	WRITE_BYTE 0x16e 15	WRITE_SHORT 0x34 8000 //Potion de dissipation
+COPY ~Derats_Defis/pxd180/items/Discombulateur/pxpastic.itm~	~override~	SAY NAME2 @5053	SAY DESC @5054 //Stimulant cÃ©rÃ©bral
+COPY ~Derats_Defis/pxd180/items/Discombulateur/pxpastim.itm~	~override~	SAY NAME2 @5055	SAY DESC @5056 //Stimulant musculaire
+COPY ~Derats_Defis/pxd180/items/Discombulateur/pxpavivi.itm~	~override~	SAY NAME2 @5057	SAY DESC @5058 //Vivifiant
+COPY ~Derats_Defis/pxd180/items/Discombulateur/pxl2dcon.itm~	~override~	SAY NAME2 @5059	SAY DESC @5060 //Potion de contrevue
+COPY ~Derats_Defis/pxd180/items/Discombulateur/pxl2dinv.itm~	~override~	SAY NAME2 @5061	SAY DESC @5062 //Potion d'invulnÃ©rabilitÃ©*
+COPY ~Derats_Defis/pxd180/items/Discombulateur/pxl2dcer.itm~	~override~	SAY NAME2 @5063	SAY DESC @5064 //Potion de feu continuel
+ADD_PROJECTILE ~Derats_Defis/pxd180/items/Discombulateur/pxl2puls.pro~	~pxl2 flame pulse~
+COPY ~Derats_Defis/pxd180/items/Discombulateur/pxl2pul1.spl~	~override~	WRITE_SHORT 0x98 ~%pxl2puls%~
+COPY ~Derats_Defis/pxd180/items/Discombulateur/pxl2dcfo.itm~	~override~	SAY NAME2 @5065	SAY DESC @5066 //Potion de changement de forme
+COPY ~Derats_Defis/pxd180/items/Discombulateur/pxl2dfee.itm~	~override~	SAY NAME2 @5067	SAY DESC @5068 //Liqueur fÃ©erique
+COPY ~Derats_Defis/pxd180/items/Discombulateur/pxl2dvig.itm~	~override~	SAY NAME2 @5069	SAY DESC @5070 //Potion de vitalitÃ© supÃ©rieure
+COPY ~Derats_Defis/pxd180/items/Discombulateur/pxl2dhat.itm~	~override~	SAY NAME2 @5071	SAY DESC @5072 //Potion d'accÃ©lÃ©ration
+COPY ~Derats_Defis/pxd180/items/Discombulateur/pxl2drep.itm~	~override~	SAY NAME2 @5073	SAY DESC @5074 //Breuvage noir de TokkÃ¨tel
+COPY_EXISTING	~sparm2.vvc~		~override/pxg4bouv.vvc~	WRITE_ASCII 0x8 ~pxg4bou1~ #8	WRITE_BYTE 0x34 11	WRITE_BYTE 0x20 (THIS | 65)	WRITE_BYTE 0x18 (THIS | 2)
+COPY ~Derats_Defis/pxd180/items/Discombulateur/pxl2dd2.itm~	~override~	SAY NAME2 @5075	SAY DESC @5076 //Potion de Rajeunissement total
+COPY ~Derats_Defis/pxd180/items/Discombulateur/pxl2ddiv.itm~	~override~	SAY NAME2 @5077	SAY DESC @5078 //Nectar divin
+COPY ~Derats_Defis/pxd180/items/Discombulateur/pxl2ddup.itm~	~override~	SAY NAME2 @5079	SAY DESC @5080 //Potion de duplication
+COPY ~Derats_Defis/pxd180/items/Discombulateur/pxl2ddua.itm~	~override~	SAY NAME2 @5081	SAY DESC @5082 //Potion de dualitÃ©
+COPY ~Derats_Defis/pxd180/items/Discombulateur/pxl2dpoi.itm~	~override~	SAY NAME2 @5083	SAY DESC @5084 //Fiole de poison tenace
+ADD_PROJECTILE	~Derats_Defis/pxd180/items/pxl2dnex.pro~		~Pxl2 potion of non-existence~
+COPY ~Derats_Defis/pxd180/items/Discombulateur/pxl2dnex.itm~	~override~	SAY NAME2 @5085	SAY DESC @5086	WRITE_SHORT 0x9c ~%pxl2dnex%~ //Potion de non-existence
+COPY ~Derats_Defis/pxd180/items/Discombulateur/pxl2dfor.itm~	~override~	SAY NAME2 @5087	SAY DESC @5088 //Fortifiant (Arcanum)
+COPY ~Derats_Defis/pxd180/items/Discombulateur/pxl2dlar.itm~	~override~	SAY NAME2 @5089	SAY DESC @5090 //Larmes de Morgana (Arcanum)
+COPY ~Derats_Defis/pxd180/items/Discombulateur/pxpasoin.itm~	~override~	SAY NAME2 @5091	SAY DESC @5092 //Soin miracle (Arcanum)
+COPY ~Derats_Defis/pxd180/items/Discombulateur/pxparevi.itm~	~override~	SAY NAME2 @5093	SAY DESC @5094 //Revitalisant (Arcanum)
+COPY ~Derats_Defis/pxd180/items/Discombulateur/pxpmhero.itm~	~override~	SAY NAME2 @5095	SAY DESC @5096 //Potion dÂ’hÃ©roÃ¯sme (Morrowind)
+COPY ~Derats_Defis/pxd180/items/Discombulateur/pxpmimpa.itm~	~override~	SAY NAME2 @5097	SAY DESC @5098 //Ã‰lixir de L'Imparfait (Morrowind)
+COPY ~Derats_Defis/pxd180/items/Discombulateur/pxl2dnet.itm~	~override~	SAY NAME2 @5099	SAY DESC @50100 //Potion de Nettoyage d'aura
+COPY ~Derats_Defis/pxd180/items/Discombulateur/pxl2dmag.itm~	~override~	SAY NAME2 @50103	SAY DESC @50104 //Ã‰lixir de Magica Incarna
+COPY ~Derats_Defis/pxd180/items/Discombulateur/pxl2dvit.itm~	~override~	SAY NAME2 @50105	SAY DESC @50106 //Potion de vitesse absolue
+COPY ~Derats_Defis/pxd180/items/Discombulateur/pxl2dvie.itm~	~override~	SAY NAME2 @50107	SAY DESC @50108 //Potion de Vie
+COPY ~Derats_Defis/pxd180/items/Discombulateur/pxl2dbro.itm~	~override~	SAY NAME2 @50109	SAY DESC @50110 //Brouet anti-magique
+COPY_EXISTING	~amcall.vvc~					~override/pxw0morv.vvc~	WRITE_ASCII 0x8 ~pxw0mort~ #8	WRITE_BYTE 0x34 22	WRITE_BYTE 0x4c 50	WRITE_ASCII 0x78 ~EFF_M27~ #8
+COPY ~Derats_Defis/pxd180/items/Discombulateur/pxl2dluk.itm~	~override~	SAY NAME2 @50111	SAY DESC @50112 //Filtre de chance sublimÃ©e
+COPY ~Derats_Defis/pxd180/items/Discombulateur/pxl2dref.itm~	~override~	SAY NAME2 @50113	SAY DESC @50114 //RÃ©flecteur de Sanset
+>>>>>>> 8f54d34c62e4b971959fa09557f669d1dde5b832
 COPY_EXISTING	~sareveff.eff~				~override/pxl2buv1.eff~	WRITE_ASCII 0x30 ~pxl2buv1~ #8
 COPY ~Derats_Defis/pxd105/items/Discombulateur/pxl2dcam.itm~	~override~	SAY NAME2 @50115	SAY DESC @50116 //Potion de Disparition
 COPY_EXISTING	~sareveff.eff~				~override/pxl2isu1.eff~	WRITE_ASCII 0x30 ~pxl2isu1~ #8
 
+<<<<<<< HEAD
 COPY ~Derats_Defis/pxd105/items/Discombulateur/pxl2dcoe.itm~	~override~	SAY NAME2 @50117	SAY DESC @50118 //Cœur de glace
 COPY ~Derats_Defis/pxd105/items/Discombulateur/pxl2dcbs.itm~	~override~	SAY NAME2 @50119	SAY DESC @50120 //Potion de combattant suprême
 COPY ~Derats_Defis/pxd105/items/Discombulateur/pxl2dsca.itm~	~override~	SAY NAME2 @50121	SAY DESC @50122 //Potion de Souffle caustique
@@ -329,10 +388,24 @@ COPY ~Derats_Defis/pxd105/items/Discombulateur/pxl2dban.itm~	~override~	SAY NAME
 COPY ~Derats_Defis/pxd105/items/Discombulateur/pxl2dprt.itm~	~override~	SAY NAME2 @50133	SAY DESC @50134 //Potion de protection totale
 COPY ~Derats_Defis/pxd105/items/Discombulateur/pxl2dpui.itm~	~override~	SAY NAME2 @50101	SAY DESC @50102 //Potion de puissance extrême
 COPY ~Derats_Defis/pxd105/items/Discombulateur/pxl2dpsy.itm~	~override~	SAY NAME2 @50123	SAY DESC @50124 //Potion de psychomagie
+=======
+COPY ~Derats_Defis/pxd180/items/Discombulateur/pxl2dcoe.itm~	~override~	SAY NAME2 @50117	SAY DESC @50118 //CÂœur de glace
+COPY ~Derats_Defis/pxd180/items/Discombulateur/pxl2dcbs.itm~	~override~	SAY NAME2 @50119	SAY DESC @50120 //Potion de combattant suprÃªme
+COPY ~Derats_Defis/pxd180/items/Discombulateur/pxl2dsca.itm~	~override~	SAY NAME2 @50121	SAY DESC @50122 //Potion de Souffle caustique
+COPY ~Derats_Defis/pxd180/items/Discombulateur/pxl2sf0.spl~	~override~	SAY NAME1 @501221
+COPY ~Derats_Defis/pxd180/items/Discombulateur/pxl2dvis.itm~	~override~	SAY NAME2 @50125	SAY DESC @50126 //Filtre de visÃ©e sublimÃ©e
+COPY ~Derats_Defis/pxd180/items/Discombulateur/pxl2dcob.itm~	~override~	SAY NAME2 @50127	SAY DESC @50128 //Filtre de corps d'obsidienne
+COPY ~Derats_Defis/pxd180/items/Discombulateur/pxl2demo.itm~	~override~	SAY NAME2 @50129	SAY DESC @50130 //Essence de mort
+COPY ~Derats_Defis/pxd180/items/Discombulateur/pxl2dban.itm~	~override~	SAY NAME2 @50131	SAY DESC @50132 //Potion de blocage de magie antinomique
+COPY ~Derats_Defis/pxd180/items/Discombulateur/pxl2dprt.itm~	~override~	SAY NAME2 @50133	SAY DESC @50134 //Potion de protection totale
+COPY ~Derats_Defis/pxd180/items/Discombulateur/pxl2dpui.itm~	~override~	SAY NAME2 @50101	SAY DESC @50102 //Potion de puissance extrÃªme
+COPY ~Derats_Defis/pxd180/items/Discombulateur/pxl2dpsy.itm~	~override~	SAY NAME2 @50123	SAY DESC @50124 //Potion de psychomagie
+>>>>>>> 8f54d34c62e4b971959fa09557f669d1dde5b832
 COPY_EXISTING	~pxl2disc.itm~					~override~	WRITE_ASCII 0xd7e ~pxl2dpui~ #8	WRITE_ASCII 0xdae ~pxl2dpsy~ #8
 COPY_EXISTING	~sareveff.eff~		~override/pxl2doe2.eff~	WRITE_ASCII 0x30 ~pxl2doe2~ #8
 COPY_EXISTING	~amcall.vvc~		~override/pxw7boiv.vvc~	WRITE_ASCII 0x8 ~pxw7boui~ #8
 COPY_EXISTING	~sparm2.vvc~		~override/pxw7boi2.vvc~	WRITE_ASCII 0x8 ~pxw7boi2~ #8	WRITE_BYTE 0x20 (THIS | 65)	WRITE_BYTE 0x18 (THIS | 2)
+<<<<<<< HEAD
 COPY ~Derats_Defis/pxd105/items/Discombulateur/pxl2bonn.itm~	~override~	SAY NAME2 @50137	SAY DESC @50138 	SAY 0x10e @501381 //Potion de bonne fortune
 COPY ~Derats_Defis/pxd105/items/Discombulateur/pxl2eaup.itm~	~override~	SAY NAME2 @50139	SAY DESC @50140 //Eau positive
 COPY ~Derats_Defis/pxd105/items/Discombulateur/pxl2tord.itm~	~override~	SAY NAME2 @50141	SAY DESC @50142 //Tord-boyaux du sage
@@ -346,3 +419,18 @@ COPY ~Derats_Defis/pxd105/items/Discombulateur/pxl2refl.itm~	~override~	SAY NAME
 COPY_EXISTING	~dam5.eff~						~override/pxl2cpy1.eff~	WRITE_BYTE 0x1c 0	WRITE_BYTE 0x38 1	WRITE_BYTE 0x3c 6	WRITE_BYTE 0x22 8
 COPY ~Derats_Defis/pxd105/items/Discombulateur/pxl2vorp.itm~	~override~	SAY NAME2 @50157	SAY DESC @50158 //Filtre de vorpalité
 END
+=======
+COPY ~Derats_Defis/pxd180/items/Discombulateur/pxl2bonn.itm~	~override~	SAY NAME2 @50137	SAY DESC @50138 	SAY 0x10e @501381 //Potion de bonne fortune
+COPY ~Derats_Defis/pxd180/items/Discombulateur/pxl2eaup.itm~	~override~	SAY NAME2 @50139	SAY DESC @50140 //Eau positive
+COPY ~Derats_Defis/pxd180/items/Discombulateur/pxl2tord.itm~	~override~	SAY NAME2 @50141	SAY DESC @50142 //Tord-boyaux du sage
+COPY ~Derats_Defis/pxd180/items/Discombulateur/pxl2dese.itm~	~override~	SAY NAME2 @50143	SAY DESC @50144 //Potion de dÃ©senchantement
+COPY ~Derats_Defis/pxd180/items/Discombulateur/pxl2invm.itm~	~override~	SAY NAME2 @50145	SAY DESC @50146 //Potion d'invisibilitÃ© majeure
+COPY ~Derats_Defis/pxd180/items/Discombulateur/pxl2visi.itm~	~override~	SAY NAME2 @50147	SAY DESC @50148 //Potion de Vision totale
+COPY ~Derats_Defis/pxd180/items/Discombulateur/pxl2mem2.itm~	~override~	SAY NAME2 @50149	SAY DESC @50150 //MÃ©moire concentrÃ©e
+COPY ~Derats_Defis/pxd180/items/Discombulateur/pxl2feer.itm~	~override~	SAY NAME2 @50151	SAY DESC @50152 //Huile fÃ©erique
+COPY ~Derats_Defis/pxd180/items/Discombulateur/pxl2ppyr.itm~	~override~	SAY NAME2 @50153	SAY DESC @50154 //Huile pyrophorique
+COPY ~Derats_Defis/pxd180/items/Discombulateur/pxl2refl.itm~	~override~	SAY NAME2 @50155	SAY DESC @50156 //Baume de rÃ©flexion
+COPY_EXISTING	~dam5.eff~						~override/pxl2cpy1.eff~	WRITE_BYTE 0x1c 0	WRITE_BYTE 0x38 1	WRITE_BYTE 0x3c 6	WRITE_BYTE 0x22 8
+COPY ~Derats_Defis/pxd180/items/Discombulateur/pxl2vorp.itm~	~override~	SAY NAME2 @50157	SAY DESC @50158 //Filtre de vorpalitÃ©
+END
+>>>>>>> 8f54d34c62e4b971959fa09557f669d1dde5b832
