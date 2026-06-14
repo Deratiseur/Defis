@@ -482,9 +482,6 @@ COPY_EXISTING ~px1804.cre~			~override/px180434.cre~	SAY NAME1 @180434	SAY NAME2
 LPF ADD_CRE_EFFECT INT_VAR opcode = 146 parameter2 = 1 timing = 9 target = 1 STR_VAR resource = pxddirig END
 COPY_EXISTING ~px1804.cre~			~override/px180435.cre~	SAY NAME1 @180435	SAY NAME2 @180435
 LPF ADD_CRE_EFFECT INT_VAR opcode = 146 parameter2 = 1 timing = 9 target = 1 STR_VAR resource = pxdnecro END
-//Caparaçonné
-COPY_EXISTING ~px1804.cre~			~override/px180436.cre~	SAY NAME1 @180436	SAY NAME2 @180436
-LPF ADD_CRE_EFFECT INT_VAR opcode = 146 parameter2 = 1 timing = 9 target = 1 STR_VAR resource = pxdcara1 END
 COPY_EXISTING ~px1804.cre~			~override/px180437.cre~	SAY NAME1 @180437	SAY NAME2 @180437
 LPF ADD_CRE_EFFECT INT_VAR opcode = 146 parameter2 = 1 timing = 9 target = 1 STR_VAR resource = pxdcharg END
 //Maudit
@@ -611,9 +608,6 @@ COPY_EXISTING ~px1805.cre~			~override/px180534.cre~	SAY NAME1 @180534	SAY NAME2
 LPF ADD_CRE_EFFECT INT_VAR opcode = 146 parameter2 = 1 timing = 9 target = 1 STR_VAR resource = pxddirig END
 COPY_EXISTING ~px1805.cre~			~override/px180535.cre~	SAY NAME1 @180535	SAY NAME2 @180535
 LPF ADD_CRE_EFFECT INT_VAR opcode = 146 parameter2 = 1 timing = 9 target = 1 STR_VAR resource = pxdnecro END
-//Caparaçonné
-COPY_EXISTING ~px1805.cre~			~override/px180536.cre~	SAY NAME1 @180536	SAY NAME2 @180536
-LPF ADD_CRE_EFFECT INT_VAR opcode = 146 parameter2 = 1 timing = 9 target = 1 STR_VAR resource = pxdcara1 END
 COPY_EXISTING ~px1805.cre~			~override/px180537.cre~	SAY NAME1 @180537	SAY NAME2 @180537
 LPF ADD_CRE_EFFECT INT_VAR opcode = 146 parameter2 = 1 timing = 9 target = 1 STR_VAR resource = pxdcharg END
 //Maudit
