@@ -22,7 +22,7 @@ At the location of your choice (Athkatla, Watchtower, or Amkethran), you will en
 
 Each challenge consists of an "arena" in which you will encounter dozens of random monsters and where you must find and kill the boss to claim victory.
 
-This is a WIP version, offering only 8 of the 11 planned arenas.
+There are 10 challenges to try, plus the final challenge once you've completed all 10.
 
 </td>
 
@@ -36,7 +36,7 @@ This is a WIP version, offering only 8 of the 11 planned arenas.
 
 Chaque défi consiste en une "arène" dans laquelle vous rencontrerez des dizaines de monstres aléatoires et où vous devrez trouver et tuer le boss pour valider la victoire.
 
-Ceci est une version WIP, ne proposant que 8 arènes sur les 11 prévues.
+Il y a 10 défis à relever, plus le défi final quand vous aurez triomphé des 10 premiers défis.
 
 </td>
 </tr>
