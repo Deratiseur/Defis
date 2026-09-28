@@ -1,0 +1,43 @@
+IF
+	OnCreation()
+THEN
+	RESPONSE #100
+		ReallyForceSpell(Myself,QUICK_INVISIBLE)
+		DisplayStringHead(Myself,@11033)
+END
+
+IF
+	StateCheck(Myself,STATE_INVISIBLE)
+	See(NearestEnemyOfType([0.0.0.MAGE_ALL]))
+THEN
+	RESPONSE #100
+		MoveToObject(LastSeenBy(Myself))
+END
+
+IF
+	StateCheck(Myself,STATE_INVISIBLE)
+	See(NearestEnemyOfType([0.0.0.MAGE_ALL]))
+	Range(LastSeenBy(Myself),4)
+	OR(2)
+		CheckStatGT(LastSeenBy(Myself),0,STONESKINS)
+		Global("pxd101pal","GLOBAL",1)
+THEN
+	RESPONSE #100
+		AttackReevaluate(NearestEnemyOf(Myself),30)
+END
+
+IF
+	StateCheck(Myself,STATE_INVISIBLE)
+	See(NearestEnemyOf(Myself))
+THEN
+	RESPONSE #100
+		AttackReevaluate(NearestEnemyOf(Myself),30)
+END
+
+IF	!StateCheck(Myself,STATE_INVISIBLE)
+	See(NearestEnemyOf(Myself))
+THEN
+	RESPONSE #100
+		Hide() 
+		AttackReevaluate(NearestEnemyOf(Myself),30)
+END

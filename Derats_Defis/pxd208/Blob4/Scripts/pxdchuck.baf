@@ -1,0 +1,67 @@
+IF
+	OR(6)
+		See(Player1)
+		See(Player2)
+		See(Player3)
+		See(Player4)
+		See(Player5)
+		See(Player6)
+	Global("px203chuck","LOCALS",0)
+THEN
+	RESPONSE #100
+		SetGlobal("px203chuck","LOCALS",1)
+		StartDialogueNoSet(LastSeenBy(Myself))
+END
+
+IF
+	OR(2)
+		Global("pxdfusion","GLOBAL",1)
+		Global("pxdfusion","GLOBAL",2)
+	Range("PXDJCVD",5)  // Jean-Claude Van Damme
+THEN
+	RESPONSE #100
+		SetGlobal("pxdfusion","GLOBAL",3)
+		FaceObject("PXDJCVD")  // Jean-Claude Van Damme
+		ActionOverride("PXDJCVD",FaceObject("PXDCHUCK"))  // Chuck Norris
+		CreateVisualEffectObject("PXDFUSIv",Myself)
+		SaveObjectLocation("GLOBAL","pxdfusion_POS",Myself)
+		ActionOverride("PXDJCVD",DestroySelf())
+		//CreateCreatureAtLocation("pxdfusion_POS","GLOBAL","PXDFUSIO") 
+		CreateCreatureImpassableAllowOverlap("PXDFUSIO",[-1.-1],0)
+		DestroySelf()
+END
+
+IF
+	Global("pxdfusion","GLOBAL",0)
+	HPLT(Myself,6)
+THEN
+	RESPONSE #100
+		SetGlobal("pxdfusion","GLOBAL",1)
+		ActionOverride("PXDJCVD",ClearAllActions())
+		ActionOverride("PXDJCVD",MoveToObject("PXDCHUCK"))
+		MoveToObject("PXDJCVD")  // Jean-Claude Van Damme
+END
+
+IF
+	Global("pxdfusion","GLOBAL",1)
+	!Range("PXDJCVD",5)  // Jean-Claude Van Damme
+THEN
+	RESPONSE #100
+		MoveToObject("PXDJCVD")  // Jean-Claude Van Damme
+END
+
+IF
+	Global("pxdfusion","GLOBAL",2)
+THEN
+	RESPONSE #100
+		NoAction()
+END
+
+IF
+	See(NearestEnemyOf(Myself))
+	Global("pxdfusion","GLOBAL",0)
+THEN
+	RESPONSE #100
+		AttackReevaluate(LastSeenBy(Myself),30)
+END
+

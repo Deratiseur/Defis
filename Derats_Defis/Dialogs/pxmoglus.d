@@ -1,0 +1,105 @@
+BEGIN ~pxmoglus~
+
+IF ~Global("pxmoglus","GLOBAL",0)~ THEN BEGIN welcome SAY @20002
+	IF ~~ THEN REPLY @20003 GOTO portail
+END
+
+IF ~Global("pxmoglus","GLOBAL",1)~ THEN BEGIN dialogue SAY @200035
+	IF ~~ THEN REPLY @200036 GOTO sante
+	IF ~~ THEN REPLY @200039 GOTO adieu
+END
+
+IF ~~ THEN BEGIN adieu SAY @200040
+	IF ~~ THEN DO ~SetGlobal("pxmoglus","GLOBAL",2)
+			Wait(1)
+			MoveGlobal("AR0602",Myself,[3863.2463])~ EXIT
+END
+
+IF ~~ THEN BEGIN sante SAY @200037
+	IF ~~ THEN REPLY @200038 EXIT
+END
+
+IF ~~ THEN BEGIN portail SAY @20004
+	IF ~~ THEN REPLY @20005 GOTO quoi
+	IF ~~ THEN REPLY @20006 GOTO rate
+END
+
+IF ~~ THEN BEGIN quoi SAY @20007
+	IF ~~ THEN REPLY @20009 GOTO MV
+	IF ~~ THEN REPLY @200010 GOTO cache
+	IF ~Dead("PXD201B")~ THEN REPLY @200031 GOTO mort
+END
+
+IF ~~ THEN BEGIN rate SAY @20008
+	IF ~~ THEN REPLY @20009 GOTO MV
+	IF ~~ THEN REPLY @200010 GOTO cache
+	IF ~Dead("PXD201B")~ THEN REPLY @200031 GOTO mort	
+END
+
+IF ~~ THEN BEGIN MV SAY @200011
+	IF ~~ THEN REPLY @200013 GOTO etes
+END
+
+IF ~~ THEN BEGIN cache SAY @200012
+	IF ~~ THEN REPLY @200013 GOTO etes
+	IF ~~ THEN REPLY @200014 GOTO fifres
+END
+
+IF ~~ THEN BEGIN fifres SAY @200016
+	IF ~~ THEN REPLY @200020 GOTO maintenant1
+END
+
+IF ~~ THEN BEGIN etes SAY @200015
+	IF ~~ THEN REPLY @200017 GOTO pompeux
+	IF ~Global("mort","LOCALS",0)~ THEN REPLY @200018 GOTO maintenant1
+	IF ~Global("mort","LOCALS",1)~ THEN REPLY @200018 GOTO maintenant2
+END
+
+IF ~~ THEN BEGIN pompeux SAY @200019
+	IF ~Global("mort","LOCALS",0)~ THEN REPLY @200020 GOTO maintenant1
+	IF ~Global("mort","LOCALS",1)~ THEN REPLY @200020 GOTO maintenant2
+END
+
+IF ~~ THEN BEGIN maintenant1 SAY @200021
+	IF ~~ THEN REPLY @200022 GOTO blague
+	IF ~~ THEN REPLY @200023 GOTO apport
+	IF ~~ THEN REPLY @200024 GOTO poignard
+END
+
+IF ~~ THEN BEGIN blague SAY @200025
+	IF ~~ THEN REPLY @200028 GOTO familier
+	IF ~~ THEN REPLY @200029 GOTO refus
+END
+
+IF ~~ THEN BEGIN apport SAY @200026
+	IF ~~ THEN REPLY @200028 GOTO familier
+	IF ~~ THEN REPLY @200029 GOTO refus
+END
+
+IF ~~ THEN BEGIN poignard SAY @200027
+	IF ~~ THEN REPLY @200028 GOTO familier
+	IF ~~ THEN REPLY @200029 GOTO refus
+END
+
+IF ~~ THEN BEGIN refus SAY @200030
+	IF ~~ THEN EXIT
+END
+
+IF ~~ THEN BEGIN familier SAY @200030
+	IF ~~ THEN DO
+		~MakeGlobal()
+		ChangeEnemyAlly(Myself,FAMILIAR)
+		AddFamiliar()
+		SetGlobal("pxmoglus","GLOBAL",1)
+		ReallyForceSpellRES("pxflvisi",Myself)~ EXIT
+END
+
+IF ~~ THEN BEGIN mort SAY @200032
+	IF ~~ THEN REPLY @200033 DO ~SetGlobal("mort","LOCALS",1)~ GOTO etes
+END
+
+IF ~~ THEN BEGIN maintenant2 SAY @200034
+	IF ~~ THEN REPLY @200022 GOTO blague
+	IF ~~ THEN REPLY @200023 GOTO apport
+	IF ~~ THEN REPLY @200024 GOTO poignard
+END

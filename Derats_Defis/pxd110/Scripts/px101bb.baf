@@ -1,0 +1,26 @@
+IF
+	OnCreation()
+THEN
+	RESPONSE #100
+	DisplayStringHead(Myself,@11030)
+END
+
+
+IF
+	See(NearestEnemyOf(Myself))
+	HaveSpell(BARBARIAN_RAGE)
+	!GlobalTimerNotExpired("rage","LOCALS")
+THEN
+	RESPONSE #100
+		SetGlobalTimer("rage","LOCALS",120)
+		Spell(Myself,BARBARIAN_RAGE)
+		AttackReevaluate(NearestEnemyOf(Myself),45)
+END
+
+IF
+	See(NearestEnemyOf(Myself))
+THEN
+	RESPONSE #100
+
+		Attack(NearestEnemyOf(Myself))
+END

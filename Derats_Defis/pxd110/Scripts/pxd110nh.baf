@@ -1,0 +1,47 @@
+IF
+	GlobalGT("pxd101dead","GLOBAL",0)
+THEN
+	RESPONSE #100
+		DestroySelf()
+END
+
+IF
+    InMyArea(Player1)
+    !See(NearestEnemyOf(Myself))
+THEN
+    RESPONSE #100
+        MoveToObject(Player1)
+        Continue()
+    RESPONSE #100
+        MoveToObject(Player2)
+        Continue()
+    RESPONSE #100
+        MoveToObject(Player3)
+        Continue()
+    RESPONSE #100
+        MoveToObject(Player4)
+        Continue()
+    RESPONSE #100
+        MoveToObject(Player5)
+        Continue()
+    RESPONSE #100
+        MoveToObject(Player6)
+        Continue()
+END
+
+IF
+	OR(6)
+	Range(Player1,6)
+	Range(Player2,6)
+	Range(Player3,6)
+	Range(Player4,6)
+	Range(Player5,6)
+	Range(Player6,6)
+THEN
+	RESPONSE #100
+		DisplayStringHead(Myself,@1102)
+		SetGlobal("px110nh","PXD110",2)
+		ApplySpell(Myself,WIZARD_SUN_FIRE)
+		Wait(1)
+		DestroySelf()
+END

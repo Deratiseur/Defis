@@ -1,5 +1,5 @@
 COPY ~Derats_Defis/base/Copy~					~override~
-COPY ~Derats_Defis/base/pxdgolem.cre~			~override~	SAY NAME1 @18	SAY NAME2 @18
+
 COPY ~Derats_Defis/base/pxd108ru.itm~			~override~	SAY NAME2 @19	SAY DESC @110
 COPY_EXISTING ~pxd108ru.itm~		~override/pxd160ru.itm~	WRITE_ASCII 0xee ~px160wn~ #8	WRITE_ASCII 0x3a ~pxd160ru~ #8	WRITE_ASCII 0x76 ~pxd160ru~ #8
 COPY_EXISTING ~pxd108ru.itm~		~override/pxd610ru.itm~	WRITE_ASCII 0xee ~px610wn~ #8	WRITE_ASCII 0x3a ~pxd610ru~ #8	WRITE_ASCII 0x76 ~pxd610ru~ #8
@@ -15,10 +15,12 @@ COPY_EXISTING ~pxd108ru.itm~		~override/pxd105ru.itm~	WRITE_ASCII 0xee ~px105wn~
 ADD_PROJECTILE ~Derats_Defis/base/pxdtout.pro~
 APPEND ~RNDTRES.2da~ 
 ~PXD1081  POTN23   POTN25   POTN32   POTN40   POTN08   *        *        *        *        *        *        *        *        *        *        *        *        *        *        *        *        *        *        *        *        *        *        *        *        *        *        *        *        *        *        *        *        *        *        *
-PXD1082  SCRL03   SCRL04   SCRL05   SCRL06   SCRL07  SCRL08    SCRL09   SCRL10   SCRL11   SCRL12   SCRL13   SCRL14  SCRL15    SCRL16   SCRL17   SCRL18   SCRL19   *        *        *        *        *        *        *        *        *        *        *        *        *        *        *        *        *        *        *        *        *        *        *
-PXD2081  CHAN01   CHAN02   CLCK12   LEAT01   LEAT02  PLAT02    AX1H01   AX1H02   PLOT01P  BOW01    BOW06    XBOW05  DAGG01    DAGG02   BLUN02   BLUN03   SW1H20   HALB01   HAMM01   HAMM02   HELM01  BLUN01    BLUN04   BLUN07   RING02   RING06   SHLD03   SHLD17  SW1H07    SW1H08   SPER01   SPER02   STAF02   SW1H01   SW1H01   SW1H02   SW1H04  SW1H05    SW1H022  SW2H01
-PXD1801  DAGG01   BLUN02   AX1H01   HAMM01   BLUN01  BLUN04    BLUN06   SW1H07   SW1H20   SW1H01  SW1H04    SW2H01   *        *        *        *        *        *        *        *        *        *        *        *        *        *        *        *        *        *        *        *        *        *        *        *        *        *        *        *
-PXD7081  COMPON18 COMPON19 OHDSCALE SCALER   *        *        *        *        *        *        *        *        *        *        *        *        *        *        *        *        *        *        *        *        *        *        *        *        *        *        *        *        *        *        *        *        *        *        *        *~
+PXD1082  SCRL03   SCRL04   SCRL05   SCRL06   SCRL07   SCRL08   SCRL09   SCRL10   SCRL11   SCRL12   SCRL13   SCRL14  SCRL15    SCRL16   SCRL17   SCRL18   SCRL19   *        *        *        *        *        *        *        *        *        *        *        *        *        *        *        *        *        *        *        *        *        *        *
+PXD2081  CHAN01   CHAN02   CLCK12   LEAT01   LEAT02   PLAT02   AX1H01   AX1H02   PLOT01P  BOW01    BOW06    XBOW05  DAGG01    DAGG02   BLUN02   BLUN03   SW1H20   HALB01   HAMM01   HAMM02   HELM01  BLUN01    BLUN04   BLUN07   RING02   RING06   SHLD03   SHLD17  SW1H07    SW1H08   SPER01   SPER02   STAF02   SW1H01   SW2H02   SW1H02   SW1H04  SW1H05    SW1H022  SW2H01
+PXD1801  DAGG01   BLUN02   AX1H01   HAMM01   BLUN01   BLUN04   BLUN06   SW1H07   SW1H20   SW1H01   SW1H04   SW2H01   *        *        *        *        *        *        *        *        *        *        *        *        *        *        *        *        *        *        *        *        *        *        *        *        *        *        *        *
+PXD7081  COMPON18 COMPON18 COMPON18 COMPON18 COMPON18 COMPON19 COMPON19 COMPON19 COMPON19 COMPON19 OHDSCALE OHDSCALE OHDSCALE OHDSCALE OHDSCALE SCALER   SCALER   SCALER   SCALER   SCALER   SCALER   SCALER   SCALEB   SCALEB   *        *        *        *        *        *        *        *        *        *        *        *        *        *        *        *
+PXDDISC  POTN55   PXL2DINV POTN35   POTN33   PXL2DDUP PXL2DVIG PXL2DCBS PXL2DDUA PXL2DPOI PXL2DFEE PXL2DCOE PXL2DSCA PXL2DHAT PXL2DBRO PXL2DLUK PXL2DNEX PXL2DREP PXL2DVIE PXL2DFOR PXL2DLAR PXPASOIN PXPAREVI PXL2DVIS PXPMINPA PXPMHERO PXL2DCOB PXL2DVIT PXL2DREF PXL2DCFO PXL2DF25 PXL2DD2 PXL2DEMO PXL2DCAM PXL2DNET PXL2DDIV PXL2DBAN PXL2DMAG PXL2DPUI PXL2DPSY POTN34
+PXDWAND  WAND02   WAND04   WAND05   WAND06   WAND07   WAND08   WAND09   WAND10   WAND11   WAND13   WAND18   WAND19   *        *        *        *        *        *        *        *        *        *        *        *        *        *        *        *        *        *        *        *        *        *        *        *        *        *        *        *~
 BUT_ONLY
 ACTION_IF FILE_EXISTS_IN_GAME ~pxl2hexa.itm~ THEN BEGIN
 APPEND ~RNDTRES.2da~
@@ -67,8 +69,16 @@ LPF ADD_CRE_EFFECT INT_VAR opcode = 206 target = 1 timing = 9 STR_VAR resource =
 LPF ADD_CRE_EFFECT INT_VAR opcode = 206 target = 1 timing = 9 STR_VAR resource = spwi025 END
 LPF ADD_CRE_EFFECT INT_VAR opcode = 206 target = 1 timing = 9 STR_VAR resource = pxd1801 END
 LPF ADD_CRE_EFFECT INT_VAR opcode = 206 target = 1 timing = 9 STR_VAR resource = pxd1001 END
-LPF ADD_CRE_EFFECT INT_VAR opcode = 206 target = 1 timing = 9 STR_VAR resource = pxd100b2 END
 LPF ADD_CRE_EFFECT INT_VAR opcode = 206 target = 1 timing = 9 STR_VAR resource = spwi810 END
+LPF ADD_CRE_EFFECT INT_VAR opcode = 206 target = 1 timing = 9 STR_VAR resource = SPDR201 END
+LPF ADD_CRE_EFFECT INT_VAR opcode = 206 target = 1 timing = 9 STR_VAR resource = SPWI957 END
+LPF ADD_CRE_EFFECT INT_VAR opcode = 206 target = 1 timing = 9 STR_VAR resource = Pxd7081 END
+LPF ADD_CRE_EFFECT INT_VAR opcode = 206 target = 1 timing = 9 STR_VAR resource = pxdgdrag END
+LPF ADD_CRE_EFFECT INT_VAR opcode = 206 target = 1 timing = 9 STR_VAR resource = pxd100b2 END
+LPF ADD_CRE_EFFECT INT_VAR opcode = 206 target = 1 timing = 9 STR_VAR resource = pxd1101 END
+LPF ADD_CRE_EFFECT INT_VAR opcode = 206 target = 1 timing = 9 STR_VAR resource = SPIN894 END
+LPF ADD_CRE_EFFECT INT_VAR opcode = 206 target = 1 timing = 9 STR_VAR resource = PIN695 END
+LPF ADD_CRE_EFFECT INT_VAR opcode = 206 target = 1 timing = 9 STR_VAR resource = SPIN535 END
 END
 
 COPY ~Derats_Defis/Base/Cre_buffs/Copy~				~override~
@@ -160,7 +170,7 @@ COPY_EXISTING ~pxdentrv.vvc~		~override/pxdsomvf.vvc~	WRITE_ASCII 0x8 ~pxdsombf~
 //33 - Vampirique
 COPY_EXISTING ~pxdvenim.spl~		~override/pxdvampi.spl~	WRITE_ASCII 0xae ~pxdvamp1~ #8 WRITE_ASCII 0xde ~pxdvamp2~ #8	WRITE_ASCII 0x10e ~pxdvamp1~ #8 WRITE_ASCII 0x13e ~pxdvamp2~ #8
 //34 - Dirigeante
-COPY_EXISTING ~pxdepuis.spl~		~override/pxddirig.spl~	WRITE_ASCII 0xae ~pxddirix~ #8	WRITE_ASCII 0xde ~pxddirvf~ #8	WRITE_ASCII 0x10e ~pxdirvb~ #8	WRITE_BYTE 0x9e 6
+COPY_EXISTING ~pxdepuis.spl~		~override/pxddirig.spl~	WRITE_ASCII 0xae ~pxddirix~ #8	WRITE_ASCII 0xde ~pxddirvf~ #8	WRITE_ASCII 0x10e ~pxddirvb~ #8	WRITE_BYTE 0x9e 6
 COPY_EXISTING ~sareveff.eff~		~override/pxddirix.eff~	WRITE_ASCII 0x30 ~pxddirix~ #8
 COPY_EXISTING ~pxdentrv.vvc~		~override/pxddirvf.vvc~	WRITE_ASCII 0x8 ~pxddirif~ #8	WRITE_BYTE 0x2c 5
 COPY_EXISTING ~pxdentrv.vvc~		~override/pxddirvb.vvc~	WRITE_ASCII 0x8 ~pxddirib~ #8	WRITE_BYTE 0x2c ~-10~
@@ -179,6 +189,8 @@ COPY_EXISTING ~pxdcara2.spl~		~override/pxdcara3.spl~
 LPF ADD_SPELL_EFFECT INT_VAR opcode = 120 target = 2 timing = 9 parameter1 = 3 END
 COPY_EXISTING ~pxdcara3.spl~		~override/pxdcara4.spl~
 LPF ADD_SPELL_EFFECT INT_VAR opcode = 120 target = 2 timing = 9 parameter1 = 4 END
+COPY_EXISTING ~pxdcara4.spl~		~override/pxdcara5.spl~
+LPF ADD_SPELL_EFFECT INT_VAR opcode = 120 target = 2 timing = 9 parameter1 = 5 END
 //37 - Chargée 
 COPY_EXISTING ~spwi403d.eff~		~override/pxdcharx.eff~	WRITE_ASCII 0x30 ~pxdcharx~ #8
 COPY_EXISTING ~sparm2.vvc~			~override/pxsph62v.vvc~	WRITE_ASCII 0x8 ~pxl2elc1~ #8	WRITE_BYTE 0x20 (THIS | 65)	WRITE_BYTE 0x18 (THIS | 2)

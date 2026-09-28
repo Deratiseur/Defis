@@ -1,0 +1,22 @@
+IF
+	Die()
+THEN
+    RESPONSE #100
+        SetGlobal("px160sss","GLOBAL",0)
+END
+
+IF
+	OR(6)
+		See(Player1)
+		See(Player2)
+		See(Player3)
+		See(Player4)
+		See(Player5)
+		See(Player6)
+		Global("px160df","LOCALS",0)
+THEN
+    RESPONSE #100
+		SetGlobal("px160df","LOCALS",1)
+        StartDialogueNoSet(LastSeenBy(Myself))	
+END
+

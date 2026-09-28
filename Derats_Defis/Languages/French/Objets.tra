@@ -1,13 +1,15 @@
 @201 = ~Trésor de Cachemisère~
-@202 = ~Vous avez trouvé ce sac toile dégoûtant accroché au coup d'un Planétaire déchu puant la charogne.
+
+@202 = ~Vous avez trouvé ce sac de toile dégoûtant accroché au cou d'un Planétaire déchu puant la charogne.
 
 Capacité de charge :
 - Une fois par jour peut générer un trésor aléatoire.~
 
 @203 = ~Dague de la méduse~
-@204 = ~C’était la dague que portait la reine méduse spectrale que vous avez vaincu lors d'une épreuve pour prouver votre valeur.
 
-PARAMETRES :
+@204 = ~C’était la dague que portait la reine méduse spectrale que vous avez vaincue lors d'une épreuve pour prouver votre valeur.
+
+PARAMÈTRES :
 
 Capacité de combat :
 - Pétrifie la cible en cas de coup critique (jet de sauvegarde contre la Métamorphose pour annuler)
@@ -19,13 +21,15 @@ Capacités d'équipement :
 TAC0 : +3
 Dégâts : 1D4+3
 Type de dégâts : perforants
-Facteur de vitesse : 1
+Facteur de Vitesse : 1
 Compétence : dague
 Type : une main
+Force nécessaire : 3
 
 Poids : 2~
 
 @207 = ~Orbe des fées~
+
 @208 = ~Vous avez trouvé cet orbe dans le ventre d'un ver charognard géant. Il luit d'une étrange lumière bleue quand vous le prenez en main. Bizarrement, vous savez d'instinct ce que vous pouvez en faire.
 
 Capacité d'équipement :
@@ -38,35 +42,39 @@ Une fois par jour permet de lancer au choix :
 - Globe d'invulnérabilité féerique (protection contre les sorts de niveau 6 et le reste du groupe contre les sorts de niveau 3).
 
 Spécial : doit être tenue en main, occupe la place du bouclier.~
+
 @2081 = ~Bouclier des fées~
+
 @2082 = ~Globe d'invulnérabilité féerique~
 
-@209 = ~Épée cruelle de Tr'kin +5~
-@210 = ~Cette épée est une des deux choses que vous à laissé le Mal Absolu en disparaissant.
+@209 = ~Épée cruelle de Tr'Kin +3~
 
-PARAMETRES :
+@210 = ~Vous avez trouvé cette épée dans un tombeau gardé par des morts-vivants exceptionnels.
+
+PARAMÈTRES :
 
 Capacités d'équipement :
 +3 aux chances de coup critique
 +3 au multiplicateur d'attaque sournoise
 +1 attaque par round
-Spécial : l'épée est habitée par l'esprit acharné de Tr'kin le xvart et il y a de grande chance que cela ait des répercutions sur le porteur.
+Spécial : l'épée est habitée par la volonté acharnée de Tr'Kin, le héros xvart et il y a de grandes chances que cela ait des répercussions sur le porteur.
 Spécial : maudite, on ne peut s'en débarrasser qu'avec un sort de délivrance de la malédiction
 
 Capacité de charge :
-Une fois par jour, permet de lancer une combinaison d'Invisibilité majeure et Immunité contre la divination.
+Une fois par jour pendant un tour Invisibilité majeure, Non détection et Immunité contre la divination.
 
-TAC0 : +5
-Dégâts : 2D3 +5
-Type de dégâts : tranchant 
-Facteur de vitesse : 0
+TAC0 : +3
+Dégâts : 2D3 +3
+Type de dégâts : perçant 
+Facteur de Vitesse : 0
 Compétence : épée courte
 Type d'arme : à 1 main
 Force nécessaire : 5
 
 Poids : 1~
 
-@211 = ~Discombullateur merveilleux~
+@211 = ~Discombulateur merveilleux~
+
 @212 = ~Cet authentique artefact n'a été ensorcelé qu'avec les enchantements spatiaux et temporels les plus raffinés. Au moyen de matériaux alchimiques complexes et d'une iconographie magique et artisanale, cette merveille arcanique moderne permet à son utilisateur d'exercer son influence au-delà même du temps et de l'espace afin de trouver toutes sortes d'élixirs mystérieux et puissants, tout droit sortis de derrière le voile même de la réalité, et cela sans le moindre entraînement. Il n'aura jamais été aussi simple d'invoquer des potions.
 
 PARAMÈTRES :
@@ -75,20 +83,27 @@ Capacité de charge :
 - Une fois par jour, crée une potion aléatoire.~
 
 @213 = ~Baguette de déplacement~
-@214 = ~Quelqu’un c'est fait enterrer avec cette baguette.
+
+@214 = ~Quelqu’un s'est fait enterrer avec cette baguette.
 
 PARAMÈTRES :
 
 Capacité de charge :
 - Téléportation (instantanée)
-- Interversion (sur cible, interverti l'utilisateur et la cible)~
+- Interversion (sur cible, intervertit l'utilisateur et la cible)
+- Téléportation de groupe~
+
 @2141 = ~Téléportation~
+
 @2142 = ~Interversion~
 
-@215 = ~Lame noire du désastre vivante incarnée~
-@216 = ~Cette arme est un sort vivant que vous avez réussi à mater. Plutôt que de mourir, le sort à choisi de se plier à votre volonté pour vivre. Il est donc devenu une arme que vous pouvez utiliser.
+@2143 = ~Téléportation de groupe~
 
-PARAMETRES :
+@215 = ~Lame noire du désastre vivante incarnée~
+
+@216 = ~Cette arme est un sort vivant que vous avez réussi à mater. Plutôt que de mourir, le sort a choisi de se plier à votre volonté pour vivre. Il est donc devenu une arme que vous pouvez utiliser.
+
+PARAMÈTRES :
 
 Capacité d'équipement :
 - Fixe la compétence Épée longue du porteur à 5
@@ -96,7 +111,7 @@ Capacité d'équipement :
 Capacité de combat :
 - La victime doit réussir un jet de sauvegarde contre la mort à +4 ou être désintégrée
 - 10 % de chance de drainer 4 niveaux de la cible et de soigner 20 points de vie du porteur
-- 2% de chance que l'arme devienne berserk : dans ce cas elle s'extirpe de la main du porteur et redevient un sort vivant agressif. Son propriétaire doit alors la mater à nouveau s'il veut pouvoir la récupérer.
+- 2% de chance que l'arme devienne berserk : dans ce cas, elle s'extirpe de la main du porteur et redevient un sort vivant agressif. Son propriétaire doit alors la mater à nouveau s'il veut pouvoir la récupérer.
 
 TAC0 : +5
 Dégâts : 2D12 +5
@@ -107,9 +122,10 @@ Compétence : Épée longue
 Poids : 0~
 
 @217 = ~La lumière anéantissante~
-@218 = ~L’incarnation du feu que vous avez combattu dans un des défis de Telim'Gar a utilisé ce bâton contre vous.
 
-PARAMETRES :
+@218 = ~Le Carbonisateur que vous avez combattu dans un des défis de Telim'Gar "portait" ce bâton.
+
+PARAMÈTRES :
 
 Capacités d'équipement :
 - Résistances élémentaires : -65%
@@ -120,33 +136,36 @@ Dégâts : 1D6 +1
 Type de dégâts : Contondant 
 Facteur de Vitesse : 3
 Compétence : Bâton
-Type d'arme : à 2 mains
+Type d'arme : à deux mains
 Force nécessaire : 5
 
 Poids : 2~
 
 @219 = ~Flamme ardente~
-@220 = ~Vous avez récupéré cet anneau sur le cadavre de l'Incarnation du feu.
 
-PARAMETRES :
+@220 = ~Vous avez récupéré cet anneau sur le cadavre du Carbonisateur.
+
+PARAMÈTRES :
 
 Capacités d'équipement :
 - Résistance au feu : fixée à 125%
 - Dégâts de feu infligés : +20%~
 
 @221 = ~Racines de Kaom~
-@222 = ~L’Incarnation du feu que vous avez combattu sur une poche de terre dans le plan élémentaire du feu portait ces bottes.
 
-PARAMETRES :
+@222 = ~Le Carbonisateur que vous avez combattu sur une poche de terre dans le plan élémentaire du feu portait ces bottes.
+
+PARAMÈTRES :
 
 Capacités d'équipement :
-- Point de vie maximum : +40
+- Points de vie maximum : +40
 - Immunité au ralentissement et aux coups d'ailes.~
 
-@223 = ~Coeur de Kaom~
-@224 = ~L’Incarnation du feu que vous avez combattu sur une poche de terre dans le plan élémentaire du feu portait cette armure.
+@223 = ~Cœur de Kaom~
 
-PARAMETRES :
+@224 = ~Le Carbonisateur que vous avez combattu sur une poche de terre dans le plan élémentaire du feu portait cette armure.
+
+PARAMÈTRES :
 
 Capacités d'équipement :
 - Points de vie maximum : +200
@@ -155,25 +174,30 @@ Classe d'Armure : 2 (-1 contre les armes tranchantes)
 Poids : 20
 Force nécessaire : 12~
 
-@225 = ~Célérité du voleur~
-@226 = ~Cet anneau appartenait à un voleur inconnu mort dans l'une des épreuves de Telim'gar. Vous l'avez trouvé dans les possessions d'un prête du même groupe.
+@225 = ~Célérité de Shalierra~
 
-PARAMETRES
+@226 = ~Cet anneau appartenait à une magicienne inconnue morte dans l'une des épreuves de Telim'Gar. Vous l'avez trouvé dans les possessions d'un prêtre du même groupe.
+
+PARAMÈTRES :
 
 Capacités d'équipement :
 - Hâte
 - Mouvement +2~
 
 @227 = ~Leçons de Maître Iroshi-Sama~
-@228 = ~Ce recueil de techniques de ninja est enchanté pour permettre à n'importe qui de profiter des connaissance d'un maître.
+
+@228 = ~Ce recueil de techniques de ninja est enchanté pour permettre à n'importe qui de profiter des connaissances d'un maître.
+
+PARAMÈTRES :
 
 Capacités de charge :
-- Une fois par jour permet d'utiliser n'importe quel technique majeure de Guerrier ou voleur.~
+- Une fois par jour permet d'utiliser n'importe quelle technique majeure de Guerrier ou voleur.~
 
 @229 = ~Robe de La Liche~
-@230 = ~Cette robe reposait parmi les cendres d'un feu de camp éteint depuis longtemps. Quelqu'un a manifestement essayé de la brûler pour en tirer de la chaleur, mais elle à résisté au feu et est intacte.
 
-PARAMETRES :
+@230 = ~Cette robe reposait parmi les cendres d'un feu de camp éteint depuis longtemps. Quelqu'un a manifestement essayé de la brûler pour en tirer de la chaleur, mais elle a résisté au feu et est intacte.
+
+PARAMÈTRES :
 
 - Classe d'armure : 3
 - +3 sorts mémorisables par niveau de sorts
@@ -181,38 +205,47 @@ PARAMETRES :
 - Immunité à tout autre effet qui modifierait le maximum de points de vie~
 
 @231 = ~Tueuse de mage~
-@232 = ~Cette épée reposait au fond d'un tombeau avant que vous ne le pillez.
+
+@232 = ~Cette lance reposait au fond d'un tombeau avant que vous ne le pilliez.
 
 PARAMÈTRES :
 
 Capacités de combat :
 - Dissipe la magie en touchant
-- Renvoi les créatures invoquées touchées
-- Fait oublier un sort arcanique du plus haut niveau connu à la cible, 5% de chance de faire oublier tous les sorts à la place.
+- Renvoie les créatures invoquées touchées
+- Fait oublier un sort arcanique du plus haut niveau connu à la cible ; 5% de chance de faire oublier tous les sorts à la place.
 
 Capacités de charge :
 - Une fois par jour peut lancer Bouclier des fées (immunité à la magie pendant 4 rounds).
 
-TAC0 :  +3
-Dégâts :  1D6 +3
-Type de dégâts : perforant
-Facteur de Vitesse : 0
-Type de compétence : Épée Courte
-Type : arme à 1 main
-Force nécessaire : 5
+TAC0 : +3
+Dégâts : 1d6+3 (perforant)
+Facteur de vitesse : 3
+Type de compétence : lance
+Type : arme à deux mains
+Nécessite : 5 en Force
 
-Poids :  1~
+Poids : 1~
 
 @233 = ~Bâton Galeno~
-@234 = ~Voici l'histoire de Galeno, le voleur malin. Au cours de ses années d'aventures, Galeno appris à imiter de nombreuses personnes, y compris des magiciens et des sorciers. Son imitation était si astucieuse et complète qu'il pouvait utiliser leurs baguettes et leurs bâtons. Galeno avait peu d'attrait pour les baguettes, car il ne savait pas s'en servir comme armes, et il lui était difficile de les porter pour escalader les murs d'un des temples de Vurkis, lui qui aimait voler les fidèles du dieu du mal. Les baguettes pouvaient toutefois être glissées dans une poche ou une pochette, ou cousues dans la doublure d'une cape, et Galeno les trouvait très utiles. Un jour, alors qu'il échappait aux gardiens d'un autre temple de Vurkis, Galeno sortit une baguette de sous sa cape, dans le but de créer l'illusion d'un mur entre lui et ses poursuivants. Au lieu de cela, il transforma l'un de ses poursuivants en poulet ! Forcé de sauter d'une fenêtre plutôt que de faire une sortie plus digne, Galeno atterrit dans le chariot d'un nettoyeur de rue. Si le contenu âcre du chariot amortit sa chute, il abîma aussi ses vêtements. Frustré et temporairement humilié, Galeno décida qu'il devait y avoir une meilleure façon d'organiser et de transporter sa collection de baguettes magiques. Pendant des jours, il resta assis dans sa chambre, réfléchissant et attendant que les gens oublient son humiliante évasion pour ne pas rire lorsqu'il entrerait dans la taverne. Après tout, l'habile voleur était habitué aux accolades et aux auditeurs avides d'un nouveau récit de ses exploits audacieux. Après avoir soigneusement étudié sa collection, Galeno choisit une baguette qui le transformerait en elfe. Empruntant quelques vêtements à un voisin endormi, Galeno se confectionna un déguisement. S'il n'a rien appris d'autre, il a appris qu'il valait mieux expérimenter quand aucun témoin ne se rendrait compte qu'il regardait le grand Galeno. Tout d'abord, Galeno rassembla les baguettes et tenta de s'en servir pour dévaliser un riche marchand. Cette expérience s'avéra décevante, car Galeno découvrit qu'il ne pouvait accéder qu'aux baguettes qui n’étaient pas rangée. Sans se décourager, Galeno renouvela son déguisement et essaya d'attacher les baguettes en rang sur de courtes longueurs de bois, puis partit voler les bijoux de la duchesse de Beortheocht. (Normalement, il aurait également volé ses affections, car la duchesse était d'une grande beauté. Mais l'orgueil de Galeno voulait qu'il ne puisse le faire que sous sa véritable forme). Il constata qu'il pouvait utiliser toutes les baguettes dont il avait besoin, mais les planches étaient encombrantes lorsqu'il s'agissait de se glisser dans des endroits étroits, qu'il ne put voler les bijoux.
-Cela n'arrivera jamais. Le grand Galeno ne pouvait pas se permettre d'échouer. Sa réputation en souffrirait irrémédiablement. Seul son déguisement éloignait de sa porte la bête de l'humiliation. Cette fois, Galeno décida d'attacher ses baguettes à un tube creux de papier épais, juste assez grand pour faire le tour de son avant-bras. Les baguettes à l'intérieur du tube dépassaient juste assez pour qu'il puisse voir laquelle était laquelle. Sans s'embarrasser d'un déguisement, Galeno entreprit de voler un sorcier nommé Joaquin Mago, dont l'arrogant étalage de richesses méritait d'être cueilli.
-Hélas, le sorcier pris Galeno en flagrant délit. À la grande horreur de Galeno, tout cela n'était qu'un piège ! Il semblait que le garde que Galeno avait transformé en poulet était le fils de Joaquin, et que l'étalage ostentatoire de richesse n'était rien d'autre qu'un appât pour l'avide voleur qui se croyait intelligent. Galeno et Joaquin se livrèrent un combat acharné. L'habile voleur savait que le sorcier avait l'avantage, car il pouvait choisir tous les sorts qu'il connaissait, alors que Galeno n'avait que ses baguettes. Il ne souhaitait rien tant que d'échapper à son piège. Alors qu'il parcourait des yeux la chambre dans laquelle ils se battaient, sa concentration se relâcha et une étrange confluence entre une baguette mal utilisée et un sortilège arcanique se produisit. Le tube autour du bras de Galeno commença à se tordre et à s'allonger. Galeno avait beau essayer, il ne parvenait pas à libérer son bras de la transformation en cours. Il implora désespérément la pitié de Joaquin, et le cœur du sorcier se serra : son fils n'avait été que temporairement une poule, après tout. Comme il ne parvenait pas arrêter ou inverser la transformation, Joaquin trouva le moyen de faire voler le paquet protéiforme de baguettes à travers les dimensions.
+
+@234 = ~Galeno était un voleur ingénieux. Au fil de ses aventures, il apprit à imiter de nombreuses personnes, notamment des magiciens et des sorciers. Son imitation était si habile et si parfaite qu'il pouvait utiliser leurs baguettes et leurs bâtons magiques. Les bâtons lui étaient cependant peu utiles : il ne savait pas s'en servir comme armes et ils étaient difficiles à transporter lorsqu'il escaladait les murs des temples de Vurkis, car il aimait voler les fidèles de ce dieu du mal. Les baguettes, en revanche, pouvaient être glissées dans une bourse ou une poche, ou cousues dans la doublure d'une cape, et Galeno les trouvait fort utiles.
+
+Un jour, alors qu'il fuyait les gardiens d'un temple de Vurkis, Galeno tira une baguette de sous sa cape, dans l'intention de créer l'illusion d'un mur entre lui et ses poursuivants. Au lieu de cela, il transforma l'un des gardiens en poulet ! Contraint de sauter par une fenêtre plutôt que de prendre une fuite plus digne, Galeno atterrit dans le chariot d'un balayeur des rues. Le contenu nauséabond du chariot amortit sa chute, mais ruina également ses vêtements.
+
+Frustré et momentanément humilié, Galeno chercha un meilleur moyen d'organiser et de transporter sa collection de baguettes. Après plusieurs expériences, il finit par les fixer sur un tube creux en papier épais entourant son avant-bras. Les baguettes placées à l'intérieur du tube dépassaient suffisamment à l'arrière pour qu'il puisse les distinguer. Il partit alors cambrioler un sorcier nommé Joaquin Mago, dont l'étalage arrogant de richesses appelait à être dépouillé.
+
+Hélas, le sorcier découvrit Galeno en plein cambriolage. À sa grande horreur, tout cela n'était qu'un piège ! Le garde que Galeno avait transformé en poulet était le fils de Joaquin, et l'étalage de richesses n'était qu'un appât destiné à attirer un voleur cupide, certes, mais ingénieux. Galeno et Joaquin livrèrent un formidable duel. Alors que le combat faisait rage, la concentration de Galeno vacilla et une étrange confluence entre les baguettes et la magie du sorcier se produisit. Le tube autour du bras de Galeno se mit à se tordre et à s'allonger. Les baguettes commencèrent à fusionner avec lui et, malgré tous ses efforts, il ne parvint pas à se libérer de la transformation. Désespéré, Galeno supplia Joaquin de lui venir en aide.
+
+Le cœur du sorcier s'attendrit. Après tout, son fils n'était resté un poulet que temporairement. Joaquin tenta d'arrêter la transformation, mais il ne put ni l'interrompre ni l'inverser. L'étrange amas continua de se tordre et de changer, Galeno et les baguettes se mélangeant et fusionnant sans cesse. Incapable de contrôler ou de contenir ce que Galeno était en train de devenir, Joaquin finit par projeter l'amas en perpétuelle métamorphose à travers les dimensions.
+
+Bien des années plus tard, Dillpater retrouva ce qui restait du voleur ingénieux. À ce moment-là, Galeno avait été entièrement métamorphosé, son corps et ses baguettes ne formant désormais plus qu'un seul et même objet magique.
 
 
-PARAMETRES :
+PARAMÈTRES :
 
 Capacités de combat :
-- Crée l'effet d'une baguette aléatoire en touchant.
+- Crée l'effet d'une baguette aléatoire en touchant (pas de projectile ni de zone)
 
 Capacités de charge :
 - Crée une baguette aléatoire
@@ -220,64 +253,91 @@ Capacités de charge :
 TAC0 : +3
 Dégâts : 1D6 +3
 Type de dégât : contondant
-Facteur de vitesse : 1
+Facteur de Vitesse : 1
 Type de compétence : bâton
-Type : arme à 2 mains
+Type : arme à deux mains
 Force nécessaire : 5
 
 Poids : 3~
 
+@2341 = ~Baguette d'effroi~
+
+@2342 = ~Baguette de projectiles magiques~
+
+@2343 = ~Baguette de paralysie~
+
+@2344 = ~Baguette de feu~
+
+@2345 = ~Baguette de givre~
+
+@2346 = ~Baguette de foudre~
+
+@2347 = ~Baguette de sommeil~
+
+@2348 = ~Baguette de métamorphose~
+
+@2349 = ~Baguette de convocation de monstres~
+
+@23410 = ~Baguette des cieux~
+
+@23411 = ~Baguette de Nuage mortel~
+
+@23412 = ~Baguette de contrecoup~
+
+@23413 = ~Baguette de malédiction~
+
 @235 = ~Négation~
-@236 = ~C'est l'armure que portait Frod Lannas lorsqu'il dirigeait la Citadelle d'Exhalus. Lorsqu'une armée de Vacuous tenta de prendre la citadelle, la Garde Fatale et quelques Hommes poussières luttèrent vaillamment et repoussèrent les monstres. Mais les pertes furent lourdes et les disparitions nombreuses. Après la bataille, l'armure flottait isolée près de la citadelle. Les monstres n'avait pas pu la dévorer. Du sort de Frod, aucune idée. Et de comment l'armure peut rester solide sur le plan matériel, encore moins....
+
+@236 = ~C'est l'armure que portait Frod Lannas lorsqu'il dirigeait la Citadelle d'Exhalus. Lorsqu'une armée de Vacuous tenta de prendre la citadelle, la Garde Fatale et quelques Hommes poussières luttèrent vaillamment et repoussèrent les monstres. Mais les pertes furent lourdes et les disparitions nombreuses. Après la bataille, l'armure flottait isolée près de la citadelle. Les monstres n'avaient pas pu la dévorer. Du sort de Frod, aucune idée. Et de comment l'armure peut rester solide sur le plan matériel, encore moins....
 Elle est constituée de vide négatif solidifié, ce qui ne devrait même pas être possible. Mais dans les plans, rien n'est impossible.
 
 PARAMÈTRES :
 
 Capacité d'équipement :
-- Toute adversaire qui frappe en mêlée le porteur de l'armure subit 2D6 points de dégâts magiques et doit réussir un jet de sauvegarde contre la mort à +4 ou être désintégré.
+- Tout adversaire qui frappe en mêlée le porteur de l'armure subit 2D6 points de dégâts magiques et doit réussir un jet de sauvegarde contre la mort à +4 ou être désintégré.
 - +50% de résistance à la magie.
 
-Classe d'armure : -3 (-6 contre les armes tranchantes)
+Classe d'armure : -3 (-7 contre les armes tranchantes, -6 contre les armes perforantes et les projectiles)
 
 Force nécessaire : 3
 
 Poids : 5~
 
-@237 = ~Dent de Gaurak~
-@238 = ~Forgée par le forgeron fou Galsconi à partir d'une dent de Gaurak, la bête, cette arme ressemble à un morceau d’ivoire pourri taillé en grande épée. La poignée est enveloppée de cuir noirci et déchiré, qui semble prête à tomber en morceaux au moindre contact. Encore plus dérangeant est le venin jaune que cette épée d'os semble secréter dès qu'on la prend en main.
+@237 = ~Os de Gaurak~
 
-PARAMETRES :
+@238 = ~Forgée par le forgeron fou Galsconi à partir d'un os de Gaurak, la bête, cette arme ressemble à un morceau d’ivoire pourri taillé en grande épée. La poignée est enveloppée de cuir noirci et déchiré, qui semble prête à tomber en morceaux au moindre contact. Encore plus dérangeant est le suc jaune que cette épée d'os semble secréter dès qu'on la prend en main.
+
+PARAMÈTRES :
 
 Capacités d'équipement :
-Force +4
+- Constitution : +2
 
 Capacités de combat :
-- Impose à la cible un jet de sauvegarde contre les sorts sous peine de perdre un point de force pendant 5 tours.
-- Empoisonne la cible : 2 points de dégâts par round pendant un tour.
+- Diminue définitivement de 1 point le maximum de points de vie de la cible, et augmente de 1 point le maximum de points de vie du porteur pendant un tour.
 
-Capacités de charges :
-- Contagion une fois par jour.
-- Dégénérescence une fois par jour.
+Capacités de charge :
 - Toucher vampirique une fois par jour.
 
 TAC0 : +5
-Dégâts : 1D12 +5, +4 contre les créatures bonnes
+Dégâts : 1D12 +5, +1D6 points de dégâts d'acide
 Type de dégâts : tranchant
 
-Facteur de vitesse : 5
-Type de compétence : épée à 2 mains
-Type : arme à 2 mains
+Facteur de Vitesse : 5
+Type de compétence : épée à deux mains
+Type : arme à deux mains
 Force nécessaire : 12
 
-Poids : 10~
+Poids : 11~
 
 @239 = ~Pipe de Dévastation~
-@240 = ~Cette pipe était utilisée par le Mal Absolu pour rendre une des épreuves que vous avez du passer encore plus difficile. Il vous l'a laissé quand vous vous êtes débarrassé de lui.
+
+@240 = ~Cette pipe était utilisée par Liptzitn le seigneur de la 618e pour vous en mettre plein la tête. En tant que seigneur démon, il savait comment utiliser cet objet à volonté, mais vous, vous ne savez pas.
 
 Capacité de charge :
-- Trois fois par jour peut créer un Nuage de frénésie bestiale (chaque round jet de sauvegarde contre les sorts ou Berserk, +1 attaque par round et attaque toujours la créature la plus proche) ou un Nuage Incendiaire ou une Brume de Sombremort (chaque round attaqué par 1D3 assassins imaginaires)~
+- Trois fois par jour, permet de créer un Nuage de frénésie bestiale (chaque round jet de sauvegarde contre les sorts ou ne pense plus qu'à attaquer simplement la créature la plus proche avec +1 attaque par round) ou un Nuage Incendiaire ou une Brume de Sombremort (chaque round attaqué par 1D3 assassins imaginaires)~
 
 @241 = ~Collier de Rex~
+
 @242 = ~C'est le collier que portait Rex, l'animal de compagnie de Cachemisère le puant.
 
 Capacités d'équipement :
@@ -285,9 +345,10 @@ Capacités d'équipement :
 - Immunité à la peur~
 
 @243 = ~Arme pourrie de Cachemisère~
-@244 = ~C'est l'arme d'un planétaire. Mais elle très abîmée, elle pue et elle n'a plus rien de luxueux.
 
-PARAMETRES :
+@244 = ~C'est l'arme d'un planétaire. Mais elle est très abîmée, elle pue et elle n'a plus rien de luxueux.
+
+PARAMÈTRES :
 
 Capacités de combat :
 - 25% de chance de dissiper la magie et de tuer la cible si elle rate un jet de sauvegarde contre la mort à -2
@@ -300,32 +361,34 @@ Dégâts : 2D10+3
 Type de dégâts : tranchant  
 Facteur de Vitesse : 5 
 Compétence : Épée à deux mains
-Type d'arme : à 2 mains
+Type d'arme : à deux mains
 Force nécessaire : 12
 
 Poids : 8~
 
 @245 = ~L'enclume~
+
 @246 = ~Ce marteau, c'est une enclume magique à laquelle on a fixé un manche.
 
-PARAMETRES :
+PARAMÈTRES :
 
 Spécial : le manche est fragile : peut se casser lors de l'impact
 
 Dégâts : 4D6 +4
 TAC0 : +1
 Type de dégâts : contondant
-Facteur de vitesse : 5
+Facteur de Vitesse : 5
 Type de compétence : marteau de guerre
 Type : arme à 1 main
 Force nécessaire : 22
 
-Poids: 750~
+Poids : 750~
 
 @247 = ~Épée bâtarde gardienne +3~
-@248 = ~C'est une des armes dont se servait la Tourmente martiale que vous avez terrassé.
 
-PARAMETRES :
+@248 = ~C'est une des armes dont se servait la Tourmente martiale que vous avez terrassée.
+
+PARAMÈTRES :
 
 Capacités d'équipement :
 - Classe d'armure : +2
@@ -342,39 +405,41 @@ Force nécessaire : 11
 
 Poids : 7~
 
-@249 = ~Anneau d'or de Grod~
-@250 = ~Cet anneau a été crée par Telim'gar, le maître des défis, à l'intention de son gardien de la poche de réalité dans le plan négatif. Vous avez récupéré cet anneau sur le cadavre de Grod "Nonoeil", qui n'etait pas sencé être le gardien original.
+@249 = ~Anneau d'or de Dillpater~
+
+@250 = ~Cet anneau a été créé par Telim'Gar, le maître des défis, à l'intention de son lieutenant Dillpater, pour qu'il puisse résister aux effets de la cape portée par Grod Nonoœil. Lui proposer un nouvel objet magique était aussi un bon moyen de s'assurer de sa fidélité.
 
 Capacités d'équipement :
 - Protection contre la mort
 - Protection contre le plan négatif
 
-Capacités de charges :
-- Contrôle des morts-vivants une fois par jour (zone de 4,5 mètres de rayon, jet de sauvegarde à -4 pour annuler, contrôle définitif)
-- Protection contre les morts-vivants une fois par jour (2 tours)~
+Capacités de charge :
+- Contrôle des morts-vivants une fois par jour.~
 
 @251 = ~Bâton du Clerc +3~
-@252 = ~Vous avez trouvé cette arme dans un dédale infesté d’aberrations.
 
-PARAMETRES :
+@252 = ~Vous avez ramassé ce bâton sur le cadavre d'un prêtre dérangé.
+
+PARAMÈTRES :
 
 Capacités de charge :
 - Permet une fois par jour de lancer n'importe quel sort divin de niveau 5 existant.
 
 TAC0 : +3
-Dégâts : 1D6 +3, +3 supplémentaires contre les morts-vivants
+Dégâts : 1D6+3, +3 supplémentaires contre les morts-vivants
 Type de dégât : contondant
-Facteur de vitesse : 1
+Facteur de Vitesse : 1
 Type de compétence : bâton
-Type : arme à 2 mains
+Type : arme à deux mains
 Force nécessaire : 5
 
 Poids : 3~
 
 @253 = ~Arc de fer~
-@254 = ~Cet arc est en fer. Pour le  bander il faut une force extraordinaire, mais la magie de l'objet convertie heureusement cette force en puissance.
 
-PARAMETRES :
+@254 = ~Cet arc est en fer. Pour le bander, il faut une force extraordinaire, mais la magie de l'objet convertit heureusement cette force en puissance.
+
+PARAMÈTRES :
 
 Spécial : prend en compte le bonus de force
 
@@ -382,38 +447,46 @@ TAC0 : +3
 Dégâts : +1 (projectile)
 Facteur de Vitesse : 5
 Compétence : Arc long
-Type d'arme : à 2 mains
+Type d'arme : à deux mains
 Force nécessaire : 21
 
 Poids : 9~
 
-@255 = ~Baguette de foudre trafiquée~
-@256 = ~Cette baguette ressemble en tout point à une baguette de foudre, mais elle ne consomme pas de charges. 
+@255 = ~Baguette de Paralysie trafiquée~
 
-PARAMETRES :
+@256 = ~Cette baguette ressemble en tout point à une baguette de paralysie, mais elle ne consomme pas de charges. 
 
-Effet : éclair à volonté
-Dégâts : 3d6 (jet de sauvegarde contre baguettes pour moitié)
-Portée : 30 mètres
-Zone : trajectoire de l'éclair~
+PARAMÈTRES :
+
+Capacité d'utilisation :
+- Cible étourdie à moins de réussir un jet de sauvegarde contre les baguettes avec un malus de -4
+  Portée : 30 m
+  Zone d'effet : 1 créature
+  Durée : 1 tour
+
+Nécessite : 9 en Intelligence
+
+Poids : 1~
 
 @257 = ~Étrange gemme~
+
 @258 = ~Cette gemme semble tout à fait normale, si on excepte le fait qu'elle répond à la détection de la magie. 
 
-PARAMETRES
+PARAMÈTRES
 
 Permet d'invoquer une créature inconnue. Usage unique.~
 
 @259 = ~Frénésie +2~
-@260 = ~Cette épée ne tient pas en place. Quand vous la tenez en main elle s'agite en tout sens à une vitesse hallucinante. 
 
-PARAMETRES :
+@260 = ~Cette épée ne tient pas en place. Quand vous la tenez en main, elle s'agite en tout sens à une vitesse hallucinante. 
+
+PARAMÈTRES :
 
 Capacités d'équipement :
  +3 attaques par round
  
 TAC0 : -8
-Dégâts :  1D6+2 (perforant)
+Dégâts : 1D6+2 (perforant)
 Facteur de Vitesse : 1
 
 Type de compétence : Épée Courte
@@ -422,37 +495,32 @@ Force nécessaire : 5
 
 Poids :  2~
 
-@261 = ~Crane de Tepesh~
-@262 = ~C'est le crane de Tepesh le brave, protecteur du Bief. Il a eu la mauvaise idée de défier un nécromancien trop puissant pour lui et ce crane enchanté et tout ce qui reste de lui.
+@261 = ~Crâne de Tepesh~
 
-PARAMETRES :
+@262 = ~C'est le crâne de Tepesh le brave, protecteur du Bief. Il a eu la mauvaise idée de défier un nécromancien trop puissant pour lui et ce crâne enchanté est tout ce qui reste de lui.
+
+PARAMÈTRES :
 
 Capacités de charge :
 - Permet une fois par jour d'invoquer Tepesh pendant 2 tours.~
 
-@263 = ~Dague du Sepulcral~
-@264 = ~Entre les main d'un sepulcral, cette dague est une dague +10 acérée avec condamnation d'humain. Mais vous n'êtes pas un sépulcral et entre vos main cette dague n'est qu'une simple dague +5 acérée
+@263 = ~Gourde ultramagique vampirique de Piliam~
 
-PARAMETRES :
+@264 = ~Vous avez trouvé cette gourde dans une galerie remplie de morts-vivants exceptionnels. Elle est « vampirique » ; ce n’est pas étonnant.
 
-Capacités d'équipement :
-- Chance de coup critique : +2
+PARAMÈTRES :
 
-TAC0 : +5
-Dégâts : 1D4+5
-Type de dégâts : perforants
-Facteur de vitesse : 0
-Compétence : dague
-Type : une main
-
-Poids : 2~
+Capacité de charge :
+- Le buveur de la gourde est affecté par un sort bénéfique aléatoire lancé au niveau 20, puis la gourde draine des points de vie au buveur pour se recharger. Le nombre de points de vie drainés ainsi est égal à quatre fois le niveau du sort lancé (exemple, 24 points de vie drainés pour les effets d'un sort de niveau 6).
+- Usage illimité.~
 
 @265 = ~Bille magique~
-@266 = ~Cette bille de fronde irradie littéralement la magie. Et pour cause : elle se divise en 5 quand elle est projetée. Toutefois le tireur ne fait qu'un seul jet d'attaque : ou tous les projectiles touchent, ou aucun.
 
-PARAMETRES :
+@266 = ~Cette bille de fronde irradie littéralement la magie. Et pour cause : elle se divise en 5 quand elle est projetée. Toutefois, le tireur ne fait qu'un seul jet d'attaque : ou tous les projectiles touchent, ou aucun.
 
-Spécial : recrée dans la fronde après chaque lancé
+PARAMÈTRES :
+
+Spécial : se recrée dans la fronde après chaque lancer
 Spécial : considérée comme une arme magique +1
 
 Dégâts : 5x1D4+1
@@ -461,41 +529,235 @@ Poids : 0
 Arme de jet : fronde~
 
 @267 = ~Secrets du Forgeron~
-@268 = ~Cet épais volume enseigne tout ce qu'il faut pour pouvoir créer quelques uns des golems que le Forgeron est le seul à connaître.
 
-PARAMETRES :
+@268 = ~Cet épais volume enseigne tout ce qu'il faut pour pouvoir créer quelques-uns des golems que le Forgeron est le seul à connaître.
+
+PARAMÈTRES :
 
 Capacité spéciale :
 Invocation d'un golem spécifique au Forgeron pour 10 rounds, 1 fois par jour.~
 
-@269 = ~Baguette de délivrance de la malédiction~ 
+@269 = ~Baguette de délivrance de la malédiction~
+
 @270 = ~Une baguette qui peut être utile dans certaines circonstances.
 
-PARAMETRES :
+PARAMÈTRES :
 
 Effets : Délivrance de la malédiction
 Portée : 30 m
 Zone : 1 créature~
 
 @271 = ~Livret du Forgeron~
+
 @272 = ~Ce livret en mauvais état décrit comment construire un Carbonisateur.
 
-PARAMETRES :
+PARAMÈTRES :
 
 Capacité spéciale :
 Invocation d'un Carbonisateur v2 pour 10 rounds, 1 fois par jour.
 
 Spécial : 15% de chances que le livret se détériore et devienne inutilisable après chaque utilisation.
 
-Poid : 25~
+Poids : 2~
+
 @273 = ~Reste d'un livret~
-@274 = ~C'est tout ce qui reste du Livret du Forgeron. À force d'utilisation il a fini complètement détruit.~
 
-@275 = ~Baguette de déplacement de groupe~ 
-@276 = ~cette baguette permet une téléportation de masse.
+@274 = ~C'est tout ce qui reste du Livret du Forgeron. À force d'utilisation, il a fini complètement détruit.~
 
-PARAMETRES :
+@275 = ~La pulvérisatrice~
 
-Effets : Téléporte tout le groupe à n'importe quel endroit sur la carte.
-Portée : spéciale
-Cible : groupe complet~
+@276 = ~Vous avez pris cette arme redoutable d'entre les pattes d'une vache qui cherchait à venger toutes les vaches.
+
+PARAMÈTRES :
+
+Capacité de combat :
+- Pulvérise la cible (jet de sauvegarde contre la mort à -4 pour éviter)
+- En cas de coup critique, pulvérise la cible sans jet de sauvegarde.
+
+TAC0 : +6
+Dégâts : 1D10+6 (perforant ou tranchant)
+Facteur de Vitesse : 3
+Type de compétence : hallebarde
+Type : arme à deux mains
+Nécessite : 13 en Force
+
+Poids : 11~
+
+@277 = ~Sceptre de réjuvénation~
+
+@278 = ~Telim'Gar, le boss final des défis insurmontables, a utilisé ce sceptre pour que le combat contre lui, déjà éprouvant, le soit encore plus.
+
+PARAMÈTRES :
+
+Capacités de charge :
+- Une fois par jour, Restauration majeure et rafraîchissement de tous les sorts mémorisés.~
+
+@279 = ~Anneau de sanctuaire~
+
+@280 = ~Un prêtre de Nerull se protégeait avec cet anneau. Quelle plaie ! Maintenant, c'est à vous d'en profiter.
+
+PARAMÈTRES :
+
+Capacités d'équipement :
+- Sanctuaire sur le porteur chaque fois qu'il est touché.~
+
+@281 = ~Manteau de mort~
+
+@282 = ~Cette cape suinte de sang sans discontinuer. Il faut vraiment être voué aux forces du mal pour oser porter un tel apparat.
+
+PARAMÈTRES :
+
+Capacités d'équipement :
+- Chaque round toutes les créatures dans les 4,5 mètres de rayon autour du porteur subissent les sorts Fatalité et Doigt de mort.~
+
+@283 = ~Écureuillisatrice~
+
+@284 = ~Il s'agit d'un objet pour le moins... étrange. À ce qu'on en sait, elle aurait été fabriquée à la fin de la première floraison par Kyanka, magicien et enchanteur royal qui n'avait plus toute sa tête. On lui attribue un sens de l'humour assez particulier, ce qui pourrait expliquer ce plaisir malsain qu'il prenait à rendre ses adversaires incapables de penser correctement avant de les achever. Cette robe n'a semble-t-il été que très peu portée. 
+
+PARAMÈTRES :
+
+Capacité d'équipement :
+- Lance Métamorphose d'autrui avec un malus de -2 au jet de sauvegarde sur toute créature qui attaque le porteur
+
+Capacités de charge :
+- Trois fois par jour Métamorphose d'autrui avec un malus de -6 au jet de sauvegarde.
+
+Classe d'Armure : 5
+Poids : 6~
+
+@285 = ~Anneau du suprême chaos~
+
+@286 = ~Vous avez trouvé cet anneau sur le cadavre de Liptzitn le seigneur de la 618e. Comme il semblait ne connaître qu'un seul sort, que faisait-il avec un tel artefact ?
+
+PARAMÈTRES :
+
+Capacité d'équipement :
+- Capacité de mémorisation augmentée d'un sort par niveau de sort.
+- Enchaînement
+- Entropie~
+
+@287 = ~Baguette anti-brume~
+
+@288 = ~La baguette idéale pour ceux qui n'aiment pas les nuages, brumes et autres brouillards.
+
+PARAMÈTRES :
+
+Effets : Zone d'air pur
+Portée : 0
+Zone : spéciale~
+
+@289 = ~Anneau de là/pas là~
+
+@290 = ~Liptzitn le seigneur de la 618e portait cet anneau pour vous faire tourner en bourrique. Il trouvait ça amusant...
+
+PARAMÈTRES :
+
+Capacité d'équipement :
+- Chaque fois que le porteur prend un coup, il est téléporté à quelques mètres de sa position.~
+
+@291 = ~Ancre de réalité~
+
+@292 = ~Vous avez trouvé cet anneau dans un tombeau.
+
+PARAMÈTRES :
+
+Capacité d'équipement :
+- Protège le porteur de tout ce qui pourrait l'effacer de la trame de la réalité.~
+
+@293 = ~La cloche du parangon de la vengeance des vaches~
+
+@294 = ~Vous avez pris cette cloche à un boss "vache" dans un pâturage rempli de vaches. Il semble qu'elle ait absorbé une partie des pouvoirs de son précédent propriétaire.
+
+PARAMÈTRES :
+
+Capacité d'équipement :
+- Protection contre la mort et le plan négatif
+- Protection contre la lenteur et l'arrêt du temps
+- Protection contre l'étourdissement
+- +50% de dégâts infligés
+- 2% de chances, chaque fois que le porteur tue une créature, que l'esprit du Parangon de la vengeance des vaches apparaisse pour réclamer sa cloche
+
+Capacité de charge :
+- Arrêt du temps une fois par jour (et 5% de chance que l'esprit du Parangon de la vengeance des vaches apparaisse pour réclamer sa cloche)~
+
+@2941 = ~Esprit du Parangon de la vengeance des vaches~
+
+@295 = ~Grimoire de Dillpater~
+
+@296 = ~Ce grimoire de mage est écrit dans une langue que vous ne reconnaissez pas. Même les runes magiques propres à décrire un sort et sa façon de l'incanter sont bizarrement agencées, comme venues d'une contrée où la magie ne suivait pas les mêmes règles. Dans les dernières pages, cependant, les runes sont classiques et décrivent des sorts communs. Sur la page finale, un texte écrit en quasi-commun attire votre attention :
+
+**Journal de Dillpater — 525e année du règne du Seigneur Artificier Omanond**
+
+Mes apprentis m'ont volé mon grimoire.
+
+MON grimoire.
+
+J'ai dû créer celui-ci. Ce n'est qu'une copie. Incomplète.
+
+Ils sont partis à l'aventure dans les contrées de Sharn. Avec MON grimoire. Je vais les retrouver. Je vais les retrouver. Ils doivent être là. Ils sont forcément là.
+
+J'emporte le Discombulateur merveilleux. Il serait absurde de partir sans lui. Complètement absurde. J'en ai besoin. Besoin.
+
+**Journal de Dillpater — 652e année du règne du Seigneur Artificier Omanond**
+
+Je ne les ai pas retrouvés.
+
+J'ai suivi leurs traces. Ils sont entrés dans une sorte de série d'arènes. Pourquoi ?
+
+Je suis entré moi aussi. Je vais les retrouver. Je récupérerai mon grimoire.
+
+J'ai trouvé des monstres. Des pièges. Des mages. Des choses qui n'auraient jamais dû exister. J'ai survécu à tout cela. Je suis même arrivé jusqu'à « la finale ».
+
+Mais je ne les ai pas trouvés. Je n'ai pas retrouvé mon grimoire.
+
+Impossible. Avec tout mon pouvoir, et je ne les ai pas trouvés. Impossible.
+
+Telim'Gar est le chef. Il m'a proposé une place ici.
+
+Son pouvoir résonnait avec le mien. Je l'ai écouté.
+
+Peut-être que mes apprentis viendront.
+
+Je les attends.
+
+Je vois d'autres mages arriver. Ce ne sont pas des artificiers. Ce ne sont pas mes apprentis.
+
+Les mages meurent. Tous. Faibles.
+
+Leurs grimoires sont ridicules. Rien de plus qu'une collection d'exercices pour apprentis.
+
+Je collectionne les grimoires. J'en ai trop.
+
+**Journal de Dillpater — 450e année après les Pierres dressées, selon Telim'Gar**
+
+Je n'ai plus revu mes apprentis. Je n'ai pas retrouvé mon grimoire.
+
+Cela dure depuis trop longtemps. Je m'y suis mal pris. Je dois procéder autrement.
+
+PARAMÈTRES :
+
+Spécial : un mage particulièrement intelligent peut apprendre d'anciens sorts oubliés en lisant ce grimoire.
+Spécial : ces sorts venus d'un temps ancien sont représentés dans le livre de sorts du magicien d'une façon totalement différente.
+
+Nécessite : 20 en Intelligence
+Poids : 2~
+
+@297 = ~Imperis Temporum~
+
+@298 = ~Cet anneau était incrusté dans la poitrine de Telim'Gar, le créateur des défis dont vous avez glorieusement triomphé. Vous l'avez extraite de son corps inerte (?) et maintenant il est à vous.
+
+PARAMÈTRES :
+
+Capacité d'équipement :
+ - Immunité à l'arrêt du temps
+ - Immunité à la lenteur
+ - Hâte~
+
+@299 = ~Flûtiau de Limianuï~
+
+@2100 = ~Ce petit flûtiau dormait près d'un feu éteint.
+
+PARAMÈTRES :
+
+Capacités de charge :
+ - 1 fois par jour, jouer de ce flûtiau crée 1D6+4 simulacres du barde pendant 8 secondes.~

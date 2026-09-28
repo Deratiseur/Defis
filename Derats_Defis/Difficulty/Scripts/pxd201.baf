@@ -1,0 +1,351 @@
+IF
+	OnCreation()
+	Global("pxdport","PXD201",1)
+	Global("pxdsecret2","PXD201",1)
+	Global("px290wn","GLOBAL",0)
+THEN
+	RESPONSE #100
+		StartTimer(201,2)
+		CreateVisualEffect("pxd201sv",[3456.411])
+		PlaySound("cowmoo")
+		TriggerActivation("secret2",TRUE)
+END
+
+/*
+IF
+	GlobalGT("px290wn","GLOBAL",0)
+THEN
+	RESPONSE #100
+		TriggerActivation("pxd201sv",FALSE)
+		TriggerActivation("secret2",FALSE)
+END
+*/
+
+IF
+	OnCreation()
+	Global("pxdport","PXD201",0)
+THEN
+	RESPONSE #100
+		CreateCreature("pxd201ng",[741.1185],S)
+		CreateCreature("pxd201pt",[468.1497],S)
+		StartTimer(201,12)
+		SetGlobal("pxdport","PXD201",1)
+END
+
+IF
+	OnCreation()
+	Global("pxdport","PXD201",1)
+THEN
+	RESPONSE #100
+		StartTimer(201,12)
+END
+
+IF
+	Global("pxdhour1","GLOBAL",2)
+	Global("pxdhour2","GLOBAL",2)
+	Global("pxdhour3","GLOBAL",2)
+	Global("pxdsecret2","PXD201",0)
+THEN
+	RESPONSE #100
+		CreateVisualEffect("pxd201sv",[3456.411])
+		PlaySound("cowmoo")
+		SetGlobal("pxdsecret2","PXD201",1)
+		TriggerActivation(" secret2",TRUE)
+		AddMapNote([3455.347],@20116)
+END
+
+IF
+	!Dead("pxd201b")
+	TimerExpired(201)
+	RandomNum(5,1)
+	!Exists("pxd201pt")
+	Exists(Player6)
+THEN
+    RESPONSE #100
+		CreateCreatureObject("pxd201ng",Player1,0,0,0)
+		CreateCreature("pxd201pt",[468.1497],S)
+		StartTimer(201,24)
+	RESPONSE #100
+		CreateCreatureObject("pxd201ng",Player2,0,0,0)
+		CreateCreature("pxd201pt",[468.1497],S)
+		StartTimer(201,24)
+	RESPONSE #100
+		CreateCreatureObject("pxd201ng",Player3,0,0,0)
+		CreateCreature("pxd201pt",[468.1497],S)
+		StartTimer(201,24)
+	RESPONSE #100
+		CreateCreatureObject("pxd201ng",Player4,0,0,0)
+		CreateCreature("pxd201pt",[468.1497],S)
+		StartTimer(201,24)
+	RESPONSE #100
+		CreateCreatureObject("pxd201ng",Player5,0,0,0)
+		CreateCreature("pxd201pt",[468.1497],S)
+		StartTimer(201,24)
+	RESPONSE #100
+		CreateCreatureObject("pxd201ng",Player6,0,0,0)
+		CreateCreature("pxd201pt",[468.1497],S)
+		StartTimer(201,24)
+END
+
+IF
+	!Dead("pxd201b")
+	TimerExpired(201)
+	RandomNum(5,1)
+	!Exists("pxd201pt")
+	!Exists(Player6)
+THEN
+    RESPONSE #100
+		CreateCreatureObject("pxd201ng",Player1,0,0,0)
+		CreateCreature("pxd201pt",[468.1497],S)
+		StartTimer(201,24)
+	RESPONSE #100
+		CreateCreatureObject("pxd201ng",Player2,0,0,0)
+		CreateCreature("pxd201pt",[468.1497],S)
+		StartTimer(201,24)
+	RESPONSE #100
+		CreateCreatureObject("pxd201ng",Player3,0,0,0)
+		CreateCreature("pxd201pt",[468.1497],S)
+		StartTimer(201,24)
+	RESPONSE #100
+		CreateCreatureObject("pxd201ng",Player4,0,0,0)
+		CreateCreature("pxd201pt",[468.1497],S)
+		StartTimer(201,24)
+	RESPONSE #100
+		CreateCreatureObject("pxd201ng",Player5,0,0,0)
+		CreateCreature("pxd201pt",[468.1497],S)
+		StartTimer(201,24)
+END
+
+IF
+	!Dead("pxd201b")
+	TimerExpired(201)
+	RandomNum(5,1)
+	!Exists("pxd201pt")
+	!Exists(Player6)
+	!Exists(Player5)
+THEN
+    RESPONSE #100
+		CreateCreatureObject("pxd201ng",Player1,0,0,0)
+		CreateCreature("pxd201pt",[468.1497],S)
+		StartTimer(201,24)
+	RESPONSE #100
+		CreateCreatureObject("pxd201ng",Player2,0,0,0)
+		CreateCreature("pxd201pt",[468.1497],S)
+		StartTimer(201,24)
+	RESPONSE #100
+		CreateCreatureObject("pxd201ng",Player3,0,0,0)
+		CreateCreature("pxd201pt",[468.1497],S)
+		StartTimer(201,24)
+	RESPONSE #100
+		CreateCreatureObject("pxd201ng",Player4,0,0,0)
+		CreateCreature("pxd201pt",[468.1497],S)
+		StartTimer(201,24)
+END
+
+IF
+	!Dead("pxd201b")
+	TimerExpired(201)
+	RandomNum(5,1)
+	!Exists("pxd201pt")
+	!Exists(Player6)
+	!Exists(Player5)
+	!Exists(Player4)
+THEN
+    RESPONSE #100
+		CreateCreatureObject("pxd201ng",Player1,0,0,0)
+		CreateCreature("pxd201pt",[468.1497],S)
+		StartTimer(201,24)
+	RESPONSE #100
+		CreateCreatureObject("pxd201ng",Player2,0,0,0)
+		CreateCreature("pxd201pt",[468.1497],S)
+		StartTimer(201,24)
+	RESPONSE #100
+		CreateCreatureObject("pxd201ng",Player3,0,0,0)
+		CreateCreature("pxd201pt",[468.1497],S)
+		StartTimer(201,24)
+END
+
+IF
+	!Dead("pxd201b")
+	TimerExpired(201)
+	RandomNum(5,1)
+	!Exists("pxd201pt")
+	!Exists(Player6)
+	!Exists(Player5)
+	!Exists(Player4)
+	!Exists(Player3)
+THEN
+    RESPONSE #100
+		CreateCreatureObject("pxd201ng",Player1,0,0,0)
+		CreateCreature("pxd201pt",[468.1497],S)
+		StartTimer(201,24)
+	RESPONSE #100
+		CreateCreatureObject("pxd201ng",Player2,0,0,0)
+		CreateCreature("pxd201pt",[468.1497],S)
+		StartTimer(201,24)
+END
+
+IF
+	!Dead("pxd201b")
+	TimerExpired(201)
+	RandomNum(5,1)
+	!Exists(Player6)
+	!Exists(Player5)
+	!Exists(Player4)
+	!Exists(Player3)
+	!Exists(Player2)
+	!Exists("pxd201pt")
+THEN
+    RESPONSE #100
+		CreateCreatureObject("pxd201ng",Player1,0,0,0)
+		CreateCreature("pxd201pt",[468.1497],S)
+		StartTimer(201,24)
+END
+
+IF
+	!Dead("pxd201b")
+	TimerExpired(201)
+	Exists(Player6)
+THEN
+    RESPONSE #100
+		CreateCreatureObject("pxd201ng",Player1,0,0,0)
+		StartTimer(201,24)
+	RESPONSE #100
+		CreateCreatureObject("pxd201ng",Player2,0,0,0)
+		StartTimer(201,24)
+	RESPONSE #100
+		CreateCreatureObject("pxd201ng",Player3,0,0,0)
+		StartTimer(201,24)
+	RESPONSE #100
+		CreateCreatureObject("pxd201ng",Player4,0,0,0)
+		StartTimer(201,24)
+	RESPONSE #100
+		CreateCreatureObject("pxd201ng",Player5,0,0,0)
+		StartTimer(201,24)
+	RESPONSE #100
+		CreateCreatureObject("pxd201ng",Player6,0,0,0)
+		StartTimer(201,24)
+END
+
+IF
+	!Dead("pxd201b")
+	TimerExpired(201)
+	!Exists(Player6)
+THEN
+    RESPONSE #100
+		CreateCreatureObject("pxd201ng",Player1,0,0,0)
+		StartTimer(201,24)
+	RESPONSE #100
+		CreateCreatureObject("pxd201ng",Player2,0,0,0)
+		StartTimer(201,24)
+	RESPONSE #100
+		CreateCreatureObject("pxd201ng",Player3,0,0,0)
+		StartTimer(201,24)
+	RESPONSE #100
+		CreateCreatureObject("pxd201ng",Player4,0,0,0)
+		StartTimer(201,24)
+	RESPONSE #100
+		CreateCreatureObject("pxd201ng",Player5,0,0,0)
+		StartTimer(201,24)
+END
+
+IF
+	!Dead("pxd201b")
+	TimerExpired(201)
+	!Exists(Player6)
+	!Exists(Player5)
+THEN
+    RESPONSE #100
+		CreateCreatureObject("pxd201ng",Player1,0,0,0)
+		StartTimer(201,24)
+	RESPONSE #100
+		CreateCreatureObject("pxd201ng",Player2,0,0,0)
+		StartTimer(201,24)
+	RESPONSE #100
+		CreateCreatureObject("pxd201ng",Player3,0,0,0)
+		StartTimer(201,24)
+	RESPONSE #100
+		CreateCreatureObject("pxd201ng",Player4,0,0,0)
+		StartTimer(201,24)
+END
+
+IF
+	!Dead("pxd201b")
+	TimerExpired(201)
+	!Exists(Player6)
+	!Exists(Player5)
+	!Exists(Player4)
+THEN
+    RESPONSE #100
+		CreateCreatureObject("pxd201ng",Player1,0,0,0)
+		StartTimer(201,24)
+	RESPONSE #100
+		CreateCreatureObject("pxd201ng",Player2,0,0,0)
+		StartTimer(201,24)
+	RESPONSE #100
+		CreateCreatureObject("pxd201ng",Player3,0,0,0)
+		StartTimer(201,24)
+END
+
+IF
+	!Dead("pxd201b")
+	TimerExpired(201)
+	!Exists(Player6)
+	!Exists(Player5)
+	!Exists(Player4)
+	!Exists(Player3)
+THEN
+    RESPONSE #100
+		CreateCreatureObject("pxd201ng",Player1,0,0,0)
+		StartTimer(201,24)
+	RESPONSE #100
+		CreateCreatureObject("pxd201ng",Player2,0,0,0)
+		StartTimer(201,24)
+END
+
+IF
+	!Dead("pxd201b")
+	TimerExpired(201)
+	!Exists(Player6)
+	!Exists(Player5)
+	!Exists(Player4)
+	!Exists(Player3)
+	!Exists(Player2)
+THEN
+    RESPONSE #100
+		CreateCreatureObject("pxd201ng",Player1,0,0,0)
+		StartTimer(201,24)
+END
+
+IF
+	Dead("pxd201b")
+	TimerExpired(201)
+	RandomNum(5,1)
+	!Exists("pxd201pt")
+THEN
+	RESPONSE #100
+		CreateCreature("pxd201pt",[468.1497],S)
+		StartTimer(201,24)
+END
+
+IF
+	Dead("pxd201b")
+	TimerExpired(201)
+THEN
+	RESPONSE #100
+		StartTimer(201,24)
+END
+
+IF
+	Global("px201wn","GLOBAL",1)
+THEN
+	RESPONSE #100
+		SetGlobal("px201wn","GLOBAL",2)
+		ActionOverride(Player1,LeaveAreaLUA("AR0500","",[2387.1252],NNW))
+		ActionOverride(Player2,LeaveAreaLUA("AR0500","",[2428.1222],NNW))
+		ActionOverride(Player3,LeaveAreaLUA("AR0500","",[2477.1247],NNW))
+		ActionOverride(Player4,LeaveAreaLUA("AR0500","",[2437.1281],NNW))
+		ActionOverride(Player5,LeaveAreaLUA("AR0500","",[2484.1249],NNW))
+		ActionOverride(Player6,LeaveAreaLUA("AR0500","",[2520.1270],NNW))
+END
+

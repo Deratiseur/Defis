@@ -1,0 +1,29 @@
+IF
+	OR(6)
+		See(Player1)
+		See(Player2)
+		See(Player3)
+		See(Player4)
+		See(Player5)
+		See(Player6)
+    Global("pxdfusio","GLOBAL",0)
+THEN
+    RESPONSE #100
+        SetGlobal("pxdfusio","GLOBAL",1)
+        StartDialogueNoSet(LastSeenBy(Myself))
+END
+
+IF
+	Global("pxdfusio","GLOBAL",2)
+	See(NearestEnemyOf(Myself))
+THEN
+	RESPONSE #100
+		ReallyForceSpellRes("pxl2jcvn",NearestEnemyOf(Myself))
+END
+
+IF
+	AttackedBy([ANYONE],DEFAULT)
+THEN
+	RESPONSE #100
+		ReallyForceSpellRes("pxl2jcvn",LastAttackerOf(Myself))
+END

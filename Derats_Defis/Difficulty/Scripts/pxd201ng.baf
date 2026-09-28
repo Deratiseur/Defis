@@ -1,0 +1,23 @@
+IF
+	RandomNum(20,1)
+	Global("telopo","LOCALS",0)
+THEN
+	RESPONSE #100
+		SetGlobal("telopo","LOCALS",1)
+		ActionOverride(Player1,JumpToObject("PXD201NG"))
+	RESPONSE #100
+		SetGlobal("telopo","LOCALS",1)
+		ActionOverride(Player2,JumpToObject("PXD201NG"))
+	RESPONSE #100
+		SetGlobal("telopo","LOCALS",1)
+		ActionOverride(Player3,JumpToObject("PXD201NG"))
+	RESPONSE #100
+		SetGlobal("telopo","LOCALS",1)
+		ActionOverride(Player4,JumpToObject("PXD201NG"))
+	RESPONSE #100
+		SetGlobal("telopo","LOCALS",1)
+		ActionOverride(Player5,JumpToObject("PXD201NG"))
+	RESPONSE #100
+		SetGlobal("telopo","LOCALS",1)
+		ActionOverride(Player6,JumpToObject("PXD201NG"))
+END

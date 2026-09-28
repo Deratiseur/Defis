@@ -3,6 +3,6 @@ IF
 	AreaCheck("AR3001")
 THEN
 	RESPONSE #100
-		SetGlobal("Pxdgolem","GLOBAL",1)
-		CreateCreature("pxdgolem",[2316.1024],SW)
+		SetGlobal("Pxdgolem","GLOBAL",2)
+		CreateCreature("pxdgolem",[2316.1024],SSW)
 END

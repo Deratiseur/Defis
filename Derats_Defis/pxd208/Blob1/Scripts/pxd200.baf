@@ -1,0 +1,64 @@
+IF
+    OnCreation()
+THEN
+    RESPONSE #100
+        StartTimer(6,6)
+		Wait(3)
+		CreateCreature("pxd200b",[399.3014],S)	
+END
+
+IF
+    TimerExpired(6)
+	RandomNum(20,1)
+THEN
+    RESPONSE #100
+	 CreateCreature("pxd200sp",[554.172],S)
+	 Continue()
+END
+
+IF
+    TimerExpired(6)
+	RandomNum(20,1)
+THEN
+    RESPONSE #100
+	 CreateCreature("pxd200sp",[224.668],S)
+	 Continue()
+END
+
+IF
+    TimerExpired(6)
+	RandomNum(20,1)
+THEN
+    RESPONSE #100
+	 CreateCreature("pxd200sp",[4896.1666],S)
+	 Continue()
+END
+
+IF
+    TimerExpired(6)
+	RandomNum(20,1)
+THEN
+    RESPONSE #100
+	 CreateCreature("pxd200sp",[4188.3014],S)
+	 Continue()
+END
+
+IF
+    TimerExpired(6)
+THEN
+    RESPONSE #100
+	 StartTimer(6,6)
+END
+
+IF
+    Global("px200wn","GLOBAL",1)
+THEN
+    RESPONSE #100
+    SetGlobal("px200wn","GLOBAL",2)
+    ActionOverride(Player1,LeaveAreaLUA("PXD201","",[3483.583],S))
+    ActionOverride(Player2,LeaveAreaLUA("PXD201","",[3415.586],S))
+    ActionOverride(Player3,LeaveAreaLUA("PXD201","",[3409.550],S))
+    ActionOverride(Player4,LeaveAreaLUA("PXD201","",[3462.539],S))
+    ActionOverride(Player5,LeaveAreaLUA("PXD201","",[3459.498],S))
+    ActionOverride(Player6,LeaveAreaLUA("PXD201","",[3398.490],S))
+END

@@ -1,0 +1,24 @@
+IF
+	OnCreation()
+	Delay(2)
+THEN
+	RESPONSE #100
+		DisplayStringHead(Myself,@11034)
+END
+
+IF
+	See(NearestEnemyOf(Myself))
+	Range(NearestEnemyOf(Myself),4)
+	HaveSpell(WARRIOR_WHIRLWIND)
+THEN
+	RESPONSE #100
+		Spell(Myself,WARRIOR_WHIRLWIND)
+		AttackReevaluate(NearestEnemyOf(Myself),45)
+END
+
+IF
+	See(NearestEnemyOf(Myself))
+THEN
+	RESPONSE #100
+		Attack(NearestEnemyOf(Myself))
+END

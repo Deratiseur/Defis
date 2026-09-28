@@ -1,321 +1,381 @@
-@201 = ~Potemkin Jack's Treasure~
-@202 = ~You found this disgusting canvas bag hanging around the neck of a fallen Planetary stinking of carrion.
+@201 = ~Coverup's Treasure~
 
-Load capacity:
-- Once per day, it can generate a random treasure.~
+@202 = ~You found this disgusting canvas bag hanging around the neck of a fallen planetar reeking of carrion.
+
+Charge Ability:
+- Once per day, generates a random treasure.~
 
 @203 = ~Medusa's Dagger~
-@204 = ~This was the dagger carried by the spectral Medusa queen you defeated in a challenge to prove your valor.
 
-CHARACTERISTICS:
+@204 = ~This was the dagger carried by the spectral medusa queen you defeated during a trial meant to prove your worth.
+
+STATISTICS:
 
 Combat Ability:
-- Petrifies the target on a critical hit (save vs. Polymorph to negate)
+- Petrifies the target on a critical hit (save vs. Polymorph negates)
 
-Equipment Abilities:
-- +3 to save vs. Polymorph
-- Stoneskin (1 skin) each time the wearer is hit (maximum once per round)
+Equipped Abilities:
+- Saving Throws vs. Polymorph: +3
+- Stoneskin (1 skin) whenever the wearer is hit (maximum once per round)
 
 THAC0: +3
-Damage: 1D4+3 (percing)
+Damage: 1D4+3
+Damage Type: Piercing
 Speed Factor: 1
 Proficiency Type: Dagger
 Type: One-handed
-Requires:
- 3 Strength
- 
+Requires: Strength 3
+
 Weight: 2~
 
 @207 = ~Fairy Orb~
-@208 = ~You found this orb in the belly of a giant carrion crawler. It glows with a strange blue light when you hold it in your hand. Strangely, you instinctively know what to do with it.
 
-Equipment capacity:
-Protection against 1st to 3rd level spells.
+@208 = ~You found this orb in the belly of a giant carrion crawler. It glows with a strange blue light when you hold it. Strangely, you instinctively know what you can do with it.
 
-Charge capacity:
-Once per day, you can choose to cast:
-- Absolute Immunity
-- Fairy Shield (immunity to magic for 4 rounds) 
-- Fairy Globe of Invulnerability (Immunity to 1st- through 6th-level spells and the rest of the group to 1st- through 3th-level spells)
-Special: Must be held in hand, takes the place of the shield.~
+Equipped Ability:
+- Protection from 1st- through 3rd-level spells
+
+Charge Ability:
+- Once per day, may cast one of the following:
+  - Absolute Immunity
+  - Fairy Shield (immunity to magic for 4 rounds)
+  - Faerie Globe of Invulnerability (protection from spells up to 6th level; the rest of the party is protected from spells up to 3rd level)
+
+Special: Must be held in hand and occupies the shield slot.~
+
 @2081 = ~Fairy Shield~
-@2082 = ~Fairy Globe of Invulnerability~
 
-@209 = ~Tr'kin's Cruel Sword +5~
-@210 = ~This sword is one of two things left behind by the Absolute Evil when it disappeared.
+@2082 = ~Faerie Globe of Invulnerability~
 
-PARAMETERS:
+@209 = ~Tr'Kin's Cruel Sword +3~
 
-Equipment abilities:
-+3 to critical hit chance
-+3 to backstab multiplier
-+1 attack per round
-Special: the sword is inhabited by the relentless spirit of Tr'kin the xvart, and there is a high chance that this will have repercussions on the bearer.
-Special: Cursed, it can only be removed with a curse removal spell.
+@210 = ~You found this sword in a tomb guarded by extraordinary undead creatures.
 
-Charge Capacity:
-Once per day, allows you to cast a combination of Greater Invisibility and Immunity to Divination.
+STATISTICS:
 
-THAC0: +5
-Damage: 2D3 +5 (slashing)
+Equipped Abilities:
+- Critical Hit Chance: +3
+- Backstab Multiplier: +3
+- +1 Attack per Round
+- Special: The sword is inhabited by the relentless will of Tr'Kin, the xvart hero, and this is very likely to have consequences for its wielder.
+- Cursed: Can only be removed with Remove Curse
+
+Charge Ability:
+- Once per day for 1 turn: Improved Invisibility, Non-Detection, and immunity to divination
+
+THAC0: +3
+Damage: 2D3+3
+Damage Type: Piercing
 Speed Factor: 0
-Proficiency Type: Short sword
+Proficiency Type: Short Sword
 Type: One-handed
-Requires:
- 5 Strength
+Requires: Strength 5
 
 Weight: 1~
 
 @211 = ~Wonderful Discombulator~
-@212 = ~This authentic artifact has been enchanted with only the most refined spatial and temporal spells. Using complex alchemical materials and magical, artisanal iconography, this modern arcane marvel allows its user to exert influence beyond even time and space to find all kinds of mysterious and powerful elixirs, straight from behind the veil of reality itself, without the slightest training. It has never been easier to conjure potions.
 
-PARAMETERS:
+@212 = ~This genuine artifact has been ensorcelled with only the finest spatial and temporal enchantments. Using advanced alchemical materials and artisanal magical iconography, this wonder of modern arcane achievement allows its user to reach beyond time and space itself and draw forth all manner of mysterious and powerful elixirs from behind the veil of reality, without requiring the slightest training. It has never been easier to summon potions.
 
-Charge capacity:
+STATISTICS:
+
+Charge Ability:
 - Once per day, creates a random potion.~
 
 @213 = ~Wand of Displacement~
+
 @214 = ~Someone was buried with this wand.
 
-PARAMETERS:
+STATISTICS:
 
-Capacity:
+Charge Abilities:
 - Teleportation (instantaneous)
-- Interversion (on target, interverts the user and the target)~
+- Interversion (swaps the user and the target)
+- Party Teleportation~
+
 @2141 = ~Teleportation~
+
 @2142 = ~Interversion~
 
-@215 = ~Incarnate Black Blade of Disaster~
-@216 = ~This weapon is a living spell that you have managed to subdue. Rather than dying, the spell chose to bend to your will in order to live. It has therefore become a weapon that you can use.
+@2143 = ~Party Teleportation~
 
-PARAMETERS
+@215 = ~Incarnate Living Black Blade of Disaster~
 
-Equipment Capacity:
-- Sets the wearer's Long Sword Proficiency to 5
+@216 = ~This weapon is a living spell that you managed to subdue. Rather than die, the spell chose to bend to your will in order to survive. It has therefore become a weapon you can use.
 
-Combat Capacity:
-- the victim must make a Save vs. Death at +4 or be disintegrated.
-- 10% chance with every hit that the sword drains 4 levels from the target and heals the wielder 20 Hit Points.
-- 2% chance that the weapon will go Berserk: in this case, it will fly out of the wearer's hand and become an aggressive living spell. Its owner must then subdue it again if they want to retrieve it.
+STATISTICS:
+
+Equipped Ability:
+- Sets the wielder's Long Sword proficiency to 5
+
+Combat Abilities:
+- The target must make a Save vs. Death at +4 or be disintegrated
+- 10% chance on hit to drain 4 levels from the target and heal the wielder for 20 Hit Points
+- 2% chance on hit for the weapon to go berserk: it tears itself from the wielder's hand and reverts to an aggressive living spell. Its owner must subdue it again to recover it.
 
 THAC0: +5
-Damage: 2D12 +5 (slashing)
-Speed Factor: 0 
+Damage: 2D12+5
+Damage Type: Slashing
+Speed Factor: 0
 Proficiency Type: Long Sword
-Type: One-handed
 
 Weight: 0~
 
 @217 = ~The Annihilating Light~
-@218 = ~The Fire Incarnate you fought in one of Telim'Gar's challenges used this staff against you.
 
-PARAMETERS
+@218 = ~The Charrer you fought in one of the Telim'Gar challenges "wore" this staff.
 
-Equipment Capabilities:
+STATISTICS
+
+Equipped Abilities:
 - Elemental Resistances: -65%
 - Elemental Damage Dealt: +200%
 
-THAC0: +5
-Damage: 1D6 +5 (crushing)
-Speed Factor: 1
+THAC0: +1
+Damage: 1D6 +1 (crushing)
+Speed Factor: 3
 Proficiency Type: Quarterstaff
 Type: Two-handed
+Requires:
+ 5 Strength
  
 Weight: 2~
 
 @219 = ~Blazing Flame~
-@220 = ~You retrieved this ring from the corpse of the Fire Incarnate.
 
-PARAMETERS
+@220 = ~You retrieved this ring from the corpse of the Charrer.
 
-Equipment Capabilities:
+STATISTICS
+
+Equipped Abilities:
 - Fire Resistance: set at 125%
 - Fire Damage Dealt: +20%~
 
 @221 = ~Kaom's Roots~
-@222 = ~The Incarnation of Fire that you fought on a pocket of earth in the elemental plane of fire wore these boots.
 
-PARAMETERS:
+@222 = ~The Charrer that you fought on a pocket of earth in the elemental plane of fire wore these boots.
 
-Equipment Capabilities:
+STATISTICS:
+
+Equipped Abilities:
 - Maximum Hit Points: +40
-- Immunity to Slow and Wing Buffets.~
+- Immunity to Slow and Wing Buffet effects.~
 
 @223 = ~Kaom's Heart~
-@224 = ~The Incarnation of Fire that you fought on a pocket of land in the elemental plane of fire wore this armor.
 
-PARAMETERS:
+@224 = ~The Charrer that you fought on a pocket of earth in the elemental plane of fire wore this armor.
 
-Equipment Capabilities:
+STATISTICS:
+
+Equipped Abilities:
 - Maximum Hit Points: +200
 
 Armor Class: 2 (-1 vs. slashing)
 Weight: 20
 Strength Required: 12~
 
-@225 = ~Thief's Velocity~
-@226 = ~This ring belonged to an unknown thief who died in one of Telim'gar's challenges. You found it among the possessions of a priest from the same group.
+@225 = ~Shalierra's Swiftness~
 
-PARAMETERS
+@226 = ~This ring belonged to an unknown mage who died during one of the trials of Telim'Gar. You found it among the belongings of a priest from the same party.
 
-Equipment abilities:
+STATISTICS
+
+Equipped Abilities:
 - Haste
 - Movement +2~
 
 @227 = ~Lessons from Master Iroshi-Sama~
-@228 = ~This collection of ninja techniques is enchanted to allow anyone to benefit from the knowledge of a master.
 
-Charge capacity:
-- Once per day, allows you to use any major Warrior or Thief technique.~
+@228 = ~This collection of ninja techniques is enchanted so that anyone can benefit from a master's knowledge.
+
+STATISTICS:
+
+Charge Ability:
+- Once per day, allows the user to employ any major Warrior or Thief technique.~
 
 @229 = ~Robe of the Lich~
-@230 = ~This robe lay among the ashes of a long-extinguished campfire. Someone had clearly tried to burn it for warmth, but it resisted the fire and remains intact.
 
-PARAMETERS:
+@230 = ~This robe lay among the ashes of a long-extinguished campfire. Someone had clearly tried to burn it for warmth, but it resisted the flames and remains intact.
 
+STATISTICS:
+
+Equipped Abilities:
 - Armor Class: 3
-- Can memorize three extra spells of each level
-- Maximum hit points set at 1 hit point per level
-- Immunity to any other effect that would modify maximum hit points~
+- +3 memorization slots at each spell level
+- Maximum Hit Points set to 1 per level
+- Immunity to any other effect that would alter maximum Hit Points~
 
 @231 = ~Mage Slayer~
+
 @232 = ~This sword lay at the bottom of a tomb before you looted it.
 
-PARAMETERS:
+STATISTICS:
 
 Combat Abilities:
 - Dispels magic on hit
-- Dispels summoned creatures on hit
-- Causes the target to forget the highest-level arcane spell it knows, with a 5% chance to cause it to forget all spells instead.
+- Banishes summoned creatures on hit
+- Causes the target to forget one arcane spell of the highest level it knows; 5% chance to make it forget all spells instead
 
-Charge Abilities:
-- Once per day, can cast Fairy Shield (magic immunity for 4 rounds).
+Charge Ability:
+- Once per day, casts Fairy Shield (immunity to magic for 4 rounds)
 
-THAC0:  +3
-Damage:  1D6 +3 (piercing)
-Type de Damage: perforant
-Speed Factor: 0
-Proficiency Type: Short sword
-Type: One-handed
+THAC0: +3
+Damage: 1d6+3 (piercing)
+Speed Factor: 3
+Proficiency Type: Spear 
+Type: Two-handed
 Requires:
  5 Strength
 
-Weight:  1~
+Weight: 1~
 
 @233 = ~Galeno the Staff~
-@234 = ~This is a tale of Galeno, the clever thief. Over his years of adventures, Galeno learned to imitate many people, including wizards and sorcerers. His imitation was so cunning and complete that he could use their wands and staves. Galeno had little use for staves as he had no skill in using them as weapons, and it was difficult to carry them when scaling the walls of one of Talos’s temples—for he loved to steal from the followers of the god of evil. Wands could be tucked in a pouch or pocket, or sewed into the lining of a cloak, however, and Galeno found them most useful.
-One day, while escaping the guardians of another of Talos’ temples, Galeno pulled a wand from beneath his cloak, meaning to create the illusion of a wall between him and his pursuers.
-Instead, he turned one of his pursuers into a chicken! Forced to jump from a window rather than make a more dignified exit, Galeno landed in the wagon of a street cleaner. While the pungent contents of the wagon cushioned his fall, they also ruined his clothes.
-Frustrated and temporarily humbled, Galeno decided there had to be a better way to organize and carry his collection of magic wands. For days he sat in his room, thinking and waiting for people to forget his humiliating escape so they would not laugh when he entered the tavern. After all, the clever thief was accustomed to accolades and listeners eager for another tale of his daring exploits. Carefully studying his collection, Galeno chose a wand that would turn him into an elf.
-Borrowing some clothes from a sleeping neighbor, Galeno crafted a disguise for himself. If he learned nothing else, he learned it was best to experiment when no witness would realize they were looking at the great Galeno.
-First, Galeno bundled the wands together and tried using them as a tool while robbing a wealthy merchant. This experiment proved disappointing, as Galeno found he could only access the wands on the outside of the bundle. Undaunted, Galeno renewed his disguise and tried attaching the wands in a row along short lengths of wood, then left to rob the Duchess of Beortheocht of her jewelry. (Normally he would also have stolen her affections, for the Duchess was a great beauty. However Galeno’s pride argued that he could only do so in his true shape and form.) He found he could use any wand he needed, but the planks were cumbersome when squeezing into tight places. So cumbersome, in fact, that he was unable to steal the jewels.
-This would never do. The great Galeno could not afford to fail. His reputation would suffer irreparable damage. Only his disguise kept the beast of humiliation away from his door. This time Galeno decided to attach his wands to a hollow tube of thick paper, just big enough that it would fit around his forearm. The wands on the inside of the tube stuck out the back of the tube just enough that he could see which was which. Not bothering with a disguise, Galeno set out to rob a sorcerer named Joaquin Mago, whose arrogant display of wealth cried out for a plucking.
-Alas, the sorcerer discovered Galeno in midtheft. To Galeno’s horror, it was all a trap! It seemed the guard who Galeno turned into a chicken was Joaquin’s son, and the ostentatious display of wealth nothing more than bait for a greedy, albeit clever, thief. Galeno and Joaquin fought a mighty duel. The clever thief knew the sorcerer had the advantage, for he could choose any spell he knew while Galeno had only his wands. He wanted nothing so much as to escape his trap. As his eyes
-darted around the chamber in which they fought, his concentration slipped and a strange confluence of a misused wand and arcane spell occurred. The tube around Galeno’s arm began twisting and lengthening. Try as he might, Galeno could not free his arm from the steady transformation. Desperately he pleaded with Joaquin for mercy, and the sorcerer’s heart softened. His son had only been a chicken temporarily, after all. Though he could not stop or reverse the transformation,
-Joaquin was at last able to fling the protean bundle of wands through the dimensions.
 
-PARAMETERS:
+@234 = ~Galeno was a clever thief. Over the course of his adventures, he learned to imitate many people, including wizards and sorcerers. His imitation was so skillful and complete that he could use their magical wands and staves. Staves were of little use to him, however: he did not know how to wield them as weapons, and they were difficult to carry while scaling the walls of Vurkis's temples, for Galeno loved stealing from the followers of that evil god. Wands, on the other hand, could be slipped into a pouch or pocket, or sewn into the lining of a cloak, and Galeno found them extremely useful.
 
-Combat abilities:
-- Creates a random wand effect on hit.
+One day, while fleeing the guardians of a temple of Vurkis, Galeno pulled a wand from beneath his cloak, intending to create the illusion of a wall between himself and his pursuers. Instead, he turned one of the guards into a chicken! Forced to leap from a window rather than make a more dignified escape, Galeno landed in a street cleaner's cart. The foul-smelling contents cushioned his fall, but also ruined his clothes.
 
-Charge abilities:
-- Creates a random wand.
+Frustrated and temporarily humiliated, Galeno searched for a better way to organize and carry his collection of wands. After several experiments, he eventually fixed them to a hollow tube of thick paper wrapped around his forearm. The wands inside the tube protruded far enough from the back for him to tell them apart. He then set out to rob a sorcerer named Joaquin Mago, whose arrogant display of wealth simply begged to be plundered.
+
+Alas, the sorcerer caught Galeno in the middle of the burglary. To his horror, the entire thing had been a trap! The guard Galeno had turned into a chicken was Joaquin's son, and the ostentatious display of wealth had been nothing more than bait intended to lure a greedy—but clever—thief. Galeno and Joaquin fought a tremendous duel. As the battle raged, Galeno's concentration faltered and a strange confluence occurred between the wands and the sorcerer's magic. The tube around Galeno's arm began to twist and lengthen. The wands started to merge with him, and despite all his efforts he could not free himself from the transformation. Desperate, Galeno begged Joaquin to help him.
+
+The sorcerer's heart softened. After all, his son had only remained a chicken temporarily. Joaquin tried to stop the transformation, but he could neither halt nor reverse it. The strange mass continued to twist and change, Galeno and the wands endlessly mingling and merging together. Unable to control or contain what Galeno was becoming, Joaquin finally hurled the ever-changing mass through the dimensions.
+
+Many years later, Dillpater found what remained of the clever thief. By then, Galeno had been completely transformed, his body and his wands now forming a single magical object.
+
+STATISTICS:
+
+Combat Ability:
+- Creates the effect of a random wand on hit (no projectile or area effect)
+
+Charge Ability:
+- Creates a random wand
 
 THAC0: +3
-Damage: 1D6 +3 (crushing)
+Damage: 1D6+3
+Damage Type: Crushing
 Speed Factor: 1
 Proficiency Type: Quarterstaff
 Type: Two-handed
-Requires:
- 5 Strength
+Requires: Strength 5
 
 Weight: 3~
 
+@2341 = ~Wand of Fear~
+
+@2342 = ~Wand of Magic Missiles~
+
+@2343 = ~Wand of Paralyzation~
+
+@2344 = ~Wand of Fire~
+
+@2345 = ~Wand of Frost~
+
+@2346 = ~Wand of Lightning~
+
+@2347 = ~Wand of Sleep~
+
+@2348 = ~Wand of Polymorphing~
+
+@2349 = ~Wand of Monster Summoning~
+
+@23410 = ~Wand of the Heavens~
+
+@23411 = ~Wand of Cloudkill~
+
+@23412 = ~Wand of Spell Striking~
+
+@23413 = ~Wand of Cursing~
+
 @235 = ~Negation~
-@236 = ~This is the armor worn by Frod Lannas when he ruled the Citadel Exhalus. When an army of Vacuous attempted to take the citadel, the Doomguards and a few Dust Men fought valiantly and repelled the monsters. But the losses were heavy and many disappeared. After the battle, the armor floated alone near the citadel. The monsters had been unable to devour it. No one knows what became of Frod. And how the armor can remain solid on a material plane, even less so....
-It is made of solidified negative void, which shouldn't even be possible. But in the planes, nothing is impossible.
 
-PARAMETERS:
+@236 = ~This is the armor worn by Frod Lannas when he ruled the Citadel of Exhalus. When an army of vacuous attempted to seize the citadel, the Doomguard and several Dustmen fought valiantly and drove the monsters back. But the losses were heavy, and many disappeared. After the battle, the armor was found floating alone near the citadel. The monsters had been unable to devour it. No one knows what became of Frod, and still less how the armor can remain solid on a Material Plane....
 
-Equipment capacity:
-- Any opponent who strikes the armor wearer in melee combat suffers 2D6 points of magical damage and must make a save vs. death at +4 or be disintegrated.
-- +50% magic resistance.
+It is made of solidified negative void, which should not even be possible. But on the planes, nothing is impossible.
 
-Armor class: -3 (-6 vs. slashing)
+STATISTICS:
 
-Strength required: 3
+Equipped Abilities:
+- Any opponent who strikes the wearer in melee suffers 2D6 magical damage and must make a Save vs. Death at +4 or be disintegrated
+- Magic Resistance: +50%
+
+Armor Class: -3 (-7 vs. slashing, -6 vs. piercing and missile weapons)
+Requires: Strength 3
 
 Weight: 5~
 
-@237 = ~Gaurak's Tooth~
-@238 = ~Forged by the mad blacksmith Galsconi from a tooth of Gaurak the Beast, this weapon resembles a piece of rotten ivory carved into a great sword. The hilt is wrapped in blackened, torn leather that looks as if it might fall apart at the slightest touch. Even more disturbing is the yellow venom that this bone sword seems to secrete as soon as it is picked up.
+@237 = ~Gaurak's Bone~
 
-PARAMETERS:
+@238 = ~Forged by the mad blacksmith Galsconi from a bone of Gaurak the Beast, this weapon resembles a piece of rotten ivory carved into a greatsword. Its hilt is wrapped in blackened, torn leather that seems ready to fall apart at the slightest touch. More disturbing still is the yellow sap that this bone sword seems to secrete as soon as it is picked up.
 
-Equipment Abilities:
-Strength +4
+STATISTICS:
 
-Combat Abilities:
-- Hit target takes 2 points of poison damage per round for one turn
-- Hit target lose one point of strength for 5 rounds (Save vs. Spells negates)
+Equipped Ability:
+- Constitution: +2
 
-Charge abilities:
-- Contagion once per day.
-- Degeneration once per day.
-- Vampiric touch once per day.
+Combat Ability:
+- Permanently reduces the target's maximum Hit Points by 1 and increases the wielder's maximum Hit Points by 1 for 1 turn
+
+Charge Ability:
+- Vampiric Touch once per day
 
 THAC0: +5
-Damage: 1D12 +5, +4 vs Good (slashing)
+Damage: 1D12+5, +1D6 acid damage
+Damage Type: Slashing
 Speed Factor: 5
-Proficiency Type: Two-handed Sword
+Proficiency Type: Two-Handed Sword
 Type: Two-handed
-Requires:
- 12 Strength
+Requires: Strength 12
 
-Weight: 10~
+Weight: 11~
 
 @239 = ~Pipe of Devastation~
-@240 = ~This pipe was used by the Absolute Evil to make one of the challenges you had to overcome even more difficult. He left it to you when you got rid of him.
 
-Capacity:
-- Three times per day can create a Cloud of Beastly Frenzy (each round save vs. Spells or Berserk, +1 attack per round and always attacks the nearest creature) or a Incendiary Cloud or a Mist of Darkdeath (each round attacked by 1D3 phantasmal killers).~
+@240 = ~This pipe was used by Liptzitn, Lord of the 618th, to make your life miserable. As a demon lord, he knew how to use this item at will. You do not.
+
+Charge Ability:
+- Three times per day, creates one of the following:
+  - Cloud of Bestial Frenzy (each round, affected creatures must save vs. Spell or do nothing but attack the nearest creature, with +1 Attack per Round)
+  - Incendiary Cloud
+  - Mist of Darkdeath (each round, affected creatures are attacked by the equivalent of 1D3 Phantasmal Killers)~
 
 @241 = ~Rex's Collar~
-@242 = ~This is the collar worn by Rex, the pet of Potemkin Jack the Stinky.
 
-PARAMETERS:
+@242 = ~This is the collar worn by Rex, the pet of Coverup the Stinker.
 
-Equipment abilities:
-- Free action
+STATISTICS:
+
+Equipped Abilities:
+- Free Action
 - Immunity to fear~
 
-@243 = ~Potemkin Jack's rotten weapon~
-@244 = ~This is a planetar's weapon. But it is badly damaged, it stinks, and it no longer has any luxurious qualities.
+@243 = ~Cover-Up's Rotten Weapon~
 
-PARAMETERS:
+@244 = ~This is a planetar's weapon. It is badly damaged, it stinks, and there is nothing splendid about it anymore.
 
-Combat abilities:
-- 25% chance to dispel magic and kill the target if it fails a saving throw against death at -2
-- 10% chance to cast Contagion on the target
+STATISTICS:
 
-Special: fragile: may break on impact
+Combat Abilities:
+- 25% chance on hit to dispel magic and kill the target if it fails a Save vs. Death at -2
+- 10% chance on hit to cast Contagion on the target
+
+Special: Fragile; may break on impact
 
 THAC0: +3
-Damage: 2D10+3 
-Type de Damage: (slashing)
-Speed Factor: 5 
-Proficiency Type: Two-handed Sword
+Damage: 2D10+3
+Damage Type: Slashing
+Speed Factor: 5
+Proficiency Type: Two-Handed Sword
 Type: Two-handed
-Requires:
- 12 Strength
+Requires: Strength 12
 
 Weight: 8~
 
 @245 = ~The Anvil~
+
 @246 = ~This hammer is a magical anvil with a handle attached to it.
 
-PARAMETERS:
+STATISTICS:
 
 Special: the handle is fragile and may break upon impact.
 
@@ -330,11 +390,12 @@ Requires:
 Weight: 750~
 
 @247 = ~Guardian Bastard Sword +3~
+
 @248 = ~This is one of the weapons used by the Ragewind you defeated.
 
-PARAMETERS:
+STATISTICS:
 
-Equipment Capabilities:
+Equipped Abilities:
 - Armor Class: +2
 - Saving Throws: +1
 - Physical Damage Resistance: +10%
@@ -342,89 +403,103 @@ Equipment Capabilities:
 THAC0: +3
 Damage: 2D4 +3 (slashing)
 Speed Factor: 5
-Proficiency Type: Bastard sword
+Proficiency Type: Bastard Sword
 Type: One-handed
 Requires:
  11 Strength
 
 Weight: 7~
 
-@249 = ~Grod's Gold Ring~
-@250 = ~This ring was created by Telim'gar, the master of challenges, for his guardian of the pocket of reality in the negative plane. You recovered this ring from the corpse of Grod “No-Eye,” who was not supposed to be the original guardian.
+@249 = ~Dillpater's Gold Ring~
 
-Equipment abilities:
+@250 = ~This ring was created by Telim'Gar, the Master of Challenges, for his lieutenant Dillpater, so that he could resist the effects of the cloak worn by Grod Nonoœil. Giving him a new magical item was also a good way to secure his loyalty.
+
+STATISTICS:
+
+Equipped Abilities:
 - Death Ward
 - Negative Plane Protection
 
-Charge abilities:
-- Control Undead once per day (4.5-meter radius area, saving throw at -4 to cancel, permanent control)
-- Protection From Undead once per day (2 turns)~
+Charge Ability:
+- Control Undead once per day~
 
 @251 = ~Cleric's Staff +3~
-@252 = ~You found this weapon in a maze infested with aberrations.
 
-PARAMETERS:
+@252 = ~You picked up this staff from the corpse of a deranged priest.
 
-Charge Capabilities:
-- Allows to cast any existing level 5 divine spell once per day.
+STATISTICS:
+
+Charge Ability:
+- Once per day, allows the wielder to cast any existing 5th-level divine spell
 
 THAC0: +3
-Damage: 1D6 +3 (crushing), +4 against undead
+Damage: 1D6+3, +3 additional damage against undead
+Damage Type: Crushing
 Speed Factor: 1
 Proficiency Type: Quarterstaff
 Type: Two-handed
-Requires:
- 5 Strength
+Requires: Strength 5
 
 Weight: 3~
 
 @253 = ~Iron Bow~
-@254 = ~This bow is made of iron. It requires extraordinary strength to bend it, but the magic of the object fortunately converts this strength into power.
 
-PARAMETERS:
+@254 = ~This bow is made of iron. It takes extraordinary strength to draw it, but the bow's magic fortunately converts that strength into power.
 
-Special: takes into account the strength bonus
+STATISTICS:
+
+Special:
+- Applies the wielder's Strength damage bonus
 
 THAC0: +3
-Damage: +1 (missile)
+Damage: +1
+Damage Type: Missile
 Speed Factor: 5
 Proficiency Type: Longbow
 Type: Two-handed
-Requires:
- 21 Strength
+Requires: Strength 21
 
 Weight: 9~
 
-@255 = ~Tinkered Lightning Wand~
-@256 = ~This wand looks exactly like a Wand of Lightning, but it doesn't consume charges. 
+@255 = ~Tampered Wand of Paralyzation~
 
-PARAMETRES
+@256 = ~This wand looks exactly like a Wand of Paralyzation, but it does not consume charges.
 
-Charge abilities:
-- At willLightning Bolts
-  Damage: 3d6 electrical (Save vs. Wand for half)
-  Range: 100 ft.
-  Area of Effect: Path of bolts~
+STATISTICS:
 
-@257 = ~Strange gem~
-@258 = ~This gem seems perfectly normal, except for the fact that it responds to magic detection. 
+Use Ability:
+- Stuns the target unless it succeeds on a Save vs. Wand at -4
+  Range: 30 m
+  Area of Effect: 1 creature
+  Duration: 1 turn
 
-PARAMETERS
+Requires: Intelligence 9
 
-Allows you to summon an unknown creature. Single use.~
+Weight: 1~
+
+@257 = ~Strange Gem~
+
+@258 = ~This gem seems perfectly ordinary, except that it detects as magical.
+
+STATISTICS:
+
+Special:
+- Summons an unknown creature
+- Single use~
 
 @259 = ~Frenzy +2~
+
 @260 = ~This sword won't stay still. When you hold it in your hand, it swings around at breakneck speed. 
 
-PARAMETERS:
+STATISTICS:
 
-Equipment capabilities:
+Equipped Ability:
  +3 attacks per round
  
 THAC0: -8
-Damage:  1D6 +2 (piercing)
+Damage: 1D6 +2 (piercing)
 Speed Factor: 1
-Proficiency Type: Short sword
+Proficiency Type: Short Sword
 Type: One-handed
 Requires:
  5 Strength
@@ -432,81 +507,273 @@ Requires:
 Weight:  2~
 
 @261 = ~Skull of Tepesh~
-@262 = ~This is the skull of Tepesh the Brave, protector of the Bief. He had the misfortune of challenging a necromancer too powerful for him, and this enchanted skull is all that remains of him.
 
-PARAMETERS:
-
-Charge capacities:
-- Summon Tepesh for 2 turns once per day.~
-
-@263 = ~Dagger of the Gloom~
-@264 = ~In the hands of a gloom, this dagger is a +10 sharp dagger with human condemnation. But you are not a sepulchral, and in your hands this dagger is just a simple +5 sharp dagger.
+@262 = ~This is the skull of Tepesh the Brave, protector of the Bief. He made the unfortunate mistake of challenging a necromancer far too powerful for him, and this enchanted skull is all that remains.
 
 STATISTICS:
 
-Equipment Capabilities:
-- Critical hit chances : +2
+Charge Ability:
+- Once per day, summons Tepesh for 2 turns~
 
-THAC0: +5
-Damage: 1d4+5 (piercing)
-Speed Factor: 0
-Proficiency Type: Dagger
-Type: One-handed
-Requires:
- 3 Strength
+@263 = ~Piliam's Ultramagical Vampiric Gourd~
+
+@264 = ~You found this gourd in a gallery filled with exceptional undead creatures. It is “vampiric”; hardly surprising.
+
+STATISTICS:
+
+Charge Ability:
+- The drinker is affected by a random beneficial spell cast at 20th level. The gourd then drains Hit Points from the drinker to recharge itself. The number of Hit Points drained is equal to four times the level of the spell cast (for example, 24 Hit Points for the effects of a 6th-level spell).
+- Unlimited uses~
+
+@265 = ~Magic Bullet~
+
+@266 = ~This sling bullet literally radiates magic. And for good reason: it splits into five when fired. The wielder makes only a single attack roll, however: either all five projectiles hit, or none do.
+
+STATISTICS:
+
+Special:
+- Reappears in the sling after each shot
+- Counts as a +1 magical weapon
+
+Damage: 5x1D4+1
+Damage Type: Magical
+Weight: 0
+Ammunition Type: Sling~
+
+@267 = ~Secrets of the Blacksmith~
+
+@268 = ~This thick tome teaches everything needed to create several golems known only to the Blacksmith.
+
+STATISTICS:
+
+Special Ability:
+- Once per day, summons one of the Blacksmith's unique golems for 10 rounds~
+
+@269 = ~Wand of Remove Curse~
+
+@270 = ~A wand that can be useful in certain circumstances.
+
+STATISTICS:
+
+Use Ability:
+- Remove Curse
+  Range: 30 m
+  Area of Effect: 1 creature~
+
+@271 = ~Blacksmith's Booklet~
+
+@272 = ~This tattered booklet describes how to build a Charrer.
+
+STATISTICS:
+
+Special Ability:
+- Once per day, summons a Charrer v2 for 10 rounds
+
+Special: 15% chance after each use that the booklet deteriorates and becomes unusable.
 
 Weight: 2~
 
-@265 = ~Magic Bullet~
-@266 = ~This bullet literally radiates magic. And for good reason: it splits into 5 when thrown. However, the thrower makes only a single attack roll: either all the projectiles hit, or none do.
-
-STATISTICS:
-
-Special: Regenerates in the sling after each throw
-Special: Considered a +1 magic weapon
-
-Damage: 5x1D4+1
-Damage Type: Magic
-Weight: 0
-Throwing Weapon: Sling~
-
-@267 = ~Secrets of the Blacksmith~
-@268 = ~This thick tome teaches everything needed to create some of the golems known only to the Blacksmith.
-
-STATISTICS:
-
-Special Ability:
-Summon a golem specific to the Blacksmith for 10 rounds, once per day.~
-
-@269 = ~Wand of Curse Removal~ 
-@270 = ~A wand that can be useful in certain circumstances.
-
-PARAMETERS:
-
-Effects: Curse Removal
-Range: 30 m
-Area: 1 creature~
-
-
-@271 = ~Blacksmith's Booklet~
-@272 = ~This tattered booklet describes how to build a Charreder.
-
-PARAMETERS:
-
-Special Ability:
-Summon a Charreder v2 for 10 rounds, once per day.
-
-Special: 15% chance that the booklet will deteriorate and become unusable after each use.
-
-Weight: 25~
 @273 = ~Remains of a Booklet~
-@274 = ~This is all that remains of the Blacksmith's Booklet. Through repeated use, it has been completely destroyed.~
 
-@275 = ~Wand of Party Teleportation~ 
-@276 = ~This wand allows for mass teleportation.
+@274 = ~This is all that remains of the Blacksmith's Booklet. Repeated use eventually destroyed it completely.~
 
-PARAMETERS:
+@275 = ~The Pulverizer~
 
-Effects: Teleports the party to any location on the map.
-Range: Special
-Target: Party~
+@276 = ~You took this fearsome weapon from the hooves of a cow seeking revenge on behalf of all cows.
+
+STATISTICS:
+
+Combat Abilities:
+- Pulverizes the target (Save vs. Death at -4 negates)
+- On a critical hit, pulverizes the target with no saving throw
+
+THAC0: +6
+Damage: 1D10+6
+Damage Type: Piercing or Slashing
+Speed Factor: 3
+Proficiency Type: Halberd
+Type: Two-handed
+Requires: Strength 13
+
+Weight: 11~
+
+@277 = ~Scepter of Rejuvenation~
+
+@278 = ~Telim'Gar, the final boss of the Insurmountable Challenges, used this scepter to make the already grueling battle against him even more difficult.
+
+STATISTICS:
+
+Charge Ability:
+- Once per day, casts Greater Restoration and refreshes all memorized spells~
+
+@279 = ~Sanctuary Ring~
+
+@280 = ~A priest of Nerull used this ring to protect himself. What a nuisance! Now it is your turn to take advantage of it.
+
+STATISTICS:
+
+Equipped Ability:
+- Casts Sanctuary on the wearer whenever they are hit~
+
+@281 = ~Cloak of Death~
+
+@282 = ~This cloak constantly drips with blood. One would have to be truly devoted to the forces of evil to dare wear such a garment.
+
+STATISTICS:
+
+Equipped Ability:
+- Each round, every creature within a 4.5-meter radius of the wearer is affected by Doom and Finger of Death~
+
+@283 = ~Squirrelizer~
+
+@284 = ~This is, to say the least, an unusual item. As far as anyone knows, it was crafted at the end of the First Flowering by Kyanka, a royal mage and enchanter who was no longer entirely sane. He is said to have had a rather peculiar sense of humor, which might explain the morbid pleasure he took in rendering his opponents incapable of thinking clearly before finishing them off. It appears that this robe was worn only very rarely.
+
+STATISTICS:
+
+Equipped Ability:
+- Casts Polymorph Other on any creature that attacks the wearer (saving throw at -2 negates)
+
+Charge Ability:
+- Three times per day, casts Polymorph Other (saving throw at -6 negates)
+
+Armor Class: 5
+Weight: 6~
+
+@285 = ~Ring of Supreme Chaos~
+
+@286 = ~You found this ring on the corpse of Liptzitn, Lord of the 618th. Since he seemed to know only one spell, what was he doing with such an artifact?
+
+STATISTICS:
+
+Equipped Abilities:
+- +1 memorization slot at each spell level
+- Improved Alacrity
+- Entropy~
+
+@287 = ~Anti-Fog Wand~
+
+@288 = ~The perfect wand for anyone who dislikes clouds, mists, and other kinds of fog.
+
+STATISTICS:
+
+Use Ability:
+- Zone of Sweet Air
+  Range: 0
+  Area of Effect: Special~
+
+@289 = ~Ring of Here/Not Here~
+
+@290 = ~Liptzitn, Lord of the 618th, wore this ring to drive you crazy. He found it amusing....
+
+STATISTICS:
+
+Equipped Ability:
+- Whenever the wearer is hit, they are teleported a few meters away~
+
+@291 = ~Anchor of Reality~
+
+@292 = ~You found this ring in a tomb.
+
+STATISTICS:
+
+Equipped Ability:
+- Protects the wearer from anything that could erase them from the fabric of reality~
+
+@293 = ~The Bell of the Paragon of Bovine Vengeance~
+
+@294 = ~You took this bell from a “cow” boss in a pasture full of cows. It seems to have absorbed some of its previous owner's powers.
+
+STATISTICS:
+
+Equipped Abilities:
+- Protection from death and the Negative Energy Plane
+- Protection from Slow and Time Stop
+- Protection from stun
+- Damage dealt: +50%
+- Each time the wearer kills a creature, 2% chance that the Spirit of the Paragon of Bovine Vengeance appears to reclaim its bell
+
+Charge Ability:
+- Once per day: Time Stop (5% chance that the Spirit of the Paragon of Bovine Vengeance appears to reclaim its bell)~
+
+@2941 = ~Spirit of the Paragon of Bovine Vengeance~
+
+@295 = ~Dillpater's Grimoire~
+
+@296 = ~This mage's grimoire is written in a language you do not recognize. Even the magical runes used to describe a spell and how to cast it are strangely arranged, as though they came from a land where magic followed different rules. In the final pages, however, the runes are conventional and describe common spells. On the last page, a passage written in Quasi-Common catches your eye:
+
+**Dillpater's Journal — 525th year of the reign of Lord Artificer Omanond**
+
+My apprentices stole my grimoire.
+
+MY grimoire.
+
+I had to create this one. It is only a copy. Incomplete.
+
+They set out adventuring through the lands of Sharn. With MY grimoire. I am going to find them. I will find them. They must be there. They have to be there.
+
+I am taking the Wonderful Discombulator with me. It would be absurd to leave without it. Completely absurd. I need it. Need it.
+
+**Dillpater's Journal — 652nd year of the reign of Lord Artificer Omanond**
+
+I did not find them.
+
+I followed their trail. They entered some kind of series of arenas. Why?
+
+I went in too. I am going to find them. I will recover my grimoire.
+
+I found monsters. Traps. Mages. Things that should never have existed. I survived all of it. I even reached “the final.”
+
+But I did not find them. I did not recover my grimoire.
+
+Impossible. With all my power, and I did not find them. Impossible.
+
+Telim'Gar is the leader. He offered me a place here.
+
+His power resonated with mine. I listened to him.
+
+Perhaps my apprentices will come.
+
+I am waiting for them.
+
+I see other mages arriving. They are not artificers. They are not my apprentices.
+
+The mages die. All of them. Weak.
+
+Their grimoires are ridiculous. Nothing more than a collection of exercises for apprentices.
+
+I collect grimoires. I have too many.
+
+**Dillpater's Journal — 450th year after the Standing Stones, according to Telim'Gar**
+
+I have not seen my apprentices again. I have not recovered my grimoire.
+
+This has gone on too long. I approached this the wrong way. I must proceed differently.
+
+STATISTICS:
+
+Special:
+- A particularly intelligent mage can learn ancient, forgotten spells by reading this grimoire.
+- These spells from an ancient age are represented in the wizard's spellbook in a completely different way.
+
+Requires: Intelligence 20
+Weight: 2~
+
+@297 = ~Imperis Temporum~
+
+@298 = ~This ring was embedded in the chest of Telim'Gar, the creator of the Challenges you so gloriously overcame. You removed it from his inert (?) body, and now it is yours.
+
+STATISTICS:
+
+Equipped Abilities:
+- Immunity to Time Stop
+- Immunity to Slow
+- Haste~
+
+@299 = ~Limianuï's Little Flute~
+
+@2100 = ~This little flute was lying beside an extinguished fire.
+
+STATISTICS:
+
+Charge Ability:
+- Once per day, playing this flute creates 1D6+4 simulacra of the bard for 8 seconds.~

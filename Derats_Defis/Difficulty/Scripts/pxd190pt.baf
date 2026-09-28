@@ -1,0 +1,70 @@
+IF
+    Clicked([ANYONE])
+THEN
+    RESPONSE #100
+        ActionOverride(LastTrigger,JumpToPoint([2559.1895]))
+        ActionOverride(LastTrigger,LockScroll())
+        SmallWait(6)
+        ActionOverride(LastTrigger,UnlockScroll())
+    RESPONSE #100
+        ActionOverride(LastTrigger,JumpToPoint([4215.869]))
+        ActionOverride(LastTrigger,LockScroll())
+        SmallWait(6)
+        ActionOverride(LastTrigger,UnlockScroll())
+    RESPONSE #100
+        ActionOverride(LastTrigger,JumpToPoint([4625.1624]))
+        ActionOverride(LastTrigger,LockScroll())
+        SmallWait(6)
+        ActionOverride(LastTrigger,UnlockScroll())
+    RESPONSE #100
+        ActionOverride(LastTrigger,JumpToPoint([4216.2635]))
+        ActionOverride(LastTrigger,LockScroll())
+        SmallWait(6)
+        ActionOverride(LastTrigger,UnlockScroll())
+    RESPONSE #100
+        ActionOverride(LastTrigger,JumpToPoint([3609.3041]))
+        ActionOverride(LastTrigger,LockScroll())
+        SmallWait(6)
+        ActionOverride(LastTrigger,UnlockScroll())
+    RESPONSE #100
+        ActionOverride(LastTrigger,JumpToPoint([2397.3239]))
+        ActionOverride(LastTrigger,LockScroll())
+        SmallWait(6)
+        ActionOverride(LastTrigger,UnlockScroll())
+    RESPONSE #100
+        ActionOverride(LastTrigger,JumpToPoint([660.2328]))
+        ActionOverride(LastTrigger,LockScroll())
+        SmallWait(6)
+        ActionOverride(LastTrigger,UnlockScroll())
+    RESPONSE #100
+        ActionOverride(LastTrigger,JumpToPoint([477.1793]))
+        ActionOverride(LastTrigger,LockScroll())
+        SmallWait(6)
+        ActionOverride(LastTrigger,UnlockScroll())
+    RESPONSE #100
+        ActionOverride(LastTrigger,JumpToPoint([668.1126]))
+        ActionOverride(LastTrigger,LockScroll())
+        SmallWait(6)
+        ActionOverride(LastTrigger,UnlockScroll())
+    RESPONSE #100
+        ActionOverride(LastTrigger,JumpToPoint([1475.520]))
+        ActionOverride(LastTrigger,LockScroll())
+        SmallWait(6)
+        ActionOverride(LastTrigger,UnlockScroll())
+    RESPONSE #100
+        ActionOverride(LastTrigger,JumpToPoint([2419.300]))
+        ActionOverride(LastTrigger,LockScroll())
+        SmallWait(6)
+        ActionOverride(LastTrigger,UnlockScroll())
+    RESPONSE #100
+        ActionOverride(LastTrigger,JumpToPoint([1276.2920]))
+        ActionOverride(LastTrigger,LockScroll())
+        SmallWait(6)
+        ActionOverride(LastTrigger,UnlockScroll())
+    RESPONSE #100
+        CreateCreatureObject("pxd190gd",Myself,0,0,0)
+    RESPONSE #100
+        CreateCreatureObject("pxd190gd",Myself,0,0,0)
+    RESPONSE #100
+        CreateCreatureObject("pxd190gd",Myself,0,0,0)
+END

@@ -1,0 +1,6 @@
+IF
+	!See(NearestEnemyOf(Myself))
+THEN
+	RESPONSE #100
+	FollowObjectFormation(LastSummonerOf(Myself),1,6)
+END

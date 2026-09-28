@@ -28,6 +28,7 @@ IF ~Global("px105wn","GLOBAL",1)~ THEN BEGIN welcome4 SAY @338
 	IF ~~ THEN EXIT
 END
 
+//Finale
 IF ~Global("pxcoward","GLOBAL",0)
 	Global("px105wn","GLOBAL",0)
 	Global("px105ok","GLOBAL",0)
@@ -47,12 +48,12 @@ IF ~Global("pxcoward","GLOBAL",0)
 	CreateVisualEffectObject("spportal",LastTalkedToBy)
 	Wait(3)
 	SetGlobal("px105ok","GLOBAL",1)
-	ActionOverride(Player1,LeaveAreaLUA("PXD105","",[672.388],SE))
-    ActionOverride(Player2,LeaveAreaLUA("PXD105","",[631.435],SE))
-    ActionOverride(Player3,LeaveAreaLUA("PXD105","",[639.379],SE))
-	ActionOverride(Player4,LeaveAreaLUA("PXD105","",[584.398],SE))
-    ActionOverride(Player5,LeaveAreaLUA("PXD105","",[574.379],SE))
-    ActionOverride(Player6,LeaveAreaLUA("PXD105","",[607.357],SE))~ EXIT
+	ActionOverride(Player1,LeaveAreaLUA("PXD105","",[756.1939],SE))
+    ActionOverride(Player2,LeaveAreaLUA("PXD105","",[723.2008],SE))
+    ActionOverride(Player3,LeaveAreaLUA("PXD105","",[689.1977],SE))
+	ActionOverride(Player4,LeaveAreaLUA("PXD105","",[719.1943],SE))
+    ActionOverride(Player5,LeaveAreaLUA("PXD105","",[677.1916],SE))
+    ActionOverride(Player6,LeaveAreaLUA("PXD105","",[647.1947],SE))~ EXIT
 	IF ~~ THEN REPLY @337 EXIT
 END
 
@@ -83,18 +84,22 @@ IF ~~ THEN BEGIN explica SAY @328
 	IF ~~ THEN REPLY @315 EXIT
 END
 
+
 IF ~~ THEN BEGIN liste SAY @332
+	//Décharge
 	IF ~Global("px108ok","GLOBAL",0)~ THEN REPLY @316 DO
 	~SaveGame(0)
 	CreateVisualEffectObject("spportal",LastTalkedToBy)
 	Wait(3)
 	SetGlobal("px108ok","GLOBAL",1)
-	ActionOverride(Player1,LeaveAreaLUA("PXD108","",[672.388],SE))
-    ActionOverride(Player2,LeaveAreaLUA("PXD108","",[631.435],SE))
-    ActionOverride(Player3,LeaveAreaLUA("PXD108","",[639.379],SE))
-	ActionOverride(Player4,LeaveAreaLUA("PXD108","",[584.398],SE))
-    ActionOverride(Player5,LeaveAreaLUA("PXD108","",[574.379],SE))
-    ActionOverride(Player6,LeaveAreaLUA("PXD108","",[607.357],SE))~ EXIT
+	ActionOverride(Player1,LeaveAreaLUA("pxd903","",[582.341],SE))
+	ActionOverride(Player2,LeaveAreaLUA("pxd903","",[536.363],SE))
+	ActionOverride(Player3,LeaveAreaLUA("pxd903","",[499.342],SE))
+	ActionOverride(Player4,LeaveAreaLUA("pxd903","",[538.307],SE))
+	ActionOverride(Player5,LeaveAreaLUA("pxd903","",[511.280],SE))
+	ActionOverride(Player6,LeaveAreaLUA("pxd903","",[458.306],SE))~ EXIT
+	
+	//la nécropole silencieuse
 	IF ~Global("px160ok","GLOBAL",0)~ THEN REPLY @317 DO
 	~SaveGame(0)
 	CreateVisualEffectObject("spportal",LastTalkedToBy)
@@ -106,6 +111,8 @@ IF ~~ THEN BEGIN liste SAY @332
 	ActionOverride(Player4,LeaveAreaLUA("PXD160","",[1850.3040],NNW))
     ActionOverride(Player5,LeaveAreaLUA("PXD160","",[1880.3064],NNW))
     ActionOverride(Player6,LeaveAreaLUA("PXD160","",[1911.3040],NNW))~ EXIT
+	
+	//Le Labyrinthe végétal.
 	IF ~Global("px610ok","GLOBAL",0)~ THEN REPLY @318 DO
 	~SaveGame(0)
 	CreateVisualEffectObject("spportal",LastTalkedToBy)
@@ -118,6 +125,8 @@ IF ~~ THEN BEGIN liste SAY @332
     ActionOverride(Player5,LeaveAreaLUA("PXD610","",[3386.3094],NNE))
     ActionOverride(Player6,LeaveAreaLUA("PXD610","",[3445.3111],NNE))~ EXIT
 	IF ~Global("px208ok","GLOBAL",0)~ THEN REPLY @319 DO
+	
+	//Les tombeaux d'acier 
 	~SaveGame(0)
 	CreateVisualEffectObject("spportal",LastTalkedToBy)
 	Wait(3)
@@ -128,17 +137,8 @@ IF ~~ THEN BEGIN liste SAY @332
 	ActionOverride(Player4,LeaveAreaLUA("PXD208","",[4120.2176],S))
     ActionOverride(Player5,LeaveAreaLUA("PXD208","",[4136.2143],S))
     ActionOverride(Player6,LeaveAreaLUA("PXD208","",[4075.2132],S))~ EXIT
-	IF ~Global("px190ok","GLOBAL",0)~ THEN REPLY @320 DO
-	~SaveGame(0)
-	CreateVisualEffectObject("spportal",LastTalkedToBy)
-	Wait(3)
-	SetGlobal("px190ok","GLOBAL",1)
-	ActionOverride(Player1,LeaveAreaLUA("PXD190","",[3724.1360],SE))
-    ActionOverride(Player2,LeaveAreaLUA("PXD190","",[3678.1387],SE))
-    ActionOverride(Player3,LeaveAreaLUA("PXD190","",[3675.1337],SE))
-	ActionOverride(Player4,LeaveAreaLUA("PXD190","",[3685.1312],SE))
-    ActionOverride(Player5,LeaveAreaLUA("PXD190","",[3666.1285],SE))
-    ActionOverride(Player6,LeaveAreaLUA("PXD190","",[3614.1313],SE))~ EXIT
+	
+	//Antimaginium
 	IF ~Global("px180ok","GLOBAL",0)~ THEN REPLY @321 DO
 	~SaveGame(0)
 	CreateVisualEffectObject("spportal",LastTalkedToBy)
@@ -150,6 +150,8 @@ IF ~~ THEN BEGIN liste SAY @332
 	ActionOverride(Player4,LeaveAreaLUA("PXD180","",[2681.1073],SW))
     ActionOverride(Player5,LeaveAreaLUA("PXD180","",[2712.1024],SW))
     ActionOverride(Player6,LeaveAreaLUA("PXD180","",[2663.999],SW))~ EXIT
+	
+	//La fournaise
 	IF ~Global("px100ok","GLOBAL",0)~ THEN REPLY @322 DO
 	~SaveGame(0)
 	CreateVisualEffectObject("spportal",LastTalkedToBy)
@@ -161,6 +163,21 @@ IF ~~ THEN BEGIN liste SAY @332
 	ActionOverride(Player4,LeaveAreaLUA("PXD100","",[573.2326],E))
     ActionOverride(Player5,LeaveAreaLUA("PXD100","",[512.2330],E))
     ActionOverride(Player6,LeaveAreaLUA("PXD100","",[515.2375],E))~ EXIT
+	
+	//Le Dédale
+	IF ~Global("px190ok","GLOBAL",0)~ THEN REPLY @320 DO
+	~SaveGame(0)
+	CreateVisualEffectObject("spportal",LastTalkedToBy)
+	Wait(3)
+	SetGlobal("px190ok","GLOBAL",1)
+	ActionOverride(Player1,LeaveAreaLUA("PXD190","",[3724.1360],SE))
+    ActionOverride(Player2,LeaveAreaLUA("PXD190","",[3678.1387],SE))
+    ActionOverride(Player3,LeaveAreaLUA("PXD190","",[3675.1337],SE))
+	ActionOverride(Player4,LeaveAreaLUA("PXD190","",[3685.1312],SE))
+    ActionOverride(Player5,LeaveAreaLUA("PXD190","",[3666.1285],SE))
+    ActionOverride(Player6,LeaveAreaLUA("PXD190","",[3614.1313],SE))~ EXIT
+	
+	//La forge 
 	IF ~Global("px708ok","GLOBAL",0)~ THEN REPLY @331 DO
 	~SaveGame(0)
 	CreateVisualEffectObject("spportal",LastTalkedToBy)
@@ -172,6 +189,32 @@ IF ~~ THEN BEGIN liste SAY @332
 	ActionOverride(Player4,LeaveAreaLUA("PXD708","",[119.2046],E))
     ActionOverride(Player5,LeaveAreaLUA("PXD708","",[77.2031],E))
     ActionOverride(Player6,LeaveAreaLUA("PXD708","",[44.2066],E))~ EXIT
+	
+	//La Salle de jeu de Liptzitn
+	IF ~Global("px201ok","GLOBAL",0)~ THEN REPLY @324 DO
+	~SaveGame(0)
+	CreateVisualEffectObject("spportal",LastTalkedToBy)
+	Wait(3)
+	SetGlobal("px201ok","GLOBAL",1)
+	ActionOverride(Player1,LeaveAreaLUA("PXD201","",[1079.617],SE))
+    ActionOverride(Player2,LeaveAreaLUA("PXD201","",[1018.605],SE))
+    ActionOverride(Player3,LeaveAreaLUA("PXD201","",[1034.559],SE))
+	ActionOverride(Player4,LeaveAreaLUA("PXD201","",[1092.568],SE))
+    ActionOverride(Player5,LeaveAreaLUA("PXD201","",[1130.537],SE))
+    ActionOverride(Player6,LeaveAreaLUA("PXD201","",[1066.520],SE))~ EXIT
+	
+	//Le tombeau du grand ver
+	IF ~Global("px110ok","GLOBAL",0)~ THEN REPLY @323 DO
+	~SaveGame(0)
+	CreateVisualEffectObject("spportal",LastTalkedToBy)
+	Wait(3)
+	SetGlobal("px110ok","GLOBAL",1)
+	ActionOverride(Player1,LeaveAreaLUA("PXD110","",[187.878],E))
+    ActionOverride(Player2,LeaveAreaLUA("PXD110","",[183.904],E))
+    ActionOverride(Player3,LeaveAreaLUA("PXD110","",[125.904],E))
+	ActionOverride(Player4,LeaveAreaLUA("PXD110","",[139.880],E))
+    ActionOverride(Player5,LeaveAreaLUA("PXD110","",[94.864],E))
+    ActionOverride(Player6,LeaveAreaLUA("PXD110","",[75.907],E))~ EXIT
 	IF ~~ THEN REPLY @333 EXIT
 END
 

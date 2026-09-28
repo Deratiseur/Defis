@@ -1,0 +1,15 @@
+IF
+	See(NearestEnemyOf(Myself))
+    Global("texte","LOCALS",0)
+	RandomNum(10,1)
+THEN
+    RESPONSE #100
+	DisplayStringHead(Myself,@290012)	
+	SetGlobal("texte","LOCALS",1)
+    RESPONSE #100
+	DisplayStringHead(Myself,@290013)	
+	SetGlobal("texte","LOCALS",1)
+    RESPONSE #100
+	DisplayStringHead(Myself,@290014)	
+	SetGlobal("texte","LOCALS",1)
+END

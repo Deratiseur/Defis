@@ -1,0 +1,7 @@
+IF
+	Global("moglusbobo","GLOBAL",1)
+	PartyRested() 
+THEN
+	RESPONSE #100
+		CreateCreatureObject("pxMoglus",Player1,2,2,2)  // Moglus
+END

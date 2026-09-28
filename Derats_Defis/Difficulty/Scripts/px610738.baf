@@ -1,0 +1,7 @@
+IF
+	Die()
+THEN
+	RESPONSE #100
+		ReallyForceSpellDeadRES("px108138",Myself)
+		ReallyForceSpellDeadRES("pxdmoucz",Myself)
+END

@@ -1,0 +1,697 @@
+IF
+    CheckStatGT(Myself,0,AURACLEANSING)
+    GlobalTimerNotExpired("casting","LOCALS")
+THEN
+    RESPONSE #100
+        SetGlobalTimer("casting","LOCALS",0)
+END
+
+IF
+    StateCheck(Myself,STATE_SILENCED)
+    !GlobalTimerNotExpired("casting","LOCALS")
+    HaveSpell(WIZARD_VOCALIZE)
+THEN
+    RESPONSE #100
+        Spell(Myself,WIZARD_VOCALIZE)
+        SetGlobalTimer("casting","LOCALS",ONE_ROUND)
+END
+
+IF 	!GlobalTimerNotExpired("casting","LOCALS")
+	CheckStatLT(Myself,90,SPELLFAILUREMAGE)
+	!CheckStatGT(Myself,0,CLERIC_INSECT_PLAGUE)
+		HaveSpellRES("pxl2prep")
+        !HaveSpellRES("PXL2PNOV")
+        !HaveSpellRES("PXDNUATU")
+        !HaveSpellRES("pxdproja")  
+THEN
+    RESPONSE #100
+        SpellRES("pxl2prep",Myself)
+        SetGlobalTimer("casting","LOCALS",ONE_ROUND)
+END
+
+IF
+	!GlobalTimerNotExpired("casting","LOCALS")
+	CheckStatLT(Myself,90,SPELLFAILUREMAGE)
+	!CheckStatGT(Myself,0,CLERIC_INSECT_PLAGUE)
+	GlobalGT("px105dilp","LOCALS",6)
+    See(NearestEnemyOf(Myself))
+	HaveSpell(WIZARD_IMPROVED_ALACRITY) 
+	CheckStat(Myself,0,AURACLEANSING)
+THEN
+    RESPONSE #100
+		Spell(Myself,WIZARD_IMPROVED_ALACRITY) 
+		SetGlobalTimer("casting","LOCALS",ONE_ROUND)
+END
+
+IF 
+	HPPercentLT(Myself,33)
+	See(NearestEnemyOf(Myself))
+	HasItem("PXPASOIN",Myself)
+THEN
+	RESPONSE #100
+		DisplayStringHead(Myself,@1052199)
+		UseItem("PXPASOIN",Myself)
+END
+
+IF
+	Global("pxdtelim","GLOBAL",2)
+	See(NearestEnemyOf(Myself))
+	Global("px105dilp","LOCALS",0)
+THEN
+    RESPONSE #100
+		DisplayStringHead(Myself,@1052199)
+		UseItem("PXL2DPRT",Myself)
+		SetGlobalTimer("casting","LOCALS",ONE_ROUND)
+		StartTimer(60,60)
+        SetGlobal("px105dilp","LOCALS",1)
+END
+
+IF
+	Global("px105dilp","LOCALS",1)
+	!GlobalTimerNotExpired("casting","LOCALS")
+    See(NearestEnemyOf(Myself))
+THEN
+    RESPONSE #100
+		DisplayStringHead(Myself,@1052199)
+		UseItem("PXL2DPUI",Myself)
+        SetGlobal("px105dilp","LOCALS",2)
+		SetGlobalTimer("casting","LOCALS",ONE_ROUND)
+END
+
+IF
+	Global("px105dilp","LOCALS",2)
+	!GlobalTimerNotExpired("casting","LOCALS")
+    See(NearestEnemyOf(Myself))
+THEN
+    RESPONSE #100
+		DisplayStringHead(Myself,@1052199)
+		UseItem("PXL2DPSY",Myself)
+        SetGlobal("px105dilp","LOCALS",3)
+		SetGlobalTimer("casting","LOCALS",ONE_ROUND)
+END
+
+
+IF
+	Global("px105dilp","LOCALS",3)
+	!GlobalTimerNotExpired("casting","LOCALS")
+    See(NearestEnemyOf(Myself))
+THEN
+    RESPONSE #100
+		DisplayStringHead(Myself,@1052199)
+		UseItem("XL2DMAG",Myself)
+        SetGlobal("px105dilp","LOCALS",4)
+		SetGlobalTimer("casting","LOCALS",ONE_ROUND)
+END
+
+IF
+	Global("px105dilp","LOCALS",4)
+	!GlobalTimerNotExpired("casting","LOCALS")
+    See(NearestEnemyOf(Myself))
+THEN
+    RESPONSE #100
+		DisplayStringHead(Myself,@1052199)
+		UseItem("PXL2DVIT",Myself)
+        SetGlobal("px105dilp","LOCALS",5)
+		SetGlobalTimer("casting","LOCALS",ONE_ROUND)
+END
+
+IF
+	Global("px105dilp","LOCALS",5)
+	!GlobalTimerNotExpired("casting","LOCALS")
+	CheckStatLT(Myself,90,SPELLFAILUREMAGE)
+	!CheckStatGT(Myself,0,CLERIC_INSECT_PLAGUE)
+    See(NearestEnemyOf(Myself))
+	HaveSpell(WIZARD_IMPROVED_ALACRITY) 
+THEN
+    RESPONSE #100
+		Spell(Myself,WIZARD_IMPROVED_ALACRITY) 
+        SetGlobal("px105dilp","LOCALS",6)
+		SetGlobalTimer("casting","LOCALS",ONE_ROUND)
+END
+
+IF
+    TimerExpired(60)
+	Global("px105tel60","LOCALS",0)
+	!GlobalTimerNotExpired("casting","LOCALS")
+THEN
+    RESPONSE #100
+		DisplayStringHead(Myself,@1052199)
+		UseItem("PXL2DBAN",Myself)
+        SetGlobal("px105tel60","LOCALS",1)
+		SetGlobalTimer("casting","LOCALS",ONE_ROUND)
+END
+
+IF
+	Global("px105tel60","LOCALS",1)
+	CheckStat(Myself,0,MINORGLOBE)
+	!GlobalTimerNotExpired("casting","LOCALS")
+	CheckStatLT(Myself,90,SPELLFAILUREMAGE)
+	!CheckStatGT(Myself,0,CLERIC_INSECT_PLAGUE)
+	HaveSpell(WIZARD_GLOBE_OF_INVULNERABILITY) 
+THEN
+    RESPONSE #100
+		Spell(Myself,WIZARD_GLOBE_OF_INVULNERABILITY)
+		SetGlobalTimer("casting","LOCALS",ONE_ROUND)
+		SetGlobal("px105time1","GLOBAL",1)
+END
+
+IF
+	Global("px105dilp","LOCALS",6)
+	!GlobalTimerNotExpired("casting","LOCALS")
+	CheckStatLT(Myself,90,SPELLFAILUREMAGE)
+	!CheckStatGT(Myself,0,CLERIC_INSECT_PLAGUE)
+    See(NearestEnemyOf(Myself))
+	HaveSpellRES("pxl2pmtu")
+THEN
+    RESPONSE #100
+		SpellRES("pxl2pmtu",NearestEnemyOf(Myself)) 
+        SetGlobal("px105dilp","LOCALS",7)
+		SetGlobalTimer("casting","LOCALS",ONE_ROUND)
+END
+
+
+IF
+	AttackedBy([ANYONE],DEFAULT)
+	!GlobalTimerNotExpired("casting","LOCALS")
+	CheckStatLT(Myself,90,SPELLFAILUREMAGE)
+	!CheckStatGT(Myself,0,CLERIC_INSECT_PLAGUE)
+    See(NearestEnemyOf(Myself))
+	HaveSpellRES("pxdimagr")
+THEN
+    RESPONSE #100
+		SpellRES("pxdimagr",Myself) 
+		SetGlobalTimer("casting","LOCALS",ONE_ROUND)		
+END
+
+IF
+	HitBy([ANYONE],CRUSHING)
+	!GlobalTimerNotExpired("casting","LOCALS")
+	CheckStatLT(Myself,90,SPELLFAILUREMAGE)
+	!CheckStatGT(Myself,0,CLERIC_INSECT_PLAGUE)
+    See(NearestEnemyOf(Myself))
+	HaveSpell(WIZARD_STONE_SKIN) 
+	CheckStatLT(Myself,1,STONESKINS)
+THEN
+    RESPONSE #100
+		Spell(Myself,WIZARD_STONE_SKIN)
+		SetGlobalTimer("casting","LOCALS",ONE_ROUND)		
+END
+
+IF
+ 	!GlobalTimerNotExpired("casting","LOCALS")
+ 	CheckStatLT(Myself,90,SPELLFAILUREMAGE)
+ 	!CheckStatGT(Myself,0,CLERIC_INSECT_PLAGUE)
+    See(NearestEnemyOf(Myself))
+    HaveSpellRES("pxdimagr")
+THEN
+    RESPONSE #100
+        SpellRES("pxdimagr",Myself) 
+        SetGlobalTimer("casting","LOCALS",ONE_ROUND)
+END
+
+IF
+ 	!GlobalTimerNotExpired("casting","LOCALS")
+ 	CheckStatLT(Myself,90,SPELLFAILUREMAGE)
+ 	!CheckStatGT(Myself,0,CLERIC_INSECT_PLAGUE)
+    See(NearestEnemyOf(Myself))
+	OR(3)
+		Class(LastSeenBy(Myself),BARD_ALL)
+		Class(LastSeenBy(Myself),MAGE_ALL)
+		Class(LastSeenBy(Myself),SORCERER)
+	OR(2)
+		HasBounceEffects(LastSeenBy(Myself))
+		HasImmunityEffects(LastSeenBy(Myself))
+	HaveSpell(WIZARD_BREACH) 
+THEN
+    RESPONSE #100
+	    Spell(NearestEnemyOf(Myself),WIZARD_BREACH)
+        SetGlobalTimer("casting","LOCALS",ONE_ROUND)
+END
+
+IF
+ 	!GlobalTimerNotExpired("casting","LOCALS")
+ 	CheckStatLT(Myself,90,SPELLFAILUREMAGE)
+ 	!CheckStatGT(Myself,0,CLERIC_INSECT_PLAGUE)
+    See(NearestEnemyOf(Myself))
+	OR(2)
+		Class(LastSeenBy(Myself),DRUID_ALL)
+		Class(LastSeenBy(Myself),CLERIC_ALL)
+	HaveSpell(WIZARD_DOMINATION)
+THEN
+    RESPONSE #100
+	    Spell(NearestEnemyOf(Myself),WIZARD_DOMINATION)
+        SetGlobalTimer("casting","LOCALS",ONE_ROUND)
+END
+
+IF
+	HitBy([ANYONE],CRUSHING)
+	!GlobalTimerNotExpired("casting","LOCALS")
+	CheckStatLT(Myself,90,SPELLFAILUREMAGE)
+	!CheckStatGT(Myself,0,CLERIC_INSECT_PLAGUE)
+    See(NearestEnemyOf(Myself))
+	!HaveSpell(WIZARD_STONE_SKIN) 
+	HaveSpell(WIZARD_PROTECTION_FROM_MAGIC_WEAPONS)
+	!CheckStatGT(Myself,0,WIZARD_PROTECTION_FROM_MAGIC_WEAPONS)
+THEN
+    RESPONSE #100
+		Spell(Myself,WIZARD_PROTECTION_FROM_MAGIC_WEAPONS)
+		SetGlobalTimer("casting","LOCALS",ONE_ROUND)		
+END
+
+IF
+	OR(4)
+		HitBy([ANYONE],FIRE)
+		HitBy([ANYONE],ELECTRICITY)
+		HitBy([ANYONE],COLD)
+		HitBy([ANYONE],ACID)
+	!GlobalTimerNotExpired("casting","LOCALS")
+	CheckStatLT(Myself,90,SPELLFAILUREMAGE)
+	!CheckStatGT(Myself,0,CLERIC_INSECT_PLAGUE)
+    See(NearestEnemyOf(Myself))
+	HaveSpell(WIZARD_PROTECTION_FROM_THE_ELEMENTS) 
+THEN
+    RESPONSE #100
+		Spell(Myself,WIZARD_PROTECTION_FROM_THE_ELEMENTS) 
+		SetGlobalTimer("casting","LOCALS",ONE_ROUND)
+END
+
+IF
+ 	!GlobalTimerNotExpired("casting","LOCALS")
+    See(FourthNearestEnemyOf(Myself))
+    HaveSpell(WIZARD_CHAOS)
+	!General(LastSeenBy(Myself),UNDEAD)
+	!General(LastSeenBy(Myself),PLANT)
+	!Race(LastSeenBy(Myself),DEMONIC)
+	!Race(LastSeenBy(Myself),TROLL)
+	!Race(LastSeenBy(Myself),SLIME)
+	!StateCheck(LastSeenBy(Myself),STATE_NOT_TARGETABLE)
+	!StateCheck(LastSeenBy(Myself),STATE_DISABLED)
+	CheckStatLT(LastSeenBy(Myself),50,RESISTMAGIC)
+	!CheckStatGT(LastSeenBy(Myself),0,CLERIC_CHAOTIC_COMMANDS)
+	!CheckSpellState(LastSeenBy(Myself),BARBARIAN_RAGE)
+	!CheckSpellState(LastSeenBy(Myself),BERSERKER_RAGE)
+	!CheckSpellState(LastSeenBy(Myself),MINSC_BERSERK)
+	!CheckSpellState(LastSeenBy(Myself),POTION_OF_CLARITY)
+	!CheckStat(LastSeenBy(Myself),4,WIZARD_SPELL_IMMUNITY)
+	CheckStatLT(Myself,90,SPELLFAILUREMAGE)
+	!CheckStatGT(Myself,0,CLERIC_INSECT_PLAGUE)
+	!StateCheck(Myself,STATE_SILENCED)
+THEN
+	RESPONSE #100
+        Spell(LastSeenBy(Myself),WIZARD_CHAOS) 
+        SetGlobalTimer("casting","LOCALS",ONE_ROUND)
+END
+
+IF
+ 	!GlobalTimerNotExpired("casting","LOCALS")
+ 	CheckStatLT(Myself,90,SPELLFAILUREMAGE)
+ 	!CheckStatGT(Myself,0,CLERIC_INSECT_PLAGUE)
+    See(NearestEnemyOf(Myself))
+    HaveSpellRES("pxl2ptyr")
+THEN
+    RESPONSE #100
+        SpellRES("pxl2ptyr",NearestEnemyOf(Myself)) 
+        SetGlobalTimer("casting","LOCALS",ONE_ROUND)
+END
+
+IF
+!GlobalTimerNotExpired("casting","LOCALS")
+CheckStatLT(Myself,90,SPELLFAILUREMAGE)
+!CheckStatGT(Myself,0,CLERIC_INSECT_PLAGUE)
+    See(NearestEnemyOf(Myself))
+	Global("px105300","LOCALS",0)
+	HPGT(LastSeenBy(Myself),299)
+    HaveSpellRES("pxddilp1")
+THEN
+    RESPONSE #100
+        SpellRES("pxddilp1",NearestEnemyOf(Myself)) 
+        SetGlobalTimer("casting","LOCALS",ONE_ROUND)
+		SetGlobal("px105300","LOCALS",1)
+END
+
+IF
+	!GlobalTimerNotExpired("casting","LOCALS")
+	CheckStatLT(Myself,90,SPELLFAILUREMAGE)
+	!CheckStatGT(Myself,0,CLERIC_INSECT_PLAGUE)
+	Detect(NearestEnemyOf(Myself))
+	OR(12)
+		StateCheck(NearestEnemyOf(Myself),STATE_INVISIBLE)
+		StateCheck(NearestEnemyOf(Myself),STATE_IMPROVEDINVISIBILITY)
+		StateCheck(SecondNearestEnemyOf(Myself),STATE_INVISIBLE)
+		StateCheck(SecondNearestEnemyOf(Myself),STATE_IMPROVEDINVISIBILITY)
+		StateCheck(ThirdNearestEnemyOf(Myself),STATE_INVISIBLE)
+		StateCheck(ThirdNearestEnemyOf(Myself),STATE_IMPROVEDINVISIBILITY)
+		StateCheck(FourthNearestEnemyOf(Myself),STATE_INVISIBLE)
+		StateCheck(FourthNearestEnemyOf(Myself),STATE_IMPROVEDINVISIBILITY)
+		StateCheck(FifthNearestEnemyOf(Myself),STATE_INVISIBLE)
+		StateCheck(FifthNearestEnemyOf(Myself),STATE_IMPROVEDINVISIBILITY)
+		StateCheck(SixthNearestEnemyOf(Myself),STATE_INVISIBLE)
+		StateCheck(SixthNearestEnemyOf(Myself),STATE_IMPROVEDINVISIBILITY)
+	HaveSpell(WIZARD_TRUE_SIGHT) 
+THEN
+	RESPONSE #100
+		SetGlobalTimer("casting","LOCALS",ONE_ROUND)
+		Spell(Myself,WIZARD_TRUE_SIGHT)
+END
+
+IF
+    See(NearestEnemyOf(Myself))
+	HPGT(LastSeenBy(Myself),200)
+	!GlobalTimerNotExpired("casting","LOCALS")
+	CheckStatLT(Myself,90,SPELLFAILUREMAGE)
+	!CheckStatGT(Myself,0,CLERIC_INSECT_PLAGUE)
+    HaveSpellRES("pxl2ptrc")
+THEN
+    RESPONSE #100
+        SpellRES("pxl2ptrc",NearestEnemyOf(Myself)) 
+        SetGlobalTimer("casting","LOCALS",ONE_ROUND)
+END
+
+IF
+	!GlobalTimerNotExpired("casting","LOCALS")
+	CheckStatLT(Myself,90,SPELLFAILUREMAGE)
+	!CheckStatGT(Myself,0,CLERIC_INSECT_PLAGUE)
+    See(NearestEnemyOf(Myself))
+    HaveSpellRES("pxl2pbru")
+THEN
+    RESPONSE #100
+        SpellRES("pxl2pbru",NearestEnemyOf(Myself)) 
+        SetGlobalTimer("casting","LOCALS",ONE_ROUND)
+END
+
+IF
+	!GlobalTimerNotExpired("casting","LOCALS")
+	CheckStatLT(Myself,90,SPELLFAILUREMAGE)
+	!CheckStatGT(Myself,0,CLERIC_INSECT_PLAGUE)
+    See(NearestEnemyOf(Myself))
+    HaveSpellRES("pxl2pnov")
+THEN
+    RESPONSE #100
+        SpellRES("pxl2pnov",NearestEnemyOf(Myself)) 
+        SetGlobalTimer("casting","LOCALS",ONE_ROUND)
+END
+
+
+IF
+    See(SecondNearestEnemyOf(Myself))
+	!GlobalTimerNotExpired("casting","LOCALS")
+	CheckStatLT(Myself,90,SPELLFAILUREMAGE)
+	!CheckStatGT(Myself,0,CLERIC_INSECT_PLAGUE)
+    HaveSpellRES("pxl2porb")
+	RandomNum(3,1)
+THEN
+    RESPONSE #100
+        SpellRES("pxl2porb",SecondNearestEnemyOf(Myself)) 
+        SetGlobalTimer("casting","LOCALS",ONE_ROUND)
+END
+
+IF
+    See(ThirdNearestEnemyOf(Myself))
+	!GlobalTimerNotExpired("casting","LOCALS")
+	CheckStatLT(Myself,90,SPELLFAILUREMAGE)
+	!CheckStatGT(Myself,0,CLERIC_INSECT_PLAGUE)
+    HaveSpellRES("pxl2porb")
+	RandomNum(3,2)
+THEN
+    RESPONSE #100
+        SpellRES("pxl2porb",ThirdNearestEnemyOf(Myself)) 
+        SetGlobalTimer("casting","LOCALS",ONE_ROUND)
+END
+
+IF
+    See(FourthNearestEnemyOf(Myself))
+ 	!GlobalTimerNotExpired("casting","LOCALS")
+ 	CheckStatLT(Myself,90,SPELLFAILUREMAGE)
+ 	!CheckStatGT(Myself,0,CLERIC_INSECT_PLAGUE)
+    HaveSpellRES("pxl2porb")
+	RandomNum(3,3)
+THEN
+    RESPONSE #100
+        SpellRES("pxl2porb",FourthNearestEnemyOf(Myself)) 
+        SetGlobalTimer("casting","LOCALS",ONE_ROUND)
+END
+
+IF
+	!GlobalTimerNotExpired("casting","LOCALS")
+	CheckStatLT(Myself,90,SPELLFAILUREMAGE)
+	!CheckStatGT(Myself,0,CLERIC_INSECT_PLAGUE)
+    See(NearestEnemyOf(Myself))
+    HaveSpellRES("pxl2porb")
+THEN
+    RESPONSE #100
+        SpellRES("pxl2porb",NearestEnemyOf(Myself)) 
+        SetGlobalTimer("casting","LOCALS",ONE_ROUND)
+END
+
+IF
+	!GlobalTimerNotExpired("casting","LOCALS")
+	CheckStatLT(Myself,90,SPELLFAILUREMAGE)
+	!CheckStatGT(Myself,0,CLERIC_INSECT_PLAGUE)
+    See(NearestEnemyOf(Myself))
+    HaveSpell(WIZARD_ABI_DALZIMS_HORRID_WILTING) 
+THEN
+    RESPONSE #100
+        Spell(NearestEnemyOf(Myself),WIZARD_ABI_DALZIMS_HORRID_WILTING)
+        SetGlobalTimer("casting","LOCALS",ONE_ROUND)
+END
+
+IF
+    !GlobalTimerNotExpired("casting","LOCALS")
+    CheckStatLT(Myself,90,SPELLFAILUREMAGE)
+    !CheckStatGT(Myself,0,CLERIC_INSECT_PLAGUE)
+    NumCreatureGT([PC],3)
+    RandomNum(3,1)
+    HaveSpellRES("pxdnuatu")
+THEN
+    RESPONSE #100
+        SpellRES("pxdnuatu",SecondNearest([PC]))
+        SetGlobalTimer("casting","LOCALS",ONE_ROUND)
+END
+
+IF
+    !GlobalTimerNotExpired("casting","LOCALS")
+    CheckStatLT(Myself,90,SPELLFAILUREMAGE)
+    !CheckStatGT(Myself,0,CLERIC_INSECT_PLAGUE)
+    NumCreatureGT([PC],3)
+    RandomNum(3,2)
+    HaveSpellRES("pxdnuatu")
+THEN
+    RESPONSE #100
+        SpellRES("pxdnuatu",ThirdNearest([PC]))
+        SetGlobalTimer("casting","LOCALS",ONE_ROUND)
+END
+
+IF
+    !GlobalTimerNotExpired("casting","LOCALS")
+    CheckStatLT(Myself,90,SPELLFAILUREMAGE)
+    !CheckStatGT(Myself,0,CLERIC_INSECT_PLAGUE)
+    NumCreatureGT([PC],3)
+    RandomNum(3,3)
+    HaveSpellRES("pxdnuatu")
+THEN
+    RESPONSE #100
+        SpellRES("pxdnuatu",FourthNearest([PC]))
+        SetGlobalTimer("casting","LOCALS",ONE_ROUND)
+END
+
+IF
+    !GlobalTimerNotExpired("casting","LOCALS")
+    CheckStatLT(Myself,90,SPELLFAILUREMAGE)
+    !CheckStatGT(Myself,0,CLERIC_INSECT_PLAGUE)
+    NumCreature([PC],3)
+    RandomNum(2,1)
+    HaveSpellRES("pxdnuatu")
+THEN
+    RESPONSE #100
+        SpellRES("pxdnuatu",SecondNearest([PC]))
+        SetGlobalTimer("casting","LOCALS",ONE_ROUND)
+END
+
+IF
+    !GlobalTimerNotExpired("casting","LOCALS")
+    CheckStatLT(Myself,90,SPELLFAILUREMAGE)
+    !CheckStatGT(Myself,0,CLERIC_INSECT_PLAGUE)
+    NumCreature([PC],3)
+    RandomNum(2,2)
+    HaveSpellRES("pxdnuatu")
+THEN
+    RESPONSE #100
+        SpellRES("pxdnuatu",ThirdNearest([PC]))
+        SetGlobalTimer("casting","LOCALS",ONE_ROUND)
+END
+
+IF
+    !GlobalTimerNotExpired("casting","LOCALS")
+    CheckStatLT(Myself,90,SPELLFAILUREMAGE)
+    !CheckStatGT(Myself,0,CLERIC_INSECT_PLAGUE)
+    NumCreature([PC],2)
+    RandomNum(2,1)
+    HaveSpellRES("pxdnuatu")
+THEN
+    RESPONSE #100
+        SpellRES("pxdnuatu",Nearest([PC]))
+        SetGlobalTimer("casting","LOCALS",ONE_ROUND)
+END
+
+IF
+    !GlobalTimerNotExpired("casting","LOCALS")
+    CheckStatLT(Myself,90,SPELLFAILUREMAGE)
+    !CheckStatGT(Myself,0,CLERIC_INSECT_PLAGUE)
+    NumCreature([PC],2)
+    RandomNum(2,2)
+    HaveSpellRES("pxdnuatu")
+THEN
+    RESPONSE #100
+        SpellRES("pxdnuatu",SecondNearest([PC]))
+        SetGlobalTimer("casting","LOCALS",ONE_ROUND)
+END
+
+IF
+    !GlobalTimerNotExpired("casting","LOCALS")
+    CheckStatLT(Myself,90,SPELLFAILUREMAGE)
+    !CheckStatGT(Myself,0,CLERIC_INSECT_PLAGUE)
+    NumCreature([PC],1)
+    HaveSpellRES("pxdnuatu")
+THEN
+    RESPONSE #100
+        SpellRES("pxdnuatu",Nearest([PC]))
+        SetGlobalTimer("casting","LOCALS",ONE_ROUND)
+END
+
+IF
+	!GlobalTimerNotExpired("casting","LOCALS")
+	CheckStatLT(Myself,90,SPELLFAILUREMAGE)
+	!CheckStatGT(Myself,0,CLERIC_INSECT_PLAGUE)
+    See(NearestEnemyOf(Myself))
+    HaveSpellRES("pxdaffli")
+THEN
+    RESPONSE #100
+        SpellRES("pxdaffli",NearestEnemyOf(Myself)) 
+        SetGlobalTimer("casting","LOCALS",ONE_ROUND)
+END
+
+IF
+    !GlobalTimerNotExpired("casting","LOCALS")
+    CheckStatLT(Myself,90,SPELLFAILUREMAGE)
+    !CheckStatGT(Myself,0,CLERIC_INSECT_PLAGUE)
+    NumCreatureGT([PC],3)
+    RandomNum(3,1)
+    HaveSpellRES("pxdproja")
+THEN
+    RESPONSE #100
+        SpellRES("pxdproja",SecondNearest([PC]))
+        SetGlobalTimer("casting","LOCALS",ONE_ROUND)
+END
+
+IF
+    !GlobalTimerNotExpired("casting","LOCALS")
+    CheckStatLT(Myself,90,SPELLFAILUREMAGE)
+    !CheckStatGT(Myself,0,CLERIC_INSECT_PLAGUE)
+    NumCreatureGT([PC],3)
+    RandomNum(3,2)
+    HaveSpellRES("pxdproja")
+THEN
+    RESPONSE #100
+        SpellRES("pxdproja",ThirdNearest([PC]))
+        SetGlobalTimer("casting","LOCALS",ONE_ROUND)
+END
+
+IF
+    !GlobalTimerNotExpired("casting","LOCALS")
+    CheckStatLT(Myself,90,SPELLFAILUREMAGE)
+    !CheckStatGT(Myself,0,CLERIC_INSECT_PLAGUE)
+    NumCreatureGT([PC],3)
+    RandomNum(3,3)
+    HaveSpellRES("pxdproja")
+THEN
+    RESPONSE #100
+        SpellRES("pxdproja",FourthNearest([PC]))
+        SetGlobalTimer("casting","LOCALS",ONE_ROUND)
+END
+
+IF
+    !GlobalTimerNotExpired("casting","LOCALS")
+    CheckStatLT(Myself,90,SPELLFAILUREMAGE)
+    !CheckStatGT(Myself,0,CLERIC_INSECT_PLAGUE)
+    NumCreature([PC],3)
+    RandomNum(2,1)
+    HaveSpellRES("pxdproja")
+THEN
+    RESPONSE #100
+        SpellRES("pxdproja",SecondNearest([PC]))
+        SetGlobalTimer("casting","LOCALS",ONE_ROUND)
+END
+
+IF
+    !GlobalTimerNotExpired("casting","LOCALS")
+    CheckStatLT(Myself,90,SPELLFAILUREMAGE)
+    !CheckStatGT(Myself,0,CLERIC_INSECT_PLAGUE)
+    NumCreature([PC],3)
+    RandomNum(2,2)
+    HaveSpellRES("pxdproja")
+THEN
+    RESPONSE #100
+        SpellRES("pxdproja",ThirdNearest([PC]))
+        SetGlobalTimer("casting","LOCALS",ONE_ROUND)
+END
+
+IF
+    !GlobalTimerNotExpired("casting","LOCALS")
+    CheckStatLT(Myself,90,SPELLFAILUREMAGE)
+    !CheckStatGT(Myself,0,CLERIC_INSECT_PLAGUE)
+    NumCreature([PC],2)
+    RandomNum(2,1)
+    HaveSpellRES("pxdproja")
+THEN
+    RESPONSE #100
+        SpellRES("pxdproja",Nearest([PC]))
+        SetGlobalTimer("casting","LOCALS",ONE_ROUND)
+END
+
+IF
+    !GlobalTimerNotExpired("casting","LOCALS")
+    CheckStatLT(Myself,90,SPELLFAILUREMAGE)
+    !CheckStatGT(Myself,0,CLERIC_INSECT_PLAGUE)
+    NumCreature([PC],2)
+    RandomNum(2,2)
+    HaveSpellRES("pxdproja")
+THEN
+    RESPONSE #100
+        SpellRES("pxdproja",SecondNearest([PC]))
+        SetGlobalTimer("casting","LOCALS",ONE_ROUND)
+END
+
+IF
+    !GlobalTimerNotExpired("casting","LOCALS")
+    CheckStatLT(Myself,90,SPELLFAILUREMAGE)
+    !CheckStatGT(Myself,0,CLERIC_INSECT_PLAGUE)
+    NumCreature([PC],1)
+    HaveSpellRES("pxdproja")
+THEN
+    RESPONSE #100
+        SpellRES("pxdproja",Nearest([PC]))
+        SetGlobalTimer("casting","LOCALS",ONE_ROUND)
+END
+
+IF
+	!GlobalTimerNotExpired("casting","LOCALS")
+	CheckStatLT(Myself,90,SPELLFAILUREMAGE)
+	!CheckStatGT(Myself,0,CLERIC_INSECT_PLAGUE)
+    See(NearestEnemyOf(Myself))
+    HaveSpellRES("pxdorbeg")
+THEN
+    RESPONSE #100
+        SpellRES("pxdorbeg",NearestEnemyOf(Myself)) 
+        SetGlobalTimer("casting","LOCALS",ONE_ROUND)
+END
+
+IF
+    See(NearestEnemyOf(Myself))
+    OR(3)
+        !HaveAnySpells()
+        CheckStatGT(Myself,99,SPELLFAILUREMAGE)
+        CheckStatGT(Myself,0,CLERIC_INSECT_PLAGUE)
+THEN
+    RESPONSE #100
+        AttackOneRound(NearestEnemyOf(Myself))
+END

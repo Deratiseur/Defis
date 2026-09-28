@@ -1,0 +1,118 @@
+IF
+	Entered([ANYONE])
+THEN
+	RESPONSE #100
+		DisplayString(LastTrigger,14381)
+		ForceSpell(LastTrigger,WIZARD_CHAOS)
+	RESPONSE #100
+		DisplayString(LastTrigger,14381)
+		ForceSpell(LastTrigger,WIZARD_MAZE)
+	RESPONSE #100
+		DisplayString(LastTrigger,14381)
+		ForceSpell(LastTrigger,WIZARD_POWER_WORD_STUN)
+	RESPONSE #100
+		DisplayString(LastTrigger,14381)
+		ForceSpell(LastTrigger,WIZARD_ABI_DALZIMS_HORRID_WILTING)
+	RESPONSE #100
+		DisplayString(LastTrigger,14381)
+		ForceSpell(LastTrigger,WIZARD_BIGBYS_CRUSHING_HAND)
+	RESPONSE #100
+		DisplayString(LastTrigger,14381)
+		ForceSpell(LastTrigger,WIZARD_FINGER_OF_DEATH)
+	RESPONSE #100
+		DisplayString(LastTrigger,14381)
+		ForceSpell(LastTrigger,WIZARD_FLESH_TO_STONE)
+	RESPONSE #100
+		DisplayString(LastTrigger,14381)
+		ForceSpell(LastTrigger,WIZARD_CHAIN_LIGHTNING)
+	RESPONSE #100
+		DisplayString(LastTrigger,14381)
+		ForceSpell(LastTrigger,ENEMY_CLERIC_HARM)
+	RESPONSE #100
+		DisplayString(LastTrigger,14381)
+		ForceSpell(LastTrigger,ENEMY_CLERIC_SLAY_LIVING)
+	RESPONSE #100
+		DisplayString(LastTrigger,14381)
+		ForceSpell(LastTrigger,WIZARD_AGANNAZAR_SCORCHER)
+	RESPONSE #100
+		DisplayString(LastTrigger,14381)
+		ForceSpell(LastTrigger,INQUIS_DISPEL_MAGIC)
+	RESPONSE #100
+		DisplayString(LastTrigger,14381)
+		ForceSpell(LastTrigger,WIZARD_GREATER_MALISON)
+	RESPONSE #100
+		DisplayString(LastTrigger,14381)
+		ForceSpell(LastTrigger,CLERIC_DOLOROUS_DECAY)
+	RESPONSE #100
+		DisplayString(LastTrigger,14381)
+		ForceSpell(LastTrigger,CLERIC_POISON)
+	RESPONSE #100
+		DisplayString(LastTrigger,14381)
+		ForceSpell(LastTrigger,CLERIC_CREEPING_DOOM)
+	RESPONSE #100
+		DisplayString(LastTrigger,14381)
+		ForceSpell(LastTrigger,WIZARD_POLYMORPH_OTHER)
+	RESPONSE #100
+		DisplayString(LastTrigger,14381)
+		ForceSpell(LastTrigger,WIZARD_DISINTEGRATE)
+	RESPONSE #100
+		DisplayString(LastTrigger,14381)
+		ForceSpell(LastTrigger,WIZARD_IMPRISONMENT)
+	RESPONSE #100
+		DisplayString(LastTrigger,14381)
+		ForceSpell(LastTrigger,WIZARD_SPELL_STRIKE)
+	RESPONSE #100
+		DisplayString(LastTrigger,14381)
+		ForceSpell(LastTrigger,WIZARD_DRAGONS_BREATH)
+	RESPONSE #100
+		DisplayString(LastTrigger,14381)
+		ForceSpell(LastTrigger,WIZARD_BREACH)
+	RESPONSE #100
+		DisplayString(LastTrigger,14381)
+		ForceSpell(LastTrigger,WIZARD_FEEBLEMIND)
+	RESPONSE #100
+		DisplayString(LastTrigger,14381)
+		ForceSpell(LastTrigger,WIZARD_HOLD_MONSTER)
+	RESPONSE #100
+		DisplayString(LastTrigger,14381)
+		ForceSpell(LastTrigger,WIZARD_DOMINATION)
+	RESPONSE #100
+		DisplayString(LastTrigger,14381)
+		ForceSpell(LastTrigger,WIZARD_DEATH_FOG)
+	RESPONSE #100
+		DisplayString(LastTrigger,14381)
+		ForceSpell(LastTrigger,WIZARD_EMOTION_HOPELESSNESS)
+	RESPONSE #100
+		DisplayString(LastTrigger,14381)
+		ForceSpell(LastTrigger,WIZARD_RAY_OF_ENFEEBLEMENT)
+	RESPONSE #100
+		DisplayString(LastTrigger,14381)
+		ForceSpell(LastTrigger,WIZARD_MELF_ACID_ARROW)
+	RESPONSE #100
+		DisplayString(LastTrigger,14381)
+		ForceSpell(LastTrigger,WIZARD_SPELL_STRIKE)
+	RESPONSE #100
+		DisplayString(LastTrigger,14381)
+		ReallyForceSpellRES("pxl2porb",LastTrigger)
+	RESPONSE #100	
+		DisplayString(LastTrigger,14381)
+		ReallyForceSpellRES("pxl2pnov",LastTrigger)
+	RESPONSE #100
+		DisplayString(LastTrigger,14381)
+		ReallyForceSpellRES("pxl2pmtu",LastTrigger)
+	RESPONSE #100
+		DisplayString(LastTrigger,14381)	
+		ReallyForceSpellRES("pxdproja",LastTrigger)
+	RESPONSE #100
+		DisplayString(LastTrigger,14381)
+		ForceSpell(LastTrigger,WIZARD_POWER_WORD_KILL)
+	RESPONSE #100
+		DisplayString(LastTrigger,14381)
+		ForceSpell(LastTrigger,WIZARD_NPC_SYMBOL_STUN)
+	RESPONSE #100
+		DisplayString(LastTrigger,14381)
+		ForceSpell(LastTrigger,WIZARD_NPC_SYMBOL_DEATH)
+	RESPONSE #100
+		DisplayString(LastTrigger,14381)
+		ForceSpell(LastTrigger,WIZARD_SPHERE_OF_CHAOS)
+END

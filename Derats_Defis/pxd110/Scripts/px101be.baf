@@ -1,0 +1,39 @@
+IF
+	Global("pxd101diag","PXD101",1)
+THEN
+	RESPONSE #100
+	DisplayStringHead(Myself,@11031)
+	SetGlobal("pxd101diag","PXD101",2)
+END
+
+IF
+	See(NearestEnemyOf(Myself))
+	!Range(LastSeenBy(Myself),4)
+	HaveSpellRES("SPCL121")
+	!GlobalTimerNotExpired("CalledShot","LOCALS")
+THEN
+	RESPONSE #100
+		SetGlobalTimer("CalledShot","LOCALS",TWO_ROUNDS)
+		SpellRES("SPCL121",Myself)
+		EquipRanged()
+		AttackReevaluate(LastSeenBy(Myself),30)
+END
+
+IF
+	See(NearestEnemyOf(Myself))
+	!Range(LastSeenBy(Myself),4)
+THEN
+	RESPONSE #100
+		EquipRanged()
+		AttackReevaluate(LastSeenBy(Myself),30)
+END
+
+
+IF
+	See(NearestEnemyOf(Myself))
+	Range(NearestEnemyOf(Myself),4)
+THEN
+	RESPONSE #100
+		RunAwayFrom(LastSeenBy(Myself),30)
+		Continue()
+END

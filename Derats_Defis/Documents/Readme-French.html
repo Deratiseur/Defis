@@ -1,0 +1,1235 @@
+<!DOCTYPE html>
+
+<html lang="fr">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>Défis insurmontables de Telim'Gar</title>
+<style>
+:root{
+  --gold: goldenrod;
+  --gold2:#c79a35;
+  --line:#96846e;
+  --brown:#655949;
+  --brown2:#41382f;
+  --paper:#4b463f;
+  --paper2:#37332e;
+  --text:#deded9;
+  --muted:#c4bfb7;
+  --black:#080706;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;
+  padding:0 0 50px;
+  cursor:default;
+  color:var(--text);
+  background:
+    radial-gradient(ellipse at 20% 10%, rgba(120,95,55,.14), transparent 34%),
+    radial-gradient(ellipse at 80% 60%, rgba(95,70,40,.11), transparent 38%),
+    linear-gradient(#080706,#15120e 45%,#080706);
+  font-family:Verdana,Tahoma,Arial,sans-serif;
+  font-size:16px;
+}
+#cartouche{
+  width:calc(100% - 4cm);
+  max-width:none;
+  margin:20px 2cm 0;
+}
+#header{
+  text-align:center;
+  padding:8px 20px 18px;
+  min-height:245px;
+  border:1px solid var(--gold);
+  border-top:5px solid var(--gold);
+  border-bottom:5px solid var(--gold);
+  border-radius:4px;
+  box-shadow:8px 8px 15px #000;
+  background:
+    linear-gradient(rgba(255,255,255,.06),rgba(0,0,0,.16)),
+    radial-gradient(ellipse at center, #514a40 0,#2c2925 55%,#080706 100%);
+}
+h1{
+  line-height:170%;
+  font-size:225%;
+  color:var(--gold);
+  margin:0;
+  text-shadow:.1rem .1rem .25rem #000;
+}
+.subtitle{
+  margin:2px auto 18px;
+  color:#eee9dd;
+  font-size:105%;
+  font-weight:bold;
+}
+.header-rule{
+  width:90%;
+  height:1px;
+  margin:18px auto;
+  background:var(--gold);
+}
+.header-grid{
+  position:relative;
+  width:100%;
+  height:3.4em;
+  margin:0 auto;
+  font-size:105%;
+}
+.header-col{
+  position:absolute;
+  top:0;
+  width:max-content;
+  text-align:left;
+  line-height:170%;
+  transform:translateX(-50%);
+}
+.header-col-left{left:25%}
+.header-col-right{left:75%}
+.header-grid strong{color:#f1eee8}
+#menu{
+  font-weight:bold;
+  margin-top:20px;
+  padding:10px 18px;
+  text-align:center;
+  color:var(--gold);
+  line-height:220%;
+  border-top:1px solid #51483b;
+  border-bottom:1px solid #17130f;
+  border-radius:4px;
+  box-shadow:5px 5px 12px #000;
+  background:linear-gradient(#5f5447,#342d25 45%,#1a1713);
+}
+a:link,a:visited{color:var(--gold);text-decoration:none}
+a:hover,a:focus{text-decoration:underline;color:#eee}
+#maindiv{margin:0 auto;width:100%}
+.content{
+  background:
+    radial-gradient(circle at 15% 0, rgba(255,255,255,.035), transparent 26%),
+    linear-gradient(135deg, rgba(255,255,255,.025), transparent 35%),
+    linear-gradient(var(--paper),var(--paper2));
+  padding:0 0 28px;
+  margin:50px auto;
+  border-width:1px 1px 4px 10px;
+  border-style:solid;
+  border-color:var(--brown);
+  position:relative;
+  border-radius:4px;
+  box-shadow:8px 8px 15px #000;
+  overflow:hidden;
+}
+h2{
+  line-height:170%;
+  display:block;
+  text-align:left;
+  text-indent:30px;
+  padding:3px 0;
+  margin:0;
+  border-top:2px dotted var(--line);
+  border-bottom:2px dotted var(--line);
+  font-size:160%;
+  background:linear-gradient(#50473d,#2d2822);
+}
+h2::first-letter{color:var(--gold)}
+h3,h4{
+  line-height:170%;
+  margin:14px auto 8px;
+  width:90%;
+  padding:0;
+}
+h3{font-size:140%;color:#eee}
+h4{font-size:120%;color:var(--gold)}
+p{
+  text-align:justify;
+  font-size:110%;
+  line-height:150%;
+  margin:10px auto;
+  width:90%;
+}
+ul{
+  line-height:170%;
+  margin-left:4%;
+  width:87%;
+}
+hr{
+  margin:20px auto;
+  width:90%;
+  height:1px;
+  border:0;
+  background:var(--gold);
+}
+.important{
+  font-size:110%;
+  text-align:left;
+  border-width:1px 4px;
+  border-style:solid;
+  border-color:var(--gold);
+  padding:10px 16px;
+  margin:18px auto;
+  width:84%;
+  line-height:160%;
+  background:rgba(0,0,0,.13);
+}
+.note{
+  color:#f0eadf;
+  border-left:4px solid var(--gold);
+  width:88%;
+  margin:18px auto;
+  padding:10px 14px;
+  background:rgba(0,0,0,.16);
+  line-height:160%;
+}
+
+/* Grandes zones repliables */
+details.zone{
+  width:90%;
+  margin:14px auto;
+  border:1px solid #796b58;
+  border-left:5px solid var(--gold);
+  border-radius:3px;
+  background:rgba(0,0,0,.18);
+  box-shadow:0 2px 7px rgba(0,0,0,.35);
+}
+details.zone > summary{
+  list-style:none;
+  cursor:pointer;
+  padding:11px 15px;
+  font-weight:bold;
+  font-size:125%;
+  color:#eee;
+  background:linear-gradient(#4d4439,#29251f);
+  user-select:none;
+}
+details.zone > summary::-webkit-details-marker{display:none}
+details.zone > summary::before{
+  content:"▶";
+  color:var(--gold);
+  margin-right:10px;
+}
+details.zone[open] > summary::before{content:"▼"}
+.zonebody{padding:10px 16px 18px}
+.zonebody h4{
+  width:100%;
+  margin:14px 0 5px;
+  padding-bottom:3px;
+  border-bottom:1px solid #6c6153;
+}
+.zonebody ul{width:96%;margin-left:1.5%}
+
+/* Spoiler imbriqué : option plus difficile */
+details.hard{
+  width:96%;
+  margin:20px auto 4px;
+  border:1px solid var(--gold2);
+  background:#29251f;
+}
+details.hard > summary{
+  list-style:none;
+  cursor:pointer;
+  padding:9px 12px;
+  font-weight:bold;
+  color:var(--gold);
+  background:linear-gradient(#443a2e,#211d18);
+}
+details.hard > summary::-webkit-details-marker{display:none}
+details.hard > summary::before{
+  content:"▶";
+  margin-right:8px;
+}
+details.hard[open] > summary::before{content:"▼"}
+.hardbody{padding:10px 14px}
+
+/* Versions */
+details.versionbox{
+  width:90%;
+  margin:11px auto;
+  border-top:1px solid var(--gold);
+  border-bottom:1px solid var(--gold);
+}
+details.versionbox > summary{
+  cursor:pointer;
+  padding:7px 5px;
+  font-weight:bold;
+  color:#eee;
+}
+.versionbody{padding:4px 12px 10px}
+.versionbody ul{width:95%}
+
+.backtop{
+  text-align:right;
+  font-weight:bold;
+  margin:20px 5% 0;
+}
+.small{font-size:95%;color:var(--muted)}
+@media(max-width:760px){
+  #cartouche{width:96%;margin:12px auto 0}
+  .header-grid{height:auto}
+  .header-col{
+    position:static;
+    width:auto;
+    transform:none;
+    margin:5px 8%;
+  }
+  #header{min-height:0}
+  details.zone,p,.important,.note{width:94%}
+}
+</style>
+</head>
+<body>
+<div id="cartouche">
+<a id="top"></a>
+<div id="header">
+<h1><span id="title-anchor-left">D</span>éfis insurmontables de Telim'Ga<span id="title-anchor-right">r</span></h1>
+<div class="subtitle">Un module d'arènes pour Baldur's Gate II Enhanced Edition / EET</div>
+<div class="header-rule"></div>
+<div class="header-grid">
+<div class="header-col header-col-left">
+<div><strong>Auteur :</strong> Deratiseur</div>
+<div><strong>Type :</strong> défis / arènes</div>
+</div>
+<div class="header-col header-col-right">
+<div><strong>Langues :</strong> français, anglais</div>
+<div><strong>Version :</strong> 1</div>
+</div>
+</div>
+</div>
+<div id="menu"><a href="#intro">Présentation</a> • <a href="#options">Options</a> • <a href="#zones">Description complète des zones</a> • <a href="#monsters">Améliorations des monstres</a> • <a href="#credits">Remerciements</a> • <a href="#versions">Historique des mises à jour</a></div>
+<div id="maindiv">
+<section class="content" id="intro">
+<h2>Présentation</h2><br/>
+<p>Ce module vous propose une dizaine d'arènes à visiter pour accéder à l'arène ultime ou vous pourrez rencontrer Telim'gar lui même.</p>
+<p>Pour commencer, allez parler au Golem maître des défis sur le pont. Il vous proposera de vous envoyer sur dix arènes proposées dans l'ordre de difficulté (relatif) mais sans toutefois vous préciser en quoi elle consistent.</p>
+<p>Chaque arène est une nouvelle carte tirée de PST avec ses propres règles. Sur certaines vous subirez des inconvénients faciles à gérer ou au contraire ignobles : si vous trouvez qu'un des défis est impossible, sachez ceci : ce module est sans pitié, inutile de vous plaindre.</p>
+<div class="important">
+<strong>Il y a plusieurs choses à savoir sur les défis :</strong>
+<ul>
+<li>Une fois entrés, vous ne pouvez plus en sortir avant d'avoir trouvé la rune pour sortir (en général en possession du boss, mais pas toujours).</li>
+<li>Les arènes sont remplies de monstres qui ont tous une amélioration aléatoire. 58 amélioration sont possibles, certaine insignifiantes, d'autres redoutables. Mettez la pause et regardez bien ce que vous affrontez.</li>
+<li>Les monstres sont immunisés aux dégâts de zone des autres monstres et des pièges.</li>
+<li>Vous n'êtes pas obligés de tuer tous les monstres pour accéder au boss. Parfois il est placé sur la carte dés le début. Parfois il vient plus tard. Parfois il est caché, vous devez le trouvez.... chaque carte à ses propre règle concernant son boss.</li>
+<li>Vous pouvez trouver dans la Décharge un portail portable qui dans la limite des défis (pas à l'extérieur) peut vous téléporter dans une chambre tranquille où vous pourrez vous reposer/sauvegarder/ vous préparer. Réutiliser le portail vous ramène à l'endroit où vous étiez.</li>
+<li>Les monstres lanceurs de sorts utilisent autant que possibles les scripts vanilla du jeu de base afin de pouvoirs être améliorés par SCS.</li>
+</ul>
+</div>
+<p>Quand vous serez sortis victorieux des dix défis, le Golem maître des défis vous proposera de rencontrer son maître : à vous l'arène finale, et bonne chance.</p>
+<div class="backtop"><a href="#top">Retour en haut</a></div>
+</section>
+<section class="content" id="options">
+<h2>Options</h2><br/>
+<ul>
+<li>Option <strong>« rendre les zones plus difficiles »</strong> : cette option ajoute un inconvénient original à chaque zone. Les détails des rajouts sont en spoiler dans la description des zones.</li>
+<li>Options <strong>« Multiplier le nombre de monstres aléatoires posés »</strong> et <strong>« Les monstres aléatoires droppent un trésor aléatoire »</strong> : ces options peuvent être installés/modifiés en cour de partie. Les modifications affecterons les zones qui n'ont pas encore été visitées.</li>
+</ul>
+<div class="backtop"><a href="#top">Retour en haut</a></div>
+</section>
+<section class="content" id="zones">
+<h2>Description complète des zones</h2><br/>
+<p class="small">Cliquez sur le nom d'une zone pour afficher sa description. L'option de difficulté supplémentaire est elle-même repliée à l'intérieur.</p>
+<details class="zone">
+<summary>La Décharge</summary>
+<div class="zonebody">
+<h4>Statistiques de la carte </h4>
+<ul>
+<li>Rien de spécial à part deux sorties vers d'autres sous-zones.</li>
+</ul>
+<h4>Monstres qui apparaissent sur la carte </h4>
+<ul>
+<li>Otyughs</li>
+<li>Gelées moutardes</li>
+<li>Vers charognards</li>
+<li>Ombres des roches</li>
+<li>Margouilles (4 APR, nécessitent une arme magique pour les toucher)</li>
+<li>Ettins</li>
+</ul>
+<h4>Conseil pour les joueurs </h4>
+<ul>
+<li>La carte est grande et les margouilles prolifératrices sont exponentielles : trouvez-les avant d'être submergés.</li>
+<li>Les otyughs rendent malades, les gelées moutardes ralentissent, les vers charognards paralysent et les ombres des roches rendent confus. Prévoyez des solutions/immunités contre tout ça.</li>
+<li>Le boss dissipe et tue. Envoyez vos tanks avec de bons jets de sauvegarde.</li>
+</ul>
+<h4>Unique </h4>
+<p><strong>Cachemisère le puant, Planétaire déchu</strong></p>
+<ul>
+<li>antédiluvien</li>
+<li>nuage puant quand touché</li>
+<li>arme de Planétaire vorpale, de dissipation et contaminante</li>
+<li>Régénération de 6 points de vie par round</li>
+</ul>
+<h4>Sous-Boss 1 : Rex, Néo otyugh</h4>
+<ul>
+<li>ancien</li>
+<li>enragé</li>
+<li>super hâté</li>
+<li>injectant une maladie mortelle (RP : 20 % des otyughs) (1 point de vie toutes les 2 secondes, durée 270) (3x dégâts &amp; durée de l'otyugh normal)</li>
+</ul>
+<h4>Sous-Boss 2 : Roxxie la compagne de Rex, Néo otyugh</h4>
+<ul>
+<li>ancienne</li>
+<li>psychique</li>
+<li>hâtée</li>
+</ul>
+<details class="hard">
+<summary>Si les défis sont rendus plus difficiles (option)</summary>
+<div class="hardbody">
+<ul>
+<li>Des rats pestiférés se promènent sur la carte. Chaque round passé à côté d'un rat (ou de son cadavre) impose un jet de sauvegarde contre la mort sous peine d’attraper une maladie mortelle (la même que celle de Rex).</li>
+</ul>
+</div>
+</details>
+</div>
+</details>
+<details class="zone">
+<summary>La nécropole silencieuse</summary>
+<div class="zonebody">
+<h4>Statistiques de la carte </h4>
+<ul>
+<li>Tous les 1D4 rounds, pour chaque allié : jet de sauvegarde contre les sorts ou silence 3 rounds.</li>
+<li>Il faut trouver la clef pour ouvrir la porte d’accès vers le boss.</li>
+</ul>
+<h4>Monstres qui apparaissent sur la carte </h4>
+<ul>
+<li>Squelettes archers</li>
+<li>Combattants squelettes</li>
+<li>Goules</li>
+<li>Nécrophages</li>
+<li>Vampires</li>
+<li>Spectres</li>
+</ul>
+<h4>Conseil pour les joueurs </h4>
+<ul>
+<li>La goule paralyse, les vampires, nécrophages et spectres drainent des niveaux. Le boss et ses minions pétrifient. Prévoyez des solutions/immunités contre ça.</li>
+</ul>
+<h4>Unique </h4>
+<p>Ugloril la reine méduse, Méduse spectrale</p>
+<ul>
+<li>Spectrale (immunité aux armes non magiques et au froid + draine un niveau en touchant, voir plus bas)</li>
+<li>Contrecoup de mêlée (portée courte) : serpents → poison mortel (jet de sauvegarde contre la mort) et un niveau drainé sans jet de sauvegarde</li>
+<li>Regard "psychique" (de zone) pétrifiant (jet de sauvegarde contre la pétrification) et un niveau drainé sans jet de sauvegarde</li>
+</ul>
+<h4>Sous-Boss 1 : 4x Servantes d'Ugloril, Méduses spectrales</h4>
+<ul>
+<li>Spectrale (immunité aux armes non-magiques et au froid)</li>
+<li>Contrecoup de mêlée (portée courte) : serpents → poison mortel (jet de sauvegarde contre la mort) et un niveau drainé sans jet de sauvegarde</li>
+<li>Regard pétrifiant (jet de sauvegarde contre pétrification) et un niveau drainé sans jet de sauvegarde</li>
+</ul>
+<h4>Sous-Boss 2 : 5x Araignée-en-peine de garde, Araignées en peine</h4>
+<ul>
+<li>Aléatoire</li>
+<li>En touchant, elle draine 1 point de Force (jet de sauvegarde contre la mort) et un niveau sans jet de sauvegarde</li>
+</ul>
+<details class="hard">
+<summary>Si les défis sont rendus plus difficiles (option)</summary>
+<div class="hardbody">
+<p>Si n'importe quel héros lance un sort, 20 % de chances qu'un portail apparaisse, d'où sort une "Gardienne du silence" qui dit juste "CHUT" avant de disparaître. La deuxième fois elle revient, redit chut et redisparaît. La troisième fois elle vient avec 9 golems d'os aléatoires et dit "je vous avais prévenus" et combat.... (en boucle)</p>
+</div>
+</details>
+</div>
+</details>
+<details class="zone">
+<summary>Le labyrinthe végétal</summary>
+<div class="zonebody">
+<h4>Statistiques de la carte </h4>
+<ul>
+<li>Sur la carte, tous les 5 rounds à un endroit au hasard apparaît pour 5 rounds un portail accompagné de 1D3 vers charognards aléatoires. Prendre le portail amène au boss.</li>
+<li>Tous les 1D4 rounds, pour chaque PJ : jet de sauvegarde contre les sorts à -2 ou enchevêtré 2 rounds.</li>
+</ul>
+<h4>Monstres qui apparaissent sur la carte </h4>
+<ul>
+<li>Grizzlis</li>
+<li>Araignées sabre</li>
+<li>Trolls</li>
+<li>Basilics (20 % sont majeurs)</li>
+<li>Wyvernes</li>
+<li>Tertre errant</li>
+<li>Vers charognards</li>
+</ul>
+<h4>Conseil pour les joueurs </h4>
+<ul>
+<li>Prévoyez des solutions contre les basilics qui pétrifient et trouvez vite les araignées prolifératrices.</li>
+<li>Le portail d’accès au boss est difficile à intercepter et ne laisse passer qu'une personne par interaction (vous pouvez interagir plusieurs fois avant qu'il ne se déplace), et la personne qui se retrouve dans la pièce du boss est submergée de vers charognards paralysants. Envoyez quelqu'un avec action libre et capable de gérer une masse de monstres.</li>
+<li>Attention, quand un personnage a pris un portail et a été téléporté il disparaît de l'écran. Mettez vite la pause et cliquez sur son portrait pour le retrouver.</li>
+<li>Une astuce pour trouver facilement le portail : si vous avez les cheats activés, affichez la carte et appuyez sur CTRL pour afficher les monstres (ronds verts) : si vous voyez un groupe de 3-4 petits carrés verts, c'est le portail (avec ses vers charognards).</li>
+</ul>
+<h4>Unique </h4>
+<p><strong>La mère des vers :</strong></p>
+<ul>
+<li>Placée à l’écart dans une zone par défaut inaccessible (portail aléatoire pour la rejoindre)</li>
+<li>Immunisée contre l'acide</li>
+<li>Immunisée contre les sorts de niveau 1 à 3</li>
+<li>Tous les 3 rounds pond 1D3 vers charognards aléatoires</li>
+<li>Quand elle subit un coup, lance Immunité absolue. (une seule fois)</li>
+<li>Contrecoup de mêlée acide</li>
+<li>Morsure acide, paralysante (jet de sauvegarde à -4) qui tranche en deux (tue) les créatures de moins de 60 PV (jet de sauvegarde à -4).</li>
+</ul>
+<details class="hard">
+<summary>Si les défis sont rendus plus difficiles (option)</summary>
+<div class="hardbody">
+<p>Tous les vers charognards sont infestés de parasites → ils sont tous maîtres des mouches en plus de leur amélioration aléatoire. Le boss a 50 % de chances de lancer Fléau d'insecte quand il est touché et il lance Fatalité rampante en mourant.</p>
+</div>
+</details>
+</div>
+</details>
+<details class="zone">
+<summary>Les tombeaux d'acier</summary>
+<div class="zonebody">
+<p>Boss : juste invisible permanent. Est-ce que Vision véritable le révèle ?</p>
+<p>Ok parchemin de protection contre la pétrification ajouté en drop à une des momies royales.</p>
+<h4>Statistiques de la carte </h4>
+<ul>
+<li>Chaque round un Nuage mortel à un endroit aléatoire.</li>
+<li>Tourne en deux boucles, chaque sortie amène à une autre sortie, donc c'est facile de semer les monstres.</li>
+<li>4 momies royales placées sur la carte. Quand les 4 sont mortes, le boss apparaît quelque part.</li>
+</ul>
+<h4>Monstres qui apparaissent sur la carte </h4>
+<ul>
+<li>Momies</li>
+<li>Combattants squelettes</li>
+<li>Golems d'os</li>
+<li>Magiciens spectraux</li>
+<li>Horreurs casquées</li>
+<li>Golems de fer</li>
+</ul>
+<h4>Conseil pour les joueurs </h4>
+<ul>
+<li>Les golems de fer caparaçonnés nécessitent une arme +4 pour être touchés.</li>
+<li>Les momies royales nécessitent une arme +3 pour être touchées, et les momies royales caparaçonnées nécessitent une arme +5. Ou tuez-les avec des sorts.</li>
+<li>Le boss final est une plaie pour les combattants au corps à corps et n'est pas ciblable par les mages (invisibilité permanente). Votre meilleure option est donc tanks + tireurs, vos mages lançant des sorts de buff ou des sorts de zone qui ne touchent pas les alliés : Chaîne d'éclair, Flétrissure, Fatalité rampante, Souffle de dragon ?</li>
+<li>Une astuce pour trouver facilement le boss : si vous avez les cheats activés, affichez la carte et appuyez sur CTRL pour afficher les monstres (ronds verts) : si vous en voyez un qui se déplace très vite (hâte), c'est lui.</li>
+</ul>
+<h4>Unique </h4>
+<p><strong>Tourmente martiale : (après la mort des 4 momies royales)</strong></p>
+<ul>
+<li>Mort-vivant</li>
+<li>Invisibilité majeure</li>
+<li>Hâte améliorée, 6 APR</li>
+<li>Immunité aux armes non-magiques et magiques jusqu'à +2</li>
+<li>Résistance aux dégâts : 70 % (+10 % par une de ses armes)</li>
+<li>Résistance à la magie 50 %</li>
+<li>Détection de l'invisibilité</li>
+<li>Barrière de lame 6d6 (jet de sauvegarde pour ½)</li>
+</ul>
+<details class="hard">
+<summary>Si les défis sont rendus plus difficiles (option)</summary>
+<div class="hardbody">
+<p>Des esprits "mulhorandais" parcourent aléatoirement la zone. S'ils voient des monstres ils les suivent. Ils sont faibles mais Protecteurs, Temporels et Dirigeants.</p>
+</div>
+</details>
+</div>
+</details>
+<details class="zone">
+<summary>Le Dédale</summary>
+<div class="zonebody">
+<h4>Statistiques de la carte </h4>
+<ul>
+<li>Entièrement révélée dès le début (elle est concave, donc entièrement visible)</li>
+<li>Il y a trois Déchireurs enragés et "immortels" qui vous traquent dans le dédale.</li>
+<li>Dans la zone centrale chaque round : explosion acide : 4D4 points de dégâts d'acide (jet de sauvegarde contre les sorts à -3 pour ½) + et si le jet de sauvegarde est raté : étourdissement 1 round.</li>
+<li>Chaque explosion acide a 16 % de chances de donner vie à un Paraélémentaire d'acide (non aléatoire).</li>
+<li>Chaque portail envoie à celui d'en face et a 25 % de chances de générer un Gardien du portail (Serviteur Invisible, non aléatoire) quand vous voulez le franchir ou que vous arrivez. Le portail qui n’a rien en face envoie dans la zone centrale.</li>
+<li>Il n'y a pas de boss à tuer. Tout ce que les joueurs ont à faire, c'est de survivre 10 minutes.</li>
+<li>Les joueurs n'arrivent pas dans "une zone neutre" : ils sont agressés par des monstres dès leur arrivée.</li>
+</ul>
+<h4>Conseil pour les joueurs </h4>
+<ul>
+<li>Illithids et Tyrannoeuils réunis et aucun endroit où se cacher. Il va falloir revoir votre stratégie.</li>
+<li>Un bon moyen d'éviter les Dévoreurs enragés est de les attendre près d'un portail, les laisser venir et franchir le portail. Le gardien du portail sera toujours moins pénible que ces trois horreurs.</li>
+<li>Les ocularons nécessitent une arme +3 et non contondante pour être touchés. Les ocularons caparaçonnés nécessitent une arme +5 et non contondante. Ou tuez-les avec des sorts.</li>
+</ul>
+<h4>Monstres qui apparaissent sur la carte </h4>
+<ul>
+<li>Illithids (20 % sont des Ulitharids)</li>
+<li>Tyrannoeils</li>
+<li>Gauths</li>
+<li>Ocularons (arme +3 pour toucher, immunisés aux dégâts contondants et à l'acide, vision véritable, en touchant : jet de sauvegarde contre les souffles ou aveuglement et les yeux gonflés de poison s’éjectent puis explosent, nuage de poison en mourant)</li>
+<li>Otyughs (20 % sont des néo-otyughs) (poison mortel)</li>
+<li>Paraélémentaires d'acide (au centre)</li>
+<li>Gardiens du portail (en utilisant un portail)</li>
+</ul>
+<h4>Unique </h4>
+<p><strong>3x Déchireurs enragés :</strong></p>
+<ul>
+<li>Hâte améliorée, 6 APR (mouvement de base RP : 30)</li>
+<li>Régénération de 6 points de vie par round</li>
+<li>Dégâts 2D10 + bonus de force (19), 25 % de chances d'infliger double dégâts et de tuer en cas de jet de sauvegarde contre la mort raté.</li>
+<li>Immunités au poison, aux effets mentaux, au drain de niveau, aux effets de mort et de pétrification</li>
+<li>S'il est tué, il est recréé au centre de la zone après 1D4+2 rounds.</li>
+</ul>
+<details class="hard">
+<summary>Si les défis sont rendus plus difficiles (option)</summary>
+<div class="hardbody">
+<ul>
+<li>Les portails n'envoient pas le groupe au portail d'en face : ils ne laissent passer qu’une seule personne et envoient à un autre portail aléatoire ou au centre. 20 % de chances de ne pas téléporter et de créer un Gardien du portail à la place.</li>
+</ul>
+</div>
+</details>
+</div>
+</details>
+<details class="zone">
+<summary>Antimaginium</summary>
+<div class="zonebody">
+<h4>Statistiques de la carte </h4>
+<ul>
+<li>Chaque round, pour chaque héros, 20 % de chances de rater l’incantation des sorts et jet de sauvegarde contre les sorts à -2 : si raté, ça passe à 100 % de chances de rater.</li>
+<li>Attention aux très nombreux pièges !</li>
+<li>L'autel central est activable pour téléporter l'utilisateur (une personne par utilisation) vers un endroit aléatoire, 1 chance sur 9 d'être téléporté dans la zone sans issue du boss.</li>
+</ul>
+<h4>Conseil pour les joueurs </h4>
+<ul>
+<li>Le défi sera BEAUCOUP plus facile si vos héros sont immunisés à l’électricité.</li>
+<li>Les golems magiques et les quasi-élémentaires d'Antimagie sont immunisés aux armes magiques. Pensez à équiper vos héros d'armes secondaires non magiques.</li>
+<li>La zone du boss n'a pas d'issue : les héros qui y sont téléportés ne peuvent pas repartir autrement qu'en utilisant la rune de sortie.</li>
+<li>Le boss désintègre et draine des niveaux. Il ne peut être touché que par les armes contondantes, les dégâts électriques et les dégâts magiques : pensez-y pour le premier personnage que vous y envoyez.</li>
+</ul>
+<h4>Monstres qui apparaissent sur la carte </h4>
+<ul>
+<li>Nishrus</li>
+<li>Araignées de Vortex</li>
+<li>Choqueurs visiteurs (arme magique pour toucher, bouclier électrique, attaque avec Chaîne d'éclair 6D10 qui lui coûte 8 pvs)(oui, vous pouvez le laisser lancer ses attaques et il finit par disparaître de lui-même)</li>
+<li>Golems magiques (son attaque draine 1 sort et 1 charge, immunisé contre les armes magiques et la magie)</li>
+<li>Quasi élémentaires d'Antimagie (immunisés contre les armes magiques et la magie, attaque avec 4 projectiles magiques qui dissipent au toucher)</li>
+</ul>
+<h4>Unique </h4>
+<p><strong>Lame noire du désastre vivante, épée animée +5</strong></p>
+<ul>
+<li>4 attaques par round</li>
+<li>Chaque frappe désintègre la cible si elle rate un jet de sauvegarde contre la mort à +4</li>
+<li>Chaque frappe a 10 % de chances de drainer 4 niveaux de la cible et de rendre 20 points de vie à la Lame noire.</li>
+<li>Immunisée contre les armes non-magiques</li>
+<li>Immunisée contre les tranchantes et perçantes</li>
+<li>Immunisée contre le feu, le froid et l'acide</li>
+<li>Résistances limitées : armes contondantes 70 %, électricité 70 %, magie et dégâts magiques 30 %</li>
+<li>Immunisée aux effets mentaux, effets de mort, drain d’intelligence, drain de niveau, poison, maladie, paralysie et plein d'autres choses.</li>
+</ul>
+<details class="hard">
+<summary>Si les défis sont rendus plus difficiles (option)</summary>
+<div class="hardbody">
+<ul>
+<li>À un endroit de la zone il y a une anomalie spatio-temporelle qui ralentit les héros et accélère les monstres qui s'en approchent. Tous les 3 rounds sort de cette anomalie un monstre aléatoire de n’importe quel autre défi.</li>
+</ul>
+</div>
+</details>
+</div>
+</details>
+<details class="zone">
+<summary>La fournaise</summary>
+<div class="zonebody">
+<h4>Statistiques de la carte </h4>
+<ul>
+<li>Les PJ subissent 1D3 dégâts de feu par round. Une protection contre le feu de 100 % protège complètement contre cet inconvénient (et permet de lancer des sorts).</li>
+<li>Tous les pièges génèrent un nuage incendiaire.</li>
+<li>Les deux sorties sont interconnectées : chacune envoie à l'autre.</li>
+</ul>
+<h4>Conseil pour les joueurs </h4>
+<ul>
+<li>Le défi sera BEAUCOUP plus facile si vos héros sont immunisés contre le feu. Particulièrement vos guerriers pour le boss et les mages pour pouvoir lancer des sorts.</li>
+</ul>
+<h4>Monstres qui apparaissent sur la carte </h4>
+<ul>
+<li>Éfrit (20 % sont nobles)</li>
+<li>Salamandre (20 % sont nobles)</li>
+<li>Élémental de feu majeur</li>
+<li>Para-élémentaire de magma (son attaque brûle la cible pendant 3 rounds)</li>
+<li>Géant du feu</li>
+</ul>
+<h4>Unique </h4>
+<p>Le carbonisateur, golem de fer spécial</p>
+<ul>
+<li>Immunités de golem de fer</li>
+<li>Résistance au feu 60 %, résistances au froid, à l'électricité et à l'acide 35 %</li>
+<li>Résistance à la magie 90 %</li>
+<li>Aura de feu : chaque round dans la zone de 2,5 mètres autour de lui : 2D6 (6D6+1) points de dégâts de feu</li>
+<li>Contrecoup de mêlée : 2D6 (6D6+1) points de dégâts de feu + 15 % de chances de générer un rejeton de feu (petit élémental de feu à 7 DV)</li>
+<li>3 APR avec son arme 2D6 points de dégâts tranchants (+ bonus de force) + 2D6 (6D6+1) points de dégâts de feu</li>
+<li>Nécessite une arme +3 pour le toucher</li>
+<li>Par son équipement : points de vie +240, dégâts de feu infligés +220 % (tous les 2D6 deviennent des 6D6+1)</li>
+</ul>
+<details class="hard">
+<summary>Si les défis sont rendus plus difficiles (option)</summary>
+<div class="hardbody">
+<ul>
+<li>Chaque round sous chaque PJ 5 % de chances que s'ouvre une faille qui crache des flammes et risque d'emporter le PJ dans les profondeurs du plan (jet de sauvegarde contre la mort ou mort, sinon 10D10 points de dégâts de feu/contondants)</li>
+</ul>
+</div>
+</details>
+</div>
+</details>
+<details class="zone">
+<summary>La forge</summary>
+<div class="zonebody">
+<h4>Statistiques de la carte </h4>
+<ul>
+<li>Un portail dans un coin de la zone amène au boss.</li>
+<li>La "route" vers le portail est gardée par deux golems dracosifères majeurs qui lancent chacun une boule de feu (15D6, jet de sauvegarde contre les sorts pour ½) chaque round. Vous n'êtes pas obligé de les tuer pour passer.</li>
+<li>Tous les 5 rounds un nouveau golem aléatoire apparaît sortant du portail vers le boss. Si le boss est mort, le flux s'arrête. Plus vous mettrez de temps à atteindre le portail, plus il sera gardé.</li>
+<li>Les fours sous les golems dracosifères infligent 1D3+2 points de dégâts de feu chaque seconde.</li>
+</ul>
+<h4>Monstres qui apparaissent sur la carte </h4>
+<ul>
+<li>Golem de pierre</li>
+<li>Golem gargouille (golem de pierre spécial, 75 % de chances de pétrifier en touchant, jet de sauvegarde contre la pétrification pour éviter)</li>
+<li>Golem mécanique (tous les 3 rounds décharge électrique autour de lui : 3D6 d’électricité (jet de sauvegarde contre les souffles pour ½). Quand il fait un coup critique en attaquant : 6D6 d’électricité (jet de sauvegarde contre les sorts pour ½) et jet de sauvegarde contre la paralysie ou étourdissement 1D4+2 rounds. Quand il est touché : 5 % de chances des mêmes effets que le coup critique sur l'attaquant.</li>
+<li>Golem de fer (10 % sont d'adamantite)</li>
+<li>Arachnogolem (arme magique pour toucher, 4 APR, poison en touchant (jet de sauvegarde pour éviter), toile tous les 1D4 rounds)</li>
+<li>2x Golem dracosifères majeurs (non aléatoires) (Boule de feu chaque round, 125 % de résistance au feu, 100 % de résistance à l'acide, 50 % de résistance au froid, 20 % de résistance aux dégâts physiques, régénère de 1 PV/seconde (par son placement sur le four))</li>
+</ul>
+<h4>Unique </h4>
+<p><strong>Le forgeron :</strong></p>
+<ul>
+<li>Inaccessible en mêlée</li>
+<li>250 points de vie</li>
+<li>125 % de résistance au feu</li>
+<li>70 % de résistances aux autres éléments et aux dégâts magiques</li>
+<li>90 % de résistance à la magie et aux dégâts physiques</li>
+<li>Tous les jets de sauvegarde fixés à 1</li>
+<li>N'attaque pas mais crée tous les 5 rounds un golem aléatoire (les mêmes que sur la carte) à un endroit aléatoire de la carte.</li>
+<li>Accompagné de 5 golems aléatoires déjà dans la zone.</li>
+</ul>
+<details class="hard">
+<summary>Si les défis sont rendus plus difficiles (option)</summary>
+<div class="hardbody">
+<ul>
+<li>Tous les golems ont 10 % de chances d'exploser en mourant.</li>
+</ul>
+</div>
+</details>
+</div>
+</details>
+<details class="zone">
+<summary>Le tombeau du grand ver</summary>
+<div class="zonebody">
+<h4>Statistiques de la carte </h4>
+<ul>
+<li>Tous les 1D6+2 rounds tremblement de terre : 4D6 points de dégâts contondants (jds contre les sorts pour ½), si le jet de sauvegarde est raté : inconscience 1 round, +10 % de chances d’apparition d'un élémentaire de terre (de 8/12/16/24 DV (aléatoire et buff aléatoire)).</li>
+<li>Le boss est dans une zone secondaire, dont l’accès est bloqué tant que vous n'avez pas tué 25 unités de monstres suivant le calcul suivant : 1 unité par drakéide/demi-dragonne, 3 unités par dragon.</li>
+</ul>
+<h4>Conseil pour les joueurs </h4>
+<ul>
+<li>Le gameplay contre le boss est "frapper une fois, attendre, frapper une fois, attendre". Donc si une seule personne doit frapper, autant que ce soit celle qui frappe le plus fort. Et pendant que les autres "attendent", fouiller les contenants, poser des pièges, se préparer pour la phase 2 du combat ?</li>
+<li>Contre le boss, votre voleur peut se planquer à volonté pour faire des attaques sournoises en boucle : toute la partie haute de l'escalier est hors de son champ de vision, donc idéale pour se replanquer.</li>
+<li>Lors de la phase 2 du combat, les compagnons du boss drainent deux niveaux sans jet de sauvegarde à chaque attaque :</li>
+</ul>
+<p>Si vos héros ne sont pas protégés contre le drain de niveau, ils auront vite fait de mourir par niveau = 0.</p>
+<p>Il y a un inquisiteur qui utilise sa dissipation : oubliez le sort "Protection contre le plan négatif". Prévoyez des protections permanentes (par objet/capacité). Ou tuez le paladin très très vite.</p>
+<p>Si certains héros ne sont pas immunisés contre le drain de niveau ou craignent la dissipation, laissez-les en haut de l'escalier et faites-les utiliser des armes à distance.</p>
+<ul>
+<li>Le boss ne droppe pas la rune de sortie : elle est à récupérer en haut, dans la zone des dragons. Alors dès que vous avez tué le boss, prenez ses drops et FUYEZ !!!!!!!!!!!!!! (gardez quelqu'un proche de la porte de sortie pour une sortie en un clic). Franchement, ne restez pas là !</li>
+</ul>
+<h4>Monstres qui apparaissent sur la carte </h4>
+<ul>
+<li>Défonceur drakéide (moine)</li>
+<li>Demi dragonne verte (clerc/mage)</li>
+<li>Demi dragonne rouge (guerrière/prêtresse)</li>
+<li>Dragon vert (moins fréquent)</li>
+<li>Dragon rouge (moins fréquent)</li>
+<li>Élémentaires de terre</li>
+</ul>
+<h4>Unique </h4>
+<p><strong>Prêtre, archiliche (dans la zone secondaire)</strong></p>
+<ul>
+<li>Mort-vivant</li>
+<li>Immunités de liche</li>
+<li>Il s'est appliqué sur lui-même la même barrière que celle qui bloquait l'entrée : sans événement spécial il est invulnérable (points de vie minimum fixés à 1).</li>
+<li>Sa spécialisation de clerc lui permet de lancer Mise à mort et Mise à mal en tant que sort sur cible à distance.</li>
+<li>Chaque fois qu'il est touché il devient protégé par le sort Sanctuaire (par son équipement).</li>
+<li>Ses objets lui permettent de lancer Peau de Fer et Robustesse.</li>
+<li>Quand il ne lui reste que 30 % de points de vie il se lance Guérison.</li>
+<li>Quand il ne lui reste que 30 % de points de vie et qu'il n'a plus de sort de guérison, il appelle son dieu à l'aide. Et le vrai combat commence :</li>
+<li>Le prêtre est totalement restauré avec +200 % de points de vie (mais le dieu n'aime pas sa couardise et supprime sa barrière de protection)</li>
+<li>Tous ses sorts sont restaurés et ses objets rechargés.</li>
+<li>Il gagne un bonus au temps d'incantation : temps maximal d'incantation fixé à 4.</li>
+<li>Il est gratifié de 5 Doigts de mort mémorisés en supplément.</li>
+<li>Ses anciens compagnons sont tous ramenés à la vie en tant que spectres (quand ils touchent, ils infligent 2 points de dégâts de froid et drainent deux niveaux sans jet de sauvegarde, en mêlée comme à distance)</li>
+<li>Quand il meurt, sortez vite de la zone. Si la curiosité vous pousse à rester pour voir ce qui se passe, vous ne direz pas que je ne vous ai pas prévenu.....</li>
+</ul>
+<details class="hard">
+<summary>Si les défis sont rendus plus difficiles (option)</summary>
+<div class="hardbody">
+<p>Des mini-tornades de sable parcourent aléatoirement le niveau (elles sont invulnérables). Si la tornade passe à côté d'un héros ce héros est aveuglé pour 1 round et doit réussir un jet de sauvegarde contre les souffles à -4 ou être violemment repoussé.</p>
+</div>
+</details>
+</div>
+</details>
+<details class="zone">
+<summary>La salle de jeu du Mal</summary>
+<div class="zonebody">
+<h4>Statistiques de la carte </h4>
+<ul>
+<li>Tous les 2 rounds est créé à un endroit aléatoire un nuage aléatoire : Nuage incendiaire, Brume de Sombremort (chaque round attaqué par 1D3 assassins imaginaires) ou Nuage de frénésie bestiale (chaque round jet de sauvegarde ou ne pense plus qu'à attaquer la créature la plus proche avec +1 APR). La création de nuages s'arrête si le boss est mort.</li>
+<li>Il y a dans la zone des pièges chaotiques qui infligent un effet aléatoire (mais toujours offensif)</li>
+</ul>
+<h4>Monstres qui apparaissent sur la carte </h4>
+<ul>
+<li>Balor</li>
+<li>Glabrezu</li>
+<li>Marilith</li>
+<li>Bodak (regard tueur)(pas cracheur, pas immortel)</li>
+<li>Horreur chasseresse (vo : Retriever) (immunités de golem, lance 2 sorts élémentaires aléatoires au début du combat, puis tous les 6 rounds. (Boule de feu, Cône de froid, Éclair (tous 12D6) ou Pétrification)</li>
+</ul>
+<h4>Conseil pour les joueurs </h4>
+<ul>
+<li>Le combat contre le boss n'est que pur chaos. Une bande de 6 archers est ici bien meilleure qu'une combinaison de combattants / lanceurs de sorts.</li>
+<li>Le boss n'est pas immunisé contre les attaques sournoises, et peut être tué en deux coups bien placés. Si vous réussissez à le toucher...</li>
+<li>Le boss n'est pas immunisé contre la mort...</li>
+</ul>
+<h4>Unique </h4>
+<p><strong>Lipzitn, seigneur de la 618e, seigneur démon (le prince du chaos)</strong></p>
+<ul>
+<li>Immunités de démon, résistance à l’électricité et au feu 100 %, résistance au froid et au feu magique 50 %, résistance à la magie 80 %</li>
+<li>Nécessite une arme +3 pour le toucher</li>
+<li>Régénération de 2 points de vie par seconde</li>
+<li>Après chacune de ses attaques ou s'il est touché, il est aléatoirement téléporté à quelques mètres (capacité de base + son équipement)</li>
+<li>Attaque trois fois par round en lançant des Vaporisations prismatiques à la portée + 33 %.</li>
+<li>Chaque round il reçoit une amélioration aléatoire parmi celles utiles, chacune durant 3 rounds (oui, ça fait 3 améliorations aléatoires cumulées)(attention, sa "réplique" peut-elle même créer une "réplique"....)</li>
+<li>Au début du combat, il convoque 1D10+2 monstres aléatoires parmi ceux qu'on peut trouver dans la zone.</li>
+<li>Pendant le combat, les nuages ne sont plus créés à un endroit aléatoire de la zone : à la place ils sont créés tous les 4 rounds directement sur les héros.</li>
+</ul>
+<details class="hard">
+<summary>Si les défis sont rendus plus difficiles (option)</summary>
+<div class="hardbody">
+<p>5% de chance chaque fois qu'un nuage est crée qu'un joueur aléatoire soit téléporté au centre du nuage.</p>
+</div>
+</details>
+</div>
+</details>
+<details class="zone">
+<summary>La Bibliothèque (arène finale)</summary>
+<div class="zonebody">
+<h4>Statistiques de la carte </h4>
+<ul>
+<li>Il y a un portail dans un coin de la zone, d'où sort chaque tour une tarasque aléatoire. Il peut être détruit : 300 points de vie, immunité contre toutes les armes et contre toutes les écoles de magie sauf évocation et conjuration, ne peut être touché que par du feu ou de l'électricité.</li>
+<li>Il n'y a pas un boss, mais trois, chacun avec une spécialité. Lequel allez-vous éliminer en premier ?</li>
+</ul>
+<p>Telim'Gar : un guerrier/mage quasi-invulnérable qui frappe comme une brute tout en lançant des sorts instantanément.</p>
+<p>Grod Nonoœil : un guerrier mort-vivant inapprochable dont les coups ont des conséquences irréversibles.</p>
+<p>Dillpater : un mage qui enchaîne des sorts imaskaris quasi-instantanément et dispose d'une quantité de magie illimitée (tant que les potions dont il se gave sont actives).</p>
+<h4>Conseils pour les joueurs </h4>
+<ul>
+<li>N'utilisez pas le Portail portable dans cette zone.</li>
+<li>Le portail invoque des tarasques à un rythme régulier. Vous devriez peut-être vous en occuper avant d'aller voir les boss.</li>
+<li>Ne laissez pas Grod Nonoœil vous toucher. Et ne l'approchez pas. Bombardez-le.</li>
+<li>Face à Dillpater, vous n'avez aucune chance sans un maximum de résistance à la magie/aux éléments.</li>
+<li>Un personnage protégé contre l'école d’altération est protégé contre les "contrecoups" de Dillpater et de Grod Nonoœil.</li>
+<li>Si vous "faites passer le temps", vous pouvez laisser finir la protection contre la divination et toutes les images de Telim'gar, et les effets des potions de dillpater.</li>
+<li>Si vous connaissez le lore de Donjon &amp; Dragon, vous avez sûrement en main le moyen de tuer d'un coup les réprouvés.</li>
+</ul>
+<h4>Monstres qui apparaissent sur la carte </h4>
+<ul>
+<li>1 Tarasque aléatoire, +1 chaque tour. Détruire le portail arrête le flux. (550 points de vie + Constitution 22, Résistance au feu 100% et à la magie 35%, immunité aux sorts de l'école d'évocation, régénération de 3 points de vie par round, griffes +7, critiques augmentés, critiques dévastateurs)</li>
+<li>Golems de mithril (Immunités de golem de fer, hâte, résistance aux dégâts physiques 60 %.)</li>
+<li>Héros réprouvés aléatoires (Morts-vivants, CA +3, RM 85 %, haut niveau et hlas, (ils sont arrivés à la finale))</li>
+</ul>
+<h4>Uniques </h4>
+<p><strong>Telim'Gar (le maître des défis), Golem d'adamantite géant mage niveau 28</strong></p>
+<ul>
+<li>Points de vie doublés (160 points de vie)</li>
+<li>Résistances physiques 95 %</li>
+<li>Immunisé à la magie et à tous les éléments, nécessite une arme +4 pour être touché.</li>
+<li>Immunisé à l'arrêt du temps et à la lenteur (par son équipement)</li>
+<li>Hâte (par son équipement)</li>
+<li>Chaque round il attaque trois fois (une fois par la hâte) pour 4D12 points de dégâts (+ bonus de force) ET lance un sort sans temps d'incantation.</li>
+<li>Quand il est très blessé il utilise un Sceptre de réjuvénation pour retrouver toute sa santé et se remémorer tous ses sorts (une seule fois).</li>
+<li>Au début du combat il se lance quelques sorts de boost puis Simulacre puis Double illusoire. Son simulacre bénéficie des même boosts et lance aussi Double Illusoire. Ça fait quatre Telim'gar à gérer.</li>
+</ul>
+<p><strong>Premier lieutenant : Grod Nonoœil, Chevalier de la mort (Édition DD3) (guerrier) niveau 35</strong></p>
+<ul>
+<li>Mort-vivant, immunisé au froid et à l’électricité, résistance à la magie 135 % (50 % par son équipement), points de vie +20 %, immunisé aux armes non-magiques, force +4</li>
+<li>Quand il touche, le maximum de points de vie de la cible est définitivement réduit de 1 point (par son équipement)</li>
+<li>Quand il est touché, l’attaquant subit 2D6 points de dégâts magiques et doit réussir un jet de sauvegarde contre la mort à +4 ou être désintégré (par son équipement)</li>
+<li>Aura de mort : chaque round, dans une zone de 4,5 mètres autour de lui, Fatalité + Doigt de mort (par son équipement)</li>
+</ul>
+<p><strong>Second lieutenant : Dillpater, Artificier Incantifeur (mage) niveau 38</strong></p>
+<ul>
+<li>Renvoie tous les sorts à cible unique qui sont lancés sur lui (par son "kit" incantifeur)</li>
+<li>Antédiluvien (Imaskari)</li>
+<li>Immunisé aux effets de mort et de drain de niveau (par son équipement)</li>
+<li>Il boit une série de potions (de bourrin) dès le début du combat : "Temps d'incantation fixé à 1", "Dégâts infligés +150 %", "Transformation en élémentaire de magie (immunisé aux armes magiques et à la magie,  rafraîchissement des sorts chaque round)", etc....</li>
+<li>Quand il a fini de boire des potions, il lance un "gros" Arrêt du temps et commence à "mitrailler" des sorts infinis, surpuissants, avec un temps d'incantation de 1.</li>
+<li>Il connaît le sort "repos magique" qui lui permet de se remémorer tous ses sorts (il a donc des sorts infinis)</li>
+<li>Quand il est touché, l’attaquant doit réussir un jet de sauvegarde contre la métamorphose à -2 ou être transformé en écureuil (par son équipement)</li>
+</ul>
+<details class="hard">
+<summary>Si les défis sont rendus plus difficiles (option)</summary>
+<div class="hardbody">
+<ul>
+<li>La zone contient aussi un Dévoreur enragé (recréé au début de la carte)(le même que dans "le dédale")</li>
+</ul>
+</div>
+</details>
+</div>
+</details>
+<details class="zone secret-zone">
+<summary>Spoilers majeurs — boss spéciaux</summary>
+<div class="zonebody">
+<p><strong>Attention :</strong> Cette section décrit uniquement deux boss spéciaux. Elle n"indique pas où les trouver.</p>
+<details class="hard">
+<summary>L'Anomalie</summary>
+<div class="hardbody">
+<ul>
+<li>Quand elle attaque, la cible subit 2D8 points de dégâts magiques et doit réussir un jet de sauvegarde contre la mort à -4 ou être effacée de la trame de la réalité. Ce n'est ni la mort ni la désintégration, et il n'existe aucune protection contre cet effet.</li>
+<li>Quand elle est touchée en mêlée, l'attaquant doit réussir un jet de sauvegarde contre la mort à -4 ou être lui aussi effacé de la trame de la réalité.</li>
+<li>66 % de résistance à la magie.</li>
+<li>66 % de résistance aux dégâts.</li>
+<li>Immunisée aux effets permettant de réduire sa résistance à la magie ou aux dégâts.</li>
+<li>Nécessite une arme +3 pour être touchée.</li>
+<li>Immunités de mort-vivant, bien qu'elle ne soit pas un mort-vivant.</li>
+<li>Pas de régénération.</li>
+<li>Déplacement lent et 1 attaque par round.</li>
+<li>À 75 % de vie, elle gagne la hâte.</li>
+<li>À 50 % de vie, elle gagne Imprécision spatiale : deux images miroirs permanentes.</li>
+<li>À 25 % de vie, elle passe à 90 % de résistance à la magie et aux dégâts.</li>
+</ul>
+</div>
+</details>
+<details class="hard">
+<summary>????</summary>
+<div class="hardbody">
+<ul>
+<li>Niveau 40, points de vie calculés avec un D12.</li>
+<li>Toutes les auras cumulées des 4 sous-boss : chaque round, jet de sauvegarde contre la mort à -4 ou mort, jet de sauvegarde contre la métamorphose à -4 ou désintégration, jet de sauvegarde contre les souffles à -4 ou étourdissement 2 rounds et jet de sauvegarde contre les sorts à -4 ou stase temporelle 2 rounds
+.</li>
+<li>Toutes les Immunités cumulées des 4 sous-boss : mort-vivant, froid, golem, gelée, berserk, lenteur et arrêt du temps.</li>
+<li>Tous les bonus cumulés des 4 sous-boss : vampirique, drainant, caparaçonné (armes +4 pour toucher), résistance à la magie +50 %, Berserk, du carnage, furieux, temporel, Antédiluvien, tous les 6 rounds lance Arrêt du temps.</li>
+<li>10 attaques par round (2 de base + furieux = 5 et temporel = hâte améliorée).</li>
+<li>Quand il touche : jet de sauvegarde contre les sorts à -4 ou Pulvérisation ; en cas de coup critique, Pulvérisation sans jet de sauvegarde.</li>
+<li>Résistance à la magie : 80 % (30 % de base +50 % "du vide").</li>
+<li>Résistance au froid : 127 % (100 % de "la mort" + 50 % de "caparaçonné").</li>
+</ul>
+</div>
+</details>
+</div>
+</details>
+<div class="backtop"><a href="#top">Retour en haut</a></div>
+</section>
+<section class="content" id="monsters">
+<h2>Améliorations aléatoires des monstres</h2>
+<br/>
+<p>Les monstres des défis reçoivent tous une amélioration aléatoire. Les catégories ci-dessous décrivent les améliorations possibles.</p>
+<details class="zone">
+<summary>Améliorations simples</summary>
+<div class="zonebody">
+<ul>
+<li>
+<strong>Accéléré :</strong> Hâte</li>
+<li>
+<strong>Flou :</strong> CA +3 et jets de sauvegarde +1</li>
+<li>
+<strong>Berserk :</strong> rage de berserk constante</li>
+<li>
+<strong>Furieux :</strong> +3 attaques/round</li>
+<li>
+<strong>Puissant :</strong> force et constitution fixées à 19</li>
+<li>
+<strong>Vital :</strong> points de vie +200%</li>
+<li>
+<strong>Régénérant :</strong> régénère de 3 points de vie par round</li>
+<li>
+<strong>Précis :</strong> chance de coup critiques +4</li>
+<li>
+<strong>Réfracté :</strong> 4 images miroir permanentes</li>
+<li>
+<strong>Du carnage :</strong> tous les dégâts infligés +200%</li>
+<li>
+<strong>Cracheur :</strong> attaque avec des attaques à distances à la place d'attaques de mêlée, le bonus de force est converti en bonus de toucher/dégâts à distance</li>
+<li>
+<strong>Psychique :</strong> attaque avec des attaques à distances à la place d'attaques de mêlée/ les attaques explosent (cible +2,5 m autour, ne touche que les ennemis)</li>
+</ul>
+</div>
+</details>
+<details class="zone">
+<summary>Capacités "quand il touche"</summary>
+<div class="zonebody">
+<ul>
+<li>
+<strong>Aveuglant :</strong> quand il touche impose un jet de sauvegarde ou Cécité, quand il meurt vague autour 3 mètres impose un jet de sauvegarde à -4 ou Cécité.</li>
+<li>
+<strong>Venimeux :</strong> quand il touche impose un jet de sauvegarde à -2 ou Poison 2 par secondes pendant 20 secondes (pareil que l'Araignée de phase)</li>
+<li>
+<strong>De la peste :</strong> immunité aux maladies, quand il touche impose un jet de sauvegarde à -3 ou Maladie : lenteur, dégât 1/round et toutes caractéristiques -3, cumulable après 5 rounds.</li>
+<li>
+<strong>Déchirant :</strong> quand il touche tous les jets de sauvegarde et CA -1, toutes les résistances -5% pendant 1 tour, cumulatif.</li>
+<li>
+<strong>Cannibale :</strong> quand il touche +1D4 point de dégâts "soul burn" et récupère autant de pvs</li>
+<li>
+<strong>Du malheur :</strong> quand il touche tous les jets de sauvegarde -1 pendant un tour cumulatif, quand il meurt vague autour 3 mètres tous les jets de sauvegarde -6 pendant 2 tours cumulatif.</li>
+<li>
+<strong>Paralysant :</strong> quand il touche impose un jet de sauvegarde à -2 ou Immobilisation des monstres</li>
+<li>
+<strong>Brutal :</strong> +30% de dégâts infligés, quand il touche impose un jet de sauvegarde ou Étourdissement 1 round</li>
+<li>
+<strong>Du destin :</strong> chance +4, quand il touche chance -1 pendant 1 tour, cumulatif</li>
+<li>
+<strong>Vampirique :</strong> quand il touche drain de 2 niveaux</li>
+<li>
+<strong>Hypnotique :</strong> quand il touche impose un jet de sauvegarde ou Charme néfaste</li>
+<li>
+<strong>Tueur :</strong> quand il touche impose un jet de sauvegarde à -2 ou Mort</li>
+<li>
+<strong>Du vide :</strong> quand il touche impose un jet de sauvegarde à -4 ou Désintégration</li>
+</ul>
+</div>
+</details>
+<details class="zone">
+<summary>Capacité "quand il est frappé / quand il meurt"</summary>
+<div class="zonebody">
+<ul>
+<li>
+<strong>Méphitique :</strong> quand il est frappé 20% de chance qu'il dégage un petit nuage de gaz qui empoisonne. Quand il meurt nuage automatique autour, 4,5 mètres de rayon</li>
+<li>
+<strong>Maudit :</strong> quand il meurt il relève 10 répliques fantomatiques de lui même</li>
+<li>
+<strong>Explosif :</strong> quand il est frappé 25% de chance de créer une petite explosion sur 2,5 mètres autour dégâts 4D6 (jet de sauvegarde pour ½), quand il meurt explosion sur 4,5 mètres autour dégâts 10D6 (jet de sauvegarde à -2 pour ½)</li>
+<li>
+<strong>Pyro-lié :</strong> quand il est frappé Incinérateur 3D8 sans jet de sauvegarde sur l'attaquant (pas de limite d’incinérateurs en place)</li>
+<li>
+<strong>Immortel :</strong> Lors de sa primaire mort, il revient avec toute sa vie et perd un niveau. Pour toutes les morts ensuite, il perd deux niveaux.</li>
+</ul>
+</div>
+</details>
+<details class="zone">
+<summary>Effets récurrents</summary>
+<div class="zonebody">
+<ul>
+<li>
+<strong>Rayonnant :</strong> chaque round Radiation autour 2D6 de feu (jets de sauvegarde pour ½)</li>
+<li>
+<strong>Hurleur :</strong> chaque 3 rounds Hurlement : jet de sauvegarde à -2 ou Surdité et jet de sauvegarde ou Confusion</li>
+<li>
+<strong>Horrible :</strong> chaque 3 rounds Horreur sur zone. Quand il est frappé Hantise sur l’attaquant.</li>
+<li>
+<strong>Nécromantique :</strong> chaque 2 rounds crée un squelette ou un zombi avec hâte, 4% de chance de créer un combattant squelette ou une goule à la place</li>
+<li>
+<strong>Répliquant :</strong> chaque 2 rounds crée une réplique de lui même, durée 6 rounds.</li>
+<li>
+<strong>Proliférateur :</strong> chaque 4 rounds crée un petit. Petit qui devient "normal" après 5 rounds, 33%de chance d'être lui même "proliférateur". (attention, c'est exponentiel)</li>
+</ul>
+</div>
+</details>
+<details class="zone">
+<summary>Auras</summary>
+<div class="zonebody">
+<ul>
+<li>
+<strong>Entropique :</strong> aura 4,5 m autour joueurs seulement entropie</li>
+<li>
+<strong>Épuisant :</strong> aura 4,5 m autour joueurs seulement chaque seconde +1 en fatigue</li>
+<li>
+<strong>Enivrant :</strong> aura 4,5m autour joueurs seulement chaque seconde +1 en ébriété</li>
+<li>
+<strong>Du silence :</strong> aura 4,5m autour joueurs seulement silence (sans jet de sauvegarde)</li>
+<li>
+<strong>Siphonneur :</strong> aura 4,5 m autour joueurs seulement chaque round 2 sorts arcaniques oubliés</li>
+<li>
+<strong>De sombrelune :</strong> aura 4,5m autour joueurs seulement aveuglement et surdité (sans jet de sauvegarde)</li>
+<li>
+<strong>Dirigeante :</strong> aura 4,5m autour monstres seulement TAC0, dégâts et jets de sauvegarde +4, +1 attaque/round</li>
+<li>
+<strong>Temporel :</strong> immunisé à la lenteur et à l'arrêt du temps, hâte améliorée, aura 4,5m autour monstres Hâte, joueurs Lenteur (sans jet de sauvegarde)</li>
+<li>
+<strong>Protecteur :</strong> aura 4,5m autour monstres seulement points de vie minimum 2</li>
+<li>
+<strong>Source de vie :</strong> régénère de 2 points de vie par seconde, aura 4,5m autour monstres seulement régénération 1 par seconde</li>
+</ul>
+</div>
+</details>
+<details class="zone">
+<summary>Améliorations combinées</summary>
+<div class="zonebody">
+<ul>
+<li>
+<strong>Caparaçonnée :</strong> CA +5, résistance aux dégâts +50%, immunité aux armes incrémentée de "+2" (pas d'immunité aux armes = immunités aux arme normales et magiques +1)</li>
+<li>
+<strong>Pyrophore :</strong> quand il touche +1d10 dégâts de feu, résistance au feu 125%, bouclier de feu, dégâts de feu infligés +30%</li>
+<li>
+<strong>Cryophique :</strong> quand il touche +1d10 dégâts de froid, résistance au froid 125%, bouclier de froid, dégâts de froid infligés +30%</li>
+<li>
+<strong>Ancien :</strong> +30 points de vie, TAC0 +4, jets de sauvegarde +2, niveau de lanceur de sort +4</li>
+<li>
+<strong>Antédiluvien :</strong> +70 points de vie, TAC0 +8, jets de sauvegarde +5, +1 attaque/round , niveau de lanceur de sort +10</li>
+<li>
+<strong>Chargé :</strong> résistance à l’électricité 125%, renvoi les dégâts électriques, quand il est frappé Éclair 3D6 (jet de sauvegarde pour ½), 5% de chance de lancer Chaîne d'éclair 6D6 (jet de sauvegarde pour ½) à la place.</li>
+<li>
+<strong>D'ombre :</strong> Immunité de mort vivant, immunité aux armes non-magiques, draine 2 points de force en touchant.</li>
+<li>
+<strong>Maître des mouches (à renommer) :</strong> couvert d'un manteau d'insectes (CA +2), renvoi de tous les sorts d'insectes, quand il touche ou quand il est frappé Convocation d'insectes, quand il meurt Fléau d'insectes.</li>
+<li>
+<strong>Antimagique :</strong> immunisé à la magie et aux armes magiques, aura 4,5 m autour joueurs seulement magie morte, quand il touche dissipe la magie 100% et applique 25% de chances cumulatif de rater l’incantation de sorts pendant 15 rounds.</li>
+<li>
+<strong>Négatif :</strong> quand il touche drain de 2 niveaux, quand il est frappé drain de 2 niveaux et +1D4 point de dégâts "soul burn" et récupère autant de pvs</li>
+<li>
+<strong>Super :</strong> +3 attaques par round, Hâte améliorée, +100% mouvement, résistances élémentaires/physiques +80%, jets de sauvegarde +3, statistiques physiques 23 (pas de résistance à la magie supplémentaire, alors effet de mort/métamorphose pour s'en débarrasser)</li>
+<li>
+<strong>Scion de la magie :</strong> enchaînement, temps d'incantation maximum 4, sorts infinis</li>
+</ul>
+</div>
+</details>
+<div class="backtop">
+<a href="#top">Retour en haut</a>
+</div>
+</section>
+<section class="content" id="credits">
+<h2>Remerciements</h2><br/>
+<ul>
+<li>À <strong>Ulb</strong> pour ses animations de créature « Werebear » et « WOW Zaaman-Rul ».</li>
+<li>À <strong>FreddyGwendo</strong> pour ses animations de créatures « Mechanical Arachnid », « Tarasque » et « Hag, annis », ainsi que pour le template HTML du README.</li>
+<li>À <strong>Seifer</strong> pour son animation de créature « Bovine with axe ».</li>
+<li>À <strong>Hanhwisoo</strong> pour ses animations de Diablo 2 dans son mod « Skin ».</li>
+<li>À <strong>AionZ</strong> pour son mod Artisan Animations.</li>
+<li>À <strong>aquadrizzt</strong> pour son mod Planescape Areas.</li>
+<li>À <strong>Selphira, Argent77</strong> et <strong>Acifer</strong> pour toutes les aides et conseils qu'ils m'ont fournis.</li>
+<li>À tous les utilisateurs qui ont signalé les bugs.</li>
+</ul>
+<div class="backtop"><a href="#top">Retour en haut</a></div>
+</section>
+<section class="content" id="versions">
+<h2>Historique des mises à jour</h2><br/>
+<details class="versionbox">
+<summary>Version WIP 1</summary>
+<div class="versionbody"><ul><li>Première mise en ligne.</li></ul></div>
+</details>
+<details class="versionbox">
+<summary>Version WIP 2</summary>
+<div class="versionbody">
+<h4>Améliorations</h4>
+<ul>
+<li>Traduction anglaise.</li>
+<li>Ajout de quatre défis.</li>
+<li>Ajout de plusieurs options, dont le choix du placement initial du golem.</li>
+<li>Ajout d'un bonus de contenu à trouver si l'Interplan est installé. (bof, pas beaucoup)</li>
+<li>Ajout d'un script à toutes les créatures non-boss pour qu'elles se déplacent aléatoirement.</li>
+<li>Amélioration de certaines améliorations aléatoires.</li>
+<li>Tous les monstres diffusant une aura ont maintenant une animation pour être vite reconnus.</li>
+<li>Le script de retour est maintenant géré par les zones au lieu d'être généralisé dans le Baldur.bcs.</li>
+<li>Suppression temporaire du système de « couardise ». Il fonctionnait mais squattait gravement le Baldur.bcs.</li>
+</ul>
+<h4>Corrections</h4>
+<ul>
+<li>La capacité « protecteur » rendait le monstre invulnérable.</li>
+<li>La capacité « Caparaçonné » était mal patchée.</li>
+<li>La capacité « Berserk » rejouait l'animation en boucle.</li>
+<li>La capacité « Nécromantique » créaient des morts vivants qui n’étaient pas immunisés aux effets des zones/des monstres et n'avaient pas la hâte.</li>
+<li>La capacité « Horrible » faisait redire aux monstres chaque round dans le log « Horreur ».</li>
+<li>La capacité « Source de vie » faisait redire aux monstres chaque seconde dans le log « Guéri ».</li>
+<li>La régénération des monstres/boss ne marchait pas.</li>
+<li>Le Golem forçait la sauvegarde après avoir validé le défi et donc empêchait de le re-choisir après rechargement.</li>
+</ul>
+<h4>Changement dans les zones</h4>
+<ul>
+<li>La nécropole : correction du nécrophage sans animation et du nom du boss.</li>
+<li>La nécropole : l'effet de debuff « Silence » à maintenant une fréquence aléatoire pour chaque héros.</li>
+<li>La nécropole : ajout d'un effet pour que les vampires soient de sexe aléatoire.</li>
+<li>La nécropole : maintenant il faut une clef pour ouvrir la porte d’accès au boss.</li>
+<li>La nécropole : ajout d'un nouvel objet unique à trouver.</li>
+</ul>
+</div>
+</details>
+<details class="versionbox">
+<summary>Version WIP 3</summary>
+<div class="versionbody">
+<h4>Améliorations</h4>
+<ul>
+<li>Ajout de deux nouvelles zones.</li>
+<li>Ajout des documents en anglais.</li>
+<li>Ajout d'une option pour pouvoir sauvegarder / dormir pendant les défis.</li>
+<li>Ajout d'un dialogue possible au golem après la visite d'une certaine zone.</li>
+<li>Modification de deux options pour qu'elle puissent être réinstallées en cours de jeu.</li>
+</ul>
+<h4>Corrections</h4>
+<ul>
+<li>Certaines nouvelles animations étaient silencieuses.</li>
+<li>Le mode ne s'installait pas conjointement au mod Enhanced Edition fixpack.</li>
+<li>Les pièges étaient visibles (curseur « piège » dessus).</li>
+<li>Les monstres qui ont « 20 % sont une version supérieure » ne sont plus « surnuméraires » mais « à la place ».</li>
+<li>La décharge : il y avait deux runes données, et elles ne marchaient pas.</li>
+<li>Le jardin végétal : la zone crachait à cause d'un fichier manquant.</li>
+<li>Le jardin végétal : les « Basilics majeurs psychiques » avaient pour nom « Basilic majeurs répliquant ».</li>
+<li>Le dédale : les portails ne téléportaient pas.</li>
+<li>Antimaginium : les golems magiques cracheurs/psychiques utilisaient l'arme d'un otyugh.</li>
+<li>Antimaginium : parfois un illithid immortel pouvait apparaître parmi les monstres.</li>
+</ul>
+<h4>Changement dans les zones</h4>
+<ul>
+<li>Le jardin végétal : le boss est maintenant immunisé aux sort de niveau 1 à 3 (puisqu'il a avalé l'orbe).</li>
+<li>Le jardin végétal : ajout de deux nouveaux objets uniques à trouver.</li>
+<li>Antimaginium : les quasis élémentaires d'Antimagie ne peuvent plus être cracheurs/psychiques.</li>
+</ul>
+</div>
+</details>
+<details class="versionbox" open="">
+<summary>Version 1</summary>
+<div class="versionbody">
+<h4>Améliorations</h4>
+<ul>
+<li>Ajout de toutes les zones manquantes.</li>
+<li>Ajout d'une nouvelle option.</li>
+<li>Ajout de petites choses pour faciliter la vie (parchemins de protection contre la pétrification et contre l’électricité, etc...)</li>
+<li>L'option « Ajouter des objets permettant de dormir / sauvegarder » devient « par défaut » et n'est plus proposée.</li>
+<li>Le golem lanceur de défi n'est plus un « moche » golem de diamant mais un imposant golem de mithril.</li>
+<li>Les monstres entropiques, du silence, siphonneurs et antimagiques attaquent maintenant en priorité les lanceurs de sorts.</li>
+<li>Correction de toutes les fautes de français dans les textes et les documents.</li>
+<li>Fusion des trois lisez_moi en pdf en un seul lisez-moi en html.</li>
+</ul>
+<h4>Corrections</h4>
+<ul>
+<li>Les baguettes trouvées ont maintenant des charges.</li>
+<li>Depuis le wip 2 les monstres répliquant faisaient des dégâts de zone au lieu de se reproduire.</li>
+<li>Trois monstres maudits ne faisaient rien en mourant.</li>
+<li>Quatre monstres répliquants ne se dupliquaient pas.</li>
+<li>Les monstres communs à plusieurs zone n’étaient protégé que contre les effets d'une seul zone.</li>
+<li>Les monstre cracheurs / psychique avaient un double bonus de force.</li>
+<li>Les monstres immortels perdaient 4 niveaux au lieu de 2.</li>
+<li>Capacité « Nécromantique » : les morts-vivants ne droppent plus d'objets.</li>
+<li>Les tombeaux d'acier / la forge : il n'y a plus de super golem de fer (100 % de résistance physiques et à la magie)</li>
+<li>Les tombeaux d'acier : lorsque la 4ème momie royale meurt, les joueurs sont maintenant prévenus de l'arrivée du boss.</li>
+<li>La décharge : les ettins ne droppent plus 100 pièces d'or en mourant.</li>
+<li>La forge : les créatures cracheuses/psychiques n'avaient pas les bonus aux toucher correctement calibrés.</li>
+<li>Antimaginum : le quasi élémentaire d'Antimagie ne pouvait être touché par aucune arme.</li>
+</ul>
+<h4>Changement dans les zones</h4>
+<ul>
+<li>La décharge : le départ se fait maintenant dans la chambre.</li>
+<li>Le dédale : il y a maintenant des Néo-otyughs.</li>
+<li>La nécropole silencieuse : amélioration de la Baguette de déplacement.</li>
+<li>Antimaginium : la récompense dans le tombeau final est désormais une lance.</li>
+<li>Le dédale : ajout d'un nouvel objet à ramasser.</li>
+<li>La forge : la Baguette de déplacement de groupe est remplacée par la Baguette anti-brume.</li>
+<li>La forge : les golems de fer ont maintenant 10 % de chances d'être en adamantite à la place de 20%, et ceux qui restent sont les « moins dangereux ».</li>
+</ul>
+</div>
+</details>
+<div class="backtop"><a href="#top">Retour en haut</a></div>
+</section>
+</div>
+</div>
+
+<script>
+(function(){
+  function alignHeaderColumns(){
+    if (window.innerWidth <= 760) return;
+
+    var grid = document.querySelector('.header-grid');
+    var leftAnchor = document.getElementById('title-anchor-left');
+    var rightAnchor = document.getElementById('title-anchor-right');
+    var leftCol = document.querySelector('.header-col-left');
+    var rightCol = document.querySelector('.header-col-right');
+
+    if (!grid || !leftAnchor || !rightAnchor || !leftCol || !rightCol) return;
+
+    var g = grid.getBoundingClientRect();
+    var l = leftAnchor.getBoundingClientRect();
+    var r = rightAnchor.getBoundingClientRect();
+
+    leftCol.style.left = (l.left + l.width / 2 - g.left) + 'px';
+    rightCol.style.left = (r.left + r.width / 2 - g.left) + 'px';
+  }
+
+  window.addEventListener('load', alignHeaderColumns);
+  window.addEventListener('resize', alignHeaderColumns);
+
+  if (document.fonts && document.fonts.ready) {
+    document.fonts.ready.then(alignHeaderColumns);
+  }
+})();
+</script>
+
+</body>
+</html>

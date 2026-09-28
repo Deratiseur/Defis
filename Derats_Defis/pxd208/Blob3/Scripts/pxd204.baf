@@ -1,0 +1,82 @@
+IF
+	OnCreation()
+THEN
+	RESPONSE #100
+		StartTimer(30,30)
+		GiveItemCreate("Pxdvoid","pxd108b",0,0,0)
+	RESPONSE #100
+		StartTimer(30,30)
+		GiveItemCreate("pxdvoid","pxd160b",0,0,0)
+	RESPONSE #100
+		StartTimer(30,30)
+		GiveItemCreate("Pxdvoid","pxd610b",0,0,0)
+	RESPONSE #100
+		StartTimer(30,30)
+		GiveItemCreate("Pxdvoid","pxd208b",0,0,0)
+	RESPONSE #100
+		StartTimer(30,30)
+		GiveItemCreate("Pxdvoid","pxd180b",0,0,0)
+	RESPONSE #100
+		StartTimer(30,30)
+		GiveItemCreate("Pxdvoid","pxd100b",0,0,0)
+	RESPONSE #100
+		StartTimer(30,30)
+		SetGlobal("PXD204P","PXD204",1)
+END
+
+IF
+	Global("pxd204b","GLOBAL",1)
+THEN
+	RESPONSE #100
+	DisplayStringHead(Player1,@143)
+	SetGlobal("pxd204b","GLOBAL",2)
+END
+
+IF
+	GlobalGT("pxd208b","GLOBAL",3)
+THEN
+	RESPONSE #100
+		CreateCreature("px208c",[1750.1063],W)
+		SetGlobal("pxd208b","GLOBAL",0)
+END
+
+IF
+	TimerExpired(30)
+	Global("PXD204l","PXD204",0)
+THEN
+	RESPONSE #100
+		CreateCreature("px201c",[1446.864],W)
+		SetGlobal("PXD204l","PXD204",1)
+END
+
+IF
+	Global("PXD204l","PXD204",1)
+	Global("PXD204P","PXD204",1)
+THEN
+	RESPONSE #100	
+	GiveItemCreate("Pxdvoid","pxd201b",0,0,0)
+	SetGlobal("PXD204P","PXD204",1)
+END
+
+IF
+	GlobalGT("pxdvoid","GLOBAL",0)
+THEN
+	RESPONSE #100
+		ClearAllActions()
+		StorePartyLocations()
+		CreateVisualEffectObject("icccmdsi",Player1)
+		CreateVisualEffectObject("icccmdsi",Player2)
+		CreateVisualEffectObject("icccmdsi",Player3)
+		CreateVisualEffectObject("icccmdsi",Player4)
+		CreateVisualEffectObject("icccmdsi",Player5)
+		CreateVisualEffectObject("icccmdsi",Player6)
+		CreateVisualEffectObject("icccmdsi",Familiar)
+		Wait(2)
+		ActionOverride(Player1,LeaveAreaLUA("PXD105","",[756.1939],SE))
+		ActionOverride(Player2,LeaveAreaLUA("PXD105","",[723.2008],SE))
+		ActionOverride(Player3,LeaveAreaLUA("PXD105","",[689.1977],SE))
+		ActionOverride(Player4,LeaveAreaLUA("PXD105","",[719.1943],SE))
+		ActionOverride(Player5,LeaveAreaLUA("PXD105","",[677.1916],SE))
+		ActionOverride(Player6,LeaveAreaLUA("PXD105","",[647.1947],SE))
+		SetGlobal("pxdvoid","GLOBAL",0)
+END

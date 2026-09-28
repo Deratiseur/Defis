@@ -4,11 +4,11 @@
 @70804 = ~Golem mécanique~
 @70805 = ~Arachnogolem~
 @70806 = ~Golem dracosifer majeur~
-@70807 = ~VOUS AVEZ DETRUIT LE CARBONISATEUR. JE SAIS CE QUE JE DOIS FAIRE.~
+@70807 = ~VOUS AVEZ DÉTRUIT LE CARBONISATEUR. JE SAIS CE QUE JE DOIS FAIRE.~
 @70808 = ~MON MARTEAU ! VOLEURS !~
 
 @708101 = ~Golem de pierre pyrophore~
-@708102 = ~Golem de pierre cryophique~
+@708102 = ~Golem de pierre cryogène~
 @708103 = ~Golem de pierre accéléré~
 @708104 = ~Golem de pierre flou~
 @708105 = ~Golem de pierre berserk~
@@ -25,7 +25,7 @@
 @708116 = ~Golem de pierre furieux~
 @708117 = ~Golem de pierre venimeux~
 @708118 = ~Golem de pierre hurleur~
-@708119 = ~Golem de pierre puits de santé~
+@708119 = ~Golem de pierre vital~
 @708120 = ~Golem de pierre du destin~
 @708122 = ~Golem de pierre de la peste~
 @708123 = ~Golem de pierre du silence~
@@ -54,17 +54,17 @@
 @708146 = ~Golem de pierre temporel~
 @708147 = ~Golem de pierre protecteur~
 @708148 = ~Golem de pierre source de vie~
-@708149 = ~Golem de pierre répliquant~
+@708149 = ~Golem de pierre réplicateur~
 @708150 = ~Golem de pierre pyro-lié~
 @708151 = ~Golem de pierre du carnage~
 @708152 = ~Super golem de pierre~
 @708154 = ~Golem de pierre du vide~
 @708156 = ~Golem de pierre d'ombre~
-@708157 = ~Golem de pierre maître des mouches~
+@708157 = ~Golem de pierre maître des essaims~
 @708158 = ~Golem de pierre hypnotique~
 
 @708201 = ~Golem gargouille pyrophore~
-@708202 = ~Golem gargouille cryophique~
+@708202 = ~Golem gargouille cryogène~
 @708203 = ~Golem gargouille accéléré~
 @708204 = ~Golem gargouille flou~
 @708205 = ~Golem gargouille berserk~
@@ -81,7 +81,7 @@
 @708216 = ~Golem gargouille furieux~
 @708217 = ~Golem gargouille venimeux~
 @708218 = ~Golem gargouille hurleur~
-@708219 = ~Golem gargouille puits de santé~
+@708219 = ~Golem gargouille vital~
 @708220 = ~Golem gargouille du destin~
 @708222 = ~Golem gargouille de la peste~
 @708223 = ~Golem gargouille du silence~
@@ -110,18 +110,18 @@
 @708246 = ~Golem gargouille temporel~
 @708247 = ~Golem gargouille protecteur~
 @708248 = ~Golem gargouille source de vie~
-@708249 = ~Golem gargouille répliquant~
+@708249 = ~Golem gargouille réplicateur~
 @708250 = ~Golem gargouille pyro-lié~
 @708251 = ~Golem gargouille du carnage~
 @708252 = ~Super golem gargouille~
 @708254 = ~Golem gargouille du vide~
 @708255 = ~Golem gargouille puissant~
 @708256 = ~Golem gargouille d'ombre~
-@708257 = ~Golem gargouille maître des mouches~
+@708257 = ~Golem gargouille maître des essaims~
 @708258 = ~Golem gargouille hypnotique~
 
 @708301 = ~Golem mécanique pyrophore~
-@708302 = ~Golem mécanique cryophique~
+@708302 = ~Golem mécanique cryogène~
 @708303 = ~Golem mécanique accéléré~
 @708304 = ~Golem mécanique flou~
 @708305 = ~Golem mécanique berserk~
@@ -138,7 +138,7 @@
 @708316 = ~Golem mécanique furieux~
 @708317 = ~Golem mécanique venimeux~
 @708318 = ~Golem mécanique hurleur~
-@708319 = ~Golem mécanique puits de santé~
+@708319 = ~Golem mécanique vital~
 @708320 = ~Golem mécanique du destin~
 @708322 = ~Golem mécanique de la peste~
 @708323 = ~Golem mécanique du silence~
@@ -167,19 +167,19 @@
 @708346 = ~Golem mécanique temporel~
 @708347 = ~Golem mécanique protecteur~
 @708348 = ~Golem mécanique source de vie~
-@708349 = ~Golem mécanique répliquant~
+@708349 = ~Golem mécanique réplicateur~
 @708350 = ~Golem mécanique pyro-lié~
 @708351 = ~Golem mécanique du carnage~
 @708352 = ~Super golem mécanique~
 @708354 = ~Golem mécanique du vide~
 @708355 = ~Golem mécanique puissant~
 @708356 = ~Golem mécanique d'ombre~
-@708357 = ~Golem mécanique maître des mouches~
+@708357 = ~Golem mécanique maître des essaims~
 @708358 = ~Golem mécanique hypnotique~
 
 @708403 = ~Golem d'adamantite accéléré~
 @708413 = ~Golem d'adamantite entropique~
-@708419 = ~Golem d'adamantite puits de santé~
+@708419 = ~Golem d'adamantite vital~
 @708422 = ~Golem d'adamantite de la peste~
 @708426 = ~Golem d'adamantite cannibale~
 @708428 = ~Golem d'adamantite paralysant~
@@ -190,10 +190,10 @@
 @708438 = ~Golem d'adamantite maudit~
 @708440 = ~Golem d'adamantite tueur~
 @708444 = ~Golem d'adamantite psychique~
-@708449 = ~Golem d'adamantite répliquant~
+@708449 = ~Golem d'adamantite réplicateur~
 
 @708501 = ~Arachnogolem pyrophore~
-@708502 = ~Arachnogolem cryophique~
+@708502 = ~Arachnogolem cryogène~
 @708503 = ~Arachnogolem accéléré~
 @708504 = ~Arachnogolem flou~
 @708505 = ~Arachnogolem berserk~
@@ -210,7 +210,7 @@
 @708516 = ~Arachnogolem furieux~
 @708517 = ~Arachnogolem venimeux~
 @708518 = ~Arachnogolem hurleur~
-@708519 = ~Arachnogolem puits de santé~
+@708519 = ~Arachnogolem vital~
 @708520 = ~Arachnogolem du destin~
 @708522 = ~Arachnogolem de la peste~
 @708523 = ~Arachnogolem du silence~
@@ -239,11 +239,11 @@
 @708546 = ~Arachnogolem temporel~
 @708547 = ~Arachnogolem protecteur~
 @708548 = ~Arachnogolem source de vie~
-@708549 = ~Arachnogolem répliquant~
+@708549 = ~Arachnogolem réplicateur~
 @708550 = ~Arachnogolem pyro-lié~
 @708551 = ~Arachnogolem du carnage~
 @708552 = ~Super Arachnogolem~
 @708554 = ~Arachnogolem du vide~
 @708556 = ~Arachnogolem d'ombre~
-@708557 = ~Arachnogolem maître des mouches~
+@708557 = ~Arachnogolem maître des essaims~
 @708558 = ~Arachnogolem hypnotique~

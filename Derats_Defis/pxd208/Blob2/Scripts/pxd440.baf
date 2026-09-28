@@ -1,0 +1,179 @@
+IF
+    OnCreation()
+THEN
+    RESPONSE #100
+		Weather(RAIN)
+        ReallyForceSpellPointRES("pxd2901",[4041.2601])
+        StartTimer(150,6)
+END
+
+IF
+	Global("PXD290boss","PXD440",0)
+	Dead("px290b2t")
+	Dead("px290b2c")
+	Dead("px290b2m")
+	Dead("px290b2v")
+THEN
+	RESPONSE #100
+		PlaySound("cowmoo")
+		CreateCreature("pxd290b",[2390.1413],S)
+		SetGlobal("PXD290boss","PXD440",1)
+END
+
+IF
+    TimerExpired(150)
+	Exists(Player6)
+	RandomNum(20,1)
+THEN
+    RESPONSE #100
+        ReallyForceSpellPointRES("pxd2901",[2500.1900])
+		ReallyForceSpellRES("pxd2902",Player1)
+		StartTimer(150,6)
+	RESPONSE #100
+        ReallyForceSpellPointRES("pxd2901",[2500.1900])
+		ReallyForceSpellRES("pxd2902",Player2)
+		StartTimer(150,6)
+	RESPONSE #100
+        ReallyForceSpellPointRES("pxd2901",[2500.1900])
+		ReallyForceSpellRES("pxd2902",Player3)
+		StartTimer(150,6)
+	RESPONSE #100
+        ReallyForceSpellPointRES("pxd2901",[2500.1900])
+		ReallyForceSpellRES("pxd2902",Player4)
+		StartTimer(150,6)
+	RESPONSE #100
+        ReallyForceSpellPointRES("pxd2901",[2500.1900])
+		ReallyForceSpellRES("pxd2902",Player5)
+		StartTimer(150,6)
+	RESPONSE #100
+        ReallyForceSpellPointRES("pxd2901",[2500.1900])
+		ReallyForceSpellRES("pxd2902",Player6)
+		StartTimer(150,6)
+END
+
+IF
+    TimerExpired(150)
+	!Exists(Player6)
+	RandomNum(20,1)
+THEN
+    RESPONSE #100
+        ReallyForceSpellPointRES("pxd2901",[2500.1900])
+		ReallyForceSpellRES("pxd2902",Player1)
+		StartTimer(150,6)
+	RESPONSE #100
+        ReallyForceSpellPointRES("pxd2901",[2500.1900])
+		ReallyForceSpellRES("pxd2902",Player2)
+		StartTimer(150,6)
+	RESPONSE #100
+        ReallyForceSpellPointRES("pxd2901",[2500.1900])
+		ReallyForceSpellRES("pxd2902",Player3)
+		StartTimer(150,6)
+	RESPONSE #100
+        ReallyForceSpellPointRES("pxd2901",[2500.1900])
+		ReallyForceSpellRES("pxd2902",Player4)
+		StartTimer(150,6)
+	RESPONSE #100
+        ReallyForceSpellPointRES("pxd2901",[2500.1900])
+		ReallyForceSpellRES("pxd2902",Player5)
+		StartTimer(150,6)
+END
+
+IF
+    TimerExpired(150)
+	!Exists(Player6)
+	!Exists(Player5)
+	RandomNum(20,1)
+THEN
+    RESPONSE #100
+        ReallyForceSpellPointRES("pxd2901",[2500.1900])
+		ReallyForceSpellRES("pxd2902",Player1)
+		StartTimer(150,6)
+	RESPONSE #100
+        ReallyForceSpellPointRES("pxd2901",[2500.1900])
+		ReallyForceSpellRES("pxd2902",Player2)
+		StartTimer(150,6)
+	RESPONSE #100
+        ReallyForceSpellPointRES("pxd2901",[2500.1900])
+		ReallyForceSpellRES("pxd2902",Player3)
+		StartTimer(150,6)
+	RESPONSE #100
+        ReallyForceSpellPointRES("pxd2901",[2500.1900])
+		ReallyForceSpellRES("pxd2902",Player4)
+		StartTimer(150,6)
+END
+
+IF
+    TimerExpired(150)
+	!Exists(Player6)
+	!Exists(Player5)
+	!Exists(Player4)
+	RandomNum(20,1)
+THEN
+    RESPONSE #100
+        ReallyForceSpellPointRES("pxd2901",[2500.1900])
+		ReallyForceSpellRES("pxd2902",Player1)
+		StartTimer(150,6)
+	RESPONSE #100
+        ReallyForceSpellPointRES("pxd2901",[2500.1900])
+		ReallyForceSpellRES("pxd2902",Player2)
+		StartTimer(150,6)
+	RESPONSE #100
+        ReallyForceSpellPointRES("pxd2901",[2500.1900])
+		ReallyForceSpellRES("pxd2902",Player3)
+		StartTimer(150,6)
+END
+
+IF
+    TimerExpired(150)
+	!Exists(Player6)
+	!Exists(Player5)
+	!Exists(Player4)
+	!Exists(Player3)
+	RandomNum(20,1)
+THEN
+    RESPONSE #100
+        ReallyForceSpellPointRES("pxd2901",[2500.1900])
+		ReallyForceSpellRES("pxd2902",Player1)
+		StartTimer(150,6)
+	RESPONSE #100
+        ReallyForceSpellPointRES("pxd2901",[2500.1900])
+		ReallyForceSpellRES("pxd2902",Player2)
+		StartTimer(150,6)
+END
+
+IF
+    TimerExpired(150)
+	!Exists(Player6)
+	!Exists(Player5)
+	!Exists(Player4)
+	!Exists(Player3)
+	!Exists(Player2)
+	RandomNum(20,1)
+THEN
+    RESPONSE #100
+        ReallyForceSpellPointRES("pxd2901",[2500.1900])
+		ReallyForceSpellRES("pxd2902",Player1)
+		StartTimer(150,6)
+END
+
+
+IF
+    TimerExpired(150)
+THEN
+    RESPONSE #100
+        ReallyForceSpellPointRES("pxd2901",[2500.1900])
+		StartTimer(150,6)
+END
+
+IF
+    Global("px290wn","GLOBAL",1)
+THEN
+    RESPONSE #100
+    SetGlobal("px290wn","GLOBAL",2)
+    ActionOverride(Player1,LeaveAreaLUA("PXD201","",[3483.583],S))
+    ActionOverride(Player2,LeaveAreaLUA("PXD201","",[3415.586],S))
+    ActionOverride(Player3,LeaveAreaLUA("PXD201","",[3409.550],S))
+    ActionOverride(Player4,LeaveAreaLUA("PXD201","",[3462.539],S))
+    ActionOverride(Player5,LeaveAreaLUA("PXD201","",[3459.498],S))
+    ActionOverride(Player6,LeaveAreaLUA("PXD201","",[3398.490],S))
+END

@@ -1,0 +1,33 @@
+IF
+	Die()
+THEN
+    RESPONSE #100	
+		ReallyForceSpellDeadRES("pxdclocs",LastSummonerOf(Myself))
+		DestroySelf()
+END
+
+IF
+	See(NearestEnemyOf(Myself))
+    !GlobalTimerNotExpired("px290b2t","LOCALS")
+THEN
+    RESPONSE #100
+        ReallyForceSpell(Myself,WIZARD_TIME_STOP)
+        SetGlobalTimer("px290b2t","LOCALS",36)
+END
+
+IF
+	OnCreation()
+THEN
+	RESPONSE #100
+		StartTimer(12,6)
+		ReallyForceSpellRES("pxd290b1",Myself)	
+END
+
+IF
+	TimerExpired(12)
+
+THEN
+	RESPONSE #100
+		ReallyForceSpellRES("pxd290b1",Myself)
+		StartTimer(12,6)
+END

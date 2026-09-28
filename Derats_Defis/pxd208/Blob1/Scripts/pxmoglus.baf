@@ -1,0 +1,57 @@
+IF
+	HPLT(Myself,3)
+	Global("moglusbobo","GLOBAL",0)
+THEN
+	RESPONSE #100
+		DisplayStringHead(Myself,28250)  // NOOON ! AAAAAÏEEE !!
+		SetGlobal("moglusbobo","GLOBAL",1)
+		DestroySelf()
+END
+
+IF
+	Global("pxmoglus","GLOBAL",1)
+	Global("moglusbobo","GLOBAL",1)
+THEN
+	RESPONSE #100
+		MakeGlobal()
+		ChangeEnemyAlly(Myself,FAMILIAR)
+		AddFamiliar()
+		ReallyForceSpellRES("pxflvisi",Myself)  // No such index
+		SetGlobal("moglusbobo","GLOBAL",0)
+END
+
+IF
+	Global("pxmoglus","GLOBAL",1)
+	See(NearestEnemyOf(Myself))
+THEN
+	RESPONSE #100
+		MoveGlobalObject(Myself,NearestEnemyOf(Myself))
+		Attack(NearestEnemyOf(Myself))
+END
+
+IF
+	Global("pxmoglus","GLOBAL",1)
+	!See(NearestEnemyOf(Myself))
+	!Range(Player1,30)
+THEN
+	RESPONSE #100
+		MoveGlobalObject(Myself,Player1)
+END
+
+IF
+	Global("pxmoglus","GLOBAL",0)
+	ActionListEmpty()
+THEN
+	RESPONSE #100
+		RandomWalk()
+END
+
+
+IF
+	Global("pxmoglus","GLOBAL",1)
+	RandomNum(5,1)
+	ActionListEmpty()
+THEN
+	RESPONSE #100
+		RandomWalk()
+END

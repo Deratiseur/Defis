@@ -1,0 +1,128 @@
+IF
+	Die()
+THEN
+	RESPONSE #100
+		ReallyForceSpellDead(Myself,ILLUSION_DEATH)
+		Wait(1)
+		DestroySelf()
+END
+
+IF
+	See(NearestEnemyOf(Myself))
+	!GlobalTimerNotExpired("round","LOCALS")
+	Global("combo","LOCALS",0)
+THEN
+	RESPONSE #100
+		ReallyForceSpellRES("px2015a",NearestEnemyOf(Myself))
+		ReallyForceSpellRES("px2015b",NearestEnemyOf(Myself))
+		SetGlobalTimer("round","LOCALS",ONE_ROUND)
+		SetGlobal("combo","LOCALS",1)
+		AttackOneRound(NearestEnemyOf(Myself))
+	RESPONSE #100
+		ReallyForceSpellRES("px2015a",NearestEnemyOf(Myself))
+		ReallyForceSpellRES("px2015c",NearestEnemyOf(Myself))
+		SetGlobalTimer("round","LOCALS",ONE_ROUND)
+		SetGlobal("combo","LOCALS",2)
+		AttackOneRound(NearestEnemyOf(Myself))
+	RESPONSE #100
+		ReallyForceSpellRES("px2015a",NearestEnemyOf(Myself))
+		ReallyForceSpellRES("px2015d",NearestEnemyOf(Myself))
+		SetGlobalTimer("round","LOCALS",ONE_ROUND)
+		SetGlobal("combo","LOCALS",3)
+		AttackOneRound(NearestEnemyOf(Myself))
+	RESPONSE #100
+		ReallyForceSpellRES("px2015b",NearestEnemyOf(Myself))
+		ReallyForceSpellRES("px2015c",NearestEnemyOf(Myself))
+		SetGlobalTimer("round","LOCALS",ONE_ROUND)
+		SetGlobal("combo","LOCALS",4)
+		AttackOneRound(NearestEnemyOf(Myself))
+	RESPONSE #100
+		ReallyForceSpellRES("px2015b",NearestEnemyOf(Myself))
+		ReallyForceSpellRES("px2015d",NearestEnemyOf(Myself))
+		SetGlobalTimer("round","LOCALS",ONE_ROUND)
+		SetGlobal("combo","LOCALS",5)
+		AttackOneRound(NearestEnemyOf(Myself))
+	RESPONSE #100
+		ReallyForceSpellRES("px2015c",NearestEnemyOf(Myself))
+		ReallyForceSpellRES("px2015b",NearestEnemyOf(Myself))
+		SetGlobalTimer("round","LOCALS",ONE_ROUND)
+		SetGlobal("combo","LOCALS",6)
+		AttackOneRound(NearestEnemyOf(Myself))
+END
+
+IF
+	See(NearestEnemyOf(Myself))
+	GlobalTimerNotExpired("round","LOCALS")
+THEN
+	RESPONSE #100
+	AttackReevaluate(NearestEnemyOf(Myself),30)
+END
+
+IF
+	!GlobalTimerNotExpired("round","LOCALS")
+	Global("combo","LOCALS",1)
+THEN
+	RESPONSE #100
+		ReallyForceSpellRES("px2015c",NearestEnemyOf(Myself))
+		ReallyForceSpellRES("px2015d",NearestEnemyOf(Myself))
+		SetGlobal("combo","LOCALS",0)
+		SetGlobalTimer("round","LOCALS",30)
+END
+
+IF
+	!GlobalTimerNotExpired("round","LOCALS")
+	Global("combo","LOCALS",2)
+THEN
+	RESPONSE #100
+		ReallyForceSpellRES("px2015b",NearestEnemyOf(Myself))
+		ReallyForceSpellRES("px2015d",NearestEnemyOf(Myself))
+		SetGlobal("combo","LOCALS",0)
+		SetGlobalTimer("round","LOCALS",30)
+END
+
+IF
+	!GlobalTimerNotExpired("round","LOCALS")
+	Global("combo","LOCALS",3)
+THEN
+	RESPONSE #100
+		ReallyForceSpellRES("px2015c",NearestEnemyOf(Myself))
+		ReallyForceSpellRES("px2015d",NearestEnemyOf(Myself))
+		SetGlobal("combo","LOCALS",0)
+		SetGlobalTimer("round","LOCALS",30)
+END
+
+IF
+	!GlobalTimerNotExpired("round","LOCALS")
+	Global("combo","LOCALS",4)
+THEN
+	RESPONSE #100
+		ReallyForceSpellRES("px2015a",NearestEnemyOf(Myself))
+		ReallyForceSpellRES("px2015d",NearestEnemyOf(Myself))
+		SetGlobal("combo","LOCALS",0)
+		SetGlobalTimer("round","LOCALS",30)
+END
+
+IF
+	!GlobalTimerNotExpired("round","LOCALS")
+	Global("combo","LOCALS",5)
+THEN
+	RESPONSE #100
+		ReallyForceSpellRES("px2015a",NearestEnemyOf(Myself))
+		ReallyForceSpellRES("px2015c",NearestEnemyOf(Myself))
+		SetGlobal("combo","LOCALS",0)
+		SetGlobalTimer("round","LOCALS",30)
+END
+
+IF
+	!GlobalTimerNotExpired("round","LOCALS")
+	Global("combo","LOCALS",6)
+THEN
+	RESPONSE #100
+		ReallyForceSpellRES("px2015a",NearestEnemyOf(Myself))
+		ReallyForceSpellRES("px2015b",NearestEnemyOf(Myself))
+		SetGlobal("combo","LOCALS",0)
+		SetGlobalTimer("round","LOCALS",30)
+END
+
+
+

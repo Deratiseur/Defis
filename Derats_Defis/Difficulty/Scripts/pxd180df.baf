@@ -1,0 +1,15 @@
+IF
+    OnCreation()
+
+THEN
+    RESPONSE #100
+        SetGlobalTimer("pxd180sp","LOCALS",6)
+END
+
+IF
+    !GlobalTimerNotExpired("pxd180sp","LOCALS")
+THEN
+    RESPONSE #100
+        ReallyForceSpellRES("pxd180dp",Myself)  
+        SetGlobalTimer("pxd180sp","LOCALS",18)
+END

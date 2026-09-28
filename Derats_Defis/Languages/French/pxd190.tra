@@ -1,14 +1,15 @@
-@19001 = ~Elémentaire d'acide~
+@19001 = ~Élémentaire d'acide~
 @19002 = ~L'acide prend vie~
 @19003 = ~Déchireur enragé~
-@19004 = ~*Quand vous arrivez dans la zone, une voix se met à résonner dans votre tête. Elle vous dit : "Bienvenue dans le Dédale, aventuriers. Ne cherchez pas la sortie, il n'y en a pas. Ne cherchez pas le boss, il n'y en a pas non plus. Pour gagnez votre rune, tout ce que vous avez à faire c'est de survivre 10 minutes. Mais ne croyez pas que ce sera facile. Connaissez vous le Déchireur ? On doit cette merveille de la nature aux expérience perverties qui se sont déroulées dans Sombrefort. Pour mon défi, je l'ai reproduit, amélioré, et multiplié. Il y en a trois ici, qui n'ont qu'une idée en tête, tous vous mettre en charpie. Ils sont puissants, mortels, enragés et immortels : ne cherchez pas à les tuer, ça ne ferait que les recréer au centre du dédale. Alors.... que la chasse commence !". Quand la voix se tait, vous savez que ce qu'il vous reste à faire.*~
-@19005 = ~"Toujours vivants ? Prometteur. Je vous attends. Voilà votre rune; vous pouvez sortir."~
+@19004 = ~*Quand vous arrivez dans la zone, une voix se met à résonner dans votre tête. Elle vous dit : "Bienvenue dans le Dédale, aventuriers. Ne cherchez pas la sortie, il n'y en a pas. Ne cherchez pas le boss, il n'y en a pas non plus. Pour gagner votre rune, tout ce que vous avez à faire c'est de survivre 10 minutes. Mais ne croyez pas que ce sera facile. Connaissez-vous le Déchireur ? On doit cette merveille de la nature aux expériences perverties qui se sont déroulées dans Sombrefort. Pour mon défi, je l'ai reproduit, amélioré, et multiplié. Il y en a trois ici, qui n'ont qu'une idée en tête, tous vous mettre en charpie. Ils sont puissants, mortels, enragés et immortels : ne cherchez pas à les tuer, ça ne ferait que les recréer au centre du dédale. Alors.... que la chasse commence !". Quand la voix se tait, vous savez que ce qu'il vous reste à faire.*~
+@19005 = ~"Toujours vivants ? Prometteur. Je vous attends. Voilà votre rune ; vous pouvez sortir."~
 @19006 = ~Présence inconnue~
 @19007 = ~Gardien du portail~
 @19008 = ~Œil animé~
+@19009 = ~Néo-otyugh~
 
 @190101 = ~Illithid pyrophore~
-@190102 = ~Illithid cryophique~
+@190102 = ~Illithid cryogène~
 @190103 = ~Illithid accéléré~
 @190104 = ~Illithid flou~
 @190105 = ~Illithid berserk~
@@ -25,7 +26,7 @@
 @190116 = ~Illithid furieux~
 @190117 = ~Illithid venimeux~
 @190118 = ~Illithid hurleur~
-@190119 = ~Illithid puits de santé~
+@190119 = ~Illithid vital~
 @190120 = ~Illithid du destin~
 @190122 = ~Illithid de la peste~
 @190123 = ~Illithid du silence~
@@ -54,14 +55,14 @@
 @190146 = ~Illithid temporel~
 @190147 = ~Illithid protecteur~
 @190148 = ~Illithid source de vie~
-@190149 = ~Illithid répliquant~
+@190149 = ~Illithid réplicateur~
 @190150 = ~Illithid pyro-lié~
 @190151 = ~Illithid du carnage~
 @190152 = ~Super Illithid~
 @190154 = ~Illithid du vide~
 @190155 = ~Illithid puissant~
 @190156 = ~Illithid d'ombre~
-@190157 = ~Illithid maître des mouches~
+@190157 = ~Illithid maître des essaims~
 @190158 = ~Illithid hypnotique~
 
 @190204 = ~Tyrannoeuil flou~
@@ -72,7 +73,7 @@
 @190214 = ~Tyrannoeuil épuisant~
 @190215 = ~Tyrannoeuil enivrant~
 @190218 = ~Tyrannoeuil hurleur~
-@190219 = ~Tyrannoeuil puits de santé~
+@190219 = ~Tyrannoeuil vital~
 @190223 = ~Tyrannoeuil du silence~
 @190224 = ~Tyrannoeuil horrible~
 @190225 = ~Tyrannoeuil siphonneur~
@@ -91,11 +92,11 @@
 @190246 = ~Tyrannoeuil temporel~
 @190247 = ~Tyrannoeuil protecteur~
 @190248 = ~Tyrannoeuil source de vie~
-@190249 = ~Tyrannoeuil répliquant~
+@190249 = ~Tyrannoeuil réplicateur~
 @190250 = ~Tyrannoeuil pyro-lié~
 @190252 = ~Super Tyrannoeuil~
 @190256 = ~Tyrannoeuil d'ombre~
-@190257 = ~Tyrannoeuil maître des mouches~
+@190257 = ~Tyrannoeuil maître des essaims~
 
 @190304 = ~Gauth flou~
 @190307 = ~Gauth rayonnant~
@@ -105,7 +106,7 @@
 @190314 = ~Gauth épuisant~
 @190315 = ~Gauth enivrant~
 @190318 = ~Gauth hurleur~
-@190319 = ~Gauth puits de santé~
+@190319 = ~Gauth vital~
 @190323 = ~Gauth du silence~
 @190324 = ~Gauth horrible~
 @190325 = ~Gauth siphonneur~
@@ -124,15 +125,15 @@
 @190346 = ~Gauth temporel~
 @190347 = ~Gauth protecteur~
 @190348 = ~Gauth source de vie~
-@190349 = ~Gauth répliquant~
+@190349 = ~Gauth réplicateur~
 @190350 = ~Gauth pyro-lié~
 @190352 = ~Super Gauth~
 @190356 = ~Gauth d'ombre~
-@190357 = ~Gauth maître des mouches~
+@190357 = ~Gauth maître des essaims~
 
 @1904 = ~Ocularon~
 @190401 = ~Ocularon pyrophore~
-@190402 = ~Ocularon cryophique~
+@190402 = ~Ocularon cryogène~
 @190403 = ~Ocularon accéléré~
 @190404 = ~Ocularon flou~
 @190405 = ~Ocularon berserk~
@@ -148,7 +149,7 @@
 @190416 = ~Ocularon furieux~
 @190417 = ~Ocularon venimeux~
 @190418 = ~Ocularon hurleur~
-@190419 = ~Ocularon puits de santé~
+@190419 = ~Ocularon vital~
 @190420 = ~Ocularon du destin~
 @190422 = ~Ocularon de la peste~
 @190423 = ~Ocularon du silence~
@@ -174,7 +175,7 @@
 @190446 = ~Ocularon temporel~
 @190447 = ~Ocularon protecteur~
 @190448 = ~Ocularon source de vie~
-@190449 = ~Ocularon répliquant~
+@190449 = ~Ocularon réplicateur~
 @190450 = ~Ocularon pyro-lié~
 @190451 = ~Ocularon du carnage~
 @190452 = ~Super Ocularon~
@@ -183,52 +184,29 @@
 @190456 = ~Ocularon d'ombre~
 @190458 = ~Ocularon hypnotique~
 
-@190513 = ~Ullitarid entropique~
-@190519 = ~Ullitarid puits de santé~
-@190523 = ~Ullitarid du silence~
-@190525 = ~Ullitarid siphonneur~
-@190531 = ~Ullitarid de Sombrelune~
-@190534 = ~Ullitarid dirigeant~
-@190535 = ~Ullitarid nécromantique~
-@190536 = ~Ullitarid caparaçonné~
-@190541 = ~Ullitarid antimagique~
-@190545 = ~Ullitarid réfracté~
-@190546 = ~Ullitarid temporel~
-@190547 = ~Ullitarid protecteur~
-@190548 = ~Ullitarid source de vie~
-@190549 = ~Ullitarid répliquant~
+@190513 = ~Ulitharid entropique~
+@190519 = ~Ulitharid vital~
+@190523 = ~Ulitharid du silence~
+@190525 = ~Ulitharid siphonneur~
+@190531 = ~Ulitharid de Sombrelune~
+@190534 = ~Ulitharid dirigeant~
+@190535 = ~Ulitharid nécromantique~
+@190536 = ~Ulitharid caparaçonné~
+@190541 = ~Ulitharid antimagique~
+@190545 = ~Ulitharid réfracté~
+@190546 = ~Ulitharid temporel~
+@190547 = ~Ulitharid protecteur~
+@190548 = ~Ulitharid source de vie~
+@190549 = ~Ulitharid réplicateur~
 
-
-
-
-@20001 = ~Moglus~
-@20002 = ~Des aventuriers ? Ici ? Comment êtes vous arrivés là ?~
-	@20003 = ~J'ai utilisé un portail bleu dans la Salle de jeu du Mal.~
-@20004 = ~Un portail bleu ? Zut, ça veut dire qu'il est resté en place après que je l'ai crée pour m'enfuir. Il aurait disparaître de lui même.~
-	@20005 = ~Vous enfuir ? De quoi vouliez vous vous enfuir ?~
-	@20006 = ~Et ben non, c'est raté. Mais je dois dire que votre portail est instable, il apparaît et disparaît aléatoirement.~
-@20007 = ~Je me suis enfuis de la salle de jeu - torture, devrais-dire. Je me cache ici pour échapper au Mal absolu et à tout ce qu'il m'inflige. J’étais son familier, mais il se délectait de m'infliger les pires sévisses. Enfin, vous voyez le genre...~
-@20008 = ~Re-zut. Ça veut dire que le mal absolu a la possibilité de me retrouver. C'est que me suis enfuis de la salle de torture pour lui échapper, ainsi qu'à tout ce qu'il m'inflige. J’étais son familier, mais il se délectait de m'infliger les pires sévisses. Enfin, vous voyez le genre...~
-	@20009 = ~*En regardant autour de vous* et vous croyez que la présence de tous ces morts-vivants est mieux pour vous ?~
-	@200010 = ~Franchement, si le mal absolu est si puissant que ça, je doute que changer d'endroit -de plan ?- suffise pour qu'il ne vous retrouve pas.~
-@200011 = ~Ces mots-vivants ne peuvent rien contre moi. Pour eux, je n'existe pas. Seule la mage peut me voir, mais pour elle je ne suis qu'une chauve-souris zombi... et je me garde bien de la détromper.~
-@200012 = ~Ho, j'ai quand même assez de puissance pour cacher mon aura. S'il ne prend pas le portail, il ne me retrouvera pas. Et je doute qu'il prenne le portail, il est si bien sur son trône de sang.~
-	@200013 = ~Et qu'êtes-vous, au juste ?~
-	@200014 = ~Et s'il envoie des sous-fifres ? ?~
-@200015 = ~Je suis Moglus, le chauve-souris divine.~
-@200016 = ~Je saurais m'en cacher. Ou je les détruirais. Croyiez moi, je suis capable des deux.~
-	@200017 = ~"Divine" ? n'est-ce pas un peu pompeux comme nom ?~
-	@200018 = ~Alors , "Monsieur" moglus, que proposez vous maintenant ?~
-@200019 = ~Non, ça ne l'est pas. Être le familier du Mal Absolu, ça se mérite. Il faut un statut minimal pour ça. Et dieu des chauves souris, ç’était un minimum.~
-	@200020 = ~Soit. Alors que fait-on maintenant que je vous ai trouvé ?~
-@200021 = ~La Chauve souris se tait pendant quelques secondes, puis vous dis : Écoutez, je pense que si vous avec pu arriver jusqu'ici, c'est que vous êtes de sacrés brutasses. Peut être même que vous pourrez me débarrasser du Mal absolu. Dans ce cas, plutôt que de tourner en rond ici, je vous propose de vous accompagner. Le plan matériel à sûrement plein de choses à offrir à un esprit vif comme le mien. Qu'en dite vous ?~
-	@200022 = ~Vous ? Dans mon groupe ? Ce doit être une blague ?~
-	@200023 = ~Pourquoi pas ? Que pourriez vous m'apporter ?~
-	@200024 = ~Et j'imagine que je devrais m’attendre à ce que vous me poignardiez sitôt que j'aurais le dos tourné ?~
-@200025 = ~Ça ne l'est pas. Et je ne prendrais pas de place dans votre groupe. Je vous suivrais à distance, profitant juste de tout ce que votre monde peut m'offrir.~
-@200026 = ~Je vous suivrais à distance et vous soutiendrais avec mes pouvoirs magiques. Ha, et sur le plan matériel, je suis invulnérable. Et si quelques chose me renvois dans les abysses, je saurais revenir.~
-@200027 = ~Heeer. Non. Je vous le concède, les créatures des abysses sont données pour le mal; mais pas moi. Je n'ai pas de penchant mauvais, je ne suis que curieux. C'est ce que le mal absolu ne peut pas supporter en moi : je ne répondais pas à ses attentes de meurtre, domination et sadisme. C'est pourquoi il a tenté de me détruire... sans sucés.~
-	@200028 = ~D'accord. Bienvenue à Bord, moglus.~
-	@200029 = ~Non. Je ne peux pas faire confiance à une chauve souris de l'enfer. Vous resterez ici.~
-@200030 = ~Qu'il en soit ainsi.~
-@200031 = ~Terreur guerrière~		
+@190603 = ~Néo-otyugh accéléré~
+@190609 = ~Ancien néo-otyugh~
+@190616 = ~Néo-otyugh furieux~
+@190619 = ~Néo-otyugh vital~
+@190626 = ~Néo-otyugh cannibale~
+@190629 = ~Néo-otyugh brutal~
+@190633 = ~Néo-otyugh vampirique~
+@190638 = ~Néo-otyugh maudit~
+@190645 = ~Néo-otyugh réfracté~
+@190649 = ~Néo-otyugh réplicateur~
+@190656 = ~Néo-otyugh d'ombre~

@@ -1,0 +1,62 @@
+IF
+	OnCreation()
+THEN
+	RESPONSE #100
+	CreateCreatureObject("pxd290sx",Myself,0,0,0)
+	CreateCreatureObject("pxd290sx",Myself,0,0,0)
+	CreateCreatureObject("pxd290sx",Myself,0,0,0)
+	CreateCreatureObject("pxd290sx",Myself,0,0,0)
+	CreateCreatureObject("pxd290sx",Myself,0,0,0)
+	CreateCreatureObject("pxd290sx",Myself,0,0,0)
+	RESPONSE #100
+	CreateCreatureObject("pxd290sx",Myself,0,0,0)
+	CreateCreatureObject("pxd290sx",Myself,0,0,0)
+	CreateCreatureObject("pxd290sx",Myself,0,0,0)
+	CreateCreatureObject("pxd290sx",Myself,0,0,0)
+	CreateCreatureObject("pxd290sx",Myself,0,0,0)
+	CreateCreatureObject("pxd290sx",Myself,0,0,0)
+	CreateCreatureObject("pxd290sx",Myself,0,0,0)
+	RESPONSE #100
+	CreateCreatureObject("pxd290sx",Myself,0,0,0)
+	CreateCreatureObject("pxd290sx",Myself,0,0,0)
+	CreateCreatureObject("pxd290sx",Myself,0,0,0)
+	CreateCreatureObject("pxd290sx",Myself,0,0,0)
+	CreateCreatureObject("pxd290sx",Myself,0,0,0)
+	CreateCreatureObject("pxd290sx",Myself,0,0,0)
+	CreateCreatureObject("pxd290sx",Myself,0,0,0)
+	CreateCreatureObject("pxd290sx",Myself,0,0,0)
+	RESPONSE #100
+	CreateCreatureObject("pxd290sx",Myself,0,0,0)
+	CreateCreatureObject("pxd290sx",Myself,0,0,0)
+	CreateCreatureObject("pxd290sx",Myself,0,0,0)
+	CreateCreatureObject("pxd290sx",Myself,0,0,0)
+	CreateCreatureObject("pxd290sx",Myself,0,0,0)
+	CreateCreatureObject("pxd290sx",Myself,0,0,0)
+	CreateCreatureObject("pxd290sx",Myself,0,0,0)
+	CreateCreatureObject("pxd290sx",Myself,0,0,0)
+	CreateCreatureObject("pxd290sx",Myself,0,0,0)
+END
+
+IF
+	RandomNum(10,1)
+	See(NearestEnemyOf(Myself))
+	Global("cowdiag","LOCALS",0)
+THEN
+	RESPONSE #100
+	SetGlobal("cowdiag","LOCALS",1)
+	DisplayStringHead(Myself,@290012)
+	RESPONSE #100
+	SetGlobal("cowdiag","LOCALS",1)
+	DisplayStringHead(Myself,@290013)
+	RESPONSE #100
+	SetGlobal("cowdiag","LOCALS",1)
+	DisplayStringHead(Myself,@290014)
+END
+
+IF
+	Exists("pxd290b")
+	!Range("pxd290b",25)
+THEN
+    RESPONSE #100
+	MoveToObject("pxd290b")
+END

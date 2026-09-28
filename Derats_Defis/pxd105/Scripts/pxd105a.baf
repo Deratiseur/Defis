@@ -1,0 +1,82 @@
+
+IF
+	HaveSpell(INQUIS_TRUE_SIGHT)
+	!GlobalTimerNotExpired("TrueSeeing","LOCALS")
+	Detect(NearestEnemyOf(Myself))
+	OR(12)
+		StateCheck(NearestEnemyOf(Myself),STATE_INVISIBLE)
+		StateCheck(NearestEnemyOf(Myself),STATE_IMPROVEDINVISIBILITY)
+		StateCheck(SecondNearestEnemyOf(Myself),STATE_INVISIBLE)
+		StateCheck(SecondNearestEnemyOf(Myself),STATE_IMPROVEDINVISIBILITY)
+		StateCheck(ThirdNearestEnemyOf(Myself),STATE_INVISIBLE)
+		StateCheck(ThirdNearestEnemyOf(Myself),STATE_IMPROVEDINVISIBILITY)
+		StateCheck(FourthNearestEnemyOf(Myself),STATE_INVISIBLE)
+		StateCheck(FourthNearestEnemyOf(Myself),STATE_IMPROVEDINVISIBILITY)
+		StateCheck(FifthNearestEnemyOf(Myself),STATE_INVISIBLE)
+		StateCheck(FifthNearestEnemyOf(Myself),STATE_IMPROVEDINVISIBILITY)
+		StateCheck(SixthNearestEnemyOf(Myself),STATE_INVISIBLE)
+		StateCheck(SixthNearestEnemyOf(Myself),STATE_IMPROVEDINVISIBILITY)
+THEN
+	RESPONSE #100
+		SetGlobalTimer("TrueSeeing","LOCALS",TEN_ROUNDS)
+		Spell(Myself,INQUIS_TRUE_SIGHT)
+		Continue()
+END
+
+IF
+	HaveSpell(INQUIS_DISPEL_MAGIC)
+	!GlobalTimerNotExpired("Dispel","LOCALS")
+	OR(4)
+		See(NearestEnemyOfType([0.0.0.MAGE_ALL]))
+		See(NearestEnemyOfType([0.0.0.CLERIC_ALL]))
+		See(NearestEnemyOfType([0.0.0.BARD_ALL]))
+		See(NearestEnemyOfType([0.0.0.DRUID_ALL]))
+THEN
+	RESPONSE #100
+		Spell(LastSeenBy(Myself),INQUIS_DISPEL_MAGIC)
+		SetGlobal("pxd101pal","GLOBAL",1)
+		SetGlobalTimer("Dispel","LOCALS",THREE_ROUNDS)
+END
+
+IF
+	See(NearestEnemyOf(Myself))
+	HaveSpell(PALADIN_SUMMON_DEVA)
+	!GlobalTimerNotExpired("Deva","LOCALS")
+THEN
+	RESPONSE #100
+		Spell(Myself,PALADIN_SUMMON_DEVA)
+		SetGlobalTimer("Deva","LOCALS",FIVE_ROUNDS)
+END
+
+IF
+	HaveSpell(WARRIOR_GREATER_WHIRLWIND)
+	See(NearestEnemyOf(Myself))
+	!GlobalTimerNotExpired("Whirlwind","LOCALS")
+	Range(NearestEnemyOf(Myself),5)
+THEN
+	RESPONSE #100
+		Spell(Myself,WARRIOR_GREATER_WHIRLWIND)
+		SetGlobalTimer("Whirlwind","LOCALS",ONE_ROUND)
+END
+
+IF
+	HaveSpell(WARRIOR_WHIRLWIND)
+	See(NearestEnemyOf(Myself))
+	!GlobalTimerNotExpired("Whirlwind","LOCALS")
+	Range(NearestEnemyOf(Myself),5)
+THEN
+	RESPONSE #100
+		Spell(Myself,WARRIOR_WHIRLWIND)
+		SetGlobalTimer("Whirlwind","LOCALS",ONE_ROUND)
+END
+
+IF
+	HaveSpell(ARCHER_CALL_SHOT)
+	See(NearestEnemyOf(Myself))
+	!GlobalTimerNotExpired("Whirlwind","LOCALS")
+	Range(NearestEnemyOf(Myself),5)
+THEN
+	RESPONSE #100
+		Spell(Myself,ARCHER_CALL_SHOT)
+		SetGlobalTimer("Whirlwind","LOCALS",ONE_ROUND)
+END

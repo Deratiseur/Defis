@@ -1,0 +1,196 @@
+IF
+	OnCreation()
+	See(NearestEnemyOf(Myself))
+THEN
+	RESPONSE #100
+		DisplayStringHead(Myself,@11037)
+		SetGlobalTimer("casting","LOCALS",4)
+END
+
+IF
+	HPLT(Myself,200)
+	GlobalLT("nerullp6","LOCALS",7)
+	!GlobalTimerNotExpired("casting","LOCALS")
+	See(NearestEnemyOf(Myself))
+THEN
+	RESPONSE #100
+		ReallyForceSpell(Myself,CLERIC_HEAL)  // SPPR607.SPL (Guérison)
+		IncrementGlobal("nerullp6","LOCALS",1)
+		SetGlobalTimer("casting","LOCALS",ONE_ROUND)
+END
+
+IF
+	HPLT(Myself,200)
+	GlobalGT("nerullp6","LOCALS",6)
+	GlobalLT("nerullp7","LOCALS",7)
+	!GlobalTimerNotExpired("casting","LOCALS")
+	See(NearestEnemyOf(Myself))
+THEN
+	RESPONSE #100
+		ReallyForceSpell(Myself,CLERIC_RESTORATION)  // SPPR713.SPL (Restauration majeure)
+		IncrementGlobal("nerullp7","LOCALS",1)
+		SetGlobalTimer("casting","LOCALS",ONE_ROUND)
+END
+
+IF
+	HitBy([ANYONE],CRUSHING)
+	CheckStat(Myself,0,STONESKINS)
+	GlobalLT("nerullw4","LOCALS",7)
+	!GlobalTimerNotExpired("casting","LOCALS")
+THEN
+	RESPONSE #100
+		ReallyForceSpell(Myself,WIZARD_STONE_SKIN)  // SPWI408.SPL (Peau de pierre)
+		IncrementGlobal("nerullw4","LOCALS",1)
+		SetGlobalTimer("casting","LOCALS",ONE_ROUND)
+END
+
+IF
+	HitBy([ANYONE],CRUSHING)
+	CheckStat(Myself,0,STONESKINS)
+	GlobalGT("nerullw4","LOCALS",6)
+	GlobalLT("nerullp5","LOCALS",7)
+	!GlobalTimerNotExpired("casting","LOCALS")
+THEN
+	RESPONSE #100
+		ReallyForceSpell(Myself,CLERIC_IRONSKIN)  // SPPR506.SPL (Peaux de fer)
+		IncrementGlobal("nerullp5","LOCALS",1)
+		SetGlobalTimer("casting","LOCALS",ONE_ROUND)
+END
+
+IF
+	See(NearestEnemyOf(Myself))
+	HPLT(LastSeenBy(Myself),60)
+	GlobalLT("nerulldeath","LOCALS",5)
+	!GlobalTimerNotExpired("casting","LOCALS")
+THEN
+	RESPONSE #100
+		ReallyForceSpell(NearestEnemyOf(Myself),WIZARD_POWER_WORD_KILL)  // SPWI912.SPL (Mot de pouvoir : Mort)
+		IncrementGlobal("nerulldeath","LOCALS",1)
+		SetGlobalTimer("casting","LOCALS",ONE_ROUND)
+END
+
+IF
+	Detect(NearestEnemyOf(Myself))
+	OR(12)
+		StateCheck(NearestEnemyOf(Myself),STATE_INVISIBLE)
+		StateCheck(NearestEnemyOf(Myself),STATE_IMPROVEDINVISIBILITY)
+		StateCheck(SecondNearestEnemyOf(Myself),STATE_INVISIBLE)
+		StateCheck(SecondNearestEnemyOf(Myself),STATE_IMPROVEDINVISIBILITY)
+		StateCheck(ThirdNearestEnemyOf(Myself),STATE_INVISIBLE)
+		StateCheck(ThirdNearestEnemyOf(Myself),STATE_IMPROVEDINVISIBILITY)
+		StateCheck(FourthNearestEnemyOf(Myself),STATE_INVISIBLE)
+		StateCheck(FourthNearestEnemyOf(Myself),STATE_IMPROVEDINVISIBILITY)
+		StateCheck(FifthNearestEnemyOf(Myself),STATE_INVISIBLE)
+		StateCheck(FifthNearestEnemyOf(Myself),STATE_IMPROVEDINVISIBILITY)
+		StateCheck(SixthNearestEnemyOf(Myself),STATE_INVISIBLE)
+		StateCheck(SixthNearestEnemyOf(Myself),STATE_IMPROVEDINVISIBILITY)
+	GlobalLT("nerullp5","LOCALS",7)
+	!GlobalTimerNotExpired("casting","LOCALS")
+THEN
+	RESPONSE #100
+		ReallyForceSpell(Myself,CLERIC_TRUE_SIGHT)  // SPPR505.SPL (Vision véritable)
+		IncrementGlobal("nerullp5","LOCALS",1)
+		SetGlobalTimer("casting","LOCALS",ONE_ROUND)
+END
+
+IF
+	Global("nerullw9","LOCALS",5)
+	!GlobalTimerNotExpired("casting","LOCALS")
+THEN
+	RESPONSE #100
+		ReallyForceSpellRES("pxl2prep",Myself) // Repos magique
+		SetGlobal("nerullp7","LOCALS",0)
+		SetGlobal("nerullp6","LOCALS",0)
+		SetGlobal("nerullp5","LOCALS",0)
+		SetGlobal("nerullw9","LOCALS",0)
+		SetGlobal("nerullw8","LOCALS",0)
+		SetGlobal("nerullw7","LOCALS",0)
+		SetGlobalTimer("casting","LOCALS",ONE_ROUND)
+END
+
+IF
+	See(NearestEnemyOf(Myself))
+	!See(SecondNearestEnemyOf(Myself))
+	GlobalLT("nerullp6","LOCALS",7)
+	GlobalLT("nerullw3","LOCALS",7)
+	GlobalLT("nerullw9","LOCALS",5)
+	!GlobalTimerNotExpired("casting","LOCALS")
+THEN
+	RESPONSE #100
+		ReallyForceSpell(NearestEnemyOf(Myself),ENEMY_CLERIC_HARM)  // SPPR699.SPL (Mise à Mal)
+		IncrementGlobal("nerullp6","LOCALS",1)
+		SetGlobalTimer("casting","LOCALS",ONE_ROUND)
+	RESPONSE #100
+		ReallyForceSpell(NearestEnemyOf(Myself),WIZARD_FLAME_ARROW)  // SPWI303.SPL (Flèche enflammée)
+		IncrementGlobal("nerullw3","LOCALS",1)
+		SetGlobalTimer("casting","LOCALS",ONE_ROUND)
+	RESPONSE #100
+		ReallyForceSpellRES("pxl2porb",NearestEnemyOf(Myself))  // Orbe prismatique
+		IncrementGlobal("nerullw9","LOCALS",1)
+		SetGlobalTimer("casting","LOCALS",ONE_ROUND)
+END
+
+IF
+	GlobalLT("nerullw9","LOCALS",5)
+	!GlobalTimerNotExpired("casting","LOCALS")
+	See(NearestEnemyOf(Myself))
+THEN
+	RESPONSE #100
+		ReallyForceSpell(Myself,WIZARD_TIME_STOP)  // SPWI909.SPL (Arrêt du temps)
+		IncrementGlobal("nerullw9","LOCALS",1)
+		SetGlobalTimer("casting","LOCALS",ONE_ROUND)
+	RESPONSE #100
+		ReallyForceSpell(NearestEnemyOf(Myself),WIZARD_COMET)  // SPWI925.SPL (Comète)
+		IncrementGlobal("nerullw9","LOCALS",1)
+		SetGlobalTimer("casting","LOCALS",ONE_ROUND)
+	RESPONSE #100
+		ReallyForceSpell(NearestEnemyOf(Myself),WIZARD_DRAGONS_BREATH)  // SPWI922.SPL (Souffle de dragon)
+		IncrementGlobal("nerullw9","LOCALS",1)
+		SetGlobalTimer("casting","LOCALS",ONE_ROUND)
+	RESPONSE #100
+		ReallyForceSpellRES("pxl2pnov",NearestEnemyOf(Myself))  // Nova de destruction absolue
+		IncrementGlobal("nerullw9","LOCALS",1)
+		SetGlobalTimer("casting","LOCALS",ONE_ROUND)
+END
+
+IF
+	GlobalLT("nerullw8","LOCALS",6)
+	!GlobalTimerNotExpired("casting","LOCALS")
+	See(NearestEnemyOf(Myself))
+THEN
+	RESPONSE #100
+		ReallyForceSpell(NearestEnemyOf(Myself),WIZARD_SYMBOL_DEATH)  // SPWI817.SPL (Symbole : Mort)
+		IncrementGlobal("nerullw8","LOCALS",1)
+		SetGlobalTimer("casting","LOCALS",ONE_ROUND)
+	RESPONSE #100
+		ReallyForceSpell(NearestEnemyOf(Myself),WIZARD_INCENDIARY_CLOUD)  // SPWI810.SPL (Nuage incendiaire)
+		IncrementGlobal("nerullw8","LOCALS",1)
+		SetGlobalTimer("casting","LOCALS",ONE_ROUND)
+	RESPONSE #100
+		ReallyForceSpell(NearestEnemyOf(Myself),WIZARD_SYMBOL_STUN)  // SPWI816.SPL (Symbole : Étourdissement)
+		IncrementGlobal("nerullw8","LOCALS",1)
+		SetGlobalTimer("casting","LOCALS",ONE_ROUND)
+	RESPONSE #100
+		ReallyForceSpellRES("pxl2pmtu",NearestEnemyOf(Myself))  // Malédiction de la mort qui tue
+		IncrementGlobal("nerullw8","LOCALS",1)
+		SetGlobalTimer("casting","LOCALS",ONE_ROUND)
+END
+
+IF
+	GlobalLT("nerullw7","LOCALS",7)
+	!GlobalTimerNotExpired("casting","LOCALS")
+	See(NearestEnemyOf(Myself))
+THEN
+	RESPONSE #100
+		ReallyForceSpell(NearestEnemyOf(Myself),WIZARD_DELAYED_BLAST_FIREBALL)  // SPWI712.SPL (Boule de feu à retardement)
+		IncrementGlobal("nerullw7","LOCALS",1)
+		SetGlobalTimer("casting","LOCALS",ONE_ROUND)
+	RESPONSE #100
+		ReallyForceSpell(NearestEnemyOf(Myself),WIZARD_MORDENKAINENS_SWORD)  // SPWI716.SPL (Épée de Mordenkainen)
+		IncrementGlobal("nerullw7","LOCALS",1)
+		SetGlobalTimer("casting","LOCALS",ONE_ROUND)
+	RESPONSE #100
+		ReallyForceSpellRES("pxdproja",NearestEnemyOf(Myself))  // Projectile arc-en-ciel
+		IncrementGlobal("nerullw7","LOCALS",1)
+		SetGlobalTimer("casting","LOCALS",ONE_ROUND)
+END

@@ -1,0 +1,7 @@
+IF
+    !GlobalTimerNotExpired("bouse","LOCALS")
+THEN
+    RESPONSE #100
+        CreateCreatureObject("pxd290sy",Myself,0,0,0)
+        SetGlobalTimer("bouse","LOCALS",18)
+END

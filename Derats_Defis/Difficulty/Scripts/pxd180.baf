@@ -1,0 +1,58 @@
+IF
+    OnCreation()
+THEN
+    RESPONSE #100
+       CreateCreature("pxd180df",[1402.1743],S)
+END
+
+IF
+    !GlobalTimerNotExpired("pxd180chaos","PXD180")
+THEN
+    RESPONSE #100
+        ReallyForceSpellPointRES("Pxd1801",[1890.1696])
+        SetGlobalTimer("pxd180chaos","PXD180",6)
+END
+
+IF
+    Global("px180wn","GLOBAL",1)
+	Global("pxdgolem","GLOBAL",1)
+THEN
+    RESPONSE #100
+    SetGlobal("px180wn","GLOBAL",2)
+    ActionOverride(Player1,LeaveAreaLUA("AR0500","",[2387.1252],NNW))
+    ActionOverride(Player2,LeaveAreaLUA("AR0500","",[2428.1222],NNW))
+    ActionOverride(Player3,LeaveAreaLUA("AR0500","",[2477.1247],NNW))
+    ActionOverride(Player4,LeaveAreaLUA("AR0500","",[2437.1281],NNW))
+    ActionOverride(Player5,LeaveAreaLUA("AR0500","",[2484.1249],NNW))
+    ActionOverride(Player6,LeaveAreaLUA("AR0500","",[2520.1270],NNW))
+END
+
+
+IF
+	Global("px180wn","GLOBAL",1)
+	Global("pxdgolem","GLOBAL",2)
+THEN
+	RESPONSE #100
+	SetGlobal("px180wn","GLOBAL",2)
+	ActionOverride(Player1,LeaveAreaLUA("AR3001","",[2253.1042],NE))
+	ActionOverride(Player2,LeaveAreaLUA("AR3001","",[2280.1074],NE))
+	ActionOverride(Player3,LeaveAreaLUA("AR3001","",[2238.1108],NE))
+	ActionOverride(Player4,LeaveAreaLUA("AR3001","",[2202.1075],NE))
+	ActionOverride(Player5,LeaveAreaLUA("AR3001","",[2170.1095],NE))
+	ActionOverride(Player6,LeaveAreaLUA("AR3001","",[2191.1132],NE))
+END
+
+
+IF
+	Global("px180wn","GLOBAL",1)
+	Global("pxdgolem","GLOBAL",3)
+THEN
+	RESPONSE #100
+	SetGlobal("px180wn","GLOBAL",2)
+	ActionOverride(Player1,LeaveAreaLUA("AR5500","",[3662.1637],N))
+	ActionOverride(Player2,LeaveAreaLUA("AR5500","",[3704.1627],N))
+	ActionOverride(Player3,LeaveAreaLUA("AR5500","",[3702.1660],N))
+	ActionOverride(Player4,LeaveAreaLUA("AR5500","",[3659.1667],N))
+	ActionOverride(Player5,LeaveAreaLUA("AR5500","",[3660.1705],N))
+	ActionOverride(Player6,LeaveAreaLUA("AR5500","",[3704.1700],N))
+END

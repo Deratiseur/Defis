@@ -1,0 +1,35 @@
+IF
+    Global("pxdfusion","GLOBAL",0)
+    HPLT(Myself,6)
+THEN
+    RESPONSE #100
+        SetGlobal("pxdfusion","GLOBAL",2)
+        ActionOverride("PXDCHUCK",ClearAllActions())
+        ActionOverride("PXDCHUCK",MoveToObject("PXDCHUCK"))
+        MoveToObject("PXDCHUCK")
+END
+
+
+IF
+    Global("pxdfusion","GLOBAL",2)
+    !Range("PXDCHUCK",5)
+THEN
+    RESPONSE #100
+        MoveToObject("PXDCHUCK")
+END
+
+
+IF
+    Global("pxdfusion","GLOBAL",1)
+THEN
+    RESPONSE #100
+        NoAction()
+END
+
+IF
+	See(NearestEnemyOf(Myself))
+	Global("pxdfusion","GLOBAL",0)
+THEN
+	RESPONSE #100
+		AttackReevaluate(LastSeenBy(Myself),30)
+END

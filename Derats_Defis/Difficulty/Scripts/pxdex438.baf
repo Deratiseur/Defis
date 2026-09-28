@@ -1,0 +1,16 @@
+IF
+	Die()
+	AreaCheck("PXD708")
+	RandomNum(10,1)
+THEN
+	RESPONSE #100 
+		ReallyForceSpellDeadRES("pxdexply",Myself)
+		ReallyForceSpellDeadRES("px708438",Myself)
+END
+
+IF
+	Die()
+THEN
+	RESPONSE #100
+		ReallyForceSpellDeadRES("px708438",Myself)
+END

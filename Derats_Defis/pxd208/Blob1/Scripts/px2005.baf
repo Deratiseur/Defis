@@ -1,0 +1,49 @@
+IF
+	!See(NearestEnemyOf(Myself))
+THEN
+	RESPONSE #100
+		RandomWalk()
+END
+
+IF
+	See(NearestEnemyOf(Myself))
+	!GlobalTimerNotExpired("resetprep","LOCALS")
+THEN
+	RESPONSE #100
+		SetGlobalTimer("resetprep","LOCALS",THREE_MINUTES)
+		ApplySpell(Myself,WIZARD_FIRE_SHIELD_RED)
+		Continue()
+END
+
+IF
+	See(NearestEnemyOf(Myself))
+	Range(LastSeenBy(Myself),10)
+THEN
+	RESPONSE #100
+		RunAwayFrom(NearestEnemyOf(Myself),15)
+		Continue()
+END
+
+IF
+	See(NearestEnemyOf(Myself))
+	!Range(LastSeenBy(Myself),10)
+	!GlobalTimerNotExpired("renewflame","LOCALS")
+THEN
+	RESPONSE #15
+		SetGlobalTimer("renewflame","LOCALS",4)
+		SpellNoDecRES("spwi001",NearestEnemyOf(Myself)) 
+		Continue()
+	RESPONSE #40
+		SetGlobalTimer("renewflame","LOCALS",4)
+		SpellNoDecRES("spin799",NearestEnemyOf(Myself))
+		Continue()
+	RESPONSE #50
+		SetGlobalTimer("renewflame","LOCALS",4)
+		SpellNoDecRES("px20051",NearestEnemyOf(Myself))
+		Continue()
+	RESPONSE #100
+		SetGlobalTimer("renewflame","LOCALS",4)
+		SpellNoDecRES("spin539",NearestEnemyOf(Myself))
+		Continue()
+END
+

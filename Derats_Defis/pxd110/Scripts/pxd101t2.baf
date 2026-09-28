@@ -1,0 +1,10 @@
+IF
+	OR(2)
+		Entered([ANYONE])
+THEN
+	RESPONSE #100
+		DisplayString(LastTrigger,14381)
+		ForceSpell(LastTrigger,CLERIC_DOOM)
+		ForceSpell(LastTrigger,CLERIC_CONFUSION)
+		ForceSpell(LastTrigger,CLERIC_DOLOROUS_DECAY)
+END

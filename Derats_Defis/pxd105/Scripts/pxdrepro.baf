@@ -1,0 +1,10 @@
+IF
+	OR(2)
+	SpellCastOnMe([ANYONE],CLERIC_REMOVE_CURSE)
+	SpellCastOnMe([ANYONE],WIZARD_REMOVE_CURSE)
+THEN
+    RESPONSE #100
+		DisplayStringHead(Myself,@10512)
+        Kill(Myself)
+        AddexperienceParty(8000)
+END

@@ -1,0 +1,9 @@
+IF
+	See(Player1)
+THEN
+	RESPONSE #100
+		DisplayStringHead(Myself,@11016)
+		ApplySpellRES("PXD110BN",PLAYER1)
+		Wait(2)
+		DestroySelf()
+END

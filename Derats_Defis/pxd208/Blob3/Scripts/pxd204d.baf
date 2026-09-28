@@ -1,0 +1,15 @@
+IF
+	HasItem("Pxdvoid",Myself)  // Wardstone
+	Global("pxdrune","LOCALS",0)
+THEN
+	RESPONSE #100
+		SetGlobal("pxdrune","LOCALS",1)
+END
+
+IF
+	Die()
+	Global("pxdrune","LOCALS",1)
+THEN
+	RESPONSE #100
+		SetGlobal("pxd204b","GLOBAL",1)
+END

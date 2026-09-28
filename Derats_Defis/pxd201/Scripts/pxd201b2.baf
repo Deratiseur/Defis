@@ -1,0 +1,39 @@
+IF
+	Die()
+THEN
+	RESPONSE #100
+		ReallyForceSpellDead(Myself,ILLUSION_DEATH)  // SPIN835.SPL (No such index)
+		Wait(1)
+		DestroySelf()
+END
+
+IF
+	OnCreation()
+THEN
+	RESPONSE #100
+		SetGlobalTimer("casting","LOCALS",2)
+		StartTimer(12,6)
+		ReallyForceSpellRES("pxd201b1",Myself)  // No such index
+		ReallyForceSpellRES("pxd201bs",NearestEnemyOf(Myself))  // Vaporisation prismatique
+		Wait(1)
+		ReallyForceSpellRES("pxdpala",Myself)  // No such index
+END
+
+IF
+	TimerExpired(12)
+
+THEN
+	RESPONSE #100
+		ReallyForceSpellRES("pxd201b1",Myself)
+		StartTimer(12,6)
+END
+
+IF
+	!GlobalTimerNotExpired("casting","LOCALS")
+THEN
+	RESPONSE #100
+		SetGlobalTimer("casting","LOCALS",2)
+		ReallyForceSpellRES("pxd201bs",NearestEnemyOf(Myself))  // Vaporisation prismatique
+		Wait(1)
+		ReallyForceSpellRES("pxdpala",Myself)  // No such index
+END

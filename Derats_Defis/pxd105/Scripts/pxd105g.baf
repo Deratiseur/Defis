@@ -1,0 +1,77 @@
+IF
+	HaveSpellRES("SPDWD02")
+	See(NearestEnemyOf(Myself))
+	CheckStatLT(Myself,50,RESISTSLASHING)
+	!GlobalTimerNotExpired("Defens","LOCALS")
+THEN
+	RESPONSE #100
+		SetGlobalTimer("Defens","LOCALS",60)
+		ForceSpellRES("SPDWD02",Myself)
+		RemoveSpellRES("SPDWD02")
+END
+
+IF
+	HaveSpell(BERSERKER_RAGE)
+	See(NearestEnemyOf(Myself))
+	!CheckSpellState(Myself,BERSERKER_RAGE)
+	!CheckSpellState(Myself,BERSERKER_RAGE_FATIGUE)
+	!GlobalTimerNotExpired("berserk","LOCALS")
+THEN
+	RESPONSE #100
+		SetGlobalTimer("berserk","LOCALS",60)
+		Spell(Myself,BERSERKER_RAGE)
+END
+
+IF
+	HaveSpell(BARBARIAN_RAGE)
+	See(NearestEnemyOf(Myself))
+	!CheckSpellState(Myself,BARBARIAN_RAGE)
+	!GlobalTimerNotExpired("rage","LOCALS")
+THEN
+	RESPONSE #100
+		SetGlobalTimer("rage","LOCALS",30)
+		Spell(Myself,BARBARIAN_RAGE)
+END
+
+IF
+	HaveSpell(WARRIOR_GREATER_WHIRLWIND)
+	See(NearestEnemyOf(Myself))
+	!GlobalTimerNotExpired("Whirlwind","LOCALS")
+	Range(NearestEnemyOf(Myself),5)
+THEN
+	RESPONSE #100
+		Spell(Myself,WARRIOR_GREATER_WHIRLWIND)
+		SetGlobalTimer("Whirlwind","LOCALS",ONE_ROUND)
+END
+
+IF
+	HaveSpell(WARRIOR_WHIRLWIND)
+	See(NearestEnemyOf(Myself))
+	!GlobalTimerNotExpired("Whirlwind","LOCALS")
+	Range(NearestEnemyOf(Myself),5)
+THEN
+	RESPONSE #100
+		Spell(Myself,WARRIOR_WHIRLWIND)
+		SetGlobalTimer("Whirlwind","LOCALS",ONE_ROUND)
+END
+
+IF
+	HaveSpell(KENSAI_KIA)
+	See(NearestEnemyOf(Myself))
+	!GlobalTimerNotExpired("Whirlwind","LOCALS")
+	Range(NearestEnemyOf(Myself),5)
+THEN
+	RESPONSE #100
+		Spell(Myself,KENSAI_KIA)
+		SetGlobalTimer("Whirlwind","LOCALS",TWO_ROUNDS)
+END
+
+IF
+	HaveSpell(WARRIOR_HARDINESS)
+	See(NearestEnemyOf(Myself))
+	!GlobalTimerNotExpired("Whirlwind","LOCALS")
+THEN
+	RESPONSE #100
+		Spell(Myself,WARRIOR_HARDINESS)
+		SetGlobalTimer("Whirlwind","LOCALS",TWO_TURNS)
+END

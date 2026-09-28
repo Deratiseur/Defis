@@ -1,0 +1,23 @@
+IF
+	Detect(NearestEnemyOf(Myself))
+	Detect(NearestAllyOf(Myself))
+	THEN
+    RESPONSE #100
+		MoveToObjectFollow(NearestAllyOf(Myself))
+END
+
+IF
+	!Detect(NearestEnemyOf(Myself))
+	!Detect(NearestAllyOf(Myself))
+	THEN
+    RESPONSE #100
+		RandomWalk()
+END
+
+IF
+	!Detect(NearestEnemyOf(Myself))
+	Detect(NearestAllyOf(Myself))
+	THEN
+    RESPONSE #100
+		RunAwayFrom(NearestEnemyOf(Myself),30)
+END

@@ -1,0 +1,7 @@
+IF
+	Entered([ANYONE])
+THEN
+	RESPONSE #100
+		DisplayString(LastTrigger,14381)
+		ForceSpell(LastTrigger,WIZARD_DOMINATION)
+END

@@ -4,6 +4,7 @@ COPY ~Derats_Defis/pxd160/Anim~					~override~
 COPY_EXISTING ~pxd108sp.cre~		~override/pxd160sp.cre~	WRITE_ASCII 0x514 ~pxd160sp~ #8
 COPY_EXISTING ~pxd108sp.spl~		~override/pxd160sp.spl~	WRITE_ASCII 0xae ~pxd160~ #8
 COPY ~Derats_Defis/pxd160/pxd1601.spl~			~override~	WRITE_SHORT 0x98 ~%pxdtout%~
+COPY ~Derats_Defis/pxd180/Scripts/pxd180t3.baf~ ~Derats_Defis/Temp/pxd1603.baf~	REPLACE_TEXTUALLY ~pxdhour2~ ~pxdhour1~
 
 COPY ~Derats_Defis/pxd160/pxd160.are~			~override~	SAY 0x6404 @16007	SAY 0x64c8 @16008	SAY 0x658c @16003	SAY 0x6650 @16003
 SAY 0x6714 @16003	SAY 0x67d8 @16003	SAY 0x689c @16003	SAY 0x6960 @16003	SAY 0x6a24 @16003	SAY 0x6960 @16003	SAY 0x6ae8 @16003
@@ -20,7 +21,7 @@ END
 ////items
 COPY ~Derats_Defis/pxd160/items/pxduglor.itm~	~override~	SAY NAME2 @203	SAY DESC @204
 COPY ~Derats_Defis/pxd160/items/pxdtelep.itm~	~override~	SAY NAME2 @213	SAY DESC @214
-LAF ~GW_ADD_ITEM_TOOLTIPS~ STR_VAR GW_objet = ~pxdtelep~ GW_tooltips = ~@2141	@2142~  END
+LAF ~GW_ADD_ITEM_TOOLTIPS~ STR_VAR GW_objet = ~pxdtelep~ GW_tooltips = ~@2141	@2142	@2143~  END
 COPY ~Derats_Defis/pxd160/items/pxd160k.itm~	~override~	SAY NAME1 @16014 SAY NAME2 @16014	SAY DESC @16015
 COPY ~Derats_Defis/pxd160/items/pxdjuju.itm~	~override~	SAY NAME2 @261	SAY DESC @262
 COPY_EXISTING	~spandead.eff~		~override/pxdjuju.eff~	WRITE_ASCII 0x30 ~pxdjuju~ #8
@@ -77,7 +78,7 @@ COPY_EXISTING ~px1601.cre~			~override/px160111.cre~	SAY NAME1 @160111	SAY NAME2
 LPF ADD_CRE_EFFECT INT_VAR opcode = 146 parameter2 = 1 timing = 9 target = 1 STR_VAR resource = pxdmalhe END
 COPY_EXISTING ~px1601.cre~			~override/px160112.cre~	SAY NAME1 @160112	SAY NAME2 @160112
 LPF ADD_CRE_EFFECT INT_VAR opcode = 146 parameter2 = 1 timing = 9 target = 1 STR_VAR resource = pxddechi END
-COPY_EXISTING ~px1601.cre~			~override/px160113.cre~	SAY NAME1 @160113	SAY NAME2 @160113
+COPY_EXISTING ~px1601.cre~			~override/px160113.cre~	SAY NAME1 @160113	SAY NAME2 @160113	WRITE_ASCII 0x268 ~pxdmagea~ #8
 LPF ADD_CRE_EFFECT INT_VAR opcode = 146 parameter2 = 1 timing = 9 target = 1 STR_VAR resource = pxdentro END
 COPY_EXISTING ~px1601.cre~			~override/px160114.cre~	SAY NAME1 @160114	SAY NAME2 @160114
 LPF ADD_CRE_EFFECT INT_VAR opcode = 146 parameter2 = 1 timing = 9 target = 1 STR_VAR resource = pxdepuis END
@@ -95,11 +96,11 @@ COPY_EXISTING ~px1601.cre~			~override/px160120.cre~	SAY NAME1 @160120	SAY NAME2
 LPF ADD_CRE_EFFECT INT_VAR opcode = 146 parameter2 = 1 timing = 9 target = 1 STR_VAR resource = pxddesti END
 COPY_EXISTING ~px1601.cre~			~override/px160122.cre~	SAY NAME1 @160122	SAY NAME2 @160122
 LPF ADD_CRE_EFFECT INT_VAR opcode = 146 parameter2 = 1 timing = 9 target = 1 STR_VAR resource = pxdpeste END
-COPY_EXISTING ~px1601.cre~			~override/px160123.cre~	SAY NAME1 @160123	SAY NAME2 @160123
+COPY_EXISTING ~px1601.cre~			~override/px160123.cre~	SAY NAME1 @160123	SAY NAME2 @160123	WRITE_ASCII 0x268 ~pxdmagea~ #8
 LPF ADD_CRE_EFFECT INT_VAR opcode = 146 parameter2 = 1 timing = 9 target = 1 STR_VAR resource = pxdsilen END
 COPY_EXISTING ~px1601.cre~			~override/px160124.cre~	SAY NAME1 @160124	SAY NAME2 @160124
 LPF ADD_CRE_EFFECT INT_VAR opcode = 146 parameter2 = 1 timing = 9 target = 1 STR_VAR resource = pxdhorri END
-COPY_EXISTING ~px1601.cre~			~override/px160125.cre~	SAY NAME1 @160125	SAY NAME2 @160125
+COPY_EXISTING ~px1601.cre~			~override/px160125.cre~	SAY NAME1 @160125	SAY NAME2 @160125	WRITE_ASCII 0x268 ~pxdmagea~ #8
 LPF ADD_CRE_EFFECT INT_VAR opcode = 146 parameter2 = 1 timing = 9 target = 1  STR_VAR resource = pxdsipho END
 COPY_EXISTING ~px1601.cre~			~override/px160126.cre~	SAY NAME1 @160126	SAY NAME2 @160126
 LPF ADD_CRE_EFFECT INT_VAR opcode = 146 parameter2 = 1 timing = 9 target = 1 STR_VAR resource = pxdcanib END
@@ -127,7 +128,6 @@ LPF ADD_CRE_EFFECT INT_VAR opcode = 146 parameter2 = 1 timing = 9 target = 1 STR
 COPY_EXISTING ~px1601.cre~			~override/px160137.cre~	SAY NAME1 @160137	SAY NAME2 @160137
 LPF ADD_CRE_EFFECT INT_VAR opcode = 146 parameter2 = 1 timing = 9 target = 1 STR_VAR resource = pxdcharg END
 COPY_EXISTING ~px1601.cre~			~override/px160138.cre~	SAY NAME1 @160138	SAY NAME2 @160138	WRITE_ASCII 0x248 ~px1601md~ #8
-COPY ~Derats_Defis/Scripts/pxd180t3.baf~		~Derats_Defis/Temp/px1603.baf~	REPLACE_TEXTUALLY ~pxdhour2~ ~pxdhour1~
 COPY ~Derats_Defis/Scripts/pxdmephi.baf~ ~Derats_Defis/Temp/px1601md.baf~	REPLACE_TEXTUALLY ~pxdmephy~ ~px160138~
 COPY_EXISTING ~px1601.cre~			~override/px1601sp.cre~	SAY NAME1 @16	SAY NAME2 @16
 REPLACE_CRE_ITEM ~BDSPIRIM~ #0 #0 #0 ~UNDROPPABLE~ ~HELMET~
@@ -137,7 +137,7 @@ COPY_EXISTING ~px1601.cre~			~override/px160139.cre~	SAY NAME1 @160139	SAY NAME2
 LPF ADD_CRE_EFFECT INT_VAR opcode = 146 parameter2 = 1 timing = 9 target = 1 STR_VAR resource = pxdexplo END
 COPY_EXISTING ~px1601.cre~			~override/px160140.cre~	SAY NAME1 @160140	SAY NAME2 @160140
 LPF ADD_CRE_EFFECT INT_VAR opcode = 146 parameter2 = 1 timing = 9 target = 1 STR_VAR resource = pxdtueus END
-COPY_EXISTING ~px1601.cre~			~override/px160141.cre~	SAY NAME1 @160141	SAY NAME2 @160141
+COPY_EXISTING ~px1601.cre~			~override/px160141.cre~	SAY NAME1 @160141	SAY NAME2 @160141	WRITE_ASCII 0x268 ~pxdmagea~ #8
 LPF ADD_CRE_EFFECT INT_VAR opcode = 146 parameter2 = 1 timing = 9 target = 1 STR_VAR resource = pxdantim END
 COPY_EXISTING ~px1601.cre~			~override/px160142.cre~	SAY NAME1 @160142	SAY NAME2 @160142
 LPF ADD_CRE_EFFECT INT_VAR opcode = 146 parameter2 = 1 timing = 9 target = 1 STR_VAR resource = pxdnegat END
@@ -201,7 +201,7 @@ COPY_EXISTING ~px1602.cre~			~override/px160211.cre~	SAY NAME1 @160211	SAY NAME2
 LPF ADD_CRE_EFFECT INT_VAR opcode = 146 parameter2 = 1 timing = 9 target = 1 STR_VAR resource = pxdmalhe END
 COPY_EXISTING ~px1602.cre~			~override/px160212.cre~	SAY NAME1 @160212	SAY NAME2 @160212
 LPF ADD_CRE_EFFECT INT_VAR opcode = 146 parameter2 = 1 timing = 9 target = 1 STR_VAR resource = pxddechi END
-COPY_EXISTING ~px1602.cre~			~override/px160213.cre~	SAY NAME1 @160213	SAY NAME2 @160213
+COPY_EXISTING ~px1602.cre~			~override/px160213.cre~	SAY NAME1 @160213	SAY NAME2 @160213	WRITE_ASCII 0x268 ~pxdmagea~ #8
 LPF ADD_CRE_EFFECT INT_VAR opcode = 146 parameter2 = 1 timing = 9 target = 1 STR_VAR resource = pxdentro END
 COPY_EXISTING ~px1602.cre~			~override/px160214.cre~	SAY NAME1 @160214	SAY NAME2 @160214
 LPF ADD_CRE_EFFECT INT_VAR opcode = 146 parameter2 = 1 timing = 9 target = 1 STR_VAR resource = pxdepuis END
@@ -219,11 +219,11 @@ COPY_EXISTING ~px1602.cre~			~override/px160220.cre~	SAY NAME1 @160220	SAY NAME2
 LPF ADD_CRE_EFFECT INT_VAR opcode = 146 parameter2 = 1 timing = 9 target = 1 STR_VAR resource = pxddesti END
 COPY_EXISTING ~px1602.cre~			~override/px160222.cre~	SAY NAME1 @160222	SAY NAME2 @160222
 LPF ADD_CRE_EFFECT INT_VAR opcode = 146 parameter2 = 1 timing = 9 target = 1 STR_VAR resource = pxdpeste END
-COPY_EXISTING ~px1602.cre~			~override/px160223.cre~	SAY NAME1 @160223	SAY NAME2 @160223
+COPY_EXISTING ~px1602.cre~			~override/px160223.cre~	SAY NAME1 @160223	SAY NAME2 @160223	WRITE_ASCII 0x268 ~pxdmagea~ #8
 LPF ADD_CRE_EFFECT INT_VAR opcode = 146 parameter2 = 1 timing = 9 target = 1 STR_VAR resource = pxdsilen END
 COPY_EXISTING ~px1602.cre~			~override/px160224.cre~	SAY NAME1 @160224	SAY NAME2 @160224
 LPF ADD_CRE_EFFECT INT_VAR opcode = 146 parameter2 = 1 timing = 9 target = 1 STR_VAR resource = pxdhorri END
-COPY_EXISTING ~px1602.cre~			~override/px160225.cre~	SAY NAME1 @160225	SAY NAME2 @160225
+COPY_EXISTING ~px1602.cre~			~override/px160225.cre~	SAY NAME1 @160225	SAY NAME2 @160225	WRITE_ASCII 0x268 ~pxdmagea~ #8
 LPF ADD_CRE_EFFECT INT_VAR opcode = 146 parameter2 = 1 timing = 9 target = 1  STR_VAR resource = pxdsipho END
 COPY_EXISTING ~px1602.cre~			~override/px160226.cre~	SAY NAME1 @160226	SAY NAME2 @160226
 LPF ADD_CRE_EFFECT INT_VAR opcode = 146 parameter2 = 1 timing = 9 target = 1 STR_VAR resource = pxdcanib END
@@ -260,7 +260,7 @@ COPY_EXISTING ~px1602.cre~			~override/px160239.cre~	SAY NAME1 @160239	SAY NAME2
 LPF ADD_CRE_EFFECT INT_VAR opcode = 146 parameter2 = 1 timing = 9 target = 1 STR_VAR resource = pxdexplo END
 COPY_EXISTING ~px1602.cre~			~override/px160240.cre~	SAY NAME1 @160240	SAY NAME2 @160240
 LPF ADD_CRE_EFFECT INT_VAR opcode = 146 parameter2 = 1 timing = 9 target = 1 STR_VAR resource = pxdtueus END
-COPY_EXISTING ~px1602.cre~			~override/px160241.cre~	SAY NAME1 @160241	SAY NAME2 @160241
+COPY_EXISTING ~px1602.cre~			~override/px160241.cre~	SAY NAME1 @160241	SAY NAME2 @160241	WRITE_ASCII 0x268 ~pxdmagea~ #8
 LPF ADD_CRE_EFFECT INT_VAR opcode = 146 parameter2 = 1 timing = 9 target = 1 STR_VAR resource = pxdantim END
 COPY_EXISTING ~px1602.cre~			~override/px160242.cre~	SAY NAME1 @160242	SAY NAME2 @160242
 LPF ADD_CRE_EFFECT INT_VAR opcode = 146 parameter2 = 1 timing = 9 target = 1 STR_VAR resource = pxdnegat END
@@ -329,7 +329,7 @@ COPY_EXISTING ~px1603.cre~			~override/px160311.cre~	SAY NAME1 @160311	SAY NAME2
 LPF ADD_CRE_EFFECT INT_VAR opcode = 146 parameter2 = 1 timing = 9 target = 1 STR_VAR resource = pxdmalhe END
 COPY_EXISTING ~px1603.cre~			~override/px160312.cre~	SAY NAME1 @160312	SAY NAME2 @160312
 LPF ADD_CRE_EFFECT INT_VAR opcode = 146 parameter2 = 1 timing = 9 target = 1 STR_VAR resource = pxddechi END
-COPY_EXISTING ~px1603.cre~			~override/px160313.cre~	SAY NAME1 @160313	SAY NAME2 @160313
+COPY_EXISTING ~px1603.cre~			~override/px160313.cre~	SAY NAME1 @160313	SAY NAME2 @160313	WRITE_ASCII 0x268 ~pxdmagea~ #8
 LPF ADD_CRE_EFFECT INT_VAR opcode = 146 parameter2 = 1 timing = 9 target = 1 STR_VAR resource = pxdentro END
 COPY_EXISTING ~px1603.cre~			~override/px160314.cre~	SAY NAME1 @160314	SAY NAME2 @160314
 LPF ADD_CRE_EFFECT INT_VAR opcode = 146 parameter2 = 1 timing = 9 target = 1 STR_VAR resource = pxdepuis END
@@ -347,11 +347,11 @@ COPY_EXISTING ~px1603.cre~			~override/px160320.cre~	SAY NAME1 @160320	SAY NAME2
 LPF ADD_CRE_EFFECT INT_VAR opcode = 146 parameter2 = 1 timing = 9 target = 1 STR_VAR resource = pxddesti END
 COPY_EXISTING ~px1603.cre~			~override/px160322.cre~	SAY NAME1 @160322	SAY NAME2 @160322
 LPF ADD_CRE_EFFECT INT_VAR opcode = 146 parameter2 = 1 timing = 9 target = 1 STR_VAR resource = pxdpeste END
-COPY_EXISTING ~px1603.cre~			~override/px160323.cre~	SAY NAME1 @160323	SAY NAME2 @160323
+COPY_EXISTING ~px1603.cre~			~override/px160323.cre~	SAY NAME1 @160323	SAY NAME2 @160323	WRITE_ASCII 0x268 ~pxdmagea~ #8
 LPF ADD_CRE_EFFECT INT_VAR opcode = 146 parameter2 = 1 timing = 9 target = 1 STR_VAR resource = pxdsilen END
 COPY_EXISTING ~px1603.cre~			~override/px160324.cre~	SAY NAME1 @160324	SAY NAME2 @160324
 LPF ADD_CRE_EFFECT INT_VAR opcode = 146 parameter2 = 1 timing = 9 target = 1 STR_VAR resource = pxdhorri END
-COPY_EXISTING ~px1603.cre~			~override/px160325.cre~	SAY NAME1 @160325	SAY NAME2 @160325
+COPY_EXISTING ~px1603.cre~			~override/px160325.cre~	SAY NAME1 @160325	SAY NAME2 @160325	WRITE_ASCII 0x268 ~pxdmagea~ #8
 LPF ADD_CRE_EFFECT INT_VAR opcode = 146 parameter2 = 1 timing = 9 target = 1  STR_VAR resource = pxdsipho END
 COPY_EXISTING ~px1603.cre~			~override/px160326.cre~	SAY NAME1 @160326	SAY NAME2 @160326
 LPF ADD_CRE_EFFECT INT_VAR opcode = 146 parameter2 = 1 timing = 9 target = 1 STR_VAR resource = pxdcanib END
@@ -388,7 +388,7 @@ COPY_EXISTING ~px1603.cre~			~override/px160339.cre~	SAY NAME1 @160339	SAY NAME2
 LPF ADD_CRE_EFFECT INT_VAR opcode = 146 parameter2 = 1 timing = 9 target = 1 STR_VAR resource = pxdexplo END
 COPY_EXISTING ~px1603.cre~			~override/px160340.cre~	SAY NAME1 @160340	SAY NAME2 @160340
 LPF ADD_CRE_EFFECT INT_VAR opcode = 146 parameter2 = 1 timing = 9 target = 1 STR_VAR resource = pxdtueus END
-COPY_EXISTING ~px1603.cre~			~override/px160341.cre~	SAY NAME1 @160341	SAY NAME2 @160341
+COPY_EXISTING ~px1603.cre~			~override/px160341.cre~	SAY NAME1 @160341	SAY NAME2 @160341	WRITE_ASCII 0x268 ~pxdmagea~ #8
 LPF ADD_CRE_EFFECT INT_VAR opcode = 146 parameter2 = 1 timing = 9 target = 1 STR_VAR resource = pxdantim END
 COPY_EXISTING ~px1603.cre~			~override/px160342.cre~	SAY NAME1 @160342	SAY NAME2 @160342
 LPF ADD_CRE_EFFECT INT_VAR opcode = 146 parameter2 = 1 timing = 9 target = 1 STR_VAR resource = pxdnegat END
@@ -457,7 +457,7 @@ COPY_EXISTING ~px1604.cre~			~override/px160411.cre~	SAY NAME1 @160411	SAY NAME2
 LPF ADD_CRE_EFFECT INT_VAR opcode = 146 parameter2 = 1 timing = 9 target = 1 STR_VAR resource = pxdmalhe END
 COPY_EXISTING ~px1604.cre~			~override/px160412.cre~	SAY NAME1 @160412	SAY NAME2 @160412
 LPF ADD_CRE_EFFECT INT_VAR opcode = 146 parameter2 = 1 timing = 9 target = 1 STR_VAR resource = pxddechi END
-COPY_EXISTING ~px1604.cre~			~override/px160413.cre~	SAY NAME1 @160413	SAY NAME2 @160413
+COPY_EXISTING ~px1604.cre~			~override/px160413.cre~	SAY NAME1 @160413	SAY NAME2 @160413	WRITE_ASCII 0x268 ~pxdmagea~ #8
 LPF ADD_CRE_EFFECT INT_VAR opcode = 146 parameter2 = 1 timing = 9 target = 1 STR_VAR resource = pxdentro END
 COPY_EXISTING ~px1604.cre~			~override/px160414.cre~	SAY NAME1 @160414	SAY NAME2 @160414
 LPF ADD_CRE_EFFECT INT_VAR opcode = 146 parameter2 = 1 timing = 9 target = 1 STR_VAR resource = pxdepuis END
@@ -475,11 +475,11 @@ COPY_EXISTING ~px1604.cre~			~override/px160420.cre~	SAY NAME1 @160420	SAY NAME2
 LPF ADD_CRE_EFFECT INT_VAR opcode = 146 parameter2 = 1 timing = 9 target = 1 STR_VAR resource = pxddesti END
 COPY_EXISTING ~px1604.cre~			~override/px160422.cre~	SAY NAME1 @160422	SAY NAME2 @160422
 LPF ADD_CRE_EFFECT INT_VAR opcode = 146 parameter2 = 1 timing = 9 target = 1 STR_VAR resource = pxdpeste END
-COPY_EXISTING ~px1604.cre~			~override/px160423.cre~	SAY NAME1 @160423	SAY NAME2 @160423
+COPY_EXISTING ~px1604.cre~			~override/px160423.cre~	SAY NAME1 @160423	SAY NAME2 @160423	WRITE_ASCII 0x268 ~pxdmagea~ #8
 LPF ADD_CRE_EFFECT INT_VAR opcode = 146 parameter2 = 1 timing = 9 target = 1 STR_VAR resource = pxdsilen END
 COPY_EXISTING ~px1604.cre~			~override/px160424.cre~	SAY NAME1 @160424	SAY NAME2 @160424
 LPF ADD_CRE_EFFECT INT_VAR opcode = 146 parameter2 = 1 timing = 9 target = 1 STR_VAR resource = pxdhorri END
-COPY_EXISTING ~px1604.cre~			~override/px160425.cre~	SAY NAME1 @160425	SAY NAME2 @160425
+COPY_EXISTING ~px1604.cre~			~override/px160425.cre~	SAY NAME1 @160425	SAY NAME2 @160425	WRITE_ASCII 0x268 ~pxdmagea~ #8
 LPF ADD_CRE_EFFECT INT_VAR opcode = 146 parameter2 = 1 timing = 9 target = 1  STR_VAR resource = pxdsipho END
 COPY_EXISTING ~px1604.cre~			~override/px160426.cre~	SAY NAME1 @160426	SAY NAME2 @160426
 LPF ADD_CRE_EFFECT INT_VAR opcode = 146 parameter2 = 1 timing = 9 target = 1 STR_VAR resource = pxdcanib END
@@ -516,7 +516,7 @@ COPY_EXISTING ~px1604.cre~			~override/px160439.cre~	SAY NAME1 @160439	SAY NAME2
 LPF ADD_CRE_EFFECT INT_VAR opcode = 146 parameter2 = 1 timing = 9 target = 1 STR_VAR resource = pxdexplo END
 COPY_EXISTING ~px1604.cre~			~override/px160440.cre~	SAY NAME1 @160440	SAY NAME2 @160440
 LPF ADD_CRE_EFFECT INT_VAR opcode = 146 parameter2 = 1 timing = 9 target = 1 STR_VAR resource = pxdtueus END
-COPY_EXISTING ~px1604.cre~			~override/px160441.cre~	SAY NAME1 @160441	SAY NAME2 @160441
+COPY_EXISTING ~px1604.cre~			~override/px160441.cre~	SAY NAME1 @160441	SAY NAME2 @160441	WRITE_ASCII 0x268 ~pxdmagea~ #8
 LPF ADD_CRE_EFFECT INT_VAR opcode = 146 parameter2 = 1 timing = 9 target = 1 STR_VAR resource = pxdantim END
 COPY_EXISTING ~px1604.cre~			~override/px160442.cre~	SAY NAME1 @160442	SAY NAME2 @160442
 LPF ADD_CRE_EFFECT INT_VAR opcode = 146 parameter2 = 1 timing = 9 target = 1 STR_VAR resource = pxdnegat END
@@ -585,7 +585,7 @@ COPY_EXISTING ~px1605.cre~			~override/px160511.cre~	SAY NAME1 @160511	SAY NAME2
 LPF ADD_CRE_EFFECT INT_VAR opcode = 146 parameter2 = 1 timing = 9 target = 1 STR_VAR resource = pxdmalhe END
 COPY_EXISTING ~px1605.cre~			~override/px160512.cre~	SAY NAME1 @160512	SAY NAME2 @160512
 LPF ADD_CRE_EFFECT INT_VAR opcode = 146 parameter2 = 1 timing = 9 target = 1 STR_VAR resource = pxddechi END
-COPY_EXISTING ~px1605.cre~			~override/px160513.cre~	SAY NAME1 @160513	SAY NAME2 @160513
+COPY_EXISTING ~px1605.cre~			~override/px160513.cre~	SAY NAME1 @160513	SAY NAME2 @160513	WRITE_ASCII 0x268 ~pxdmagea~ #8
 LPF ADD_CRE_EFFECT INT_VAR opcode = 146 parameter2 = 1 timing = 9 target = 1 STR_VAR resource = pxdentro END
 COPY_EXISTING ~px1605.cre~			~override/px160514.cre~	SAY NAME1 @160514	SAY NAME2 @160514
 LPF ADD_CRE_EFFECT INT_VAR opcode = 146 parameter2 = 1 timing = 9 target = 1 STR_VAR resource = pxdepuis END
@@ -603,11 +603,11 @@ COPY_EXISTING ~px1605.cre~			~override/px160520.cre~	SAY NAME1 @160520	SAY NAME2
 LPF ADD_CRE_EFFECT INT_VAR opcode = 146 parameter2 = 1 timing = 9 target = 1 STR_VAR resource = pxddesti END
 COPY_EXISTING ~px1605.cre~			~override/px160522.cre~	SAY NAME1 @160522	SAY NAME2 @160522
 LPF ADD_CRE_EFFECT INT_VAR opcode = 146 parameter2 = 1 timing = 9 target = 1 STR_VAR resource = pxdpeste END
-COPY_EXISTING ~px1605.cre~			~override/px160523.cre~	SAY NAME1 @160523	SAY NAME2 @160523
+COPY_EXISTING ~px1605.cre~			~override/px160523.cre~	SAY NAME1 @160523	SAY NAME2 @160523	WRITE_ASCII 0x268 ~pxdmagea~ #8
 LPF ADD_CRE_EFFECT INT_VAR opcode = 146 parameter2 = 1 timing = 9 target = 1 STR_VAR resource = pxdsilen END
 COPY_EXISTING ~px1605.cre~			~override/px160524.cre~	SAY NAME1 @160524	SAY NAME2 @160524
 LPF ADD_CRE_EFFECT INT_VAR opcode = 146 parameter2 = 1 timing = 9 target = 1 STR_VAR resource = pxdhorri END
-COPY_EXISTING ~px1605.cre~			~override/px160525.cre~	SAY NAME1 @160525	SAY NAME2 @160525
+COPY_EXISTING ~px1605.cre~			~override/px160525.cre~	SAY NAME1 @160525	SAY NAME2 @160525	WRITE_ASCII 0x268 ~pxdmagea~ #8
 LPF ADD_CRE_EFFECT INT_VAR opcode = 146 parameter2 = 1 timing = 9 target = 1  STR_VAR resource = pxdsipho END
 COPY_EXISTING ~px1605.cre~			~override/px160526.cre~	SAY NAME1 @160526	SAY NAME2 @160526
 LPF ADD_CRE_EFFECT INT_VAR opcode = 146 parameter2 = 1 timing = 9 target = 1 STR_VAR resource = pxdcanib END
@@ -642,7 +642,7 @@ COPY_EXISTING ~px1605.cre~			~override/px160539.cre~	SAY NAME1 @160539	SAY NAME2
 LPF ADD_CRE_EFFECT INT_VAR opcode = 146 parameter2 = 1 timing = 9 target = 1 STR_VAR resource = pxdexplo END
 COPY_EXISTING ~px1605.cre~			~override/px160540.cre~	SAY NAME1 @160540	SAY NAME2 @160540
 LPF ADD_CRE_EFFECT INT_VAR opcode = 146 parameter2 = 1 timing = 9 target = 1 STR_VAR resource = pxdtueus END
-COPY_EXISTING ~px1605.cre~			~override/px160541.cre~	SAY NAME1 @160541	SAY NAME2 @160541
+COPY_EXISTING ~px1605.cre~			~override/px160541.cre~	SAY NAME1 @160541	SAY NAME2 @160541	WRITE_ASCII 0x268 ~pxdmagea~ #8
 LPF ADD_CRE_EFFECT INT_VAR opcode = 146 parameter2 = 1 timing = 9 target = 1 STR_VAR resource = pxdantim END
 COPY_EXISTING ~px1605.cre~			~override/px160542.cre~	SAY NAME1 @160542	SAY NAME2 @160542
 LPF ADD_CRE_EFFECT INT_VAR opcode = 146 parameter2 = 1 timing = 9 target = 1 STR_VAR resource = pxdnegat END
@@ -709,7 +709,7 @@ COPY_EXISTING ~px1606.cre~			~override/px160611.cre~	SAY NAME1 @160611	SAY NAME2
 LPF ADD_CRE_EFFECT INT_VAR opcode = 146 parameter2 = 1 timing = 9 target = 1 STR_VAR resource = pxdmalhe END
 COPY_EXISTING ~px1606.cre~			~override/px160612.cre~	SAY NAME1 @160612	SAY NAME2 @160612
 LPF ADD_CRE_EFFECT INT_VAR opcode = 146 parameter2 = 1 timing = 9 target = 1 STR_VAR resource = pxddechi END
-COPY_EXISTING ~px1606.cre~			~override/px160613.cre~	SAY NAME1 @160613	SAY NAME2 @160613
+COPY_EXISTING ~px1606.cre~			~override/px160613.cre~	SAY NAME1 @160613	SAY NAME2 @160613	WRITE_ASCII 0x268 ~pxdmagea~ #8
 LPF ADD_CRE_EFFECT INT_VAR opcode = 146 parameter2 = 1 timing = 9 target = 1 STR_VAR resource = pxdentro END
 COPY_EXISTING ~px1606.cre~			~override/px160614.cre~	SAY NAME1 @160614	SAY NAME2 @160614
 LPF ADD_CRE_EFFECT INT_VAR opcode = 146 parameter2 = 1 timing = 9 target = 1 STR_VAR resource = pxdepuis END
@@ -727,11 +727,11 @@ COPY_EXISTING ~px1606.cre~			~override/px160620.cre~	SAY NAME1 @160620	SAY NAME2
 LPF ADD_CRE_EFFECT INT_VAR opcode = 146 parameter2 = 1 timing = 9 target = 1 STR_VAR resource = pxddesti END
 COPY_EXISTING ~px1606.cre~			~override/px160622.cre~	SAY NAME1 @160622	SAY NAME2 @160622
 LPF ADD_CRE_EFFECT INT_VAR opcode = 146 parameter2 = 1 timing = 9 target = 1 STR_VAR resource = pxdpeste END
-COPY_EXISTING ~px1606.cre~			~override/px160623.cre~	SAY NAME1 @160623	SAY NAME2 @160623
+COPY_EXISTING ~px1606.cre~			~override/px160623.cre~	SAY NAME1 @160623	SAY NAME2 @160623	WRITE_ASCII 0x268 ~pxdmagea~ #8
 LPF ADD_CRE_EFFECT INT_VAR opcode = 146 parameter2 = 1 timing = 9 target = 1 STR_VAR resource = pxdsilen END
 COPY_EXISTING ~px1606.cre~			~override/px160624.cre~	SAY NAME1 @160624	SAY NAME2 @160624
 LPF ADD_CRE_EFFECT INT_VAR opcode = 146 parameter2 = 1 timing = 9 target = 1 STR_VAR resource = pxdhorri END
-COPY_EXISTING ~px1606.cre~			~override/px160625.cre~	SAY NAME1 @160625	SAY NAME2 @160625
+COPY_EXISTING ~px1606.cre~			~override/px160625.cre~	SAY NAME1 @160625	SAY NAME2 @160625	WRITE_ASCII 0x268 ~pxdmagea~ #8
 LPF ADD_CRE_EFFECT INT_VAR opcode = 146 parameter2 = 1 timing = 9 target = 1  STR_VAR resource = pxdsipho END
 COPY_EXISTING ~px1606.cre~			~override/px160626.cre~	SAY NAME1 @160626	SAY NAME2 @160626
 LPF ADD_CRE_EFFECT INT_VAR opcode = 146 parameter2 = 1 timing = 9 target = 1 STR_VAR resource = pxdcanib END
@@ -768,7 +768,7 @@ COPY_EXISTING ~px1606.cre~			~override/px160639.cre~	SAY NAME1 @160639	SAY NAME2
 LPF ADD_CRE_EFFECT INT_VAR opcode = 146 parameter2 = 1 timing = 9 target = 1 STR_VAR resource = pxdexplo END
 COPY_EXISTING ~px1606.cre~			~override/px160640.cre~	SAY NAME1 @160640	SAY NAME2 @160640
 LPF ADD_CRE_EFFECT INT_VAR opcode = 146 parameter2 = 1 timing = 9 target = 1 STR_VAR resource = pxdtueus END
-COPY_EXISTING ~px1606.cre~			~override/px160641.cre~	SAY NAME1 @160641	SAY NAME2 @160641
+COPY_EXISTING ~px1606.cre~			~override/px160641.cre~	SAY NAME1 @160641	SAY NAME2 @160641	WRITE_ASCII 0x268 ~pxdmagea~ #8
 LPF ADD_CRE_EFFECT INT_VAR opcode = 146 parameter2 = 1 timing = 9 target = 1 STR_VAR resource = pxdantim END
 COPY_EXISTING ~px1606.cre~			~override/px160642.cre~	SAY NAME1 @160642	SAY NAME2 @160642
 LPF ADD_CRE_EFFECT INT_VAR opcode = 146 parameter2 = 1 timing = 9 target = 1 STR_VAR resource = pxdnegat END
@@ -839,7 +839,7 @@ COPY_EXISTING ~px1501.cre~			~override/px150111.cre~	SAY NAME1 @150111	SAY NAME2
 LPF ADD_CRE_EFFECT INT_VAR opcode = 146 parameter2 = 1 timing = 9 target = 1 STR_VAR resource = pxdmalhe END
 COPY_EXISTING ~px1501.cre~			~override/px150112.cre~	SAY NAME1 @150112	SAY NAME2 @150112
 LPF ADD_CRE_EFFECT INT_VAR opcode = 146 parameter2 = 1 timing = 9 target = 1 STR_VAR resource = pxddechi END
-COPY_EXISTING ~px1501.cre~			~override/px150113.cre~	SAY NAME1 @150113	SAY NAME2 @150113
+COPY_EXISTING ~px1501.cre~			~override/px150113.cre~	SAY NAME1 @150113	SAY NAME2 @150113	WRITE_ASCII 0x268 ~pxdmagea~ #8
 LPF ADD_CRE_EFFECT INT_VAR opcode = 146 parameter2 = 1 timing = 9 target = 1 STR_VAR resource = pxdentro END
 COPY_EXISTING ~px1501.cre~			~override/px150114.cre~	SAY NAME1 @150114	SAY NAME2 @150114
 LPF ADD_CRE_EFFECT INT_VAR opcode = 146 parameter2 = 1 timing = 9 target = 1 STR_VAR resource = pxdepuis END
@@ -857,11 +857,11 @@ COPY_EXISTING ~px1501.cre~			~override/px150120.cre~	SAY NAME1 @150120	SAY NAME2
 LPF ADD_CRE_EFFECT INT_VAR opcode = 146 parameter2 = 1 timing = 9 target = 1 STR_VAR resource = pxddesti END
 COPY_EXISTING ~px1501.cre~			~override/px150122.cre~	SAY NAME1 @150122	SAY NAME2 @150122
 LPF ADD_CRE_EFFECT INT_VAR opcode = 146 parameter2 = 1 timing = 9 target = 1 STR_VAR resource = pxdpeste END
-COPY_EXISTING ~px1501.cre~			~override/px150123.cre~	SAY NAME1 @150123	SAY NAME2 @150123
+COPY_EXISTING ~px1501.cre~			~override/px150123.cre~	SAY NAME1 @150123	SAY NAME2 @150123	WRITE_ASCII 0x268 ~pxdmagea~ #8
 LPF ADD_CRE_EFFECT INT_VAR opcode = 146 parameter2 = 1 timing = 9 target = 1 STR_VAR resource = pxdsilen END
 COPY_EXISTING ~px1501.cre~			~override/px150124.cre~	SAY NAME1 @150124	SAY NAME2 @150124
 LPF ADD_CRE_EFFECT INT_VAR opcode = 146 parameter2 = 1 timing = 9 target = 1 STR_VAR resource = pxdhorri END
-COPY_EXISTING ~px1501.cre~			~override/px150125.cre~	SAY NAME1 @150125	SAY NAME2 @150125
+COPY_EXISTING ~px1501.cre~			~override/px150125.cre~	SAY NAME1 @150125	SAY NAME2 @150125	WRITE_ASCII 0x268 ~pxdmagea~ #8
 LPF ADD_CRE_EFFECT INT_VAR opcode = 146 parameter2 = 1 timing = 9 target = 1  STR_VAR resource = pxdsipho END
 COPY_EXISTING ~px1501.cre~			~override/px150126.cre~	SAY NAME1 @150126	SAY NAME2 @150126
 LPF ADD_CRE_EFFECT INT_VAR opcode = 146 parameter2 = 1 timing = 9 target = 1 STR_VAR resource = pxdcanib END
@@ -898,7 +898,7 @@ COPY_EXISTING ~px1501.cre~			~override/px150139.cre~	SAY NAME1 @150139	SAY NAME2
 LPF ADD_CRE_EFFECT INT_VAR opcode = 146 parameter2 = 1 timing = 9 target = 1 STR_VAR resource = pxdexplo END
 COPY_EXISTING ~px1501.cre~			~override/px150140.cre~	SAY NAME1 @150140	SAY NAME2 @150140
 LPF ADD_CRE_EFFECT INT_VAR opcode = 146 parameter2 = 1 timing = 9 target = 1 STR_VAR resource = pxdtueus END
-COPY_EXISTING ~px1501.cre~			~override/px150141.cre~	SAY NAME1 @150141	SAY NAME2 @150141
+COPY_EXISTING ~px1501.cre~			~override/px150141.cre~	SAY NAME1 @150141	SAY NAME2 @150141	WRITE_ASCII 0x268 ~pxdmagea~ #8
 LPF ADD_CRE_EFFECT INT_VAR opcode = 146 parameter2 = 1 timing = 9 target = 1 STR_VAR resource = pxdantim END
 COPY_EXISTING ~px1501.cre~			~override/px150142.cre~	SAY NAME1 @150142	SAY NAME2 @150142
 LPF ADD_CRE_EFFECT INT_VAR opcode = 146 parameter2 = 1 timing = 9 target = 1 STR_VAR resource = pxdnegat END

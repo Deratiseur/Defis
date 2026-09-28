@@ -1,0 +1,8 @@
+IF
+	See(NearestEnemyOf(Myself))
+    !GlobalTimerNotExpired("px290b2t","LOCALS")
+THEN
+    RESPONSE #100
+        ReallyForceSpell(Myself,WIZARD_TIME_STOP)
+        SetGlobalTimer("px290b2t","LOCALS",36)
+END

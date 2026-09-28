@@ -4,5 +4,5 @@ IF
 THEN
 	RESPONSE #100
 		SetGlobal("Pxdgolem","GLOBAL",1)
-		CreateCreature("pxdgolem",[2375.1215],SSE)
+		CreateCreature("pxdgolem",[2388.1218],SE)
 END

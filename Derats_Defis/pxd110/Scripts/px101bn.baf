@@ -1,0 +1,58 @@
+IF
+	OnCreation()
+THEN
+	RESPONSE #100
+		DisplayStringHead(Myself,@11029)
+		SetGlobal("pxd101diag","PXD101",1)
+END
+
+IF
+	See(NearestEnemyOf(Myself))
+	HaveSpell(BERSERKER_RAGE)
+	!GlobalTimerNotExpired("rage","LOCALS")
+THEN
+	RESPONSE #100
+		SetGlobalTimer("rage","LOCALS",120)
+		Spell(Myself,BERSERKER_RAGE)
+		AttackReevaluate(NearestEnemyOf(Myself),45)
+END
+
+IF
+	OR(2)
+		See(NearestEnemyOfType([0.0.0.CLERIC_ALL]))
+		See(NearestEnemyOfType([0.0.0.DRUID_ALL]))
+	!Range(NearestEnemyOf(Myself),7)
+THEN
+	RESPONSE #100
+		EquipRanged()
+		AttackReevaluate(NearestEnemyOf(Myself),45)
+END
+
+IF
+	OR(2)
+		See(NearestEnemyOfType([0.0.0.CLERIC_ALL]))
+		See(NearestEnemyOfType([0.0.0.DRUID_ALL]))
+	Range(NearestEnemyOf(Myself),7)
+THEN
+	RESPONSE #100
+		EquipMostDamagingMelee()
+		AttackReevaluate(NearestEnemyOf(Myself),45)
+END
+
+IF
+	See(NearestEnemyOf(Myself))
+	!Range(NearestEnemyOf(Myself),7)
+THEN
+	RESPONSE #100
+		EquipRanged()
+		AttackReevaluate(NearestEnemyOf(Myself),45)
+END
+
+IF
+	See(NearestEnemyOf(Myself))
+	Range(NearestEnemyOf(Myself),7)
+THEN
+	RESPONSE #100
+		EquipMostDamagingMelee()
+		AttackReevaluate(NearestEnemyOf(Myself),45)
+END

@@ -1,0 +1,31 @@
+IF
+	HPPercentLT(Myself,75)
+	Global("etape1","LOCALS",0)
+THEN
+	RESPONSE #100
+
+		ReallyForceSpellRES("px200be1",Myself)
+		SetGlobal("etape1","LOCALS",1)
+END
+
+IF
+	HPPercentLT(Myself,50)
+	Global("etape2","LOCALS",0)
+THEN
+	RESPONSE #100
+
+		ReallyForceSpellRES("px200be2",Myself)
+		SetGlobal("etape2","LOCALS",1)
+END
+
+
+IF
+	HPPercentLT(Myself,25)
+	Global("etape3","LOCALS",0)
+THEN
+	RESPONSE #100
+
+		ReallyForceSpellRES("px200be3",Myself) 
+		SetGlobal("etape3","LOCALS",1)
+END
+

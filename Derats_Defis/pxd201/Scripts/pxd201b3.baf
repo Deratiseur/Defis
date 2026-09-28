@@ -1,0 +1,55 @@
+IF
+	Die()
+THEN
+	RESPONSE #100
+		ReallyForceSpellDead(Myself,ILLUSION_DEATH)
+		Wait(1)
+		DestroySelf()
+END
+
+IF
+	OR(6)
+		See(Player1)
+		See(Player2)
+		See(Player3)
+		See(Player4)
+		See(Player5)
+		See(Player6)
+	Global("px201talk","LOCALS",0)
+THEN
+	RESPONSE #100
+		SetGlobal("px201talk","LOCALS",1)
+		StartDialogueNoSet(LastSeenBy(Myself))
+END
+
+IF
+	Global("pxd201b1","LOCALS",2)
+THEN
+	RESPONSE #100
+		SetGlobal("pxd201b1","LOCALS",3)
+		SetGlobalTimer("casting","LOCALS",2)
+		StartTimer(12,6)
+		ReallyForceSpellRES("pxd201b1",Myself)
+		ReallyForceSpellRES("pxd201bs",NearestEnemyOf(Myself))
+		Wait(1)
+		ReallyForceSpellRES("pxdpala",Myself)  // No such index
+END
+
+IF
+	TimerExpired(12)
+
+THEN
+	RESPONSE #100
+		ReallyForceSpellRES("pxd201b1",Myself)
+		StartTimer(12,6)
+END
+
+IF
+	!GlobalTimerNotExpired("casting","LOCALS")
+THEN
+	RESPONSE #100
+		SetGlobalTimer("casting","LOCALS",2)
+		ReallyForceSpellRES("pxd201bs",NearestEnemyOf(Myself))
+		Wait(1)
+		ReallyForceSpellRES("pxdpala",Myself)  // No such index
+END

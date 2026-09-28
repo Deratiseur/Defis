@@ -1,0 +1,14 @@
+IF
+	OnCreation()
+THEN
+	RESPONSE #100
+		StartTimer(60,60)
+END
+
+IF
+    TimerExpired(60)
+THEN
+    RESPONSE #100
+        ReallyForceSpellRES("px105tsp",Myself)
+        StartTimer(60,60)
+END
