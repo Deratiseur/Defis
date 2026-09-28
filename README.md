@@ -18,7 +18,7 @@
 
 ### Description
 
-At the location of your choice (Athkatla, Watchtower, or Amkethran), you will encounter a diamond golem who will offer you challenges.
+At the location of your choice (Athkatla, Watchtower, or Amkethran), you will encounter a Mithril golem who will offer you challenges.
 
 Each challenge consists of an "arena" in which you will encounter dozens of random monsters and where you must find and kill the boss to claim victory.
 
@@ -32,7 +32,7 @@ There are 10 challenges to try, plus the final challenge once you've completed a
 
 ### Description
 
-À l'endroit que vous choisirez (Athkatla, Tour de garde ou Amkethran), vous rencontrerez un golem de diamant qui vous proposera de relever des défis.
+À l'endroit que vous choisirez (Athkatla, Tour de garde ou Amkethran), vous rencontrerez un golem de mithril qui vous proposera de relever des défis.
 
 Chaque défi consiste en une "arène" dans laquelle vous rencontrerez des dizaines de monstres aléatoires et où vous devrez trouver et tuer le boss pour valider la victoire.
 
