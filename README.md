@@ -10,8 +10,8 @@
 [Lien vers le sujet sur le forum français](https://www.baldursgateworld.fr/viewtopic.php?t=34557)  
 [Link to the beamdog forum](https://forums.beamdog.com/discussion/90555/mod-wip-telimgars-insurmountable-challenges/p1?new=1)  
 
-[Lien vers le lisez/moi spoiler complet du contenu du module.](Derats_Defis/Documents/Readme-French.html)  
-[Link to the full readme/spoiler for the module's content.](Derats_Defis/Documents/Readme-English.html)  
+[Lien vers le lisez/moi spoiler complet du contenu du module.](https://htmlpreview.github.io/?https://github.com/Deratiseur/Defis/blob/main/Derats_Defis/Documents/Readme-French.html)  
+[Link to the full readme/spoiler for the module's content.](https://htmlpreview.github.io/?https://github.com/Deratiseur/Defis/blob/main/Derats_Defis/Documents/Readme-English.html)  
 
 <table>
 <tr>
