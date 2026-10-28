@@ -173,7 +173,6 @@ COPY_EXISTING ~pxdvenim.spl~		~override/pxdvampi.spl~	WRITE_ASCII 0xae ~pxdvamp1
 COPY_EXISTING ~pxdepuis.spl~		~override/pxddirig.spl~	WRITE_ASCII 0xae ~pxddirix~ #8	WRITE_ASCII 0xde ~pxddirvf~ #8	WRITE_ASCII 0x10e ~pxddirvb~ #8	WRITE_BYTE 0x9e 6
 COPY_EXISTING ~sareveff.eff~		~override/pxddirix.eff~	WRITE_ASCII 0x30 ~pxddirix~ #8
 COPY_EXISTING ~pxdentrv.vvc~		~override/pxddirvf.vvc~	WRITE_ASCII 0x8 ~pxddirif~ #8	WRITE_BYTE 0x2c 5
-COPY_EXISTING ~pxdentrv.vvc~		~override/pxddirvb.vvc~	WRITE_ASCII 0x8 ~pxddirib~ #8	WRITE_BYTE 0x2c ~-10~
 //35 - Nécromantique
 COPY_EXISTING ~pxdrayon.spl~		~override/pxdnecro.spl~	WRITE_ASCII 0xae ~pxdnecrx~ #8	WRITE_BYTE 0x9e 12
 COPY_EXISTING ~sareveff.eff~		~override/pxdnecrx.eff~	WRITE_ASCII 0x30 ~pxdnecrx~ #8
@@ -357,4 +356,9 @@ COPY ~Derats_Defis/pxd105/items/Discombulateur/pxl2ppyr.itm~	~override~	SAY NAME
 COPY ~Derats_Defis/pxd105/items/Discombulateur/pxl2refl.itm~	~override~	SAY NAME2 @50155	SAY DESC @50156 //Baume de réflexion
 COPY_EXISTING	~dam5.eff~						~override/pxl2cpy1.eff~	WRITE_BYTE 0x1c 0	WRITE_BYTE 0x38 1	WRITE_BYTE 0x3c 6	WRITE_BYTE 0x22 8
 COPY ~Derats_Defis/pxd105/items/Discombulateur/pxl2vorp.itm~	~override~	SAY NAME2 @50157	SAY DESC @50158 //Filtre de vorpalité
+COPY ~Derats_Magasin_2/Objets/Discombulateur/pxl2daur.itm~	~override~	SAY NAME2 @50159	SAY DESC @50160 //Filtre d'aura de feu
+COPY_EXISTING	~dam5.eff~						~override/pxl2daur.eff~	WRITE_BYTE 0x1c 0	WRITE_BYTE 0x38 1	WRITE_BYTE 0x3c 10	WRITE_BYTE 0x22 8
+COPY ~Derats_Magasin_2/Objets/Discombulateur/pxl2xp15.itm~	~override~	SAY NAME2 @50161	SAY DESC @50162 //Potion d’expérience concentrée
+COPY ~Derats_Magasin_2/Objets/Discombulateur/pxl2ech1.itm~	~override/pxl2ech2.itm~	SAY NAME2 @50163	SAY DESC @50164 //Huile de résonance magique majeure
+	WRITE_ASCII 0x76 ~pxl2ech2~ #8	WRITE_ASCII 0x3a ~pxl2ech2~ #8	WRITE_BYTE 0x13e 5
 END

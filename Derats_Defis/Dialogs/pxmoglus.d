@@ -103,3 +103,23 @@ IF ~~ THEN BEGIN maintenant2 SAY @200034
 	IF ~~ THEN REPLY @200023 GOTO apport
 	IF ~~ THEN REPLY @200024 GOTO poignard
 END
+
+IF ~~ THEN BEGIN liptzitn1
+	SAY @20127
+	IF ~~ THEN EXTERN ~pxd201b~ moglusretour2
+END
+
+IF ~~ THEN BEGIN liptzitn2
+	SAY @20129
+	IF ~~ THEN EXTERN ~pxd201b~ moglusretour3
+END
+
+IF ~~ THEN BEGIN liptzitn3
+	SAY @20131
+	IF ~~ THEN EXTERN ~pxd201b~ moglusretour4
+END
+
+IF ~~ THEN BEGIN liptzitn4
+	SAY @20133
+	IF ~~ THEN EXIT
+END

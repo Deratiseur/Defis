@@ -31,6 +31,17 @@ THEN
 	RESPONSE #100
 		Spell(Myself,CLERIC_HEAL)
 END
+
+IF
+	OR(3)
+		SpellCast([ANYONE],WIZARD_INCENDIARY_CLOUD)
+		SpellCast([ANYONE],WIZARD_CLOUDKILL)
+		SpellCast([ANYONE],WIZARD_DEATH_FOG)
+	HaveSpell(CLERIC_ZONE_OF_SWEET_AIR)
+THEN
+	RESPONSE #100
+		Spell(Myself,CLERIC_ZONE_OF_SWEET_AIR)
+END
 		
 IF
 	See(NearestEnemyOf(Myself))
@@ -40,17 +51,7 @@ THEN
 	RESPONSE #100
 		Spell(Myself,NPC_BLADE_BARRIER)
 		SetGlobalTimer("Barrier","LOCALS",TEN_ROUNDS)
-		Continue()
 END
-
-IF
-	HPPercentLT(Myself,40)
-	HaveSpell(CLERIC_HEAL)
-THEN
-	RESPONSE #100
-		Spell(Myself,CLERIC_HEAL)
-END
-
 
 IF
 	CheckStat(Myself,1,SANCTUARY)
@@ -71,14 +72,6 @@ THEN
 		DisplayStringHead(Myself,@11025)
 		ApplySpell(Myself,WARRIOR_HARDINESS)
 		SetGlobal("pxd101tome","LOCALS",1)
-END
-
-IF
-	HPPercentLT(Myself,40)
-	HaveSpell(CLERIC_HEAL)
-THEN
-	RESPONSE #100
-		Spell(Myself,CLERIC_HEAL)
 END
 
 IF
@@ -122,14 +115,6 @@ END
 
 IF
 	HPPercentLT(Myself,40)
-	HaveSpell(CLERIC_HEAL)
-THEN
-	RESPONSE #100
-		Spell(Myself,CLERIC_HEAL)
-END
-
-IF
-	HPPercentLT(Myself,40)
 	Global("pxd101devin","LOCALS",0)
 	!HaveSpell(CLERIC_HEAL)
 THEN
@@ -163,14 +148,6 @@ THEN
 END	
 
 IF
-	HPPercentLT(Myself,40)
-	HaveSpell(CLERIC_HEAL)
-THEN
-	RESPONSE #100
-		Spell(Myself,CLERIC_HEAL)
-END
-
-IF
 	HaveSpell(CLERIC_AERIAL_SERVANT)
 THEN
 	RESPONSE #100
@@ -180,6 +157,7 @@ END
 IF
 	!GlobalTimerNotExpired("TrueSeeing","LOCALS")
 	Detect(NearestEnemyOf(Myself))
+	HaveSpell(CLERIC_TRUE_SIGHT)
 	OR(12)
 		StateCheck(NearestEnemyOf(Myself),STATE_INVISIBLE)
 		StateCheck(NearestEnemyOf(Myself),STATE_IMPROVEDINVISIBILITY)
@@ -196,7 +174,7 @@ IF
 THEN
 	RESPONSE #100
 		SetGlobalTimer("TrueSeeing","LOCALS",TEN_ROUNDS)
-		SpellNoDec(Myself,CLERIC_TRUE_SIGHT)
+		Spell(Myself,CLERIC_TRUE_SIGHT)
 		Continue()
 END
 
@@ -209,13 +187,6 @@ THEN
 	Spell(Myself,CLERIC_DEFENSIVE_HARMONY)
 END	
 
-IF
-	HPPercentLT(Myself,40)
-	HaveSpell(CLERIC_HEAL)
-THEN
-	RESPONSE #100
-		Spell(Myself,CLERIC_HEAL)
-END
 
 IF
 	See(NearestEnemyOf(Myself))
@@ -223,14 +194,6 @@ IF
 THEN
 	RESPONSE #100
 		Spell(LastSeenBy(Myself),CLERIC_SYMBOL_STUN)
-END
-
-IF
-	HPPercentLT(Myself,40)
-	HaveSpell(CLERIC_HEAL)
-THEN
-	RESPONSE #100
-		Spell(Myself,CLERIC_HEAL)
 END
 
 IF
@@ -245,28 +208,12 @@ THEN
 END
 
 IF
-	HPPercentLT(Myself,40)
-	HaveSpell(CLERIC_HEAL)
-THEN
-	RESPONSE #100
-		Spell(Myself,CLERIC_HEAL)
-END
-
-IF
 	HaveSpell(CLERIC_POISON)
 	See(NearestEnemyOfType([0.0.0.MAGE_ALL]))
 	!StateCheck(LastSeenBy(Myself),STATE_POISONED)
 THEN
 	RESPONSE #100
 		Spell(LastSeenBy(Myself),CLERIC_POISON)
-END
-
-IF
-	HPPercentLT(Myself,40)
-	HaveSpell(CLERIC_HEAL)
-THEN
-	RESPONSE #100
-		Spell(Myself,CLERIC_HEAL)
 END
 
 IF
@@ -279,45 +226,15 @@ THEN
 END
 
 IF
-	HPPercentLT(Myself,40)
-	HaveSpell(CLERIC_HEAL)
-THEN
-	RESPONSE #100
-		Spell(Myself,CLERIC_HEAL)
-END
-
-IF
 	HaveSpell(CLERIC_FLAME_STRIKE)
 	OR(3)
 		See(NearestEnemyOfType([0.0.0.MAGE_ALL]))
-		See(NearestEnemyOfType([0.0.0.THIEF_ALL]))
+		See(NearestEnemyOfType([0.0.0.CLERIC_ALL]))
+		See(NearestEnemyOfType([0.0.0.DRUID_ALL]))
 		See(NearestEnemyOfType([0.0.0.BARD_ALL]))
 THEN
 	RESPONSE #100
 		Spell(LastSeenBy(Myself),CLERIC_FLAME_STRIKE)
-END
-
-IF
-	HPPercentLT(Myself,40)
-	HaveSpell(CLERIC_HEAL)
-THEN
-	RESPONSE #100
-		Spell(Myself,CLERIC_HEAL)
-END
-
-IF
-	HaveSpell(CLERIC_AERIAL_SERVANT)
-THEN
-	RESPONSE #100
-		Spell(Myself,CLERIC_AERIAL_SERVANT)
-END
-
-IF
-	HPPercentLT(Myself,40)
-	HaveSpell(CLERIC_HEAL)
-THEN
-	RESPONSE #100
-		Spell(Myself,CLERIC_HEAL)
 END
 
 IF
@@ -335,23 +252,8 @@ IF
 THEN
 	RESPONSE #100
 		Spell(LastSeenBy(Myself),ENEMY_CLERIC_HARM)
-END
-
-IF
-	See(NearestEnemyOf(Myself))
-	HPLT(LastSeenBy(Myself),10)
-THEN
-	RESPONSE #100
 		EquipMostDamagingMelee()
 		AttackReevaluate(LastSeenBy(Myself),30)
-END
-
-IF
-	HPPercentLT(Myself,40)
-	HaveSpell(CLERIC_HEAL)
-THEN
-	RESPONSE #100
-		Spell(Myself,CLERIC_HEAL)
 END
 
 IF
@@ -364,19 +266,11 @@ THEN
 END
 
 IF
-	HPPercentLT(Myself,40)
-	HaveSpell(CLERIC_HEAL)
-THEN
-	RESPONSE #100
-		Spell(Myself,CLERIC_HEAL)
-END
-
-IF
 	CheckStatLT(Myself,19,STR)
-	HaveSpell(CLERIC_HOLY_POWER)
+	HaveSpell(CLERIC_DRAW_UPON_HOLY_MIGHT)
 THEN
 	RESPONSE #100
-		Spell(Myself,CLERIC_HOLY_POWER)
+		Spell(Myself,CLERIC_DRAW_UPON_HOLY_MIGHT)
 END
 
 
@@ -390,7 +284,6 @@ END
 
 IF
 	See(NearestEnemyOf(Myself))
-	Range(NearestEnemyOf(Myself),7)
 THEN
 	RESPONSE #100
 		EquipMostDamagingMelee()

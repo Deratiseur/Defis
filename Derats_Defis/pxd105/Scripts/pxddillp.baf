@@ -1,4 +1,35 @@
 IF
+	Global("pxdillbook","GLOBAL",0)
+	PartyHasItem("pxl2dill")
+	See(Player1)
+THEN
+	RESPONSE #100
+		SetGlobal("pxdillbook","GLOBAL",3)
+		StartDialogueNoSet(Player1)
+END
+
+IF
+	Global("pxdillbook","GLOBAL",2)
+THEN
+	RESPONSE #100
+		ChangeEnemyAlly(Myself,NEUTRAL)
+		ForceSpell(Myself,DRYAD_TELEPORT) 
+		Wait(1)
+		DestroySelf()
+END
+
+IF
+	Global("pxdtelim","GLOBAL",2)
+	!Exists("pxdtelim")
+	!Exists("pxdgrod")
+THEN
+	RESPONSE #100
+		ForceSpell(Myself,DRYAD_TELEPORT)
+		Wait(1)
+		DestroySelf()
+END
+
+IF
     CheckStatGT(Myself,0,AURACLEANSING)
     GlobalTimerNotExpired("casting","LOCALS")
 THEN
@@ -33,7 +64,7 @@ IF
 	!GlobalTimerNotExpired("casting","LOCALS")
 	CheckStatLT(Myself,90,SPELLFAILUREMAGE)
 	!CheckStatGT(Myself,0,CLERIC_INSECT_PLAGUE)
-	GlobalGT("px105dilp","LOCALS",6)
+	GlobalGT("px105dilp","LOCALS",5)
     See(NearestEnemyOf(Myself))
 	HaveSpell(WIZARD_IMPROVED_ALACRITY) 
 	CheckStat(Myself,0,AURACLEANSING)
@@ -53,17 +84,31 @@ THEN
 		UseItem("PXPASOIN",Myself)
 END
 
+// Protection de secours lorsque l'Image réfléchie majeure n'est plus disponible.
 IF
-	Global("pxdtelim","GLOBAL",2)
-	See(NearestEnemyOf(Myself))
-	Global("px105dilp","LOCALS",0)
+	AttackedBy([ANYONE],DEFAULT)
+    HPPercentLT(Myself,60)
+    !HaveSpellRES("pxdimagr")
+    HasItem("PXL2DPRT",Myself)
+    See(NearestEnemyOf(Myself))
+THEN
+    RESPONSE #100
+        DisplayStringHead(Myself,@1052199)
+        UseItem("PXL2DPRT",Myself) //Potion de protection Totale
+END
+
+IF
+    Global("pxdtelim","GLOBAL",2)
+    Global("px105dilp","LOCALS",0)
+	!GlobalTimerNotExpired("casting","LOCALS")
+    See(NearestEnemyOf(Myself))
 THEN
     RESPONSE #100
 		DisplayStringHead(Myself,@1052199)
-		UseItem("PXL2DPRT",Myself)
-		SetGlobalTimer("casting","LOCALS",ONE_ROUND)
-		StartTimer(60,60)
+		UseItem("PXL2DPUI",Myself) //Potion de puissance extrême // dommages +150%
+        StartTimer(60,60)
         SetGlobal("px105dilp","LOCALS",1)
+		SetGlobalTimer("casting","LOCALS",ONE_ROUND)
 END
 
 IF
@@ -73,10 +118,11 @@ IF
 THEN
     RESPONSE #100
 		DisplayStringHead(Myself,@1052199)
-		UseItem("PXL2DPUI",Myself)
+		UseItem("PXL2DPSY",Myself)	//Potion de psychomagie // temps d'incantation fixé à 1
         SetGlobal("px105dilp","LOCALS",2)
 		SetGlobalTimer("casting","LOCALS",ONE_ROUND)
 END
+
 
 IF
 	Global("px105dilp","LOCALS",2)
@@ -85,11 +131,10 @@ IF
 THEN
     RESPONSE #100
 		DisplayStringHead(Myself,@1052199)
-		UseItem("PXL2DPSY",Myself)
+		UseItem("PXL2DMAG",Myself) //Élixir de Magica incarna //Immu armes magiques et sorts, sorts infinis
         SetGlobal("px105dilp","LOCALS",3)
 		SetGlobalTimer("casting","LOCALS",ONE_ROUND)
 END
-
 
 IF
 	Global("px105dilp","LOCALS",3)
@@ -98,7 +143,7 @@ IF
 THEN
     RESPONSE #100
 		DisplayStringHead(Myself,@1052199)
-		UseItem("XL2DMAG",Myself)
+		UseItem("PXL2DVIT",Myself) //Potion de vitesse absolue //Arrêt du temps
         SetGlobal("px105dilp","LOCALS",4)
 		SetGlobalTimer("casting","LOCALS",ONE_ROUND)
 END
@@ -110,22 +155,8 @@ IF
 THEN
     RESPONSE #100
 		DisplayStringHead(Myself,@1052199)
-		UseItem("PXL2DVIT",Myself)
+		UseItem("PXL2DNET",Myself) //Potion de nettoyage d'aura //Enchaînement
         SetGlobal("px105dilp","LOCALS",5)
-		SetGlobalTimer("casting","LOCALS",ONE_ROUND)
-END
-
-IF
-	Global("px105dilp","LOCALS",5)
-	!GlobalTimerNotExpired("casting","LOCALS")
-	CheckStatLT(Myself,90,SPELLFAILUREMAGE)
-	!CheckStatGT(Myself,0,CLERIC_INSECT_PLAGUE)
-    See(NearestEnemyOf(Myself))
-	HaveSpell(WIZARD_IMPROVED_ALACRITY) 
-THEN
-    RESPONSE #100
-		Spell(Myself,WIZARD_IMPROVED_ALACRITY) 
-        SetGlobal("px105dilp","LOCALS",6)
 		SetGlobalTimer("casting","LOCALS",ONE_ROUND)
 END
 
@@ -136,27 +167,28 @@ IF
 THEN
     RESPONSE #100
 		DisplayStringHead(Myself,@1052199)
-		UseItem("PXL2DBAN",Myself)
+		UseItem("PXL2DBAN",Myself) //Potion de blocage de magie antinomique // Immu sorts lvl 7 à 9 et immu arrêt du temp  
         SetGlobal("px105tel60","LOCALS",1)
 		SetGlobalTimer("casting","LOCALS",ONE_ROUND)
 END
 
 IF
 	Global("px105tel60","LOCALS",1)
-	CheckStat(Myself,0,MINORGLOBE)
 	!GlobalTimerNotExpired("casting","LOCALS")
 	CheckStatLT(Myself,90,SPELLFAILUREMAGE)
 	!CheckStatGT(Myself,0,CLERIC_INSECT_PLAGUE)
-	HaveSpell(WIZARD_GLOBE_OF_INVULNERABILITY) 
+	HaveSpell(WIZARD_GLOBE_OF_INVULNERABILITY)
+	!GlobalTimerNotExpired("pxdglobe_active","LOCALS")
 THEN
     RESPONSE #100
 		Spell(Myself,WIZARD_GLOBE_OF_INVULNERABILITY)
+		SetGlobalTimer("pxdglobe_active","LOCALS",90)
 		SetGlobalTimer("casting","LOCALS",ONE_ROUND)
 		SetGlobal("px105time1","GLOBAL",1)
 END
 
 IF
-	Global("px105dilp","LOCALS",6)
+	Global("px105dilp","LOCALS",5)
 	!GlobalTimerNotExpired("casting","LOCALS")
 	CheckStatLT(Myself,90,SPELLFAILUREMAGE)
 	!CheckStatGT(Myself,0,CLERIC_INSECT_PLAGUE)
@@ -164,22 +196,24 @@ IF
 	HaveSpellRES("pxl2pmtu")
 THEN
     RESPONSE #100
-		SpellRES("pxl2pmtu",NearestEnemyOf(Myself)) 
-        SetGlobal("px105dilp","LOCALS",7)
+		SpellRES("pxl2pmtu",NearestEnemyOf(Myself)) //Malédiction de la mort qui tue
+        SetGlobal("px105dilp","LOCALS",6)
 		SetGlobalTimer("casting","LOCALS",ONE_ROUND)
 END
 
 
 IF
 	AttackedBy([ANYONE],DEFAULT)
+	!GlobalTimerNotExpired("pxdimagr_active","LOCALS")
 	!GlobalTimerNotExpired("casting","LOCALS")
 	CheckStatLT(Myself,90,SPELLFAILUREMAGE)
 	!CheckStatGT(Myself,0,CLERIC_INSECT_PLAGUE)
     See(NearestEnemyOf(Myself))
-	HaveSpellRES("pxdimagr")
+	HaveSpellRES("pxdimagr") //Image réfléchie majeure
 THEN
     RESPONSE #100
 		SpellRES("pxdimagr",Myself) 
+		SetGlobalTimer("pxdimagr_active","LOCALS",90)
 		SetGlobalTimer("casting","LOCALS",ONE_ROUND)		
 END
 
@@ -198,6 +232,7 @@ THEN
 END
 
 IF
+	!GlobalTimerNotExpired("pxdimagr_active","LOCALS")
  	!GlobalTimerNotExpired("casting","LOCALS")
  	CheckStatLT(Myself,90,SPELLFAILUREMAGE)
  	!CheckStatGT(Myself,0,CLERIC_INSECT_PLAGUE)
@@ -205,7 +240,8 @@ IF
     HaveSpellRES("pxdimagr")
 THEN
     RESPONSE #100
-        SpellRES("pxdimagr",Myself) 
+        SpellRES("pxdimagr",Myself) //Image réfléchie majeure
+		SetGlobalTimer("pxdimagr_active","LOCALS",90)
         SetGlobalTimer("casting","LOCALS",ONE_ROUND)
 END
 
@@ -251,7 +287,7 @@ IF
     See(NearestEnemyOf(Myself))
 	!HaveSpell(WIZARD_STONE_SKIN) 
 	HaveSpell(WIZARD_PROTECTION_FROM_MAGIC_WEAPONS)
-	!CheckStatGT(Myself,0,WIZARD_PROTECTION_FROM_MAGIC_WEAPONS)
+	!CheckSpellState(Myself,PROTECTION_FROM_MAGICAL_WEAPONS)
 THEN
     RESPONSE #100
 		Spell(Myself,WIZARD_PROTECTION_FROM_MAGIC_WEAPONS)
@@ -268,6 +304,7 @@ IF
 	CheckStatLT(Myself,90,SPELLFAILUREMAGE)
 	!CheckStatGT(Myself,0,CLERIC_INSECT_PLAGUE)
     See(NearestEnemyOf(Myself))
+	!CheckSpellState(Myself,PROTECTION_FROM_THE_ELEMENTS)
 	HaveSpell(WIZARD_PROTECTION_FROM_THE_ELEMENTS) 
 THEN
     RESPONSE #100
@@ -303,6 +340,18 @@ THEN
 END
 
 IF
+	!GlobalTimerNotExpired("casting","LOCALS")
+	CheckStatLT(Myself,90,SPELLFAILUREMAGE)
+	!CheckStatGT(Myself,0,CLERIC_INSECT_PLAGUE)
+    See(NearestEnemyOf(Myself))
+    HaveSpellRES("pxl2pnov")
+THEN
+    RESPONSE #100
+        SpellRES("pxl2pnov",NearestEnemyOf(Myself)) //Nova de destruction absolue
+        SetGlobalTimer("casting","LOCALS",ONE_ROUND)
+END
+
+IF
  	!GlobalTimerNotExpired("casting","LOCALS")
  	CheckStatLT(Myself,90,SPELLFAILUREMAGE)
  	!CheckStatGT(Myself,0,CLERIC_INSECT_PLAGUE)
@@ -310,7 +359,7 @@ IF
     HaveSpellRES("pxl2ptyr")
 THEN
     RESPONSE #100
-        SpellRES("pxl2ptyr",NearestEnemyOf(Myself)) 
+        SpellRES("pxl2ptyr",NearestEnemyOf(Myself)) //Convocation de tyrannoeil
         SetGlobalTimer("casting","LOCALS",ONE_ROUND)
 END
 
@@ -324,7 +373,7 @@ CheckStatLT(Myself,90,SPELLFAILUREMAGE)
     HaveSpellRES("pxddilp1")
 THEN
     RESPONSE #100
-        SpellRES("pxddilp1",NearestEnemyOf(Myself)) 
+        SpellRES("pxddilp1",NearestEnemyOf(Myself)) //Séquenceur : 3x Projectile Arc-en-ciel
         SetGlobalTimer("casting","LOCALS",ONE_ROUND)
 		SetGlobal("px105300","LOCALS",1)
 END
@@ -347,11 +396,13 @@ IF
 		StateCheck(FifthNearestEnemyOf(Myself),STATE_IMPROVEDINVISIBILITY)
 		StateCheck(SixthNearestEnemyOf(Myself),STATE_INVISIBLE)
 		StateCheck(SixthNearestEnemyOf(Myself),STATE_IMPROVEDINVISIBILITY)
-	HaveSpell(WIZARD_TRUE_SIGHT) 
+	HaveSpell(WIZARD_TRUE_SIGHT)
+	!GlobalTimerNotExpired("pxdtrue_active","LOCALS")
 THEN
 	RESPONSE #100
 		SetGlobalTimer("casting","LOCALS",ONE_ROUND)
 		Spell(Myself,WIZARD_TRUE_SIGHT)
+		SetGlobalTimer("pxdtrue_active","LOCALS",60)
 END
 
 IF
@@ -363,7 +414,7 @@ IF
     HaveSpellRES("pxl2ptrc")
 THEN
     RESPONSE #100
-        SpellRES("pxl2ptrc",NearestEnemyOf(Myself)) 
+        SpellRES("pxl2ptrc",NearestEnemyOf(Myself)) //Atroce tranchoir de Dillpater
         SetGlobalTimer("casting","LOCALS",ONE_ROUND)
 END
 
@@ -375,7 +426,7 @@ IF
     HaveSpellRES("pxl2pbru")
 THEN
     RESPONSE #100
-        SpellRES("pxl2pbru",NearestEnemyOf(Myself)) 
+        SpellRES("pxl2pbru",NearestEnemyOf(Myself)) //Brume de Sombremort
         SetGlobalTimer("casting","LOCALS",ONE_ROUND)
 END
 
@@ -383,51 +434,23 @@ IF
 	!GlobalTimerNotExpired("casting","LOCALS")
 	CheckStatLT(Myself,90,SPELLFAILUREMAGE)
 	!CheckStatGT(Myself,0,CLERIC_INSECT_PLAGUE)
-    See(NearestEnemyOf(Myself))
-    HaveSpellRES("pxl2pnov")
+	See(FourthNearestEnemyOf(Myself))
+	HaveSpellRES("pxl2porb")
 THEN
     RESPONSE #100
-        SpellRES("pxl2pnov",NearestEnemyOf(Myself)) 
+        SpellRES("pxl2porb",NearestEnemyOf(Myself)) //Orbe prismatique
         SetGlobalTimer("casting","LOCALS",ONE_ROUND)
-END
 
-
-IF
-    See(SecondNearestEnemyOf(Myself))
-	!GlobalTimerNotExpired("casting","LOCALS")
-	CheckStatLT(Myself,90,SPELLFAILUREMAGE)
-	!CheckStatGT(Myself,0,CLERIC_INSECT_PLAGUE)
-    HaveSpellRES("pxl2porb")
-	RandomNum(3,1)
-THEN
     RESPONSE #100
-        SpellRES("pxl2porb",SecondNearestEnemyOf(Myself)) 
+        SpellRES("pxl2porb",SecondNearestEnemyOf(Myself)) //Orbe prismatique
         SetGlobalTimer("casting","LOCALS",ONE_ROUND)
-END
 
-IF
-    See(ThirdNearestEnemyOf(Myself))
-	!GlobalTimerNotExpired("casting","LOCALS")
-	CheckStatLT(Myself,90,SPELLFAILUREMAGE)
-	!CheckStatGT(Myself,0,CLERIC_INSECT_PLAGUE)
-    HaveSpellRES("pxl2porb")
-	RandomNum(3,2)
-THEN
     RESPONSE #100
-        SpellRES("pxl2porb",ThirdNearestEnemyOf(Myself)) 
+        SpellRES("pxl2porb",ThirdNearestEnemyOf(Myself)) //Orbe prismatique
         SetGlobalTimer("casting","LOCALS",ONE_ROUND)
-END
 
-IF
-    See(FourthNearestEnemyOf(Myself))
- 	!GlobalTimerNotExpired("casting","LOCALS")
- 	CheckStatLT(Myself,90,SPELLFAILUREMAGE)
- 	!CheckStatGT(Myself,0,CLERIC_INSECT_PLAGUE)
-    HaveSpellRES("pxl2porb")
-	RandomNum(3,3)
-THEN
     RESPONSE #100
-        SpellRES("pxl2porb",FourthNearestEnemyOf(Myself)) 
+        SpellRES("pxl2porb",FourthNearestEnemyOf(Myself)) //Orbe prismatique
         SetGlobalTimer("casting","LOCALS",ONE_ROUND)
 END
 
@@ -435,11 +458,53 @@ IF
 	!GlobalTimerNotExpired("casting","LOCALS")
 	CheckStatLT(Myself,90,SPELLFAILUREMAGE)
 	!CheckStatGT(Myself,0,CLERIC_INSECT_PLAGUE)
-    See(NearestEnemyOf(Myself))
-    HaveSpellRES("pxl2porb")
+	!See(FourthNearestEnemyOf(Myself))
+	See(ThirdNearestEnemyOf(Myself))
+	HaveSpellRES("pxl2porb")
 THEN
     RESPONSE #100
-        SpellRES("pxl2porb",NearestEnemyOf(Myself)) 
+        SpellRES("pxl2porb",NearestEnemyOf(Myself)) //Orbe prismatique
+        SetGlobalTimer("casting","LOCALS",ONE_ROUND)
+
+    RESPONSE #100
+        SpellRES("pxl2porb",SecondNearestEnemyOf(Myself)) //Orbe prismatique
+        SetGlobalTimer("casting","LOCALS",ONE_ROUND)
+
+    RESPONSE #100
+        SpellRES("pxl2porb",ThirdNearestEnemyOf(Myself)) //Orbe prismatique
+        SetGlobalTimer("casting","LOCALS",ONE_ROUND)
+END
+
+IF
+	!GlobalTimerNotExpired("casting","LOCALS")
+	CheckStatLT(Myself,90,SPELLFAILUREMAGE)
+	!CheckStatGT(Myself,0,CLERIC_INSECT_PLAGUE)
+	!See(FourthNearestEnemyOf(Myself))
+	!See(ThirdNearestEnemyOf(Myself))
+	See(SecondNearestEnemyOf(Myself))
+	HaveSpellRES("pxl2porb")
+THEN
+    RESPONSE #100
+        SpellRES("pxl2porb",NearestEnemyOf(Myself)) //Orbe prismatique
+        SetGlobalTimer("casting","LOCALS",ONE_ROUND)
+
+    RESPONSE #100
+        SpellRES("pxl2porb",SecondNearestEnemyOf(Myself)) //Orbe prismatique
+        SetGlobalTimer("casting","LOCALS",ONE_ROUND)
+END
+
+IF
+	!GlobalTimerNotExpired("casting","LOCALS")
+	CheckStatLT(Myself,90,SPELLFAILUREMAGE)
+	!CheckStatGT(Myself,0,CLERIC_INSECT_PLAGUE)
+	!See(FourthNearestEnemyOf(Myself))
+	!See(ThirdNearestEnemyOf(Myself))
+	!See(SecondNearestEnemyOf(Myself))
+	See(NearestEnemyOf(Myself))
+	HaveSpellRES("pxl2porb")
+THEN
+    RESPONSE #100
+        SpellRES("pxl2porb",NearestEnemyOf(Myself)) //Orbe prismatique
         SetGlobalTimer("casting","LOCALS",ONE_ROUND)
 END
 
@@ -456,106 +521,80 @@ THEN
 END
 
 IF
-    !GlobalTimerNotExpired("casting","LOCALS")
-    CheckStatLT(Myself,90,SPELLFAILUREMAGE)
-    !CheckStatGT(Myself,0,CLERIC_INSECT_PLAGUE)
-    NumCreatureGT([PC],3)
-    RandomNum(3,1)
-    HaveSpellRES("pxdnuatu")
+	!GlobalTimerNotExpired("casting","LOCALS")
+	CheckStatLT(Myself,90,SPELLFAILUREMAGE)
+	!CheckStatGT(Myself,0,CLERIC_INSECT_PLAGUE)
+	See(FourthNearestEnemyOf(Myself))
+	HaveSpellRES("pxdnuatu")
 THEN
-    RESPONSE #100
-        SpellRES("pxdnuatu",SecondNearest([PC]))
-        SetGlobalTimer("casting","LOCALS",ONE_ROUND)
+	RESPONSE #100
+		SpellRES("pxdnuatu",NearestEnemyOf(Myself))//Nuage tueur de troll
+		SetGlobalTimer("casting","LOCALS",ONE_ROUND)
+
+	RESPONSE #100
+		SpellRES("pxdnuatu",SecondNearestEnemyOf(Myself))//Nuage tueur de troll
+		SetGlobalTimer("casting","LOCALS",ONE_ROUND)
+
+	RESPONSE #100
+		SpellRES("pxdnuatu",ThirdNearestEnemyOf(Myself))//Nuage tueur de troll
+		SetGlobalTimer("casting","LOCALS",ONE_ROUND)
+
+	RESPONSE #100
+		SpellRES("pxdnuatu",FourthNearestEnemyOf(Myself))//Nuage tueur de troll
+		SetGlobalTimer("casting","LOCALS",ONE_ROUND)
 END
 
 IF
-    !GlobalTimerNotExpired("casting","LOCALS")
-    CheckStatLT(Myself,90,SPELLFAILUREMAGE)
-    !CheckStatGT(Myself,0,CLERIC_INSECT_PLAGUE)
-    NumCreatureGT([PC],3)
-    RandomNum(3,2)
-    HaveSpellRES("pxdnuatu")
+	!GlobalTimerNotExpired("casting","LOCALS")
+	CheckStatLT(Myself,90,SPELLFAILUREMAGE)
+	!CheckStatGT(Myself,0,CLERIC_INSECT_PLAGUE)
+	!See(FourthNearestEnemyOf(Myself))
+	See(ThirdNearestEnemyOf(Myself))
+	HaveSpellRES("pxdnuatu")
 THEN
-    RESPONSE #100
-        SpellRES("pxdnuatu",ThirdNearest([PC]))
-        SetGlobalTimer("casting","LOCALS",ONE_ROUND)
+	RESPONSE #100
+		SpellRES("pxdnuatu",NearestEnemyOf(Myself))//Nuage tueur de troll
+		SetGlobalTimer("casting","LOCALS",ONE_ROUND)
+
+	RESPONSE #100
+		SpellRES("pxdnuatu",SecondNearestEnemyOf(Myself))//Nuage tueur de troll
+		SetGlobalTimer("casting","LOCALS",ONE_ROUND)
+
+	RESPONSE #100
+		SpellRES("pxdnuatu",ThirdNearestEnemyOf(Myself))//Nuage tueur de troll
+		SetGlobalTimer("casting","LOCALS",ONE_ROUND)
 END
 
 IF
-    !GlobalTimerNotExpired("casting","LOCALS")
-    CheckStatLT(Myself,90,SPELLFAILUREMAGE)
-    !CheckStatGT(Myself,0,CLERIC_INSECT_PLAGUE)
-    NumCreatureGT([PC],3)
-    RandomNum(3,3)
-    HaveSpellRES("pxdnuatu")
+	!GlobalTimerNotExpired("casting","LOCALS")
+	CheckStatLT(Myself,90,SPELLFAILUREMAGE)
+	!CheckStatGT(Myself,0,CLERIC_INSECT_PLAGUE)
+	!See(FourthNearestEnemyOf(Myself))
+	!See(ThirdNearestEnemyOf(Myself))
+	See(SecondNearestEnemyOf(Myself))
+	HaveSpellRES("pxdnuatu")
 THEN
-    RESPONSE #100
-        SpellRES("pxdnuatu",FourthNearest([PC]))
-        SetGlobalTimer("casting","LOCALS",ONE_ROUND)
+	RESPONSE #100
+		SpellRES("pxdnuatu",NearestEnemyOf(Myself))//Nuage tueur de troll
+		SetGlobalTimer("casting","LOCALS",ONE_ROUND)
+
+	RESPONSE #100
+		SpellRES("pxdnuatu",SecondNearestEnemyOf(Myself))//Nuage tueur de troll
+		SetGlobalTimer("casting","LOCALS",ONE_ROUND)
 END
 
 IF
-    !GlobalTimerNotExpired("casting","LOCALS")
-    CheckStatLT(Myself,90,SPELLFAILUREMAGE)
-    !CheckStatGT(Myself,0,CLERIC_INSECT_PLAGUE)
-    NumCreature([PC],3)
-    RandomNum(2,1)
-    HaveSpellRES("pxdnuatu")
+	!GlobalTimerNotExpired("casting","LOCALS")
+	CheckStatLT(Myself,90,SPELLFAILUREMAGE)
+	CheckStatGT(Myself,0,CLERIC_INSECT_PLAGUE)
+	!See(FourthNearestEnemyOf(Myself))
+	!See(ThirdNearestEnemyOf(Myself))
+	!See(SecondNearestEnemyOf(Myself))
+	HaveSpellRES("pxdnuatu")
 THEN
-    RESPONSE #100
-        SpellRES("pxdnuatu",SecondNearest([PC]))
-        SetGlobalTimer("casting","LOCALS",ONE_ROUND)
-END
-
-IF
-    !GlobalTimerNotExpired("casting","LOCALS")
-    CheckStatLT(Myself,90,SPELLFAILUREMAGE)
-    !CheckStatGT(Myself,0,CLERIC_INSECT_PLAGUE)
-    NumCreature([PC],3)
-    RandomNum(2,2)
-    HaveSpellRES("pxdnuatu")
-THEN
-    RESPONSE #100
-        SpellRES("pxdnuatu",ThirdNearest([PC]))
-        SetGlobalTimer("casting","LOCALS",ONE_ROUND)
-END
-
-IF
-    !GlobalTimerNotExpired("casting","LOCALS")
-    CheckStatLT(Myself,90,SPELLFAILUREMAGE)
-    !CheckStatGT(Myself,0,CLERIC_INSECT_PLAGUE)
-    NumCreature([PC],2)
-    RandomNum(2,1)
-    HaveSpellRES("pxdnuatu")
-THEN
-    RESPONSE #100
-        SpellRES("pxdnuatu",Nearest([PC]))
-        SetGlobalTimer("casting","LOCALS",ONE_ROUND)
-END
-
-IF
-    !GlobalTimerNotExpired("casting","LOCALS")
-    CheckStatLT(Myself,90,SPELLFAILUREMAGE)
-    !CheckStatGT(Myself,0,CLERIC_INSECT_PLAGUE)
-    NumCreature([PC],2)
-    RandomNum(2,2)
-    HaveSpellRES("pxdnuatu")
-THEN
-    RESPONSE #100
-        SpellRES("pxdnuatu",SecondNearest([PC]))
-        SetGlobalTimer("casting","LOCALS",ONE_ROUND)
-END
-
-IF
-    !GlobalTimerNotExpired("casting","LOCALS")
-    CheckStatLT(Myself,90,SPELLFAILUREMAGE)
-    !CheckStatGT(Myself,0,CLERIC_INSECT_PLAGUE)
-    NumCreature([PC],1)
-    HaveSpellRES("pxdnuatu")
-THEN
-    RESPONSE #100
-        SpellRES("pxdnuatu",Nearest([PC]))
-        SetGlobalTimer("casting","LOCALS",ONE_ROUND)
+	RESPONSE #100
+		SpellRES("pxdnuatu",NearestEnemyOf(Myself))//Nuage tueur de troll
+		SetGlobalTimer("casting","LOCALS",ONE_ROUND)
 END
 
 IF
@@ -566,111 +605,85 @@ IF
     HaveSpellRES("pxdaffli")
 THEN
     RESPONSE #100
-        SpellRES("pxdaffli",NearestEnemyOf(Myself)) 
+        SpellRES("pxdaffli",NearestEnemyOf(Myself)) //Affliction
         SetGlobalTimer("casting","LOCALS",ONE_ROUND)
 END
 
 IF
-    !GlobalTimerNotExpired("casting","LOCALS")
-    CheckStatLT(Myself,90,SPELLFAILUREMAGE)
-    !CheckStatGT(Myself,0,CLERIC_INSECT_PLAGUE)
-    NumCreatureGT([PC],3)
-    RandomNum(3,1)
-    HaveSpellRES("pxdproja")
+	!GlobalTimerNotExpired("casting","LOCALS")
+	CheckStatLT(Myself,90,SPELLFAILUREMAGE)
+	!CheckStatGT(Myself,0,CLERIC_INSECT_PLAGUE)
+	See(FourthNearestEnemyOf(Myself))
+	HaveSpellRES("pxdproja")
 THEN
-    RESPONSE #100
-        SpellRES("pxdproja",SecondNearest([PC]))
-        SetGlobalTimer("casting","LOCALS",ONE_ROUND)
+	RESPONSE #100
+		SpellRES("pxdproja",NearestEnemyOf(Myself))//Projectile Arc-en-ciel
+		SetGlobalTimer("casting","LOCALS",ONE_ROUND)
+
+	RESPONSE #100
+		SpellRES("pxdproja",SecondNearestEnemyOf(Myself))//Projectile Arc-en-ciel
+		SetGlobalTimer("casting","LOCALS",ONE_ROUND)
+
+	RESPONSE #100
+		SpellRES("pxdproja",ThirdNearestEnemyOf(Myself))//Projectile Arc-en-ciel
+		SetGlobalTimer("casting","LOCALS",ONE_ROUND)
+
+	RESPONSE #100
+		SpellRES("pxdproja",FourthNearestEnemyOf(Myself))//Projectile Arc-en-ciel
+		SetGlobalTimer("casting","LOCALS",ONE_ROUND)
 END
 
 IF
-    !GlobalTimerNotExpired("casting","LOCALS")
-    CheckStatLT(Myself,90,SPELLFAILUREMAGE)
-    !CheckStatGT(Myself,0,CLERIC_INSECT_PLAGUE)
-    NumCreatureGT([PC],3)
-    RandomNum(3,2)
-    HaveSpellRES("pxdproja")
+	!GlobalTimerNotExpired("casting","LOCALS")
+	CheckStatLT(Myself,90,SPELLFAILUREMAGE)
+	!CheckStatGT(Myself,0,CLERIC_INSECT_PLAGUE)
+	!See(FourthNearestEnemyOf(Myself))
+	See(ThirdNearestEnemyOf(Myself))
+	HaveSpellRES("pxdproja")
 THEN
-    RESPONSE #100
-        SpellRES("pxdproja",ThirdNearest([PC]))
-        SetGlobalTimer("casting","LOCALS",ONE_ROUND)
+	RESPONSE #100
+		SpellRES("pxdproja",NearestEnemyOf(Myself))//Projectile Arc-en-ciel
+		SetGlobalTimer("casting","LOCALS",ONE_ROUND)
+
+	RESPONSE #100
+		SpellRES("pxdproja",SecondNearestEnemyOf(Myself))//Projectile Arc-en-ciel
+		SetGlobalTimer("casting","LOCALS",ONE_ROUND)
+
+	RESPONSE #100
+		SpellRES("pxdproja",ThirdNearestEnemyOf(Myself))//Projectile Arc-en-ciel
+		SetGlobalTimer("casting","LOCALS",ONE_ROUND)
 END
 
 IF
-    !GlobalTimerNotExpired("casting","LOCALS")
-    CheckStatLT(Myself,90,SPELLFAILUREMAGE)
-    !CheckStatGT(Myself,0,CLERIC_INSECT_PLAGUE)
-    NumCreatureGT([PC],3)
-    RandomNum(3,3)
-    HaveSpellRES("pxdproja")
+	!GlobalTimerNotExpired("casting","LOCALS")
+	CheckStatLT(Myself,90,SPELLFAILUREMAGE)
+	!CheckStatGT(Myself,0,CLERIC_INSECT_PLAGUE)
+	!See(FourthNearestEnemyOf(Myself))
+	!See(ThirdNearestEnemyOf(Myself))
+	See(SecondNearestEnemyOf(Myself))
+	HaveSpellRES("pxdproja")
 THEN
-    RESPONSE #100
-        SpellRES("pxdproja",FourthNearest([PC]))
-        SetGlobalTimer("casting","LOCALS",ONE_ROUND)
+	RESPONSE #100
+		SpellRES("pxdproja",NearestEnemyOf(Myself))//Projectile Arc-en-ciel
+		SetGlobalTimer("casting","LOCALS",ONE_ROUND)
+
+	RESPONSE #100
+		SpellRES("pxdproja",SecondNearestEnemyOf(Myself))//Projectile Arc-en-ciel
+		SetGlobalTimer("casting","LOCALS",ONE_ROUND)
 END
 
 IF
-    !GlobalTimerNotExpired("casting","LOCALS")
-    CheckStatLT(Myself,90,SPELLFAILUREMAGE)
-    !CheckStatGT(Myself,0,CLERIC_INSECT_PLAGUE)
-    NumCreature([PC],3)
-    RandomNum(2,1)
-    HaveSpellRES("pxdproja")
+	!GlobalTimerNotExpired("casting","LOCALS")
+	CheckStatLT(Myself,90,SPELLFAILUREMAGE)
+	CheckStatGT(Myself,0,CLERIC_INSECT_PLAGUE)
+	!See(FourthNearestEnemyOf(Myself))
+	!See(ThirdNearestEnemyOf(Myself))
+	!See(SecondNearestEnemyOf(Myself))
+	HaveSpellRES("pxdproja")
 THEN
-    RESPONSE #100
-        SpellRES("pxdproja",SecondNearest([PC]))
-        SetGlobalTimer("casting","LOCALS",ONE_ROUND)
-END
-
-IF
-    !GlobalTimerNotExpired("casting","LOCALS")
-    CheckStatLT(Myself,90,SPELLFAILUREMAGE)
-    !CheckStatGT(Myself,0,CLERIC_INSECT_PLAGUE)
-    NumCreature([PC],3)
-    RandomNum(2,2)
-    HaveSpellRES("pxdproja")
-THEN
-    RESPONSE #100
-        SpellRES("pxdproja",ThirdNearest([PC]))
-        SetGlobalTimer("casting","LOCALS",ONE_ROUND)
-END
-
-IF
-    !GlobalTimerNotExpired("casting","LOCALS")
-    CheckStatLT(Myself,90,SPELLFAILUREMAGE)
-    !CheckStatGT(Myself,0,CLERIC_INSECT_PLAGUE)
-    NumCreature([PC],2)
-    RandomNum(2,1)
-    HaveSpellRES("pxdproja")
-THEN
-    RESPONSE #100
-        SpellRES("pxdproja",Nearest([PC]))
-        SetGlobalTimer("casting","LOCALS",ONE_ROUND)
-END
-
-IF
-    !GlobalTimerNotExpired("casting","LOCALS")
-    CheckStatLT(Myself,90,SPELLFAILUREMAGE)
-    !CheckStatGT(Myself,0,CLERIC_INSECT_PLAGUE)
-    NumCreature([PC],2)
-    RandomNum(2,2)
-    HaveSpellRES("pxdproja")
-THEN
-    RESPONSE #100
-        SpellRES("pxdproja",SecondNearest([PC]))
-        SetGlobalTimer("casting","LOCALS",ONE_ROUND)
-END
-
-IF
-    !GlobalTimerNotExpired("casting","LOCALS")
-    CheckStatLT(Myself,90,SPELLFAILUREMAGE)
-    !CheckStatGT(Myself,0,CLERIC_INSECT_PLAGUE)
-    NumCreature([PC],1)
-    HaveSpellRES("pxdproja")
-THEN
-    RESPONSE #100
-        SpellRES("pxdproja",Nearest([PC]))
-        SetGlobalTimer("casting","LOCALS",ONE_ROUND)
+	RESPONSE #100
+		SpellRES("pxdproja",NearestEnemyOf(Myself))//Projectile Arc-en-ciel
+		SetGlobalTimer("casting","LOCALS",ONE_ROUND)
 END
 
 IF
@@ -681,17 +694,14 @@ IF
     HaveSpellRES("pxdorbeg")
 THEN
     RESPONSE #100
-        SpellRES("pxdorbeg",NearestEnemyOf(Myself)) 
+        SpellRES("pxdorbeg",NearestEnemyOf(Myself)) //Orbe de glace
         SetGlobalTimer("casting","LOCALS",ONE_ROUND)
 END
 
 IF
-    See(NearestEnemyOf(Myself))
-    OR(3)
-        !HaveAnySpells()
-        CheckStatGT(Myself,99,SPELLFAILUREMAGE)
-        CheckStatGT(Myself,0,CLERIC_INSECT_PLAGUE)
+    !HaveAnySpells()
 THEN
     RESPONSE #100
-        AttackOneRound(NearestEnemyOf(Myself))
+        ForceSpell(Myself,DRYAD_TELEPORT)
+        DestroySelf()
 END

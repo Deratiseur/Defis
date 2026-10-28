@@ -146,7 +146,7 @@ COPY ~Derats_Defis/pxd105/Dilp/pxl2pmtu.spl~	~override~	SAY NAME1 @13083	SAY UNI
 //Repos magique
 COPY ~Derats_Defis/pxd105/Dilp/pxl2prep.spl~	~override~	SAY NAME1 @13091	SAY UNIDENTIFIED_DESC @13092
 //Orbe prismatique
-COPY_EXISTING	~chromorb.pro~			~override/pxl2can1.pro~	WRITE_ASCII 0x104 ~SPPRISM2~ #8	WRITE_BYTE 0xa 50
+COPY_EXISTING	~chromorb.pro~		~override/pxl2can1.pro~	WRITE_ASCII 0x104 ~SPPRISM2~ #8	WRITE_BYTE 0xa 50
 ADD_PROJECTILE	~override/pxl2can1.pro~ ~pxl2_Magic_cannon~
 COPY ~Derats_Defis/pxd105/Dilp/pxl2porb.spl~	~override~	SAY NAME1 @13099	SAY UNIDENTIFIED_DESC @130910	WRITE_SHORT 0x98 ~%pxl2can1%~
 //Brume de Sombremort

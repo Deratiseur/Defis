@@ -8,3 +8,13 @@ THEN
         Kill(Myself)
         AddexperienceParty(8000)
 END
+
+IF
+	Global("pxtelimcounted","LOCALS",0)
+	Die()
+	SpellCastOnMeRES("PXL2PNV1",[ANYONE])
+THEN
+	RESPONSE #100
+		SetGlobal("pxtelimcounted","LOCALS",1)
+		IncrementGlobal("telimrep","GLOBAL",1)
+END

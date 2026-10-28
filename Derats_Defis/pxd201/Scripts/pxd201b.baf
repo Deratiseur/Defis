@@ -8,6 +8,15 @@ THEN
 END
 
 IF
+	Global("pxmoglus","GLOBAL",1)
+	Global("pxmoglip","LOCALS",0)
+	See("pxmoglus")
+THEN
+	RESPONSE #100
+		StartDialogueNoSet(Player1)
+END
+
+IF
 	OR(6)
 		See(Player1)
 		See(Player2)

@@ -1,4 +1,3 @@
-
 IF
     Global("px105telim","LOCALS",0)
 THEN
@@ -20,6 +19,38 @@ THEN
     RESPONSE #100
         SetGlobal("px105telim","LOCALS",2)
         StartDialogueNoSet(LastSeenBy(Myself))
+END
+
+IF
+	GlobalGT("telimrep","GLOBAL",0)
+	Global("pxtelimreaction","GLOBAL",0)
+THEN
+	RESPONSE #100
+		SetGlobal("pxtelimreaction","GLOBAL",1)
+		SetGlobalTimer("pxtelimrepwait","GLOBAL",12)
+		StartDialogueNoSet(Player1)
+END
+
+IF
+	GlobalGT("telimrep","GLOBAL",1)
+	Global("pxtelimreaction","GLOBAL",2)
+	GlobalTimerExpired("pxtelimrepwait","GLOBAL")
+	Global("pxgrodDill","GLOBAL",1)
+THEN
+	RESPONSE #100
+		SetGlobal("pxtelimreaction","GLOBAL",3)
+		StartDialogueNoSet(Player1)
+END
+
+IF
+	GlobalGT("telimrep","GLOBAL",1)
+	Global("pxtelimreaction","GLOBAL",2)
+	GlobalTimerExpired("pxtelimrepwait","GLOBAL")
+	Global("pxgrodDill","GLOBAL",0)
+THEN
+	RESPONSE #100
+		SetGlobal("pxtelimreaction","GLOBAL",3)
+		StartDialogueNoSet(Player1)
 END
 
 IF
@@ -133,14 +164,14 @@ THEN
 END
 
 IF
-	Global("px105telim","LOCALS",7)
+	Global("px105telim","LOCALS",8)
 	!GlobalTimerNotExpired("casting","LOCALS")
 THEN
     RESPONSE #100
 		ReallyForceSpell(NearestEnemyOf(Myself),WIZARD_GREATER_MALISON) 
 		IncrementGlobal("telim4","LOCALS",1)
 		SetGlobalTimer("casting","LOCALS",ONE_ROUND)
-        SetGlobal("px105telim","LOCALS",8)
+        SetGlobal("px105telim","LOCALS",9)
 END
 
 IF
@@ -198,6 +229,7 @@ THEN
 	RESPONSE #100	
 		DisplayStringHead(Myself,@11025)
 		ApplySpell(Myself,CLERIC_RESTORATION)
+		SetGlobal("px105telpurg","LOCALS",0)
 		SetGlobal("telim9","LOCALS",0)
 		SetGlobal("telim8","LOCALS",0)
 		SetGlobal("telim7","LOCALS",0)
@@ -218,7 +250,7 @@ IF
 	!GlobalTimerNotExpired("casting","LOCALS")
 THEN
 	RESPONSE #100
-		ReallyForceSpellRES("pxdteli3",NearestEnemyOf(Myself)) 
+		ReallyForceSpellRES("pxdteli3",LastSeenBy(Myself)) 
 		SetGlobal("105telarow","LOCALS",1)
 		SetGlobalTimer("casting","LOCALS",ONE_ROUND)
 END
@@ -226,7 +258,7 @@ END
 IF
 	!GlobalTimerNotExpired("casting","LOCALS")
 	See(NearestEnemyOfType([0.0.0.MAGE_ALL]))
-	!CheckStat(LastSeenBy(Myself),0,MINORGLOBE)
+	CheckStat(LastSeenBy(Myself),0,MINORGLOBE)
 	Global("105telmelf","LOCALS",0)
 THEN
 	RESPONSE #100
@@ -248,7 +280,7 @@ IF
 		CheckSpellState(LastSeenBy(Myself),ABSOLUTE_IMMUNITY)
 THEN
 	RESPONSE #100
-		ReallyForceSpell(NearestEnemyOf(Myself),WIZARD_BREACH) 
+		ReallyForceSpell(LastSeenBy(Myself),WIZARD_BREACH) 
 		IncrementGlobal("telim5","LOCALS",1)
 		SetGlobalTimer("casting","LOCALS",ONE_ROUND)
 END
@@ -260,7 +292,7 @@ IF
 	!GlobalTimerNotExpired("casting","LOCALS")
 THEN
 	RESPONSE #100
-		ReallyForceSpell(NearestEnemyOf(Myself),WIZARD_POWER_WORD_KILL) 
+		ReallyForceSpell(LastSeenBy(Myself),WIZARD_POWER_WORD_KILL) 
 		IncrementGlobal("telim9","LOCALS",1)
 		SetGlobalTimer("casting","LOCALS",ONE_ROUND)
 END
@@ -283,7 +315,7 @@ THEN
 		IncrementGlobal("telim8","LOCALS",1)
 		SetGlobalTimer("casting","LOCALS",ONE_ROUND)
 	RESPONSE #100
-		ReallyForceSpell(NearestEnemyOf(Myself),WIZARD_MAZE) 
+		ReallyForceSpell(NearestEnemyOf(Myself),WIZARD_POWER_WORD_BLIND) 
 		IncrementGlobal("telim8","LOCALS",1)
 		SetGlobalTimer("casting","LOCALS",ONE_ROUND)
 END
@@ -325,7 +357,7 @@ THEN
 		IncrementGlobal("telim7","LOCALS",1)
 		SetGlobalTimer("casting","LOCALS",ONE_ROUND)
 	RESPONSE #100
-		ReallyForceSpell(NearestEnemyOf(Myself),WIZARD_POWER_WORD_STUN) 
+		ReallyForceSpell(NearestEnemyOf(Myself),WIZARD_MASS_INVISIBILITY) 
 		IncrementGlobal("telim7","LOCALS",1)
 		SetGlobalTimer("casting","LOCALS",ONE_ROUND)
 	RESPONSE #100
@@ -395,6 +427,10 @@ THEN
 		SetGlobalTimer("casting","LOCALS",ONE_ROUND)
 	RESPONSE #100
 		ReallyForceSpell(NearestEnemyOf(Myself),WIZARD_VAMPIRIC_TOUCH) 
+		IncrementGlobal("telim3","LOCALS",1)
+		SetGlobalTimer("casting","LOCALS",ONE_ROUND)
+	RESPONSE #100
+		ReallyForceSpell(NearestEnemyOf(Myself),WIZARD_HASTE)
 		IncrementGlobal("telim3","LOCALS",1)
 		SetGlobalTimer("casting","LOCALS",ONE_ROUND)
 END

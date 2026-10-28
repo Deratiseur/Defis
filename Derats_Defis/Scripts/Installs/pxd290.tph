@@ -97,7 +97,9 @@ LPF ADD_CRE_EFFECT INT_VAR opcode = 206 target = 1 timing = 9 STR_VAR resource =
 COPY ~Derats_Defis/pxd208/Blob2/Cres/px2902.cre~	~override~	SAY NAME1 @29002	SAY NAME2 @29002	LPF Anti290 END
 COPY ~Derats_Defis/pxd208/Blob2/Cres/px290x.cre~	~override~	SAY NAME1 @29003	SAY NAME2 @29003	LPF Anti290 END
 COPY ~Derats_Defis/pxd208/Blob2/Cres/px2903.cre~	~override~	SAY NAME1 @29004	SAY NAME2 @29004	LPF Anti290 END	WRITE_ASCII 0x268 ~~ #8
-COPY_EXISTING	~pxl2vac1.spl~				~override/pxl2vac2.spl~	WRITE_SHORT 0x98 ~%pxl2nova%~
+COPY_EXISTING	~inarea.pro~				~override/pxl2vach.pro~	WRITE_SHORT 0x204 170	WRITE_SHORT 0x206 170
+ADD_PROJECTILE	~override/pxl2vach.pro~ ~pxl2_Cow_fall~
+COPY_EXISTING	~pxl2vac1.spl~				~override/pxl2vac2.spl~	WRITE_SHORT 0x98 ~%pxl2vach%~
 COPY_EXISTING ~ohbminsu.cre~		~override/px2904.cre~	SAY NAME1 @29005	SAY NAME2 @29005	LPF Anti290 END	WRITE_BYTE 0x275 1	WRITE_ASCII 0x248 ~pxd290vc~ #8
 REPLACE_CRE_ITEM  "ax1h17" #0 #0 #0 undroppable weapon EQUIP	REMOVE_CRE_ITEM ~Mage01~ 
 COPY ~Derats_Defis/pxd208/Blob2/Cres/px2905.cre~	~override~	SAY NAME1 @29006	SAY NAME2 @29006	LPF Anti290 END
@@ -762,8 +764,6 @@ COPY_EXISTING ~px290y.cre~			~override/px290y45.cre~	SAY NAME1 @290545	SAY NAME2
 LPF ADD_CRE_EFFECT INT_VAR opcode = 146 parameter2 = 1 timing = 9 target = 1 STR_VAR resource = pxdrefra END
 COPY_EXISTING ~px290y.cre~			~override/px290y46.cre~	SAY NAME1 @290546	SAY NAME2 @290546
 LPF ADD_CRE_EFFECT INT_VAR opcode = 146 parameter2 = 1 timing = 9 target = 1 STR_VAR resource = pxdtempo END
-COPY_EXISTING ~px290y.cre~			~override/px290y47.cre~	SAY NAME1 @290547	SAY NAME2 @290547
-LPF ADD_CRE_EFFECT INT_VAR opcode = 146 parameter2 = 1 timing = 9 target = 1 STR_VAR resource = pxdprote END
 COPY_EXISTING ~px290y.cre~			~override/px290y48.cre~	SAY NAME1 @290548	SAY NAME2 @290548
 LPF ADD_CRE_EFFECT INT_VAR opcode = 146 parameter2 = 1 timing = 9 target = 1 STR_VAR resource = pxdsourc END
 //Répliquant
