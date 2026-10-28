@@ -782,3 +782,38 @@ Each strike with this weapon has a 5% chance of killing the target (death saving
 Duration: 3 turns
 
 Weight: 1~
+
+@50159 = ~Fire Aura Philter~
+@50160 = ~This philter creates a circle of crackling flames around the drinker.
+
+STATISTICS:
+
+Fire Resistance: +100%
+Armor Class: +4
+Immunity to nonmagical weapons
+Melee retaliation: 2D10+2 points of fire damage
+Melee weapons deal an additional 1D10 points of fire damage
+
+Duration: 10 turns
+
+Weight: 1~
+
+@50161 = ~Potion of Concentrated Experience~
+@50162 = ~This potion is normally used as a reserve by memory eaters.
+
+STATISTICS:
+
+The drinker gains 15,000 experience points.
+
+Weight: 1~
+
+@50163 = ~Greater Magical Resonance Oil~
+@50164 = ~This oil can be applied to a melee weapon, temporarily increasing its enchantment level.
+
+STATISTICS:
+
+- The equipped weapon becomes +5.
+
+- Duration: 5 rounds
+
+Weight: 1~
