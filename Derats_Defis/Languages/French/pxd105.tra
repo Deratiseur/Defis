@@ -6,19 +6,6 @@
 @1055 = ~Bienvenue, aventuriers. Bravo pour avoir survécu à tous les précédents défis. Nous voilà donc réunis pour l'acte final. Et bravo pour avoir vaincu l'anomalie. Votre nom sera inscrit au panthéon des héros. Cependant, sachez qu'ici votre puissance sera mise à l'épreuve sans commune mesure avec tout ce que vous avez connu jusqu’à présent dans mes défis. Alors, que le massacre commence ! Oh, avant ça, laissez-moi vous donner un conseil : n'utilisez pas le portail portable ici. Vraiment, ne l'utilisez pas.~
 @1056 = ~Bienvenue, aventuriers. Bravo pour avoir survécu à tous les précédents défis. Et bravo pour avoir vaincu l'anomalie et le paragon de la vengeance des vaches. Votre nom sera inscrit au panthéon des illustres. Sachez cependant qu'ici votre puissance sera mise à l'épreuve sans commune mesure avec tout ce que vous avez connu jusqu’à présent dans mes défis. Alors, que le massacre commence ! Ah, et laissez-moi vous donner deux conseils : n'utilisez pas le portail portable ici. Ce serait une mauvaise idée. Et n'utilisez pas la Pulvérisatrice sur moi. Je l'ai créée, pensez bien que j'ai prévu ce qu'il faut pour qu'elle ne m'affecte pas.~
 
-/*
-@1057 = ~Vous ne m'avez pas "en votre pouvoir". J'ai vaincu tous vos pathétiques "Boss", vous ne faites pas le poids face à moi.~
-@1058 = ~Pourquoi parler autant ? Finissons-en.~
-@1059 = ~Le panthéon des vainqueurs ? Celui inscrit dans l'Antimaginium ? Celui sur lequel un nom est effacé ?~
-@10510 = ~C'est mon nom qui manque. Je ne suis pas mort, et je n'ai rien à faire sur une liste de morts.~
-@10511 = ~Que faites-vous ici, alors ?~
-@10512 = ~Je recherche le pouvoir, quoi d'autre ? Ce que je veux, c'est le livre de sorts de vos magiciens. Ce que veut Telim'Gar, c'est le corps de vos guerriers. Et ce que veut Grod, c'est massacrer ceux qui restent, et offrir leurs âmes à son maître.~
-*/
-
-//Texte de bienvenue trop formel. À retoucher
-
-//texte de bienvenue dès que les héros arrivent dans la zone
-
 
 //Texte quand les héros voient Telim'Gar pour la première fois :
 @1057 = ~Eh oui, je suis un golem. Je sais ce que vous pensez, mais vous vous trompez : je ne suis pas un golem : je suis un mage qui a transféré son âme dans un golem. La plupart des mages cherchent l'immortalité en devenant des liches. Pas moi. Finir à terme en tant que simple crâne obsédé par les âmes, très peu pour moi. J'ai préféré demander au forgeron de créer un golem indestructible, et j'y ai transféré mon âme. J'avoue que le forgeron s'est surpassé : ce nouveau corps qui est le mien est virtuellement invulnérable.~

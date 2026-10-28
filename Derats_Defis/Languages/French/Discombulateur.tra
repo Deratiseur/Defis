@@ -1,8 +1,20 @@
 @501 = ~Potion de soins importants~
-@502 = ~Entièrement bue, cette potion restaure 18 points de vie. L'effet est instantané et la potion est détruite dans le processus.~
+@502 = ~Entièrement bue, cette potion restaure 18 points de vie. L'effet est instantané et la potion est détruite dans le processus.
+
+PARAMÈTRES :
+
+Spécial : Restaure 18 points de vie.
+
+Poids : 1~
 @503 = ~Potion de soins suprême~
-@504 = ~Entièrement bue, cette potion restaure 60 points de vie. L'effet est instantané et la potion est détruite dans le processus.~
-@505 = ~Potion de force de géant des collines*~
+@504 = ~Entièrement bue, cette potion restaure 60 points de vie. L'effet est instantané et la potion est détruite dans le processus.
+
+PARAMÈTRES :
+
+Spécial : Restaure 60 points de vie.
+
+Poids : 1~
+@505 = ~Potion de  force de géant des collines*~
 @506 = ~Quiconque boit une potion de force de géant acquiert une force surhumaine et des bonus de toucher et de dégâts quand il utilise une arme de mêlée ou de jet. L'effet de la potion dure 10 tours.
 
 PARAMÈTRES :
@@ -11,7 +23,7 @@ Force : 19
 Durée : 10 tours
 
 Poids : 1~
-@507 = ~Potion de force de géant de pierre*~
+@507 = ~Potion de  force de géant de pierre*~
 @508 = ~Quiconque boit une potion de force de géant acquiert une force surhumaine et des bonus de toucher et de dégâts quand il utilise une arme de mêlée ou de jet. L'effet de la potion dure 10 tours.
 
 PARAMÈTRES :
@@ -20,7 +32,7 @@ Force : 20
 Durée : 10 tours
 
 Poids : 1~
-@509 = ~Potion de force de géant du froid*~
+@509 = ~Potion de  force de géant du froid*~
 @5010 = ~Quiconque boit une potion de force de géant acquiert une force surhumaine et des bonus de toucher et de dégâts quand il utilise une arme de mêlée ou de jet. L'effet de la potion dure 10 tours.
 
 PARAMÈTRES :
@@ -29,7 +41,7 @@ Force : 21
 Durée : 10 tours
 
 Poids : 1~
-@5011 = ~Potion de force de géant de feu*~
+@5011 = ~Potion de  force de géant de feu*~
 @5012 = ~Quiconque boit une potion de force de géant acquiert une force surhumaine et des bonus de toucher et de dégâts quand il utilise une arme de mêlée ou de jet. L'effet de la potion dure 10 tours.
 
 PARAMÈTRES :
@@ -38,7 +50,7 @@ Force : 22
 Durée : 10 tours
 
 Poids : 1~
-@5013 = ~Potion de force de géant des nuages*~
+@5013 = ~Potion de  force de géant des nuages*~
 @5014 = ~Quiconque boit une potion de force de géant acquiert une force surhumaine et des bonus de toucher et de dégâts quand il utilise une arme de mêlée ou de jet. L'effet de la potion dure 10 tours.
 
 PARAMÈTRES :
@@ -47,7 +59,7 @@ Force : 23
 Durée : 10 tours
 
 Poids : 1~
-@5015 = ~Potion de force de géant des tempêtes*~
+@5015 = ~Potion de  force de géant des tempêtes*~
 @5016 = ~Quiconque boit une potion de force de géant acquiert une force surhumaine et des bonus de toucher et de dégâts quand il utilise une arme de mêlée ou de jet. L'effet de la potion dure 10 tours.
 
 PARAMÈTRES :
@@ -80,8 +92,7 @@ Poids : 1~
 
 PARAMÈTRES :
 
-Charisme : +1
-Intelligence : +1
+Charisme  et Intelligence : +1
 Dextérité : -1
 Durée : permanente
 
@@ -117,12 +128,11 @@ Durée : permanente
 
 Poids : 1~
 @5029 = ~Potion de bestialité~
-@5030 = ~Peu de potions de ce type ont été préparées et leur recette a été perdue. Conçues à l'époque de l'empire de Néthéril pour les prélats des Églises, elles augmentaient leurs capacités physiques aux dépens de leur capacité à réfléchir.
+@5030 = ~Peu de potions de ce type ont été préparées et leur recette a été perdue. Conçues à l'époque de l'empire de Néthéril pour les prélats des Églises, elles augmentaient leurs capacités physiques au dépend de leur capacité à réfléchir.
 
 PARAMÈTRES :
 
-Force : +1
-Dextérité : +1
+Force et Dextérité : +1
 Intelligence : -2
 Durée : permanente
 
@@ -159,8 +169,7 @@ Poids : 1~
 
 PARAMÈTRES :
 
-Résistance au feu : +5%
-Résistance au froid : +5%
+Résistance au feu et au froid : +5%
 Durée : permanente
 
 Poids : 1~
@@ -171,9 +180,9 @@ Poids : 1~
 PARAMÈTRES :
 
 Guerriers/paladins/rôdeurs : +8 points de vie maximum
-Prêtres/druides/moines : +6 points de vie maximum
-Voleurs/bardes : +4 points de vie maximum
-Magiciens/ensorceleurs : +2 points de vie maximum
+Prêtres/druide/moine : +6 points de vie maximum
+Voleur/barde : +4 points de vie maximum
+Magicien/ensorceleur : +2 points de vie maximum
 Durée : permanente
 
 Poids : 1~
@@ -191,8 +200,7 @@ Poids : 1~
 
 PARAMÈTRES :
 
-Résistance aux attaques tranchantes : +5%
-Résistance aux attaques perforantes : +5%
+Résistance aux attaques tranchantes et perforantes : +5%
 Durée : permanente
 
 Poids : 1~
@@ -211,7 +219,7 @@ Poids : 1~
 PARAMÈTRES :
 
 Intelligence : +1
-Résistance à la magie : +5%
++5% de résistance à la magie
 Durée : permanente
 
 Poids : 1~
@@ -220,7 +228,7 @@ Poids : 1~
 
 PARAMÈTRES :
 
-Résistance à la magie : +10%
++10% de résistance à la magie
 Durée : permanente
 
 Poids : 1~
@@ -229,7 +237,7 @@ Poids : 1~
 
 PARAMÈTRES :
 
-Résistance à la magie : +15%
++15% de résistance à la magie
 Durée : permanente
 
 Poids : 1~
@@ -305,9 +313,8 @@ Poids : 1~
 PARAMÈTRES :
 
 Immunité contre la magie
-Durée : 3 rounds
+Durée : 3 rounds~
 
-Poids : 1~
 @5069 = ~Potion de vitalité supérieure~
 @5070 = ~Ce breuvage augmente la vitalité du buveur.
 
@@ -322,7 +329,7 @@ Spécial : 1% de chance à la fin de l'effet de la potion d'avoir gagné 2 poin
 Poids : 1~
 
 @5071 = ~Potion d'accélération~
-@5072 = ~Cette potion permet d’attaquer et de prononcer les incantations plus vite.
+@5072 = ~Cette potion permet d’attaquer et de prononcer les incantation plus vite.
 
 PARAMÈTRES :
 
@@ -344,7 +351,7 @@ Durée : 5 tours.
 
 Poids : 1~
 @5075 = ~Potion de Rajeunissement total~
-@5076 = ~Bue entièrement, cette potion guérit le buveur de tous ses maux et le recharge en magie.
+@5076 = ~Bue entièrement , cette potion guéri le buveur de tous ses maux et le recharge en magie.
 
 PARAMÈTRES :
 
@@ -358,7 +365,7 @@ Poids : 1~
 PARAMÈTRES :
 
 Statistiques, Classe d'armure et Aide : +4
-Résistances physiques, élémentaires, magiques et à la magie : + 50%
+Résistances physiques, élémentaires, magique et à la magie : + 50%
 Durée : 10 tours
 
 Poids : 1~
@@ -420,7 +427,7 @@ Spécial : Soigne le poison et la maladie, annule la fatigue et guérit 65 point
 
 Poids : 1~
 @5091 = ~Soin miracle~
-@5092 = ~Ce puissant élixir guérit toutes les blessures et afflictions de celui qui le boit.
+@5092 = ~Ce puissant Élixir guéri toutes les blessures et afflictions de celui qui le boit.
 
 PARAMÈTRES :
 
@@ -429,7 +436,7 @@ Guérison
 Poids : 1~
 
 @5093 = ~Revitalisant~
-@5094 = ~Le liquide visqueux contenu dans cette fiole a le pouvoir d'améliorer celui qui l’ingurgite
+@5094 = ~Le liquide visqueux contenu dans cette fiole à le pouvoir d'améliorer celui qui l’ingurgite
 
 Toutes les caractéristiques : +2
 Durée : 10 tours
@@ -442,10 +449,10 @@ Celle-ci viendrait d'un autre "univers".
 
 PARAMÈTRES :
 
-Points de vie maximum : +25
-Régénération : 5 points de vie par vie
+Points de vie maximum +25
+Régénération de cinq point de vie par round
 TAC0 : +6
-Classe d'armure : +3
+Classe d'armure +3
 Durée : 10 tours
 
 Poids : 1~
@@ -456,14 +463,14 @@ Celle-ci viendrait d'un autre "univers".
 
 PARAMÈTRES :
 
-Régénération de dix points de vie par seconde
-Souvenir d'un sort de niveau 1 (arcanique et divin) la première seconde, puis un sort de niveau 2 la 3e seconde, puis un sort de niveau 3 la 5e seconde, et ainsi de suite jusqu'à un sort de niveau 8 à la 15e seconde.
+Régénération de dix points de vie par secondes
+Souvenir d'un sort de niveau 1 (arcanique et divin) la première seconde, puis un sort de niveau 2 la 3eme seconde, puis un sort de niveau 3 la 5eme seconde, et ainsi de suite jusqu'à un sort de niveau 8 à la 15eme seconde.
 Durée : 15 secondes
 
 Poids : 1~
 
 @5099 = ~Potion de Nettoyage d'aura~
-@50100 = ~Cette potion empêche les résidus magiques de stagner autour du buveur. En résulte qu'il peut enchaîner les sorts sans perturbations.
+@50100 = ~Cette potion empêche les résidus magiques de stagner autour du buveur. En résulte qu'il peut enchaîner les sort sans perturbations.
 
 PARAMÈTRES :
 
@@ -473,7 +480,7 @@ Durée : 1 tour
 Poids : 1~
 
 @50101 = ~Potion de puissance extrême~ //EE seulement
-@50102 = ~Ce mélange malodorant altère exagérément les probabilités en faveur du buveur.
+@50102 = ~Cette mélange malodorant altère exagérément les probabilités en faveur du buveur.
 
 PARAMÈTRES :
 
@@ -483,13 +490,13 @@ Durée : 5 tours
 Poids : 1~
 
 @50103 = ~Élixir de Magica Incarna~
-@50104 = ~À l'intérieur de sa bouteille, ce breuvage est continuellement en mouvement. Ceci est perceptible grâce aux nombreuses particules magiques qui s'agitent dans le mélange. Quiconque boit cet élixir fusionne avec la toile et devient un élémental de magie.
+@50104 = ~A l'intérieur de sa bouteille, ce breuvage est continuellement en mouvement. Ceci est perceptible grâce aux nombreuse particules magiques qui s'agitent dans le mélange. Quiconque boit cet élixir fusionne avec la toile et devient un élémental de magie.
 
 PARAMÈTRES :
 
 Immunité contre les armes magiques
 Immunité contre les sorts
-Sorts infinis
+Sort infinis
 Durée : 1 tour
 
 Poids : 1~
@@ -515,7 +522,7 @@ Zone d'effet : un personnage mort
 Poids : 1~
 
 @50109 = ~Brouet anti-magique~
-@50110 = ~Cette flasque doit être lancée. Elle crée à l'endroit où elle impacte le sol une zone où toute magie est dissipée, avec 100% de chance de réussite, et laisse sur les créatures impactées des résidus anti-magiques qui perturbent les chances de lancer des sorts pendant 4 rounds (100% de chances d’échouer à l'incantation d'un sort le premier round, 75% le deuxième round, 50% le troisième et 25% le quatrième).
+@50110 = ~Cette flasque doit être lancée. Elle crée à l'endroit où elle impacte le sol une zone ou toute magie est dissipée, avec 100% de chance de réussite, et laisse sur les créatures impactées des résidus anti-magiques qui perturbent les chances de lancer des sorts pendant 4 rounds (100% d’échouer à l'incantation d'un sort le premier round, 75% le deuxième round, 50% le troisième et 25% le quatrième).
 
 PARAMÈTRES :
 
@@ -536,7 +543,7 @@ Durée : 4 tours
 Poids : 1~
 
 @50113 = ~Réflecteur de Sanset~
-@50114 = ~Ce concentré de puissance donne au buveur la capacité de renvoyer vers l'incantateur tous les sorts qui le ciblent. Il n'y a aucune limite au nombre de sorts ainsi renvoyés.
+@50114 = ~Ce concentrée de puissance donne au buveur la capacité de renvoyer vers l'incantateur tous les sorts qui le cible. Il n'y a aucune limite au nombre de sort ainsi renvoyés.
 
 PARAMÈTRES :
 
@@ -546,7 +553,7 @@ Durée : 5 tours
 Poids : 1~
 
 @50115 = ~Potion de Disparition~
-@50116 = ~Cette potion fait disparaître le buveur. Il devient invisible, inodore, silencieux et indétectable. Il gagne +4 à la CA et aux jets de sauvegarde et peut librement attaquer ou lancer des sorts tout en restant invisible. La potion de Disparition protège également contre la scrutation, la divination et les visions augmentées.
+@50116 = ~Cette potion fait disparaître le buveur. Il devient invisible, inodore, silencieux et indétectable. Il gagne +4 à la CA et aux jet de sauvegarde et peut librement attaquer ou lancer des sorts tous en restant invisible. La potion de Disparition protège également contre la scrutation, la divination et les visions augmentées.
 
 PARAMÈTRES :
 
@@ -581,24 +588,23 @@ Durée : 10 tours
 
 Poids : 1~
 @50121 = ~Potion de Souffle caustique~
-@50122 = ~Cette potion dont le cœur ne cesse jamais de brûler permet à son buveur de souffler de l'acide sur une zone conique devant lui à volonté chaque round.
+@50122 = ~Cette potion dont le cœur ne cesse jamais de brûler permet à son buveur de souffler de l'acide sur une zone conique devant lui  à volonté chaque round.
 
 PARAMÈTRES :
 
 Dégâts : 10D6 points de dégâts d'acide (jet de sauvegarde contre les souffles pour ½)
-Zone : cône de 80° et 4 mètres de long devant lui.
+Zone : cône de 80Â° et 4 mètres de long devant lui.
 
 Durée : 2 tours
 
 Poids : 1~
-@501221 = ~Souffle caustique~
 
 @50123 = ~Potion de psychomagie~
 @50124 = ~Cette potion permet à n'importe quel lanceur de sort de lancer des sorts par la seule force de son esprit.
 
 PARAMÈTRES :
 
-Temps d'incantation fixé à 1
+Temps d'incantation fixés à 1
 Durée : 5 tours
 
 Poids : 1~
@@ -620,7 +626,7 @@ Poids : 1~
 PARAMÈTRES :
 
 Classe d'armure fixée à 0
-Immunité aux armes non magiques et magiques jusqu'à +2
+Immunité aux armes non magiques et magique jusqu'à +2
 Résistances aux dégâts physiques +50%
 
 Durée : 10 tours
@@ -639,7 +645,7 @@ Durée : 3 tours
 Poids : 1~
 
 @50131 = ~Potion de blocage de magie antinomique~
-@50132 = ~Cette potion protège la cible contre les sorts les plus puissants. Elle n'est d'aucun effet contre les sorts de moindre importance.
+@50132 = ~Cette potion potion protège la cible contre les sorts les plus puissants. Elle n'est d'aucun effet contre les sorts de moindre importance.
 
 PARAMÈTRES :
 
@@ -651,7 +657,7 @@ Durée : 5 tours
 Poids : 1~
 
 @50133 = ~Potion de protection totale~
-@50134 = ~Cette potion protège la cible contre tout ce qui pourrait la blesser.
+@50134 = ~Cette potion potion protège la cible contre tout ce qui pourrait la blesser.
 
 PARAMÈTRES :
 
@@ -659,7 +665,7 @@ Immunité contre les sorts.
 Immunité contre les armes.
 Résistances aux dégâts physiques, magiques et élémentaires fixées à 100%
 
-Durée : 1 tour
+Durée : 5 rounds
 
 Poids : 1~
 
@@ -695,6 +701,7 @@ Protection contre le plan négatif et la mort
 Durée : 10 tours
 
 Poids : 1~
+
 @50141 = ~Tord-boyaux du sage~
 @50142 = ~Cet alcool fort préparé avec des épices et céréales originaires de contrées lointaines éveille les sens et permet de viser des points précis.
 
@@ -706,6 +713,7 @@ Chances de coup critique : +3
 Durée : 5 tours
 
 Poids : 1~
+
 @50143 = ~Potion de désenchantement~
 @50144 = ~Cette potion contient une langue de désenchanteur. Quiconque la boit voit tous les effets magiques et toutes les malédictions l'affectant dissipés.
 
@@ -726,6 +734,7 @@ Invisibilité majeure
 Durée : 6 tours
 
 Poids : 1~
+
 @50147 = ~Potion de vision totale~
 @50148 = ~Cette potion améliore grandement la vue du buveur, en lui permettant de voir toutes les choses cachées ou fictives.
 
@@ -735,6 +744,7 @@ Vision véritable
 Durée : 6 tours
 
 Poids : 1~
+
 @50149 = ~Mémoire concentrée~
 @50150 = ~Cet élixir magique permet au consommateur, s'il est mage, de se remémorer des sorts majeurs. Il n'a aucun effet sur un non-initié aux arcanes.
 
@@ -743,6 +753,7 @@ PARAMÈTRES :
 Remémorisation d'un sort de chaque niveau 6 à 9
 
 Poids : 1~
+
 @50151 = ~Huile féerique~
 @50152 = ~Appliquer cette huile miroitante sur le corps de l'utilisateur prend un round entier, après quoi il est puissamment protégé.
 
@@ -753,6 +764,7 @@ Jets de sauvegarde et Classe d'Armure : +2
 Durée : 10 tours
 
 Poids : 1~
+
 @50153 = ~Huile pyrophoricite~
 @50154 = ~Cette huile s'enflamme peu de temps après avoir été appliquée. Utilisée sur une arme de corps-à-corps, elle permet de rajouter des dégâts de feu à ses dégâts de base. Sur une arme à projectile, l'effet ne dure que quelques secondes, l'huile filant avec le projectile lancé.
 
@@ -763,6 +775,7 @@ Spécial : durée 3 secondes quand utilisée sur une arme à distance.
 Durée : 2 tours
 
 Poids : 1~
+
 @50155 = ~Baume de réflexion~
 @50156 = ~Ce baume permet à la personne qui s'en recouvre de renvoyer à l'expéditeur tous les sorts qui la cibleraient.
 
@@ -772,6 +785,7 @@ Renvoi 10 niveaux de sorts
 Durée : 10 tours
 
 Poids : 1~
+
 @50157 = ~Filtre de vorpalité~
 @50158 = ~À manipuler avec précaution ! Cette huile est à appliquer sur une arme de mêlée, après quoi celle-ci gagne l'attribut "vorpal".
 
@@ -783,3 +797,37 @@ Durée : 3 tours
 
 Poids : 1~
 
+@50159 = ~Filtre d'aura de feu~
+@50160 = ~Ce filtre crée autour du buveur un cercle de flamme crépitantes.
+
+PARAMÈTRES :
+
+Résistance au feu + 100%
+Classe d'armure : +4
+Immunité aux armes non magiques
+Contrecoup de mêlée : 2D10+2 points de dégâts de feu
+Les armes de mêlée rajoutent 1D10 points de dégâts de feu
+
+Durée : 10 tours
+
+Poids : 1~
+
+@50161 = ~Potion d'expérience concentrée~
+@50162 = ~Cette potion sert normalement de resserve aux mangeurs de souvenirs.
+
+PARAMÈTRES :
+
+Le buveur gagne 15000 xp.
+
+Poids : 1~
+
+@50163 = ~Huile de résonance magique majeure~
+@50164 = ~Cette huile à appliquer sur une arme de mêlée lui confère un niveau d'enchantement.
+
+PARAMÈTRES :
+
+L'arme portée devient +5.
+
+Durée : 5 tours
+
+Poids : 1~
