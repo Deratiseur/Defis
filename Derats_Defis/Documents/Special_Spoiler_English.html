@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1" name="viewport"/><title>Insurmountable Challenges — Secret Areas</title><style>
+:root{
+  --gold: goldenrod;
+  --gold2:#c79a35;
+  --line:#96846e;
+  --brown:#655949;
+  --brown2:#41382f;
+  --paper:#4b463f;
+  --paper2:#37332e;
+  --text:#deded9;
+  --muted:#c4bfb7;
+  --black:#080706;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;
+  padding:0 0 50px;
+  cursor:default;
+  color:var(--text);
+  background:
+    radial-gradient(ellipse at 20% 10%, rgba(120,95,55,.14), transparent 34%),
+    radial-gradient(ellipse at 80% 60%, rgba(95,70,40,.11), transparent 38%),
+    linear-gradient(#080706,#15120e 45%,#080706);
+  font-family:Verdana,Tahoma,Arial,sans-serif;
+  font-size:16px;
+}
+#cartouche{
+  width:calc(100% - 4cm);
+  max-width:none;
+  margin:20px 2cm 0;
+}
+#header{
+  text-align:center;
+  padding:8px 20px 18px;
+  min-height:245px;
+  border:1px solid var(--gold);
+  border-top:5px solid var(--gold);
+  border-bottom:5px solid var(--gold);
+  border-radius:4px;
+  box-shadow:8px 8px 15px #000;
+  background:
+    linear-gradient(rgba(255,255,255,.06),rgba(0,0,0,.16)),
+    radial-gradient(ellipse at center, #514a40 0,#2c2925 55%,#080706 100%);
+}
+h1{
+  line-height:170%;
+  font-size:225%;
+  color:var(--gold);
+  margin:0;
+  text-shadow:.1rem .1rem .25rem #000;
+}
+.subtitle{
+  margin:2px auto 18px;
+  color:#eee9dd;
+  font-size:105%;
+  font-weight:bold;
+}
+.header-rule{
+  width:90%;
+  height:1px;
+  margin:18px auto;
+  background:var(--gold);
+}
+.header-grid{
+  position:relative;
+  width:100%;
+  height:3.4em;
+  margin:0 auto;
+  font-size:105%;
+}
+.header-col{
+  position:absolute;
+  top:0;
+  width:max-content;
+  text-align:left;
+  line-height:170%;
+  transform:translateX(-50%);
+}
+.header-col-left{left:25%}
+.header-col-right{left:75%}
+.header-grid strong{color:#f1eee8}
+#menu{
+  font-weight:bold;
+  margin-top:20px;
+  padding:10px 18px;
+  text-align:center;
+  color:var(--gold);
+  line-height:220%;
+  border-top:1px solid #51483b;
+  border-bottom:1px solid #17130f;
+  border-radius:4px;
+  box-shadow:5px 5px 12px #000;
+  background:linear-gradient(#5f5447,#342d25 45%,#1a1713);
+}
+a:link,a:visited{color:var(--gold);text-decoration:none}
+a:hover,a:focus{text-decoration:underline;color:#eee}
+#maindiv{margin:0 auto;width:100%}
+.content{
+  background:
+    radial-gradient(circle at 15% 0, rgba(255,255,255,.035), transparent 26%),
+    linear-gradient(135deg, rgba(255,255,255,.025), transparent 35%),
+    linear-gradient(var(--paper),var(--paper2));
+  padding:0 0 28px;
+  margin:50px auto;
+  border-width:1px 1px 4px 10px;
+  border-style:solid;
+  border-color:var(--brown);
+  position:relative;
+  border-radius:4px;
+  box-shadow:8px 8px 15px #000;
+  overflow:hidden;
+}
+h2{
+  line-height:170%;
+  display:block;
+  text-align:left;
+  text-indent:30px;
+  padding:3px 0;
+  margin:0;
+  border-top:2px dotted var(--line);
+  border-bottom:2px dotted var(--line);
+  font-size:160%;
+  background:linear-gradient(#50473d,#2d2822);
+}
+h2::first-letter{color:var(--gold)}
+h3,h4{
+  line-height:170%;
+  margin:14px auto 8px;
+  width:90%;
+  padding:0;
+}
+h3{font-size:140%;color:#eee}
+h4{font-size:120%;color:var(--gold)}
+p{
+  text-align:justify;
+  font-size:110%;
+  line-height:150%;
+  margin:10px auto;
+  width:90%;
+}
+ul{
+  line-height:170%;
+  margin-left:4%;
+  width:87%;
+}
+hr{
+  margin:20px auto;
+  width:90%;
+  height:1px;
+  border:0;
+  background:var(--gold);
+}
+.important{
+  font-size:110%;
+  text-align:left;
+  border-width:1px 4px;
+  border-style:solid;
+  border-color:var(--gold);
+  padding:10px 16px;
+  margin:18px auto;
+  width:84%;
+  line-height:160%;
+  background:rgba(0,0,0,.13);
+}
+.note{
+  color:#f0eadf;
+  border-left:4px solid var(--gold);
+  width:88%;
+  margin:18px auto;
+  padding:10px 14px;
+  background:rgba(0,0,0,.16);
+  line-height:160%;
+}
+
+/* Grandes zones repliables */
+details.zone{
+  width:90%;
+  margin:14px auto;
+  border:1px solid #796b58;
+  border-left:5px solid var(--gold);
+  border-radius:3px;
+  background:rgba(0,0,0,.18);
+  box-shadow:0 2px 7px rgba(0,0,0,.35);
+}
+details.zone > summary{
+  list-style:none;
+  cursor:pointer;
+  padding:11px 15px;
+  font-weight:bold;
+  font-size:125%;
+  color:#eee;
+  background:linear-gradient(#4d4439,#29251f);
+  user-select:none;
+}
+details.zone > summary::-webkit-details-marker{display:none}
+details.zone > summary::before{
+  content:"▶";
+  color:var(--gold);
+  margin-right:10px;
+}
+details.zone[open] > summary::before{content:"▼"}
+.zonebody{padding:10px 16px 18px}
+.zonebody h4{
+  width:100%;
+  margin:14px 0 5px;
+  padding-bottom:3px;
+  border-bottom:1px solid #6c6153;
+}
+.zonebody ul{width:96%;margin-left:1.5%}
+
+/* Spoiler imbriqué : option plus difficile */
+details.hard{
+  width:96%;
+  margin:20px auto 4px;
+  border:1px solid var(--gold2);
+  background:#29251f;
+}
+details.hard > summary{
+  list-style:none;
+  cursor:pointer;
+  padding:9px 12px;
+  font-weight:bold;
+  color:var(--gold);
+  background:linear-gradient(#443a2e,#211d18);
+}
+details.hard > summary::-webkit-details-marker{display:none}
+details.hard > summary::before{
+  content:"▶";
+  margin-right:8px;
+}
+details.hard[open] > summary::before{content:"▼"}
+.hardbody{padding:10px 14px}
+
+/* Versions */
+details.versionbox{
+  width:90%;
+  margin:11px auto;
+  border-top:1px solid var(--gold);
+  border-bottom:1px solid var(--gold);
+}
+details.versionbox > summary{
+  cursor:pointer;
+  padding:7px 5px;
+  font-weight:bold;
+  color:#eee;
+}
+.versionbody{padding:4px 12px 10px}
+.versionbody ul{width:95%}
+
+.backtop{
+  text-align:right;
+  font-weight:bold;
+  margin:20px 5% 0;
+}
+.small{font-size:95%;color:var(--muted)}
+@media(max-width:760px){
+  #cartouche{width:96%;margin:12px auto 0}
+  .header-grid{height:auto}
+  .header-col{
+    position:static;
+    width:auto;
+    transform:none;
+    margin:5px 8%;
+  }
+  #header{min-height:0}
+  details.zone,p,.important,.note{width:94%}
+}
+
+/* Version abrégée : les deux descriptions uniquement. */
+#cartouche{margin-top:20px}
+.content{margin:0 auto 20px}
+
+/* Zones affichées directement */
+div.zone{width:90%;margin:14px auto 24px;border:1px solid #796b58;border-left:5px solid var(--gold);border-radius:3px;background:rgba(0,0,0,.18);box-shadow:0 2px 7px rgba(0,0,0,.35)}
+div.zone > h3.zone-title{margin:0;padding:11px 15px;font-weight:bold;font-size:125%;color:#eee;background:linear-gradient(#4d4439,#29251f)}
+</style></head><body><div id="cartouche"><div id="maindiv"><section class="content" id="zones"><h2>Secret Areas</h2><br/><div class="zone"><h3 class="zone-title">The Gallery of Anomalies</h3><div class="zonebody"><h4>Area characteristics</h4><ul><li>The area has four exits, each leading back to the opposite exit (horizontally).</li><li>Each round, each exit has a 5% chance of spawning a random monster.</li><li>Vampiric dragons sometimes get stuck in the narrow corridors, blocking other creatures from passing. You can take advantage of this.</li></ul><h4>Advice for players</h4><ul><li>Don't let the boss hit you, and don't try to hit it in melee. Bombard it from a distance.</li></ul><h4>Monsters appearing in the area</h4><ul><li>Death Eye (undead beholder)</li><li>Alhoon (undead illithid)</li><li>Vampiric Dragon (vampiric by default, undead)</li><li>Earth Necromancer (undead earth elemental, 16 HD, +50% hit points, regenerates 3 HP per round; on hit, drains one level and increases its maximum HP by 5, healing it). On death, it "bursts," dealing 5D6 crushing damage in a small area (save vs. breath for half).</li><li>Flaming Skull (regenerates 1 HP per round, 127% fire resistance, permanent Fire Shield, casts one of four offensive spells every 4 seconds; on death, bursts into a Skull Trap)</li><li>Greater Ghul (undead genie; naturally paralyzing, casts wizard spells)</li></ul><h4>Unique</h4><p><strong>The Anomaly: it is neither a living creature nor an undead creature. It is… something else.</strong></p><ul><li>When it attacks, the target takes 2D8 magic damage and must save vs. death at -4 or be erased from the fabric of reality (this is not death or disintegration; no protection works against it).</li><li>When it is struck in melee, the attacker must save vs. death at -4 or be erased from the fabric of reality.</li><li>66% magic resistance (two-thirds of the spells that would affect it are erased from the fabric of reality before taking effect).</li><li>66% damage resistance (weapons, spells, and elements that strike it still deal one-third of their damage before being erased from the fabric of reality).</li><li>Immune to effects that reduce magic or damage resistance (its resistances are not attributes; they are probabilities).</li><li>Requires a +3 weapon to hit.</li><li>Undead immunities (but it is not undead).</li><li>No regeneration.</li><li>Slow movement, 1 melee attack per round.</li><li>At 75% HP, it gains Haste.</li><li>At 50% HP, it gains Spatial Blur (two permanent mirror images).</li><li>At 25% HP, its magic and damage "resistance" increases to 90%.</li></ul><h4>Special</h4><p><strong>Moglus, the Absolute Evil's pet abyssal bat, roams the area at random.</strong></p><details class="hard moglus"><summary>Moglus's abilities and statistics</summary><div class="hardbody"><ul><li>Immortal: when he "dies," he is sent back to the Abyss. If the party rests, he returns fully restored.</li><li>Teleportation movement: teleports to enemies, teleports to Player 1 when he is out of sight and has no orders, etc.</li><li>Curious and erratic: if you give him no orders, he occasionally wanders off to inspect his surroundings. He may go very far, but always comes back as long as you remain in the same area.</li><li>Regenerates 3 HP per round.</li><li>2 APR, THAC0 8, 1D3+1 magical fire damage, +5 magical weapon.</li><li>30% magic resistance.</li><li>Immune to normal fire and electricity; 50% resistance to magical fire and cold; immune to poison and mind-affecting effects.</li><li>Immune to ground effects (Web, Entangle, Grease, Mimic Web).</li><li>Permanent Non-Detection and Invisibility at will.</li><li>Can backstab at x3 damage. On a successful backstab, the target must save vs. poison or suffer 1 poison damage per second for 1 round.</li></ul></div></details><details class="hard"><summary>If the "Add an additional disadvantage to each area" component is installed</summary><div class="hardbody"><ul><li>Adds "RageWind" to the list of possible monsters.</li></ul></div></details></div></div><div class="zone"><h3 class="zone-title">The Pasture</h3><div class="zonebody"><h4>Area characteristics</h4><ul><li>It's the English countryside, and it's raining. The mud slows the party's movement by 20%, and each round the unpredictable sky has a 5% chance of striking one hero with lightning (20D6 electrical damage, save vs. wands for half).</li><li>In this challenge, monsters do not wander randomly. In fact, three of the six monster types cannot move at all.</li><li>This is the most heavily populated area in the mod (although three of the six creature types are stationary), and the monsters' abilities make it even more crowded.</li><li>There is a mini-boss (Vengeful Cow Head) in each corner of the map. Once all four have been killed, the boss appears in the center of the map. It is a fusion of all four.</li><li>When the boss appears, all surviving Hell Cows converge on it.</li></ul><h4>Advice for players</h4><ul><li>There is no point in killing Proximity Cows from a distance: their corpses can explode too.</li><li>Dung Cows regularly produce Cow Dung (black puddings). If you don't hurry, you'll soon be overwhelmed.</li><li>Cow Dung destroys armor in a single round, and no armor can withstand it: kill them from a distance or fight them without armor.</li></ul><h4>Monsters appearing in the area</h4><ul><li>Proximity Cow (if a hero approaches, it explodes, dealing 15D6 fire damage within 4.5 meters, save for half—even if it is already dead ^^)</li><li>Dung Cow (produces a pile of cow dung every 3 rounds).</li><li>Cowapult MK2™ (casts "Summon Cow" every round, dropping a cow onto an enemy. When wounded, gains Cleave.)</li><li>Cow Head (minotaur)</li><li>Hell Cows (arrive in groups of 1D4+5 cows)</li><li>Cow Dung (black pudding; 50% chance on hit to destroy armor, even magical armor; releases a Stinking Cloud on death)</li></ul><h4>Unique</h4><h4>Mini-bosses</h4><p><strong>Vengeful Cow Head of Death</strong></p><ul><li>Undead immunities + immunity to cold.</li><li>Vampiric.</li><li>Cannibal.</li><li>On hit, save vs. death at -4 or die.</li></ul><p><strong>Vengeful Cow Head of the Void</strong></p><ul><li>Undead, golem, and jelly immunities.</li><li>Armored (requires a +3 weapon to hit).</li><li>+50% magic resistance.</li><li>On hit, save vs. polymorph at -4 or be disintegrated.</li></ul><p><strong>Vengeful Cow Head of Carnage</strong></p><ul><li>Berserk.</li><li>Carnage.</li><li>Furious.</li><li>On hit, save vs. breath at -4 or be stunned for 2 rounds.</li></ul><p><strong>Vengeful Cow Head of Time</strong></p><ul><li>Temporal.</li><li>Antediluvian.</li><li>Casts Time Stop every 6 rounds (when party members are present).</li><li>On hit, save vs. spell at -4 or enter temporal stasis (paused) for 2 rounds.</li></ul><h4>Boss</h4><p><strong>Paragon of Cow Vengeance (fusion of the other four)</strong></p><ul><li>Level 40, hit points calculated using D12s.</li><li>AC 2.</li><li>All four mini-boss auras combined: each round, save vs. death at -4 or die; save vs. polymorph at -4 or be disintegrated; save vs. breath at -4 or be stunned for 2 rounds; and save vs. spell at -4 or enter temporal stasis for 2 rounds.</li><li>All four mini-bosses' immunities combined (undead, cold, golem, jelly, berserk, Slow, and Time Stop).</li><li>All four mini-bosses' bonuses combined: vampiric, draining, armored (requires +4 weapons to hit), +50% magic resistance, Berserk, Carnage, Furious, Temporal, Antediluvian, and casts Time Stop every 6 rounds.</li><li>10 APR (2 base attacks + Furious = 5, and Temporal = Improved Haste).</li><li>On hit, save vs. spell at -4 or suffer Pulverization; on a critical hit, Pulverization without a saving throw (due to its equipment).</li><li>80% magic resistance (30% base + 50% from "the Void").</li><li>127% cold resistance (100% from "Death" + 50% from "Armored").</li></ul><details class="hard"><summary>If the "Add an additional disadvantage to each area" component is installed</summary><div class="hardbody"><ul><li>Dung Cows and Proximity Cows are merged into one creature, and the proximity explosion no longer kills the cow.</li></ul></div></details></div></div></section></div></div></body></html>

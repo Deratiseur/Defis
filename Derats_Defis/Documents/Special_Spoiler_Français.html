@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+
+<html lang="fr"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1" name="viewport"/><title>Défis insurmontables — Zones secrètes</title><style>
+:root{
+  --gold: goldenrod;
+  --gold2:#c79a35;
+  --line:#96846e;
+  --brown:#655949;
+  --brown2:#41382f;
+  --paper:#4b463f;
+  --paper2:#37332e;
+  --text:#deded9;
+  --muted:#c4bfb7;
+  --black:#080706;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;
+  padding:0 0 50px;
+  cursor:default;
+  color:var(--text);
+  background:
+    radial-gradient(ellipse at 20% 10%, rgba(120,95,55,.14), transparent 34%),
+    radial-gradient(ellipse at 80% 60%, rgba(95,70,40,.11), transparent 38%),
+    linear-gradient(#080706,#15120e 45%,#080706);
+  font-family:Verdana,Tahoma,Arial,sans-serif;
+  font-size:16px;
+}
+#cartouche{
+  width:calc(100% - 4cm);
+  max-width:none;
+  margin:20px 2cm 0;
+}
+#header{
+  text-align:center;
+  padding:8px 20px 18px;
+  min-height:245px;
+  border:1px solid var(--gold);
+  border-top:5px solid var(--gold);
+  border-bottom:5px solid var(--gold);
+  border-radius:4px;
+  box-shadow:8px 8px 15px #000;
+  background:
+    linear-gradient(rgba(255,255,255,.06),rgba(0,0,0,.16)),
+    radial-gradient(ellipse at center, #514a40 0,#2c2925 55%,#080706 100%);
+}
+h1{
+  line-height:170%;
+  font-size:225%;
+  color:var(--gold);
+  margin:0;
+  text-shadow:.1rem .1rem .25rem #000;
+}
+.subtitle{
+  margin:2px auto 18px;
+  color:#eee9dd;
+  font-size:105%;
+  font-weight:bold;
+}
+.header-rule{
+  width:90%;
+  height:1px;
+  margin:18px auto;
+  background:var(--gold);
+}
+.header-grid{
+  position:relative;
+  width:100%;
+  height:3.4em;
+  margin:0 auto;
+  font-size:105%;
+}
+.header-col{
+  position:absolute;
+  top:0;
+  width:max-content;
+  text-align:left;
+  line-height:170%;
+  transform:translateX(-50%);
+}
+.header-col-left{left:25%}
+.header-col-right{left:75%}
+.header-grid strong{color:#f1eee8}
+#menu{
+  font-weight:bold;
+  margin-top:20px;
+  padding:10px 18px;
+  text-align:center;
+  color:var(--gold);
+  line-height:220%;
+  border-top:1px solid #51483b;
+  border-bottom:1px solid #17130f;
+  border-radius:4px;
+  box-shadow:5px 5px 12px #000;
+  background:linear-gradient(#5f5447,#342d25 45%,#1a1713);
+}
+a:link,a:visited{color:var(--gold);text-decoration:none}
+a:hover,a:focus{text-decoration:underline;color:#eee}
+#maindiv{margin:0 auto;width:100%}
+.content{
+  background:
+    radial-gradient(circle at 15% 0, rgba(255,255,255,.035), transparent 26%),
+    linear-gradient(135deg, rgba(255,255,255,.025), transparent 35%),
+    linear-gradient(var(--paper),var(--paper2));
+  padding:0 0 28px;
+  margin:50px auto;
+  border-width:1px 1px 4px 10px;
+  border-style:solid;
+  border-color:var(--brown);
+  position:relative;
+  border-radius:4px;
+  box-shadow:8px 8px 15px #000;
+  overflow:hidden;
+}
+h2{
+  line-height:170%;
+  display:block;
+  text-align:left;
+  text-indent:30px;
+  padding:3px 0;
+  margin:0;
+  border-top:2px dotted var(--line);
+  border-bottom:2px dotted var(--line);
+  font-size:160%;
+  background:linear-gradient(#50473d,#2d2822);
+}
+h2::first-letter{color:var(--gold)}
+h3,h4{
+  line-height:170%;
+  margin:14px auto 8px;
+  width:90%;
+  padding:0;
+}
+h3{font-size:140%;color:#eee}
+h4{font-size:120%;color:var(--gold)}
+p{
+  text-align:justify;
+  font-size:110%;
+  line-height:150%;
+  margin:10px auto;
+  width:90%;
+}
+ul{
+  line-height:170%;
+  margin-left:4%;
+  width:87%;
+}
+hr{
+  margin:20px auto;
+  width:90%;
+  height:1px;
+  border:0;
+  background:var(--gold);
+}
+.important{
+  font-size:110%;
+  text-align:left;
+  border-width:1px 4px;
+  border-style:solid;
+  border-color:var(--gold);
+  padding:10px 16px;
+  margin:18px auto;
+  width:84%;
+  line-height:160%;
+  background:rgba(0,0,0,.13);
+}
+.note{
+  color:#f0eadf;
+  border-left:4px solid var(--gold);
+  width:88%;
+  margin:18px auto;
+  padding:10px 14px;
+  background:rgba(0,0,0,.16);
+  line-height:160%;
+}
+
+/* Grandes zones repliables */
+details.zone{
+  width:90%;
+  margin:14px auto;
+  border:1px solid #796b58;
+  border-left:5px solid var(--gold);
+  border-radius:3px;
+  background:rgba(0,0,0,.18);
+  box-shadow:0 2px 7px rgba(0,0,0,.35);
+}
+details.zone > summary{
+  list-style:none;
+  cursor:pointer;
+  padding:11px 15px;
+  font-weight:bold;
+  font-size:125%;
+  color:#eee;
+  background:linear-gradient(#4d4439,#29251f);
+  user-select:none;
+}
+details.zone > summary::-webkit-details-marker{display:none}
+details.zone > summary::before{
+  content:"▶";
+  color:var(--gold);
+  margin-right:10px;
+}
+details.zone[open] > summary::before{content:"▼"}
+.zonebody{padding:10px 16px 18px}
+.zonebody h4{
+  width:100%;
+  margin:14px 0 5px;
+  padding-bottom:3px;
+  border-bottom:1px solid #6c6153;
+}
+.zonebody ul{width:96%;margin-left:1.5%}
+
+/* Spoiler imbriqué : option plus difficile */
+details.hard{
+  width:96%;
+  margin:20px auto 4px;
+  border:1px solid var(--gold2);
+  background:#29251f;
+}
+details.hard > summary{
+  list-style:none;
+  cursor:pointer;
+  padding:9px 12px;
+  font-weight:bold;
+  color:var(--gold);
+  background:linear-gradient(#443a2e,#211d18);
+}
+details.hard > summary::-webkit-details-marker{display:none}
+details.hard > summary::before{
+  content:"▶";
+  margin-right:8px;
+}
+details.hard[open] > summary::before{content:"▼"}
+.hardbody{padding:10px 14px}
+
+/* Versions */
+details.versionbox{
+  width:90%;
+  margin:11px auto;
+  border-top:1px solid var(--gold);
+  border-bottom:1px solid var(--gold);
+}
+details.versionbox > summary{
+  cursor:pointer;
+  padding:7px 5px;
+  font-weight:bold;
+  color:#eee;
+}
+.versionbody{padding:4px 12px 10px}
+.versionbody ul{width:95%}
+
+.backtop{
+  text-align:right;
+  font-weight:bold;
+  margin:20px 5% 0;
+}
+.small{font-size:95%;color:var(--muted)}
+@media(max-width:760px){
+  #cartouche{width:96%;margin:12px auto 0}
+  .header-grid{height:auto}
+  .header-col{
+    position:static;
+    width:auto;
+    transform:none;
+    margin:5px 8%;
+  }
+  #header{min-height:0}
+  details.zone,p,.important,.note{width:94%}
+}
+
+/* Version abrégée : les deux descriptions uniquement. */
+#cartouche{margin-top:20px}
+.content{margin:0 auto 20px}
+
+/* Zones affichées directement */
+div.zone{width:90%;margin:14px auto 24px;border:1px solid #796b58;border-left:5px solid var(--gold);border-radius:3px;background:rgba(0,0,0,.18);box-shadow:0 2px 7px rgba(0,0,0,.35)}
+div.zone > h3.zone-title{margin:0;padding:11px 15px;font-weight:bold;font-size:125%;color:#eee;background:linear-gradient(#4d4439,#29251f)}
+</style></head><body><div id="cartouche"><div id="maindiv"><section class="content" id="zones"><h2>Zones secrètes</h2><br/><div class="zone"><h3 class="zone-title">La galerie des anomalies</h3><div class="zonebody"><h4>Statistiques de la carte</h4><ul><li>La zone a quatre sorties qui ramènent chacune à la sortie en face (à l'horizontale).</li><li>Chaque round, pour chaque sortie, 5 % de chances qu'un monstre aléatoire arrive.</li><li>Les dragons vampiriques sont parfois coincés dans les couloirs étroits, formant un bouchon qui empêche les autres créatures de passer. Vous pouvez profiter de ça.</li></ul><h4>Conseils pour les joueurs</h4><ul><li>Ne laissez pas le boss vous toucher, et n'essayez pas de le toucher en mêlée. Bombardez-le.</li></ul><h4>Monstres qui apparaissent sur la carte</h4><ul><li>Œil de la mort (Tyrannoeil mort-vivant)</li><li>Alhoon (Illithid mort-vivant)</li><li>Dragon vampirique (vampirique par défaut, mort-vivant)</li><li>Nécromantaire de la terre (élémentaire de terre mort-vivant (16 DV), points de vie +50 %, régénération 3 PV par round, quand touche draine un niveau et gagne 5 pvs à son maximum de points de vie (ce qui le guérit)), en mourant "éclate" et inflige 5D6 points de dégâts contondants sur une petite zone (jet de sauvegarde contre les souffles pour ½)</li><li>Crâne enflammé (régénère 1 pv par round, 127 % de résistance au feu, bouclier de feu constant, lance toutes les 4 secondes un sort offensif parmi 4 possibles, en mourant éclate en Piège à crâne)</li><li>Ghul majeure (Génie mort-vivant. Paralysant par défaut, sorts de magicien)</li></ul><h4>Unique</h4><p><strong>l'Anomalie : ce n'est pas une créature vivante, ce n'est pas un mort-vivant, c'est… autre chose.</strong></p><ul><li>Quand elle attaque, la cible subit 2D8 points de dégâts magiques et doit réussir un jet de sauvegarde contre la mort à -4 ou être effacée de la trame de la réalité (ce n'est pas la mort, ce n'est pas la désintégration, il n'existe aucune protection contre ça)</li><li>Quand elle est touchée en mêlée, l'attaquant doit réussir un jet de sauvegarde contre la mort à -4 ou être effacé de la trame de la réalité</li><li>66 % de résistance à la magie (2/3 des sorts qui devraient l'affecter sont effacés de la trame de la réalité avant de faire effet)</li><li>66 % de résistance aux dégâts (les armes/sorts/éléments la touchant infligent quand même 1/3 de dégâts avant d'être effacés de la trame de la réalité)</li><li>Immunisée aux effets permettant de réduire la résistance à la magie/aux dégâts (ses résistances ne sont pas une caractéristique, ce sont des probabilités)</li><li>Nécessite une arme +3 pour être touchée</li><li>Immunités de mort-vivant (mais ce n'est pas un mort-vivant)</li><li>Pas de régénération.</li><li>Déplacement lent, 1 APR de mêlée</li><li>Quand sa vie est réduite à 75 %, elle gagne la hâte.</li><li>Quand sa vie est réduite à 50 %, elle gagne Imprécision spatiale (deux images miroirs permanentes)</li><li>Quand sa vie est réduite à 25 %, elle passe à 90 % de "résistance" à la magie et aux dégâts.</li></ul><h4>Spécial</h4><p><strong>Moglus, chauve-souris abyssale de compagnie du Mal absolu parcourt aléatoirement la carte.</strong></p><details class="hard moglus"><summary>Caractéristiques de Moglus</summary><div class="hardbody"><ul><li>Immortel : quand il "meurt" il est renvoyé dans les Abysses. Si le groupe se repose, il revient entièrement restauré.</li><li>Déplacement par téléportation : téléportation vers les ennemis, téléportation vers le joueur 1 s'il est hors du champ de vision et sans instructions, etc....</li><li>Curieux et erratique : si vous ne lui donnez pas d'instruction, il se déplace de temps en temps pour observer ce qui l'entoure. Il peut aller très loin, mais il finit toujours par revenir, tant que vous êtes dans la même zone.</li><li>Régénération de 3 points de vie par round</li><li>2 APR, TAC0 8, dégâts 1D3+1 de feu magique, magique +5</li><li>Résistance à la magie 30 %</li><li>Immunisé au feu normal et à l'électricité, 50 % de résistance au feu magique et au froid, immunité au poison et aux effets mentaux</li><li>Immunisé aux effets de sol (toile, enchevêtrement, graisse, toile de mimique)</li><li>Non-détection permanente et Invisibilité à volonté.</li><li>Peut faire des attaques sournoises x3, et en cas d'attaque sournoise réussie, la cible doit réussir un jet de sauvegarde contre le poison ou subir 1 point de dégât de poison par seconde pendant 1 round.</li></ul></div></details><details class="hard"><summary>Si l’option « Ajouter un inconvénient supplémentaire à chaque zone » est installée</summary><div class="hardbody"><ul><li>Ajout de "Tourmente martiale" à la liste des monstres possibles.</li></ul></div></details></div></div><div class="zone"><h3 class="zone-title">Le pâturage</h3><div class="zonebody"><h4>Statistiques de la carte</h4><ul><li>C'est la campagne anglaise, il pleut. La gadoue ralentit le mouvement des héros de 20 % et le ciel capricieux a, chaque round, 5 % de chances de faire tomber un éclair sur un des héros (20D6 points de dégâts électriques, jet de sauvegarde contre les baguettes pour ½)</li><li>Dans ce défi, les monstres ne se déplacent pas aléatoirement. Et 3 monstres sur 6 sont même incapables de se déplacer.</li><li>Cette zone est la plus peuplée de toutes les zones du module (à relativiser puisque 3 créatures sur 6 sont statiques), et les capacités des monstres de cette zone amplifient encore la densité de monstres.</li><li>Il y a un sous-boss (Tête de vache vengeresse) dans chaque coin de la carte. Quand les quatre sont morts, le boss apparaît au centre de la carte. C'est la fusion des quatre.</li><li>Quand le boss apparaît, toutes les vaches de l'enfer survivantes convergent vers lui.</li></ul><h4>Conseil pour les joueurs</h4><ul><li>Ça ne sert à rien de tuer les vaches de proximité de loin, leurs cadavres peuvent aussi exploser.</li><li>Les vaches bousières créent des bouses de vaches (puddings noirs) à un rythme régulier. Si vous ne vous dépêchez pas, vous serez vite submergés.</li><li>Les bouses de vaches détruisent les armures en un round, et aucune armure ne leur résiste : tuez-les de loin ou combattez-les sans armure.</li></ul><h4>Monstres qui apparaissent sur la carte</h4><ul><li>Vache de proximité (si un héros s'approche elle explose en infligeant 15D6 points de dégâts de feu sur 4,5 mètres (jet de sauvegarde pour ½) (Même si elle est morte^^))</li><li>Vache bousière (tous les 3 rounds chie une bouse de vache.)</li><li>Bovinopulteur MK2 (TM) (lance "convocation de vache" (qui fait tomber une vache sur la cible) chaque round sur les ennemis. S'il est blessé, il gagne Enchaînement.)</li><li>Tête de vache (minotaure)</li><li>Vaches de l'enfer (viennent par groupes de 1D4+5 vaches)</li><li>Bouse de vache (pudding noir,  50 % de chances en frappant de détruire l'armure (même si magique), nuage puant en mourant)</li></ul><h4>Unique</h4><h4>Sous-boss</h4><p><strong>Tête de vache vengeresse de la mort</strong></p><ul><li>Immunités de mort-vivant + immunisé au froid</li><li>Vampirique</li><li>Cannibale</li><li>Quand elle touche, jet de sauvegarde contre la mort à -4 ou mort</li></ul><p><strong>Tête de vache vengeresse du vide</strong></p><ul><li>Immunités de mort-vivant + golem + gelée</li><li>Caparaçonné (arme +3 pour toucher)</li><li>Résistance à la magie +50 %</li><li>Quand elle touche, jet de sauvegarde contre la métamorphose à -4 ou désintégration</li></ul><p><strong>Tête de vache vengeresse du carnage</strong></p><ul><li>Berserk</li><li>Du carnage</li><li>Furieuse</li><li>Quand elle touche, jet de sauvegarde contre les souffles à -4 ou étourdissement 2 rounds</li></ul><p><strong>Tête de vache vengeresse du temps</strong></p><ul><li>Temporelle</li><li>Antédiluvienne</li><li>Tous les 6 rounds lance arrêt du temps (en présence des PJ)</li><li>Quand elle touche, jet de sauvegarde contre les sorts à -4 ou stase temporelle (pause) 2 rounds</li></ul><h4>Boss</h4><p><strong>Parangon de la vengeance des vaches (combinaison des 4 autres)</strong></p><ul><li>Niveau 40, points de vie calculés avec un D12</li><li>CA 2</li><li>Toutes les auras cumulées des 4 sous-boss : chaque round, jet de sauvegarde contre la mort à -4 ou mort, jet de sauvegarde contre la métamorphose à -4 ou désintégration, jet de sauvegarde contre les souffles à -4 ou étourdissement 2 rounds et jet de sauvegarde contre les sorts à -4 ou stase temporelle 2 rounds</li><li>Toutes les Immunités cumulées des 4 sous-boss (mort-vivant, froid, golem, gelée, berserk, lenteur et arrêt du temps)</li><li>Tous les bonus cumulés des 4 sous-boss : vampirique, drainant, caparaçonné (armes +4 pour toucher), résistance à la magie +50 %, Berserk, du carnage, furieux, temporel, Antédiluvien, tous les 6 rounds lance Arrêt du 	temps.</li><li>10 APR (2 de base + furieux = 5 et temporel = hâte améliorée)</li><li>Quand il touche, jet de sauvegarde contre les sorts à -4 ou Pulvérisation, en cas de coup critique : Pulvérisation sans jet de sauvegarde (par son équipement)</li><li>Résistance à la magie 80 % (30 % de base +50 % "du vide")</li><li>Résistance au froid 127 % (100 % de "la mort" + 50 % de "caparaçonné")</li></ul><details class="hard"><summary>Si l’option « Ajouter un inconvénient supplémentaire à chaque zone » est installée</summary><div class="hardbody"><ul><li>Les vaches bousières et de proximité sont combinées en une seule vache et l'explosion de proximité ne tue plus la vache.</li></ul></div></details></div></div></section></div></div></body></html>
